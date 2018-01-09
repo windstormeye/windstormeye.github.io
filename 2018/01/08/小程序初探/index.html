@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="description" content="近期筹备期末考试，但每天晚上还是有些空闲时间的，想着今年要好好经营一番GitHub，因为今年给自己定下了一个“宏大”的计划——打满小绿点！当然在执行这个计划的过程中可能会由于某些突发情况导致“断点”，但梦想还是要有的嘛。 因此，啃下小程序就成为了我今年的第二件事情（第一件事为iBistu 4.0），完成这个去年就十分想踏入的“坑”。在去年也就是上个学期的某一天得知小程序面向个人开发者后，就一直按捺">
+<meta name="keywords" content="微信,小程序">
+<meta property="og:type" content="article">
+<meta property="og:title" content="小程序初探">
+<meta property="og:url" content="http://pjhubs.cn/2018/01/08/小程序初探/index.html">
+<meta property="og:site_name" content="PJHubs">
+<meta property="og:description" content="近期筹备期末考试，但每天晚上还是有些空闲时间的，想着今年要好好经营一番GitHub，因为今年给自己定下了一个“宏大”的计划——打满小绿点！当然在执行这个计划的过程中可能会由于某些突发情况导致“断点”，但梦想还是要有的嘛。 因此，啃下小程序就成为了我今年的第二件事情（第一件事为iBistu 4.0），完成这个去年就十分想踏入的“坑”。在去年也就是上个学期的某一天得知小程序面向个人开发者后，就一直按捺">
+<meta property="og:image" content="http://7xszq8.com1.z0.glb.clouddn.com/2018:1:8%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%88%9D%E6%8E%A2.jpg">
+<meta property="og:image" content="http://7xszq8.com1.z0.glb.clouddn.com/%E5%B0%8F%E7%A8%8B%E5%BA%8F3.png">
+<meta property="og:image" content="http://7xszq8.com1.z0.glb.clouddn.com/V2EX.png">
+<meta property="og:image" content="http://7xszq8.com1.z0.glb.clouddn.com/V2EX%E5%B0%8F%E7%A8%8B%E5%BA%8F2.gif">
+<meta property="og:updated_time" content="2018-01-09T15:58:56.252Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="小程序初探">
+<meta name="twitter:description" content="近期筹备期末考试，但每天晚上还是有些空闲时间的，想着今年要好好经营一番GitHub，因为今年给自己定下了一个“宏大”的计划——打满小绿点！当然在执行这个计划的过程中可能会由于某些突发情况导致“断点”，但梦想还是要有的嘛。 因此，啃下小程序就成为了我今年的第二件事情（第一件事为iBistu 4.0），完成这个去年就十分想踏入的“坑”。在去年也就是上个学期的某一天得知小程序面向个人开发者后，就一直按捺">
+<meta name="twitter:image" content="http://7xszq8.com1.z0.glb.clouddn.com/2018:1:8%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%88%9D%E6%8E%A2.jpg">
+    
+    
+        
+          
+              <link rel="shortcut icon" href="/images/favicon.ico">
+          
+        
+        
+          
+            <link rel="icon" type="image/png" href="/images/favicon-192x192.png" sizes="192x192">
+          
+        
+        
+          
+            <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+          
+        
+    
+    <!-- title -->
+    <title>小程序初探</title>
+    <!-- styles -->
+    <link rel="stylesheet" href="/css/style.css">
+    <!-- rss -->
+    
+    
+</head>
+
+<body>
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#"><i class="fa fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fa fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fa fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+         
+          <li><a href="https://github.com/windstormeye">Projects</a></li>
+         
+          <li><a href="http://www.pjhubs.com">Life</a></li>
+        
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        
+        <li><a class="icon" href="/2017/12/31/使用微信＋树莓派＋Arduino＋服务器构建智能家庭小助手/"><i class="fa fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        
+        <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" href="#"><i class="fa fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=http://pjhubs.cn/2018/01/08/小程序初探/"><i class="fa fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=http://pjhubs.cn/2018/01/08/小程序初探/&text=小程序初探"><i class="fa fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=http://pjhubs.cn/2018/01/08/小程序初探/&title=小程序初探"><i class="fa fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http://pjhubs.cn/2018/01/08/小程序初探/&is_video=false&description=小程序初探"><i class="fa fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=小程序初探&body=Check out this article: http://pjhubs.cn/2018/01/08/小程序初探/"><i class="fa fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=http://pjhubs.cn/2018/01/08/小程序初探/&title=小程序初探"><i class="fa fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=http://pjhubs.cn/2018/01/08/小程序初探/&title=小程序初探"><i class="fa fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=http://pjhubs.cn/2018/01/08/小程序初探/&title=小程序初探"><i class="fa fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=http://pjhubs.cn/2018/01/08/小程序初探/&title=小程序初探"><i class="fa fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=http://pjhubs.cn/2018/01/08/小程序初探/&name=小程序初探&description="><i class="fa fa-tumblr " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+      
+    </div>
+  </span>
+</div>
+
+    
+    <div class="content index width mx-auto px2 my4">
+        
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        小程序初探
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">PJHubs</span>
+      </span>
+      
+    <div class="postdate">
+        <time datetime="2018-01-08T14:37:52.000Z" itemprop="datePublished">2018-01-08</time>
+    </div>
+
+
+      
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link" href="/tags/小程序/">小程序</a>, <a class="tag-link" href="/tags/微信/">微信</a>
+    </div>
+
+
+      <span id="busuanzi_container_page_pv">
+  	总阅读<span id="busuanzi_value_page_pv"></span>次
+      </span>
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <p>近期筹备期末考试，但每天晚上还是有些空闲时间的，想着今年要好好经营一番GitHub，因为今年给自己定下了一个“宏大”的计划——打满小绿点！当然在执行这个计划的过程中可能会由于某些突发情况导致“断点”，但梦想还是要有的嘛。</p>
+<p>因此，啃下小程序就成为了我今年的第二件事情（第一件事为iBistu 4.0），完成这个去年就十分想踏入的“坑”。在去年也就是上个学期的某一天得知小程序面向个人开发者后，就一直按捺不住自己，总想着试一试，但因为当时开始了第一份实习工作，导致这个计划迟迟未能展开。最难受的是没想到在上学期末总共收到了两份小程序开发的外包需求，一咬牙用了大概一晚上加一个白天的时间吭吭哧哧的摸索了一番，最后的结果是——放弃。🙂把这个外包需求移交给其它同学后，草草了事。</p>
+<p>但是现在不一样了啊，当时是因为动机不纯，现在有大把的时间可以快活~也就把这个事情提上了日程。小程序，张小龙同学给微信生态又注入的一个新成员，用张小龙同学的话来说，之所以要推出小程序，初衷是因为，“让信息触手可及，改变应用程序需要下载、安装的繁琐过程”。🙄，俗话说的好，话不能说的太满，后续发生的事情大家想必都已经了解。</p>
+<p>在小程序推出至今也用了大大小小不下十几个小程序，不得不说确实是达到了张小龙同学所说的“用完即走”的概念，而且依托于微信开发团队强大的封装能力，为小程序提供了调用非常简单的API，使用起来难度比Native降了不止一个层级。在此给大家推荐两本书，<br>  <br>  <div align="center"><br>  <img src="http://7xszq8.com1.z0.glb.clouddn.com/2018:1:8%E5%B0%8F%E7%A8%8B%E5%BA%8F%E5%88%9D%E6%8E%A2.jpg" width="80%" height="80%" align="center"><br>  </div></p>
+<p>我主要也是通过这两本书和网上的一些教学视频等资料习得小程序开发的核心内容，并且采用<a href="https://www.v2ex.com" target="_blank" rel="noopener">V2EX</a>所公开的API做了一个简单的小程序<a href="https://github.com/windstormeye/V2EX-Little-Program" target="_blank" rel="noopener">demo</a>，为后续继续搞事情做铺垫。</p>
+<p>我们先来明确几个概念，</p>
+<ol>
+<li>微信对小程序的包大小限制在了1M以内。所以尽可能的进行封装；</li>
+<li>如果你有使用到tabBar，微信对小程序的tabBar图片资源推荐尺寸为81*81px，并且大小不超过40KB；</li>
+<li>小程序与目前的前端开发技术有部分区别，比如无div概念，但有view标签，可充当div；无p、span标签，但text标签，且不能渲染HTML，只能text标签才能被选中；</li>
+<li>如果你有使用到&lt; image&gt;标签，但未设置size，小程序的默认图片大小为300*255；</li>
+<li>跳转页面的wx.navigateTo() 只能跳转非tabBar页面；</li>
+<li>小程序官方强烈推荐使用flex布局（弹性布局）；</li>
+<li>如果你要在小程序中访问URL资源，及得一定要先到小程序后台进行安全域名配置安全域名，否则你将无法进行网络请求。</li>
+<li>小程序一个页面（假设为home页面）有以下四个文件组成：<br> a. home.js：当前页面的网络请求、页面跳转等逻辑；<br> b. home.json：当前页面的一些配置，比如是否支持山下拉刷新等；<br> c. home.wxml：当前页面UI布局（相当于HTML）；<br> d. home.wxss：当前页面的UI美化（相当于CSS）</li>
+</ol>
+<hr>
+<p>如果你之前有过一点web开发经验，会发现它的web端设计实际上是可以直接套用在小程序上的，只不过你还需要进行做很多标签的适配，比如像上文所说的，需要把div换成view等，但因此次只是学习小程序的核心内容，所以样式部分我们就不花费太大心思了，凑合着写写。😀</p>
+<p>做任何事情都需要提前准备，给V2EX做小程序端也是一样的，我们需要设计一套简单的交互及UI，当然你也可以用纸笔直接画，在此我推荐大家去使用<a href="https://modao.cc/" target="_blank" rel="noopener">墨刀</a>，这个原型设计工具目前在产品中传播得很广，使用和接受程度较高。因为也是原型设计，我就不把自己设计得丑陋不堪的UI个稿放出来了。设计如下：<br>  <br>  <div align="center"><br>  <img src="http://7xszq8.com1.z0.glb.clouddn.com/%E5%B0%8F%E7%A8%8B%E5%BA%8F3.png" width="40%" height="40%" align="center"><br>  </div></p>
+<p>参照V2EX的web端设计，我们可以发现其是一个列表，只需要用到一个image、四个text和几个view标签做布局就好了<br><br>  <div align="center"><br>  <img src="http://7xszq8.com1.z0.glb.clouddn.com/V2EX.png" width="100%" height="100%" align="center"><br></div><br>该列表下展示出了各个tab下的相关内容，所以，我就直接套用了它的信息流展示展示方式，下面是做好的最终展示，<br><br>  <div align="center"><br>  <img src="http://7xszq8.com1.z0.glb.clouddn.com/V2EX%E5%B0%8F%E7%A8%8B%E5%BA%8F2.gif" width="40%" height="40%" align="center"><br></div></p>
+<hr>
+<p>经过三天晚上的摸索，慢慢的发现了开发小程序的一些套路，<a href="https://github.com/windstormeye/V2EX-Little-Program" target="_blank" rel="noopener">工程在这</a>，第一次写小程序，很多地方考虑的还是比较肤浅，只能说是勉强入了门。给我整体的感觉小程序确实不能承载很多以往Native能够做到的事情，缺点还是不少，而且越写越觉得就是在写web啊，但它就不是web，运行效率跟Native不相上下（还是有些粗糙的地方），它能做的事情真的是少之又少，如果你只是想在微信这个生态里玩，那没问题你会很嗨皮，如果你要想稍微跳出这个圈子发挥点特长，对不起不行。</p>
+<p>不过换句话来说，小程序的这些缺点其实也正是它的优势所在，它抛弃了众多设备特性抹平了各种不同设备的棱角，大大的缩小了适配所带来的庞大工作量，确实还真挺适合作为初创团队或者个人开发者搞些小事情的（而且我觉得也就适合做点小事情了）。不过我们最终做出一个小程序，千万记得一定要在真机上进行测试。关于小程序开发的更多细节，大家可以看<a href="https://mp.weixin.qq.com/debug/wxadoc/dev/" target="_blank" rel="noopener">官方文档</a>，说句心里话，小程序学起来一点都不难，但是想要设计出一个好的小程序确实得需要下很大功夫的，在这么一个受限的环境下想玩出不一样的东西，嗯。。各位同学加油吧💪。</p>
+<p>后续想做一个iBistu新闻小程序，把现有在iBistu上的新闻模块抽离出来，单独开发一个小程序去作为承载的入口，也算是继续开拓自己的技能吧。🙂</p>
+
+  </div>
+
+</article>
+
+
+
+    </div>
+    
+      <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+         
+          <li><a href="https://github.com/windstormeye">Projects</a></li>
+         
+          <li><a href="http://www.pjhubs.com">Life</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      
+    </div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=http://pjhubs.cn/2018/01/08/小程序初探/"><i class="fa fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=http://pjhubs.cn/2018/01/08/小程序初探/&text=小程序初探"><i class="fa fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=http://pjhubs.cn/2018/01/08/小程序初探/&title=小程序初探"><i class="fa fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http://pjhubs.cn/2018/01/08/小程序初探/&is_video=false&description=小程序初探"><i class="fa fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=小程序初探&body=Check out this article: http://pjhubs.cn/2018/01/08/小程序初探/"><i class="fa fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=http://pjhubs.cn/2018/01/08/小程序初探/&title=小程序初探"><i class="fa fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=http://pjhubs.cn/2018/01/08/小程序初探/&title=小程序初探"><i class="fa fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=http://pjhubs.cn/2018/01/08/小程序初探/&title=小程序初探"><i class="fa fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=http://pjhubs.cn/2018/01/08/小程序初探/&title=小程序初探"><i class="fa fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=http://pjhubs.cn/2018/01/08/小程序初探/&name=小程序初探&description="><i class="fa fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+      <ul>
+        <li id="toc"><a class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fa fa-list fa-lg" aria-hidden="true"></i> TOC</a></li>
+        <li id="share"><a class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fa fa-share-alt fa-lg" aria-hidden="true"></i> Share</a></li>
+        <li id="top" style="display:none"><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a></li>
+        <li id="menu"><a class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fa fa-bars fa-lg" aria-hidden="true"></i> Menu</a></li>
+      </ul>
+    </div>
+
+  </div>
+</div>
+
+    
+    <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy; 2018 Piron
+	<span id="busuanzi_container_site_pv">
+  		总访问<span id="busuanzi_value_site_pv"></span>次
+	</span>		
+</div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+         
+          <li><a href="https://github.com/windstormeye">Projects</a></li>
+         
+          <li><a href="http://www.pjhubs.com">Life</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+</footer>
+
+</body>
+</html>
+<!-- styles -->
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+<link rel="stylesheet" href="/lib/meslo-LG/styles.css">
+<link rel="stylesheet" href="/lib/justified-gallery/justifiedGallery.min.css">
+
+<!-- jquery -->
+<script src="/lib/jquery/jquery.min.js"></script>
+<script src="/lib/justified-gallery/jquery.justifiedGallery.min.js"></script>
+<script src="/js/main.js"></script>
+<!-- search -->
+
+<!-- Google Analytics -->
+
+    <script type="text/javascript">
+        (function(i,s,o,g,r,a,m) {i['GoogleAnalyticsObject']=r;i[r]=i[r]||function() {
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-86660611-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+
+<!-- Disqus Comments -->
+
+
