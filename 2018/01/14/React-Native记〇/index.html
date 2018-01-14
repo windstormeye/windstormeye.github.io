@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="description" content="emmm，这是我今年的第三件事。微信小程序的学习告一段落，开始正式进入RN的学习，RN到现在发展了将近三年，业界有对其有非常大的赞誉，而且现目前不管是整体架构成熟度还是社区的活跃度都非常靠前，可以说是杀入的好时机（其实已经很晚了。）正适合我这种吃不了第一口肉的人。 之所以要学习RN有这么几点原因，其一是有即将开始的项目；其二同样是观望了RN很久，一直很想投身学习；其三就是拓展自己的技能树了。🙂。">
+<meta name="keywords" content="React-Native">
+<meta property="og:type" content="article">
+<meta property="og:title" content="React-Native记〇">
+<meta property="og:url" content="http://pjhubs.cn/2018/01/14/React-Native记〇/index.html">
+<meta property="og:site_name" content="PJHubs">
+<meta property="og:description" content="emmm，这是我今年的第三件事。微信小程序的学习告一段落，开始正式进入RN的学习，RN到现在发展了将近三年，业界有对其有非常大的赞誉，而且现目前不管是整体架构成熟度还是社区的活跃度都非常靠前，可以说是杀入的好时机（其实已经很晚了。）正适合我这种吃不了第一口肉的人。 之所以要学习RN有这么几点原因，其一是有即将开始的项目；其二同样是观望了RN很久，一直很想投身学习；其三就是拓展自己的技能树了。🙂。">
+<meta property="og:image" content="http://7xszq8.com1.z0.glb.clouddn.com/RN02.png">
+<meta property="og:image" content="http://7xszq8.com1.z0.glb.clouddn.com/WechatIMG88664.jpeg
+">
+<meta property="og:updated_time" content="2018-01-14T15:43:08.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="React-Native记〇">
+<meta name="twitter:description" content="emmm，这是我今年的第三件事。微信小程序的学习告一段落，开始正式进入RN的学习，RN到现在发展了将近三年，业界有对其有非常大的赞誉，而且现目前不管是整体架构成熟度还是社区的活跃度都非常靠前，可以说是杀入的好时机（其实已经很晚了。）正适合我这种吃不了第一口肉的人。 之所以要学习RN有这么几点原因，其一是有即将开始的项目；其二同样是观望了RN很久，一直很想投身学习；其三就是拓展自己的技能树了。🙂。">
+<meta name="twitter:image" content="http://7xszq8.com1.z0.glb.clouddn.com/RN02.png">
+    
+    
+        
+          
+              <link rel="shortcut icon" href="/images/favicon.ico">
+          
+        
+        
+          
+            <link rel="icon" type="image/png" href="/images/favicon-192x192.png" sizes="192x192">
+          
+        
+        
+          
+            <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+          
+        
+    
+    <!-- title -->
+    <title>React-Native记〇</title>
+    <!-- styles -->
+    <link rel="stylesheet" href="/css/style.css">
+    <!-- rss -->
+    
+    
+</head>
+
+<body>
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#"><i class="fa fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fa fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fa fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+         
+          <li><a href="https://github.com/windstormeye">Projects</a></li>
+         
+          <li><a href="http://www.pjhubs.com">Life</a></li>
+        
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        
+        <li><a class="icon" href="/2018/01/13/小程序初探（二）/"><i class="fa fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        
+        <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" href="#"><i class="fa fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=http://pjhubs.cn/2018/01/14/React-Native记〇/"><i class="fa fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=http://pjhubs.cn/2018/01/14/React-Native记〇/&text=React-Native记〇"><i class="fa fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=http://pjhubs.cn/2018/01/14/React-Native记〇/&title=React-Native记〇"><i class="fa fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http://pjhubs.cn/2018/01/14/React-Native记〇/&is_video=false&description=React-Native记〇"><i class="fa fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=React-Native记〇&body=Check out this article: http://pjhubs.cn/2018/01/14/React-Native记〇/"><i class="fa fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=http://pjhubs.cn/2018/01/14/React-Native记〇/&title=React-Native记〇"><i class="fa fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=http://pjhubs.cn/2018/01/14/React-Native记〇/&title=React-Native记〇"><i class="fa fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=http://pjhubs.cn/2018/01/14/React-Native记〇/&title=React-Native记〇"><i class="fa fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=http://pjhubs.cn/2018/01/14/React-Native记〇/&title=React-Native记〇"><i class="fa fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=http://pjhubs.cn/2018/01/14/React-Native记〇/&name=React-Native记〇&description="><i class="fa fa-tumblr " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+      
+    </div>
+  </span>
+</div>
+
+    
+    <div class="content index width mx-auto px2 my4">
+        
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        React-Native记〇
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">PJHubs</span>
+      </span>
+      
+    <div class="postdate">
+        <time datetime="2018-01-14T13:11:31.000Z" itemprop="datePublished">2018-01-14</time>
+    </div>
+
+
+      
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link" href="/tags/React-Native/">React-Native</a>
+    </div>
+
+
+      <span id="busuanzi_container_page_pv">
+  	总阅读<span id="busuanzi_value_page_pv"></span>次
+      </span>
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <p>emmm，这是我今年的第三件事。微信小程序的学习告一段落，开始正式进入RN的学习，RN到现在发展了将近三年，业界有对其有非常大的赞誉，而且现目前不管是整体架构成熟度还是社区的活跃度都非常靠前，可以说是杀入的好时机（其实已经很晚了。）正适合我这种吃不了第一口肉的人。</p>
+<p>之所以要学习RN有这么几点原因，其一是有即将开始的项目；其二同样是观望了RN很久，一直很想投身学习；其三就是拓展自己的技能树了。🙂。这次折腾了一下RN的开发环境，刚开始以为会非常顺利，一步到位，实际上却把自己坑得不浅，在此记录一番，给各位也想杀入RN的同学提个醒，不要把时间再次浪费。</p>
+<p>在正式进入开发之前，需要我们本地环境上已经安装好Node.js，而安装Node.js有两种方式，你可以去<a href="https://nodejs.org/en/" target="_blank" rel="noopener">官网</a>上下载安装包，直接点击解压出的pkg即可，另外一个方式通过Homebrew（Mac），Homebrew是一款Mac下的一款非常强大软件包管理工具，如果之前没安装过的话，可以通过这行原汁原味的官方安装方法搬运，</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"</span><br></pre></td></tr></table></figure>
+<p>安装好Homebrew后，我们通过Homebrew来一步下载node，<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> brew install node</span><br></pre></td></tr></table></figure></p>
+<p>RN官网上是这么写的，但我下载下来的node中并没有顺便也把npm也给一块儿下了（npm是管理node.js的包管理工具），可能每个人的环境不一样？还是我下的node版本太低，没自带npm，如果你发现通过直接install node下载好的node跟我一样也没有npm，先卸载掉之前安装的npm，</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew uninstall node</span><br></pre></td></tr></table></figure>
+<p>随后再补充参数，</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> brew install node --with -npm</span><br></pre></td></tr></table></figure>
+<p>当然，如果你是从官网上下载手动安装的话，就不用管这个问题了。此时可以执行<strong>node -v和npm -v</strong>来查看这两个东西是否都安装完毕。</p>
+<p>接着，我们再通过npm来安装react-native，</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> npm install -g react-native-cli</span><br></pre></td></tr></table></figure>
+<p>官网上说，如果你在安装过程中遇到提示npmlog模块找不到的情况，可以先尝试这么做，(我没遇到过)<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> curl -0 -L https://npmjs.org/install.sh | sudo sh.</span><br></pre></td></tr></table></figure></p>
+<p>根据官网的建议，我们还需要再安装<a href="https://github.com/facebook/watchman" target="_blank" rel="noopener">watchman</a>，它的最大作用是用来监听文件状态的改变，也就是当被管理的目录下发生任何文件的增删改查它都会进行监听记录，使用它能够加速每次RN工程目录发生变化时再编译的过程，其实咱们不使用watchman也是OK的，无非就是等嘛，RN工程大了以后每次编译就出去散个步嘛。加了watchman后，针对比前后两次提交编译的请求，只编译有改动的文件，这样能够减少编译所耗费的时间。RN推荐的做法是，装，</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew install watchman</span><br></pre></td></tr></table></figure>
+<p>以上内容都完成后，此时我们RN的本地开发环境都已经弄好了。我们来创建一个工程，<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> react-native init '你的工程名字'</span><br><span class="line"><span class="meta">#</span> 此处就以pjhubsssssss为例 #</span><br></pre></td></tr></table></figure></p>
+<p>此时，我们会等待一段巨特么长（长到我要骂人了）的时间，等到项目新建完了以后，我们可以看到以下的目录结构，</p>
+  <div align="center"><br>  <img src="http://7xszq8.com1.z0.glb.clouddn.com/RN02.png" width="40%" height="40%" align="center"><br>  </div>
+
+<p>  <strong>__tests__：</strong>RN的单元测试文件夹；<br>  <strong>android：</strong>Android工程；<br>  <strong>ios：</strong>iOS工程；<br>  <strong>node_modules：</strong>RN的模块依赖管理（可以认为是Maven或pod）；<br>  <strong>App.js：</strong>相当于对应平台下的MainActivity.java或ViewController.m；<br>  <strong>app.json：</strong>RN工程的一些配置，比如工程名等；<br>  <strong>index.js：</strong>目前我对这个理解是一个bridge，Android和iOS工程分别对其读取签名。<br>  <strong>package-lock.json和package.json：</strong>都是npm用来管理RN的。</p>
+<p>工程初始化后，我们此时可以如此这般运行demo</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> react-native run-ios</span><br></pre></td></tr></table></figure>
+<p>执行完命令后，会再次等到一次又特么巨长的编译时间（跟Native对比起来差距真的太明显了）。等了一会，我们会发现跑起了一个iPhone 6的模拟器。iOS工程demo就这么顺利的运行起来了，接下来，我们来好好的整一整Android。🙂</p>
+<p>既然运行iOS工程是run-ios那么运行Android工程就一定是run-android了，看了一眼官方文档，要求我们先把模拟器运行起来。打开我一年前下的Android studio，emmmm，它开始提示我要更新一堆东西了，刚开始没管，直接去把模拟器打开，发生了各种迷之错误（心里开始怀念Xcode的各种好），比如Gradle版本、SDK位置错误等等，最后不行了，重新去下了3.0.1，所有问题全部解决。🙂</p>
+<p>运行模拟器后执行，</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">$</span> react-native run-android</span><br></pre></td></tr></table></figure>
+<p>此时发生了一个错误，<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">java.lang.RuntimeException: SDK location not found. Define location with sdk.dir in the local.properties file or with an ANDROID_HOME environment variable.</span><br></pre></td></tr></table></figure></p>
+<p>意思就是在local.properties这个文件中没找到ANDROID_HOME，也即android SDK。解决的办法就是在Android工程目录下的local.properties文件中添加对应的android SDK路径，<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sdk.dir = /Users/incloud/Library/Android/sdk</span><br><span class="line"><span class="meta">#</span> 供参考</span><br></pre></td></tr></table></figure></p>
+<p>此时再执行run命令，即可看到下载了对应工程名的apk已经下载到了应用程序列表里，并且还会自动起一个终端记录对应的操作log。是的，iOS是直接帮你run起来，而Android是给你load到应用程序列表里，你自己去翻吧。2333</p>
+<p>如果此时你并未关闭这个终端，而再次新建了一个RN工程，并且还run了它，那么会告诉你端口被占用，因为RN默认端口是8081，我们可以这么做来更改端口号，<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">react-native start --port 8083</span><br></pre></td></tr></table></figure></p>
+<p>这个问题解决后，它可能还会告诉你’…xxx has been register…’，刚开始出现这问题，我一直以为是iOS或Android工程的签名没弄好，苦恼了好久，最后没想到居然是因为上一个工程自动起的进程终端没关闭，导致下一个新建的工程运行后判断log进程终端还在，就套用了之前的终端，就导致签名冲突。</p>
+<p>po一张完成图，<br>  <div align="center"><br>  <img src="http://7xszq8.com1.z0.glb.clouddn.com/WechatIMG88664.jpeg
+" width="100%" height="100%" align="center"><br>  </div></p>
+<hr>
+<p>以上就是本次React Native探路的第一步，总的来看，坑是不少，只能祝愿自己今后能避免部分坑吧。😂</p>
+
+  </div>
+
+</article>
+
+
+
+    </div>
+    
+      <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+         
+          <li><a href="https://github.com/windstormeye">Projects</a></li>
+         
+          <li><a href="http://www.pjhubs.com">Life</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      
+    </div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=http://pjhubs.cn/2018/01/14/React-Native记〇/"><i class="fa fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=http://pjhubs.cn/2018/01/14/React-Native记〇/&text=React-Native记〇"><i class="fa fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=http://pjhubs.cn/2018/01/14/React-Native记〇/&title=React-Native记〇"><i class="fa fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http://pjhubs.cn/2018/01/14/React-Native记〇/&is_video=false&description=React-Native记〇"><i class="fa fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=React-Native记〇&body=Check out this article: http://pjhubs.cn/2018/01/14/React-Native记〇/"><i class="fa fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=http://pjhubs.cn/2018/01/14/React-Native记〇/&title=React-Native记〇"><i class="fa fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=http://pjhubs.cn/2018/01/14/React-Native记〇/&title=React-Native记〇"><i class="fa fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=http://pjhubs.cn/2018/01/14/React-Native记〇/&title=React-Native记〇"><i class="fa fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=http://pjhubs.cn/2018/01/14/React-Native记〇/&title=React-Native记〇"><i class="fa fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=http://pjhubs.cn/2018/01/14/React-Native记〇/&name=React-Native记〇&description="><i class="fa fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+      <ul>
+        <li id="toc"><a class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fa fa-list fa-lg" aria-hidden="true"></i> TOC</a></li>
+        <li id="share"><a class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fa fa-share-alt fa-lg" aria-hidden="true"></i> Share</a></li>
+        <li id="top" style="display:none"><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a></li>
+        <li id="menu"><a class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fa fa-bars fa-lg" aria-hidden="true"></i> Menu</a></li>
+      </ul>
+    </div>
+
+  </div>
+</div>
+
+    
+    <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy; 2018 Piron
+	<span id="busuanzi_container_site_pv">
+  		总访问<span id="busuanzi_value_site_pv"></span>次
+	</span>		
+</div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/archives/">Writing</a></li>
+         
+          <li><a href="https://github.com/windstormeye">Projects</a></li>
+         
+          <li><a href="http://www.pjhubs.com">Life</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+</footer>
+
+</body>
+</html>
+<!-- styles -->
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+<link rel="stylesheet" href="/lib/meslo-LG/styles.css">
+<link rel="stylesheet" href="/lib/justified-gallery/justifiedGallery.min.css">
+
+<!-- jquery -->
+<script src="/lib/jquery/jquery.min.js"></script>
+<script src="/lib/justified-gallery/jquery.justifiedGallery.min.js"></script>
+<script src="/js/main.js"></script>
+<!-- search -->
+
+<!-- Google Analytics -->
+
+    <script type="text/javascript">
+        (function(i,s,o,g,r,a,m) {i['GoogleAnalyticsObject']=r;i[r]=i[r]||function() {
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-86660611-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+
+<!-- Disqus Comments -->
+
+
