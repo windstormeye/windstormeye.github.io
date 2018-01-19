@@ -16,7 +16,7 @@
 <meta property="og:image" content="http://7xszq8.com1.z0.glb.clouddn.com/RN02.png">
 <meta property="og:image" content="http://7xszq8.com1.z0.glb.clouddn.com/WechatIMG88664.jpeg
 ">
-<meta property="og:updated_time" content="2018-01-14T15:43:08.000Z">
+<meta property="og:updated_time" content="2018-01-15T13:59:41.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="React-Native记〇">
 <meta name="twitter:description" content="emmm，这是我今年的第三件事。微信小程序的学习告一段落，开始正式进入RN的学习，RN到现在发展了将近三年，业界有对其有非常大的赞誉，而且现目前不管是整体架构成熟度还是社区的活跃度都非常靠前，可以说是杀入的好时机（其实已经很晚了。）正适合我这种吃不了第一口肉的人。 之所以要学习RN有这么几点原因，其一是有即将开始的项目；其二同样是观望了RN很久，一直很想投身学习；其三就是拓展自己的技能树了。🙂。">
@@ -71,6 +71,8 @@
     <br/>
     <span id="actions">
       <ul>
+        
+        <li><a class="icon" href="/2018/01/19/React-Native记（一）/"><i class="fa fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
         
         
         <li><a class="icon" href="/2018/01/13/小程序初探（二）/"><i class="fa fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
@@ -173,6 +175,8 @@
 <p>此时再执行run命令，即可看到下载了对应工程名的apk已经下载到了应用程序列表里，并且还会自动起一个终端记录对应的操作log。是的，iOS是直接帮你run起来，而Android是给你load到应用程序列表里，你自己去翻吧。2333</p>
 <p>如果此时你并未关闭这个终端，而再次新建了一个RN工程，并且还run了它，那么会告诉你端口被占用，因为RN默认端口是8081，我们可以这么做来更改端口号，<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">react-native start --port 8083</span><br></pre></td></tr></table></figure></p>
 <p>这个问题解决后，它可能还会告诉你’…xxx has been register…’，刚开始出现这问题，我一直以为是iOS或Android工程的签名没弄好，苦恼了好久，最后没想到居然是因为上一个工程自动起的进程终端没关闭，导致下一个新建的工程运行后判断log进程终端还在，就套用了之前的终端，就导致签名冲突。</p>
+<p>可能还会出现这么个问题，<br><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">* What went wrong:</span><br><span class="line">A problem occurred configuring project ':app'.</span><br><span class="line"><span class="meta">&gt;</span> Failed to notify project evaluation listener.</span><br><span class="line"><span class="meta">   &gt;</span> com.android.build.gradle.tasks.factory.AndroidJavaCompile.setDependencyCacheDir(Ljava/io/File;)V</span><br><span class="line"></span><br><span class="line">* Try:</span><br><span class="line">Run with --stacktrace option to get the stack trace. Run with --info or --debug option to get more log output.</span><br><span class="line"></span><br><span class="line">* Get more help at https://help.gradle.org</span><br><span class="line"></span><br><span class="line">BUILD FAILED in 0s</span><br><span class="line">Could not install the app on the device, read the error above for details.</span><br><span class="line">Make sure you have an Android emulator running or a device connected and have</span><br><span class="line">set up your Android development environment:</span><br><span class="line">https://facebook.github.io/react-native/docs/android-setup.html</span><br></pre></td></tr></table></figure></p>
+<p>懵逼了好久，才发现原来是因为之前创建好RN工程后，打开了Android Studio，它提示有更新我就更新了，导致Android Studio和RN工程中的gradle版本不一致导致的，现在还没找到更改的手段，我只能重新init了一个工程，大家如果知道一定要告诉我🙏🙏🙏🙏</p>
 <p>po一张完成图，<br>  <div align="center"><br>  <img src="http://7xszq8.com1.z0.glb.clouddn.com/WechatIMG88664.jpeg
 " width="100%" height="100%" align="center"><br>  </div></p>
 <hr>
