@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="description" content="这是iOS开发More系列的弹幕练习总结。关于弹幕的实现在GitHub上已经有一堆的实现了，国内外都有大量的第三方库，并且做的都不错，但是给我的感觉弹幕的简单实现并不需要多少精力，遂有了这次练习。 先来看整体实现（可能有些丑😓），  此次的弹幕实现只是个练习，很多地方都做得不够完善，比如并未加入实时视频流，所以实际上实现的甚至连demo都不是，只能勉强说是造了个型，只抓住了最核心的部分而已。 1">
+<meta name="keywords" content="iOS,弹幕">
+<meta property="og:type" content="article">
+<meta property="og:title" content="More-弹幕">
+<meta property="og:url" content="http://pjhubs.cn/2018/02/08/More-弹幕/index.html">
+<meta property="og:site_name" content="PJHubs">
+<meta property="og:description" content="这是iOS开发More系列的弹幕练习总结。关于弹幕的实现在GitHub上已经有一堆的实现了，国内外都有大量的第三方库，并且做的都不错，但是给我的感觉弹幕的简单实现并不需要多少精力，遂有了这次练习。 先来看整体实现（可能有些丑😓），  此次的弹幕实现只是个练习，很多地方都做得不够完善，比如并未加入实时视频流，所以实际上实现的甚至连demo都不是，只能勉强说是造了个型，只抓住了最核心的部分而已。 1">
+<meta property="og:image" content="https://i.loli.net/2018/02/08/5a7c4b6cededd.gif">
+<meta property="og:updated_time" content="2018-02-08T15:21:51.465Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="More-弹幕">
+<meta name="twitter:description" content="这是iOS开发More系列的弹幕练习总结。关于弹幕的实现在GitHub上已经有一堆的实现了，国内外都有大量的第三方库，并且做的都不错，但是给我的感觉弹幕的简单实现并不需要多少精力，遂有了这次练习。 先来看整体实现（可能有些丑😓），  此次的弹幕实现只是个练习，很多地方都做得不够完善，比如并未加入实时视频流，所以实际上实现的甚至连demo都不是，只能勉强说是造了个型，只抓住了最核心的部分而已。 1">
+<meta name="twitter:image" content="https://i.loli.net/2018/02/08/5a7c4b6cededd.gif">
+    
+    
+        
+          
+              <link rel="shortcut icon" href="/images/favicon.ico">
+          
+        
+        
+          
+            <link rel="icon" type="image/png" href="/images/favicon-192x192.png" sizes="192x192">
+          
+        
+        
+          
+            <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+          
+        
+    
+    <!-- title -->
+    <title>More-弹幕</title>
+    <!-- styles -->
+    <link rel="stylesheet" href="/css/style.css">
+    <!-- rss -->
+    
+    
+</head>
+
+<body>
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#"><i class="fa fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fa fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fa fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/archives/">All</a></li>
+         
+          <li><a href="https://github.com/windstormeye">Projects</a></li>
+         
+          <li><a href="http://www.pjhubs.com">Life</a></li>
+        
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        
+        <li><a class="icon" href="/2018/02/02/More-DesignPattern/"><i class="fa fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        
+        <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" href="#"><i class="fa fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=http://pjhubs.cn/2018/02/08/More-弹幕/"><i class="fa fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=http://pjhubs.cn/2018/02/08/More-弹幕/&text=More-弹幕"><i class="fa fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=http://pjhubs.cn/2018/02/08/More-弹幕/&title=More-弹幕"><i class="fa fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http://pjhubs.cn/2018/02/08/More-弹幕/&is_video=false&description=More-弹幕"><i class="fa fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=More-弹幕&body=Check out this article: http://pjhubs.cn/2018/02/08/More-弹幕/"><i class="fa fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=http://pjhubs.cn/2018/02/08/More-弹幕/&title=More-弹幕"><i class="fa fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=http://pjhubs.cn/2018/02/08/More-弹幕/&title=More-弹幕"><i class="fa fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=http://pjhubs.cn/2018/02/08/More-弹幕/&title=More-弹幕"><i class="fa fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=http://pjhubs.cn/2018/02/08/More-弹幕/&title=More-弹幕"><i class="fa fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=http://pjhubs.cn/2018/02/08/More-弹幕/&name=More-弹幕&description="><i class="fa fa-tumblr " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+      
+    </div>
+  </span>
+</div>
+
+    
+    <div class="content index width mx-auto px2 my4">
+        
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        More-弹幕
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">PJHubs</span>
+      </span>
+      
+    <div class="postdate">
+        <time datetime="2018-02-08T10:17:50.000Z" itemprop="datePublished">2018-02-08</time>
+    </div>
+
+
+      
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link" href="/tags/iOS/">iOS</a>, <a class="tag-link" href="/tags/弹幕/">弹幕</a>
+    </div>
+
+
+      <span id="busuanzi_container_page_pv">
+  	总阅读<span id="busuanzi_value_page_pv"></span>次
+      </span>
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <p>这是iOS开发More系列的弹幕练习总结。关于弹幕的实现在GitHub上已经有一堆的实现了，国内外都有大量的第三方库，并且做的都不错，但是给我的感觉弹幕的简单实现并不需要多少精力，遂有了这次练习。</p>
+<p>先来看整体实现（可能有些丑😓），</p>
+<p><img src="https://i.loli.net/2018/02/08/5a7c4b6cededd.gif" width="40%" height="40%" align="center"></p>
+<p>此次的弹幕实现只是个练习，很多地方都做得不够完善，比如并未加入实时视频流，所以实际上实现的甚至连demo都不是，只能勉强说是造了个型，只抓住了最核心的部分而已。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">.</span><br><span class="line">├── 11.png # 头像</span><br><span class="line">├── AppDelegate.h</span><br><span class="line">├── AppDelegate.m</span><br><span class="line">├── BulletManage.h # 弹幕管理类</span><br><span class="line">├── BulletManage.m</span><br><span class="line">├── BulletView.h # 弹幕View</span><br><span class="line">├── BulletView.m</span><br><span class="line">├── ViewController.h</span><br><span class="line">├── ViewController.m</span><br><span class="line">└── main.m</span><br></pre></td></tr></table></figure>
+<p>实现弹幕练习的主要文件目录结构如上所示，可以看到实际上核心类只有BulletManager和BulletView而已，BulletManager负责管理弹幕整体的开始和结束，比如弹幕数据源的获取、弹幕View的初始化、根据弹幕的Start，Enter，End三个状态分别管理对应状态弹幕等，而BulletView则负责管理每个弹幕本身，包括动画时长、何时进入、位于哪个弹道、自身当前状态等。虽然只是个弹幕练习，但是我猜测应该不是使用原生的视频播放器类，要么继承要么重写，否则弹幕整体的View层级和原生视频播放器类是会冲突的，导致弹幕上不去。</p>
+<p>弹幕练习涉及到的UI部分功能编写较多，所以总结中不会涉及到从零开始进行讲解，而是重点放在核心代码部分，具体细节可在文末项目地址load工程进行查看。</p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line">- (<span class="keyword">void</span>)startAnimation &#123;</span><br><span class="line">    <span class="comment">// 根据弹幕长度执行</span></span><br><span class="line">    <span class="comment">// v = s / t</span></span><br><span class="line">    </span><br><span class="line">    <span class="built_in">CGFloat</span> screenWidth = [<span class="built_in">UIScreen</span> mainScreen].bounds.size.width;</span><br><span class="line">    <span class="built_in">CGFloat</span> duration = <span class="number">4.0</span>f;</span><br><span class="line">    <span class="built_in">CGFloat</span> wholeWidth = screenWidth + <span class="built_in">CGRectGetWidth</span>(<span class="keyword">self</span>.bounds);</span><br><span class="line">    </span><br><span class="line">    <span class="comment">// 弹幕开始</span></span><br><span class="line">    <span class="keyword">if</span> (<span class="keyword">self</span>.moveStatusBlock) &#123;</span><br><span class="line">        <span class="keyword">self</span>.moveStatusBlock(Start);</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">// t = s / v</span></span><br><span class="line">    <span class="built_in">CGFloat</span> speed = wholeWidth / duration;</span><br><span class="line">    <span class="built_in">CGFloat</span> enterDuration = <span class="built_in">CGRectGetWidth</span>(<span class="keyword">self</span>.bounds) / speed;</span><br><span class="line">    </span><br><span class="line">    [<span class="keyword">self</span> performSelector:<span class="keyword">@selector</span>(enterScreen) withObject:<span class="literal">nil</span> afterDelay:enterDuration];</span><br><span class="line">    </span><br><span class="line">    __block <span class="built_in">CGRect</span> frame = <span class="keyword">self</span>.frame;</span><br><span class="line">    [<span class="built_in">UIView</span> animateWithDuration:duration delay:<span class="number">0</span> options:<span class="built_in">UIViewAnimationOptionCurveLinear</span> animations:^&#123;</span><br><span class="line">        frame.origin.x -= wholeWidth;</span><br><span class="line">        <span class="keyword">self</span>.frame = frame;</span><br><span class="line">    &#125; completion:^(<span class="built_in">BOOL</span> finished) &#123;</span><br><span class="line">        [<span class="keyword">self</span> removeFromSuperview];</span><br><span class="line">        <span class="keyword">if</span> (<span class="keyword">self</span>.moveStatusBlock) &#123;</span><br><span class="line">            <span class="keyword">self</span>.moveStatusBlock(End);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;];</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">- (<span class="keyword">void</span>)enterScreen &#123;</span><br><span class="line">    <span class="keyword">if</span> (<span class="keyword">self</span>.moveStatusBlock) &#123;</span><br><span class="line">        <span class="keyword">self</span>.moveStatusBlock(Enter);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">- (<span class="keyword">void</span>)stopAnimation &#123;</span><br><span class="line">    [<span class="built_in">NSObject</span> cancelPreviousPerformRequestsWithTarget:<span class="keyword">self</span>];</span><br><span class="line">    [<span class="keyword">self</span>.layer removeAllAnimations];</span><br><span class="line">    [<span class="keyword">self</span> removeFromSuperview];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>以上是BulletView的开始动画方法实现，我们默认每一条弹幕都是从手机屏幕最右边移动到屏幕最左边，移动时间定义为4秒，执行该方法时需要给一个值回调，告诉外部初始化弹幕的类，该条弹幕现在的状态为Start，当弹幕从屏幕最右边即将出现的那一瞬间我们需要把弹幕的状态改为Enter，Enter状态一直持续到弹幕移动到手机屏幕最左边即将消失的那一瞬间。</p>
+<p>保持Enter状态的距离注意应该是由当前手机屏幕的宽度+弹幕的实时长度而不只是屏幕的自身宽度而已，关于计算弹幕的实时长度在此推荐使用NSString的<code>sizeWithAttributes</code>方法。并且，刚开始我使用的是GCD的after方法去做<code>enterDuration</code>时间过后的弹幕销毁，但实际上使用GCD的after方法会一直在<code>enterDuration</code>后循环执行，会导致空指针异常，推荐使用基于runtime的<code>performSelector</code>延迟方法。</p>
+<p>接下里我们来瞅瞅BulletManager弹幕管理类都做了哪些工作。首先是初始化弹幕，默认弹道为三个，</p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">- (<span class="keyword">void</span>)initBulletComment &#123;</span><br><span class="line">    <span class="built_in">NSMutableArray</span>* trajectorys = [<span class="built_in">NSMutableArray</span> arrayWithArray:@[@(<span class="number">0</span>), @(<span class="number">1</span>), @(<span class="number">2</span>)]];</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; <span class="number">3</span>; i++) &#123;</span><br><span class="line">        <span class="keyword">if</span> (<span class="keyword">self</span>.bulletComment.count &gt; <span class="number">0</span>) &#123;</span><br><span class="line">            <span class="comment">// 通过随机数获取到弹幕轨迹</span></span><br><span class="line">            <span class="built_in">NSInteger</span> index = arc4random() % trajectorys.count;</span><br><span class="line">            <span class="keyword">int</span> trajectory = [[trajectorys objectAtIndex:index] intValue];</span><br><span class="line">            [trajectorys removeObjectAtIndex:index];</span><br><span class="line">            <span class="comment">// 去除弹幕数据</span></span><br><span class="line">            <span class="built_in">NSString</span>* comment = [<span class="keyword">self</span>.bulletComment firstObject];</span><br><span class="line">            [<span class="keyword">self</span>.bulletComment removeObjectAtIndex:<span class="number">0</span>];</span><br><span class="line">            <span class="comment">// 创建弹幕</span></span><br><span class="line">            [<span class="keyword">self</span> createBulletView:comment trajectory:trajectory];</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>在创建弹幕的方法中，每创建一个弹幕我们都会拿到一个block回调<code>moveStatusBlock</code>，其有一个状态参数Status，当status发生变化时，都会进入到该block回调中，从上边的弹幕初始化方法中我们也看到了实际上只创建出了三个弹幕而已，而余下的弹幕我们通过了每个弹幕都持有的block回调进行创建。使用block回调能够较为简约的处理一个实例的各种状态值变化时所引发的二次操作。</p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br></pre></td><td class="code"><pre><span class="line">- (<span class="keyword">void</span>)createBulletView:(<span class="built_in">NSString</span> *)comment trajectory:(<span class="keyword">int</span>)trajectory &#123;</span><br><span class="line">    <span class="keyword">if</span> (<span class="keyword">self</span>.isStopAnimation) &#123;</span><br><span class="line">        <span class="keyword">return</span> ;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    BulletView* bulletView = [[BulletView alloc] initWithComment:comment];</span><br><span class="line">    bulletView.trajectory = trajectory;</span><br><span class="line">    [<span class="keyword">self</span>.bulletViews addObject:bulletView];</span><br><span class="line">    </span><br><span class="line">    __<span class="keyword">weak</span> <span class="keyword">typeof</span> (bulletView) weakBulletView = bulletView;</span><br><span class="line">    __<span class="keyword">weak</span> <span class="keyword">typeof</span> (<span class="keyword">self</span>) weakSelf = <span class="keyword">self</span>;</span><br><span class="line">    bulletView.moveStatusBlock = ^(MoveStatus status)&#123;</span><br><span class="line">        <span class="keyword">if</span> (<span class="keyword">self</span>.isStopAnimation) &#123;</span><br><span class="line">            <span class="keyword">return</span> ;</span><br><span class="line">        &#125;</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">switch</span> (status) &#123;</span><br><span class="line">            <span class="keyword">case</span> Start: &#123;</span><br><span class="line">                <span class="comment">// 弹幕开始进入屏幕，将view加入弹幕管理的变量bulletViews中</span></span><br><span class="line">                [weakSelf.bulletViews addObject:weakBulletView];</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">case</span> Enter: &#123;</span><br><span class="line">                <span class="comment">// 弹幕完全进入屏幕，判断是否还有其他内容，如果有则在改弹幕轨迹中创建一个弹幕</span></span><br><span class="line">                <span class="built_in">NSString</span> *comment = [weakSelf nextComment];</span><br><span class="line">                <span class="keyword">if</span> (comment) &#123;</span><br><span class="line">                    [weakSelf createBulletView:comment trajectory:trajectory];</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">case</span> End: &#123;</span><br><span class="line">                <span class="comment">// 弹幕飞出屏幕后从bulletView中删除，释放资源</span></span><br><span class="line">                <span class="keyword">if</span> ([weakSelf.bulletViews containsObject:weakBulletView]) &#123;</span><br><span class="line">                    [weakBulletView stopAnimation];</span><br><span class="line">                    [weakSelf.bulletViews removeObject:weakBulletView];</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">if</span> (weakSelf.bulletViews.count == <span class="number">0</span>) &#123;</span><br><span class="line">                    <span class="comment">// 此时屏幕上已无弹幕，开始循环播放</span></span><br><span class="line">                    <span class="keyword">self</span>.isStopAnimation = <span class="literal">true</span>;</span><br><span class="line">                    [weakSelf start];</span><br><span class="line">                &#125;</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">if</span> (<span class="keyword">self</span>.generateViewBlock) &#123;</span><br><span class="line">        <span class="keyword">self</span>.generateViewBlock(bulletView);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 取下一个弹幕</span></span><br><span class="line">- (<span class="built_in">NSString</span> *)nextComment &#123;</span><br><span class="line">    <span class="keyword">if</span> (<span class="keyword">self</span>.bulletComment.count == <span class="number">0</span>) &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="literal">nil</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">NSString</span> *comment = [<span class="keyword">self</span>.bulletComment firstObject];</span><br><span class="line">    <span class="keyword">if</span> (comment) &#123;</span><br><span class="line">        [<span class="keyword">self</span>.bulletComment removeObjectAtIndex:<span class="number">0</span>];</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> comment;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 弹幕停止</span></span><br><span class="line">- (<span class="keyword">void</span>)stop &#123;</span><br><span class="line">    <span class="keyword">if</span> (<span class="keyword">self</span>.isStopAnimation) &#123;</span><br><span class="line">        <span class="keyword">return</span> ;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">self</span>.isStopAnimation = <span class="literal">true</span>;</span><br><span class="line">    [<span class="keyword">self</span>.bulletViews enumerateObjectsUsingBlock:^(<span class="keyword">id</span>  _Nonnull obj, <span class="built_in">NSUInteger</span> idx, <span class="built_in">BOOL</span> * _Nonnull stop) &#123;</span><br><span class="line">        BulletView* view = obj;</span><br><span class="line">        [view stopAnimation];</span><br><span class="line">        view = <span class="literal">nil</span>;</span><br><span class="line">    &#125;];</span><br><span class="line">    [<span class="keyword">self</span>.bulletViews removeAllObjects];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>在弹幕的<code>stop</code>方法中，使用到了一个枚举器，而枚举器是一种苹果官方推荐的更加面向对象的一种遍历方式，相比于for循环,它具有高度解耦、面向对象、使用方便等优势，当然，你会发现其和for-in有一丢丢思想上的相似，id类型对象<code>obj</code>为遍历枚举到的每一个对象，<code>idx</code>为当前枚举到的所在数组的下标，NSDictionary同样也支持该方法，<code>idx</code>换为了<code>key</code>，BOOL类型<code>stop</code>为跳出枚举循环的标记，赋值为true即可退出。</p>
+<hr>
+<p>以上就是本次弹幕练习的总结，只涉及到了核心代码，还有写小的细节没有说到，<a href="https://github.com/windstormeye/iOSMorePractices/tree/master/liveCommentingPratices" target="_blank" rel="noopener">详细代码见工程😝</a></p>
+
+  </div>
+
+</article>
+
+
+
+    </div>
+    
+      <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/archives/">All</a></li>
+         
+          <li><a href="https://github.com/windstormeye">Projects</a></li>
+         
+          <li><a href="http://www.pjhubs.com">Life</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      
+    </div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=http://pjhubs.cn/2018/02/08/More-弹幕/"><i class="fa fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=http://pjhubs.cn/2018/02/08/More-弹幕/&text=More-弹幕"><i class="fa fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=http://pjhubs.cn/2018/02/08/More-弹幕/&title=More-弹幕"><i class="fa fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http://pjhubs.cn/2018/02/08/More-弹幕/&is_video=false&description=More-弹幕"><i class="fa fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=More-弹幕&body=Check out this article: http://pjhubs.cn/2018/02/08/More-弹幕/"><i class="fa fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=http://pjhubs.cn/2018/02/08/More-弹幕/&title=More-弹幕"><i class="fa fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=http://pjhubs.cn/2018/02/08/More-弹幕/&title=More-弹幕"><i class="fa fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=http://pjhubs.cn/2018/02/08/More-弹幕/&title=More-弹幕"><i class="fa fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=http://pjhubs.cn/2018/02/08/More-弹幕/&title=More-弹幕"><i class="fa fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=http://pjhubs.cn/2018/02/08/More-弹幕/&name=More-弹幕&description="><i class="fa fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+      <ul>
+        <li id="toc"><a class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fa fa-list fa-lg" aria-hidden="true"></i> TOC</a></li>
+        <li id="share"><a class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fa fa-share-alt fa-lg" aria-hidden="true"></i> Share</a></li>
+        <li id="top" style="display:none"><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a></li>
+        <li id="menu"><a class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fa fa-bars fa-lg" aria-hidden="true"></i> Menu</a></li>
+      </ul>
+    </div>
+
+  </div>
+</div>
+
+    
+    <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy; 2018 Piron
+	<span id="busuanzi_container_site_pv">
+  		总访问<span id="busuanzi_value_site_pv"></span>次
+	</span>		
+</div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/archives/">All</a></li>
+         
+          <li><a href="https://github.com/windstormeye">Projects</a></li>
+         
+          <li><a href="http://www.pjhubs.com">Life</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+</footer>
+
+</body>
+</html>
+<!-- styles -->
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+<link rel="stylesheet" href="/lib/meslo-LG/styles.css">
+<link rel="stylesheet" href="/lib/justified-gallery/justifiedGallery.min.css">
+
+<!-- jquery -->
+<script src="/lib/jquery/jquery.min.js"></script>
+<script src="/lib/justified-gallery/jquery.justifiedGallery.min.js"></script>
+<script src="/js/main.js"></script>
+<!-- search -->
+
+<!-- Google Analytics -->
+
+    <script type="text/javascript">
+        (function(i,s,o,g,r,a,m) {i['GoogleAnalyticsObject']=r;i[r]=i[r]||function() {
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-86660611-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+
+<!-- Disqus Comments -->
+
+
