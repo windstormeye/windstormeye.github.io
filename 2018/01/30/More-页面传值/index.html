@@ -10,7 +10,7 @@
 <meta name="keywords" content="iOS,页面传值">
 <meta property="og:type" content="article">
 <meta property="og:title" content="More-页面传值">
-<meta property="og:url" content="http://pjhubs.cn/2018/01/30/More-页面传值/index.html">
+<meta property="og:url" content="http://pjhubs.com/2018/01/30/More-页面传值/index.html">
 <meta property="og:site_name" content="PJHubs">
 <meta property="og:description" content="这篇文章来梳理一番在iOS页面间的传值方式，说到页面传值，不管在任何平台开发中都是一个非常的重要的事情，这就让我想起了当初大一那会儿对Qt还不够熟悉，居然对两个Window之间的传值用了一个全局变量来实现，然后在其它Window中显式声明一个extern标记变量作为数据源。emmm，现在想起来当初真的是蠢洁又扇凉。 在iOS中的页面传值方式主要以下六种：  属性传值（一般） 单例传值（一般） N">
 <meta property="og:image" content="http://7xszq8.com1.z0.glb.clouddn.com/ww%20%285%29.png">
@@ -61,8 +61,6 @@
           <li><a href="/archives/">All</a></li>
          
           <li><a href="https://github.com/windstormeye">Projects</a></li>
-         
-          <li><a href="http://www.pjhubs.com">Life</a></li>
         
       </ul>
     </span>
@@ -86,16 +84,16 @@
     <br/>
     <div id="share" style="display: none">
       <ul>
-  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=http://pjhubs.cn/2018/01/30/More-页面传值/"><i class="fa fa-facebook " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="https://twitter.com/share?url=http://pjhubs.cn/2018/01/30/More-页面传值/&text=More-页面传值"><i class="fa fa-twitter " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=http://pjhubs.cn/2018/01/30/More-页面传值/&title=More-页面传值"><i class="fa fa-linkedin " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http://pjhubs.cn/2018/01/30/More-页面传值/&is_video=false&description=More-页面传值"><i class="fa fa-pinterest " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="mailto:?subject=More-页面传值&body=Check out this article: http://pjhubs.cn/2018/01/30/More-页面传值/"><i class="fa fa-envelope " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="https://getpocket.com/save?url=http://pjhubs.cn/2018/01/30/More-页面传值/&title=More-页面传值"><i class="fa fa-get-pocket " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://reddit.com/submit?url=http://pjhubs.cn/2018/01/30/More-页面传值/&title=More-页面传值"><i class="fa fa-reddit " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=http://pjhubs.cn/2018/01/30/More-页面传值/&title=More-页面传值"><i class="fa fa-stumbleupon " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://digg.com/submit?url=http://pjhubs.cn/2018/01/30/More-页面传值/&title=More-页面传值"><i class="fa fa-digg " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://www.tumblr.com/share/link?url=http://pjhubs.cn/2018/01/30/More-页面传值/&name=More-页面传值&description="><i class="fa fa-tumblr " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=http://pjhubs.com/2018/01/30/More-页面传值/"><i class="fa fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=http://pjhubs.com/2018/01/30/More-页面传值/&text=More-页面传值"><i class="fa fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=http://pjhubs.com/2018/01/30/More-页面传值/&title=More-页面传值"><i class="fa fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http://pjhubs.com/2018/01/30/More-页面传值/&is_video=false&description=More-页面传值"><i class="fa fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=More-页面传值&body=Check out this article: http://pjhubs.com/2018/01/30/More-页面传值/"><i class="fa fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=http://pjhubs.com/2018/01/30/More-页面传值/&title=More-页面传值"><i class="fa fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=http://pjhubs.com/2018/01/30/More-页面传值/&title=More-页面传值"><i class="fa fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=http://pjhubs.com/2018/01/30/More-页面传值/&title=More-页面传值"><i class="fa fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=http://pjhubs.com/2018/01/30/More-页面传值/&title=More-页面传值"><i class="fa fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=http://pjhubs.com/2018/01/30/More-页面传值/&name=More-页面传值&description="><i class="fa fa-tumblr " aria-hidden="true"></i></a></li>
 </ul>
 
     </div>
@@ -215,8 +213,6 @@
           <li><a href="/archives/">All</a></li>
          
           <li><a href="https://github.com/windstormeye">Projects</a></li>
-         
-          <li><a href="http://www.pjhubs.com">Life</a></li>
         
       </ul>
     </div>
@@ -227,16 +223,16 @@
 
     <div id="share-footer" style="display: none">
       <ul>
-  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=http://pjhubs.cn/2018/01/30/More-页面传值/"><i class="fa fa-facebook fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="https://twitter.com/share?url=http://pjhubs.cn/2018/01/30/More-页面传值/&text=More-页面传值"><i class="fa fa-twitter fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=http://pjhubs.cn/2018/01/30/More-页面传值/&title=More-页面传值"><i class="fa fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http://pjhubs.cn/2018/01/30/More-页面传值/&is_video=false&description=More-页面传值"><i class="fa fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="mailto:?subject=More-页面传值&body=Check out this article: http://pjhubs.cn/2018/01/30/More-页面传值/"><i class="fa fa-envelope fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="https://getpocket.com/save?url=http://pjhubs.cn/2018/01/30/More-页面传值/&title=More-页面传值"><i class="fa fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://reddit.com/submit?url=http://pjhubs.cn/2018/01/30/More-页面传值/&title=More-页面传值"><i class="fa fa-reddit fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=http://pjhubs.cn/2018/01/30/More-页面传值/&title=More-页面传值"><i class="fa fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://digg.com/submit?url=http://pjhubs.cn/2018/01/30/More-页面传值/&title=More-页面传值"><i class="fa fa-digg fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://www.tumblr.com/share/link?url=http://pjhubs.cn/2018/01/30/More-页面传值/&name=More-页面传值&description="><i class="fa fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=http://pjhubs.com/2018/01/30/More-页面传值/"><i class="fa fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=http://pjhubs.com/2018/01/30/More-页面传值/&text=More-页面传值"><i class="fa fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=http://pjhubs.com/2018/01/30/More-页面传值/&title=More-页面传值"><i class="fa fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http://pjhubs.com/2018/01/30/More-页面传值/&is_video=false&description=More-页面传值"><i class="fa fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=More-页面传值&body=Check out this article: http://pjhubs.com/2018/01/30/More-页面传值/"><i class="fa fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=http://pjhubs.com/2018/01/30/More-页面传值/&title=More-页面传值"><i class="fa fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=http://pjhubs.com/2018/01/30/More-页面传值/&title=More-页面传值"><i class="fa fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=http://pjhubs.com/2018/01/30/More-页面传值/&title=More-页面传值"><i class="fa fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=http://pjhubs.com/2018/01/30/More-页面传值/&title=More-页面传值"><i class="fa fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=http://pjhubs.com/2018/01/30/More-页面传值/&name=More-页面传值&description="><i class="fa fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
 </ul>
 
     </div>
@@ -270,8 +266,6 @@
           <li><a href="/archives/">All</a></li>
          
           <li><a href="https://github.com/windstormeye">Projects</a></li>
-         
-          <li><a href="http://www.pjhubs.com">Life</a></li>
         
       </ul>
     </nav>

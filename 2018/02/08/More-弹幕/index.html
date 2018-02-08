@@ -10,7 +10,7 @@
 <meta name="keywords" content="iOS,弹幕">
 <meta property="og:type" content="article">
 <meta property="og:title" content="More-弹幕">
-<meta property="og:url" content="http://pjhubs.cn/2018/02/08/More-弹幕/index.html">
+<meta property="og:url" content="http://pjhubs.com/2018/02/08/More-弹幕/index.html">
 <meta property="og:site_name" content="PJHubs">
 <meta property="og:description" content="这是iOS开发More系列的弹幕练习总结。关于弹幕的实现在GitHub上已经有一堆的实现了，国内外都有大量的第三方库，并且做的都不错，但是给我的感觉弹幕的简单实现并不需要多少精力，遂有了这次练习。 先来看整体实现（可能有些丑😓），  此次的弹幕实现只是个练习，很多地方都做得不够完善，比如并未加入实时视频流，所以实际上实现的甚至连demo都不是，只能勉强说是造了个型，只抓住了最核心的部分而已。 1">
 <meta property="og:image" content="https://i.loli.net/2018/02/08/5a7c4b6cededd.gif">
@@ -61,8 +61,6 @@
           <li><a href="/archives/">All</a></li>
          
           <li><a href="https://github.com/windstormeye">Projects</a></li>
-         
-          <li><a href="http://www.pjhubs.com">Life</a></li>
         
       </ul>
     </span>
@@ -84,16 +82,16 @@
     <br/>
     <div id="share" style="display: none">
       <ul>
-  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=http://pjhubs.cn/2018/02/08/More-弹幕/"><i class="fa fa-facebook " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="https://twitter.com/share?url=http://pjhubs.cn/2018/02/08/More-弹幕/&text=More-弹幕"><i class="fa fa-twitter " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=http://pjhubs.cn/2018/02/08/More-弹幕/&title=More-弹幕"><i class="fa fa-linkedin " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http://pjhubs.cn/2018/02/08/More-弹幕/&is_video=false&description=More-弹幕"><i class="fa fa-pinterest " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="mailto:?subject=More-弹幕&body=Check out this article: http://pjhubs.cn/2018/02/08/More-弹幕/"><i class="fa fa-envelope " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="https://getpocket.com/save?url=http://pjhubs.cn/2018/02/08/More-弹幕/&title=More-弹幕"><i class="fa fa-get-pocket " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://reddit.com/submit?url=http://pjhubs.cn/2018/02/08/More-弹幕/&title=More-弹幕"><i class="fa fa-reddit " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=http://pjhubs.cn/2018/02/08/More-弹幕/&title=More-弹幕"><i class="fa fa-stumbleupon " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://digg.com/submit?url=http://pjhubs.cn/2018/02/08/More-弹幕/&title=More-弹幕"><i class="fa fa-digg " aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://www.tumblr.com/share/link?url=http://pjhubs.cn/2018/02/08/More-弹幕/&name=More-弹幕&description="><i class="fa fa-tumblr " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=http://pjhubs.com/2018/02/08/More-弹幕/"><i class="fa fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=http://pjhubs.com/2018/02/08/More-弹幕/&text=More-弹幕"><i class="fa fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=http://pjhubs.com/2018/02/08/More-弹幕/&title=More-弹幕"><i class="fa fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http://pjhubs.com/2018/02/08/More-弹幕/&is_video=false&description=More-弹幕"><i class="fa fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=More-弹幕&body=Check out this article: http://pjhubs.com/2018/02/08/More-弹幕/"><i class="fa fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=http://pjhubs.com/2018/02/08/More-弹幕/&title=More-弹幕"><i class="fa fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=http://pjhubs.com/2018/02/08/More-弹幕/&title=More-弹幕"><i class="fa fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=http://pjhubs.com/2018/02/08/More-弹幕/&title=More-弹幕"><i class="fa fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=http://pjhubs.com/2018/02/08/More-弹幕/&title=More-弹幕"><i class="fa fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=http://pjhubs.com/2018/02/08/More-弹幕/&name=More-弹幕&description="><i class="fa fa-tumblr " aria-hidden="true"></i></a></li>
 </ul>
 
     </div>
@@ -177,8 +175,6 @@
           <li><a href="/archives/">All</a></li>
          
           <li><a href="https://github.com/windstormeye">Projects</a></li>
-         
-          <li><a href="http://www.pjhubs.com">Life</a></li>
         
       </ul>
     </div>
@@ -189,16 +185,16 @@
 
     <div id="share-footer" style="display: none">
       <ul>
-  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=http://pjhubs.cn/2018/02/08/More-弹幕/"><i class="fa fa-facebook fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="https://twitter.com/share?url=http://pjhubs.cn/2018/02/08/More-弹幕/&text=More-弹幕"><i class="fa fa-twitter fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=http://pjhubs.cn/2018/02/08/More-弹幕/&title=More-弹幕"><i class="fa fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http://pjhubs.cn/2018/02/08/More-弹幕/&is_video=false&description=More-弹幕"><i class="fa fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="mailto:?subject=More-弹幕&body=Check out this article: http://pjhubs.cn/2018/02/08/More-弹幕/"><i class="fa fa-envelope fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="https://getpocket.com/save?url=http://pjhubs.cn/2018/02/08/More-弹幕/&title=More-弹幕"><i class="fa fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://reddit.com/submit?url=http://pjhubs.cn/2018/02/08/More-弹幕/&title=More-弹幕"><i class="fa fa-reddit fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=http://pjhubs.cn/2018/02/08/More-弹幕/&title=More-弹幕"><i class="fa fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://digg.com/submit?url=http://pjhubs.cn/2018/02/08/More-弹幕/&title=More-弹幕"><i class="fa fa-digg fa-lg" aria-hidden="true"></i></a></li>
-  <li><a class="icon" href="http://www.tumblr.com/share/link?url=http://pjhubs.cn/2018/02/08/More-弹幕/&name=More-弹幕&description="><i class="fa fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=http://pjhubs.com/2018/02/08/More-弹幕/"><i class="fa fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=http://pjhubs.com/2018/02/08/More-弹幕/&text=More-弹幕"><i class="fa fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=http://pjhubs.com/2018/02/08/More-弹幕/&title=More-弹幕"><i class="fa fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http://pjhubs.com/2018/02/08/More-弹幕/&is_video=false&description=More-弹幕"><i class="fa fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=More-弹幕&body=Check out this article: http://pjhubs.com/2018/02/08/More-弹幕/"><i class="fa fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=http://pjhubs.com/2018/02/08/More-弹幕/&title=More-弹幕"><i class="fa fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=http://pjhubs.com/2018/02/08/More-弹幕/&title=More-弹幕"><i class="fa fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=http://pjhubs.com/2018/02/08/More-弹幕/&title=More-弹幕"><i class="fa fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=http://pjhubs.com/2018/02/08/More-弹幕/&title=More-弹幕"><i class="fa fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=http://pjhubs.com/2018/02/08/More-弹幕/&name=More-弹幕&description="><i class="fa fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
 </ul>
 
     </div>
@@ -232,8 +228,6 @@
           <li><a href="/archives/">All</a></li>
          
           <li><a href="https://github.com/windstormeye">Projects</a></li>
-         
-          <li><a href="http://www.pjhubs.com">Life</a></li>
         
       </ul>
     </nav>
