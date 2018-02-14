@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="description" content="停了一段时间后RN的学习又持续了💪。在停止的这段时间中主要是去做了关于iOS的一些细节加强，这部分内容也是自己之前一直想去总结出来容易遗忘和出错的地方。 随后跟进的RN学习主要是手撸轮播图、ListView的使用、tabBar的使用、Navigator的使用、网络请求的简单认识，也快过年啦，先在此祝各位看友过年好~，因为回到老家网实在是不好，很多事情不方便去做😔，一些零零散散的琐事也时不时的打">
+<meta name="keywords" content="React-Native">
+<meta property="og:type" content="article">
+<meta property="og:title" content="React-Native记（二）">
+<meta property="og:url" content="http://pjhubs.com/2018/02/14/React-Native记（二）/index.html">
+<meta property="og:site_name" content="PJHubs">
+<meta property="og:description" content="停了一段时间后RN的学习又持续了💪。在停止的这段时间中主要是去做了关于iOS的一些细节加强，这部分内容也是自己之前一直想去总结出来容易遗忘和出错的地方。 随后跟进的RN学习主要是手撸轮播图、ListView的使用、tabBar的使用、Navigator的使用、网络请求的简单认识，也快过年啦，先在此祝各位看友过年好~，因为回到老家网实在是不好，很多事情不方便去做😔，一些零零散散的琐事也时不时的打">
+<meta property="og:image" content="https://i.loli.net/2018/02/14/5a843993733f4.gif">
+<meta property="og:image" content="https://i.loli.net/2018/02/14/5a843cb9db199.gif">
+<meta property="og:updated_time" content="2018-02-14T15:56:45.011Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="React-Native记（二）">
+<meta name="twitter:description" content="停了一段时间后RN的学习又持续了💪。在停止的这段时间中主要是去做了关于iOS的一些细节加强，这部分内容也是自己之前一直想去总结出来容易遗忘和出错的地方。 随后跟进的RN学习主要是手撸轮播图、ListView的使用、tabBar的使用、Navigator的使用、网络请求的简单认识，也快过年啦，先在此祝各位看友过年好~，因为回到老家网实在是不好，很多事情不方便去做😔，一些零零散散的琐事也时不时的打">
+<meta name="twitter:image" content="https://i.loli.net/2018/02/14/5a843993733f4.gif">
+    
+    
+        
+          
+              <link rel="shortcut icon" href="/images/favicon.ico">
+          
+        
+        
+          
+            <link rel="icon" type="image/png" href="/images/favicon-192x192.png" sizes="192x192">
+          
+        
+        
+          
+            <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+          
+        
+    
+    <!-- title -->
+    <title>React-Native记（二）</title>
+    <!-- styles -->
+    <link rel="stylesheet" href="/css/style.css">
+    <!-- rss -->
+    
+    
+</head>
+
+<body>
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#"><i class="fa fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fa fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fa fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/archives/">All</a></li>
+         
+          <li><a href="https://github.com/windstormeye">Projects</a></li>
+        
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        
+        <li><a class="icon" href="/2018/02/08/More-弹幕/"><i class="fa fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        
+        <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" href="#"><i class="fa fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=http://pjhubs.com/2018/02/14/React-Native记（二）/"><i class="fa fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=http://pjhubs.com/2018/02/14/React-Native记（二）/&text=React-Native记（二）"><i class="fa fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=http://pjhubs.com/2018/02/14/React-Native记（二）/&title=React-Native记（二）"><i class="fa fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http://pjhubs.com/2018/02/14/React-Native记（二）/&is_video=false&description=React-Native记（二）"><i class="fa fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=React-Native记（二）&body=Check out this article: http://pjhubs.com/2018/02/14/React-Native记（二）/"><i class="fa fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=http://pjhubs.com/2018/02/14/React-Native记（二）/&title=React-Native记（二）"><i class="fa fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=http://pjhubs.com/2018/02/14/React-Native记（二）/&title=React-Native记（二）"><i class="fa fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=http://pjhubs.com/2018/02/14/React-Native记（二）/&title=React-Native记（二）"><i class="fa fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=http://pjhubs.com/2018/02/14/React-Native记（二）/&title=React-Native记（二）"><i class="fa fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=http://pjhubs.com/2018/02/14/React-Native记（二）/&name=React-Native记（二）&description="><i class="fa fa-tumblr " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+      
+    </div>
+  </span>
+</div>
+
+    
+    <div class="content index width mx-auto px2 my4">
+        
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        React-Native记（二）
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">PJHubs</span>
+      </span>
+      
+    <div class="postdate">
+        <time datetime="2018-02-14T03:09:50.000Z" itemprop="datePublished">2018-02-14</time>
+    </div>
+
+
+      
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link" href="/tags/React-Native/">React-Native</a>
+    </div>
+
+
+      <span id="busuanzi_container_page_pv">
+  	总阅读<span id="busuanzi_value_page_pv"></span>次
+      </span>
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <p>停了一段时间后RN的学习又持续了💪。在停止的这段时间中主要是去做了关于iOS的一些细节加强，这部分内容也是自己之前一直想去总结出来容易遗忘和出错的地方。</p>
+<p>随后跟进的RN学习主要是<code>手撸轮播图</code>、<code>ListView的使用</code>、<code>tabBar的使用</code>、<code>Navigator的使用</code>、<code>网络请求的简单认识</code>，也快过年啦，先在此祝各位看友过年好~，因为回到老家网实在是不好，很多事情不方便去做😔，一些零零散散的琐事也时不时的打扰着自己，只能每天推进一点点。</p>
+<p>在这段学习RN的时间中，我主要认识到了RN“真的很垃圾”🙂（注意：这是个双性词！），做一部分内容比Native真的方便超多的（甚至都觉得有些傻），至于哪些地方方便，之前文章中也说的七七八八了，但是重点在于做一些比如轮播图、TabBar这些Native支持得非常好的组件，在RN中就尴尬得不行（后文细谈）。所以在这段时间的学习中我差点萌生了“劝退自己”的想法，因为实在是太恶心了，先不管RN真正的精髓与我目前所理解的到底对不对得上，单是这几个基本组件在RN中实现起来都如此“恶心”（用官方的话来说，底层就是这么做的🙄），说句良心话，我实在是受不了。而且RN目前来说，虽然说是“Learn once，run anywhere”（有可能记错了？），但是iOS和Android现在位于RN生态中的分割还是太大，也有可能是自己的功夫不到家，单是一个tabBarIOS我就受不了（当然，也有可能是因为RN还需要再发展？）</p>
+<p>我们先来看看实现的轮播图效果</p>
+<p><img src="https://i.loli.net/2018/02/14/5a843993733f4.gif" width="40%" height="40%" align="center"></p>
+<p>看上去效果还行，能够实现<code>触摸拖动中断</code>，但是因为整体没搭建完，并未能实现滑动整个View让轮播图进行中断停止（具体效果可参考京东）。整体实现思想跟iOS Native是一样的，同样都是需要ScrollView作为轮播容器，使用Image标签作为轮播实体，</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">&lt;ScrollView</span><br><span class="line">    ref=&#123;<span class="string">'scrollView'</span>&#125;</span><br><span class="line">    horizontal=&#123;<span class="literal">true</span>&#125;</span><br><span class="line">    pagingEnabled=&#123;<span class="literal">true</span>&#125;</span><br><span class="line">    showsHorizontalScrollIndicator=&#123;<span class="literal">false</span>&#125;</span><br><span class="line">    onMomentumScrollEnd=&#123;(e) =&gt; <span class="keyword">this</span>.onAnimationEnd(e)&#125;</span><br><span class="line">    onScrollBeginDrag=&#123;(e) =&gt; <span class="keyword">this</span>.onScrollBeginDrag(e)&#125;</span><br><span class="line">    onScrollEndDrag=&#123;(e) =&gt; <span class="keyword">this</span>.onScrollEndDrag(e)&#125;</span><br><span class="line">    &gt;</span><br><span class="line">    &#123;<span class="keyword">this</span>.renderChildView()&#125;</span><br><span class="line">    &lt;<span class="regexp">/ScrollView&gt;</span></span><br><span class="line"><span class="regexp"></span></span><br><span class="line"><span class="regexp">    renderChildView() &#123;</span></span><br><span class="line"><span class="regexp">      var childViews = [];</span></span><br><span class="line"><span class="regexp">      var imgArr = imageData.data;</span></span><br><span class="line"><span class="regexp">      for (var i = 0; i &lt; imgArr.length; i++) &#123;</span></span><br><span class="line"><span class="regexp">          var imgItem = imgArr[i];</span></span><br><span class="line"><span class="regexp">          console.log(imgItem)</span></span><br><span class="line"><span class="regexp">          childViews.push(</span></span><br><span class="line"><span class="regexp">              &lt;Image key=&#123;i&#125; source=&#123;require('./img</span><span class="regexp">/lunbo1.png')&#125; style=&#123;&#123;width: screenWidth, height: 120&#125;&#125;/</span>&gt;</span><br><span class="line">          );</span><br><span class="line">      &#125;</span><br><span class="line">      <span class="keyword">return</span> childViews;</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
+<p>以上就是轮播图的架构（非常简单）。数据结构如下，用的是本地图片资源，（这里有个大坑，后文详解）</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  <span class="attr">"data"</span> : [</span><br><span class="line">    &#123;</span><br><span class="line">      <span class="attr">"img"</span> : <span class="string">"lunbo1"</span>,</span><br><span class="line">      <span class="attr">"title"</span> : <span class="string">"2333"</span></span><br><span class="line">    &#125;,</span><br><span class="line">    &#123;</span><br><span class="line">      <span class="attr">"img"</span> : <span class="string">"lunbo2"</span>,</span><br><span class="line">      <span class="attr">"title"</span> : <span class="string">"2333"</span></span><br><span class="line">    &#125;,</span><br><span class="line">    &#123;</span><br><span class="line">      <span class="attr">"img"</span> : <span class="string">"lunbo3"</span>,</span><br><span class="line">      <span class="attr">"title"</span> : <span class="string">"2333"</span></span><br><span class="line">    &#125;</span><br><span class="line">  ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>想要让轮播图在一定时间间隔后进行自动轮播，必不可少的需要一个定时器进行时间的计算，据部分资料显示，ES5需要一个<code>react-timer-mixin</code>组件，而采用ES6后，可直接这么写，<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 组件都载入完毕后，调起计时器方法</span></span><br><span class="line"> componentDidMount() &#123;</span><br><span class="line">   <span class="keyword">this</span>.startTimer();</span><br><span class="line"> &#125;</span><br><span class="line"></span><br><span class="line"> startTimer() &#123;</span><br><span class="line">   <span class="keyword">var</span> scrollView = <span class="keyword">this</span>.refs.scrollView;</span><br><span class="line">   <span class="keyword">var</span> imgCount = imageData.data.length;</span><br><span class="line">   <span class="comment">// 有setTimeOut和setInterval，需注意分清</span></span><br><span class="line">   <span class="keyword">this</span>.timer1 = setInterval(<span class="function"><span class="params">()</span> =&gt;</span> &#123;</span><br><span class="line">       <span class="keyword">var</span> activePage = <span class="number">0</span>;</span><br><span class="line">       <span class="comment">// 判断当前分页</span></span><br><span class="line">       <span class="keyword">if</span> ((<span class="keyword">this</span>.state.currentPage + <span class="number">1</span>) &gt;= imgCount) &#123;</span><br><span class="line">           activePage = <span class="number">0</span></span><br><span class="line">       &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">           activePage = <span class="keyword">this</span>.state.currentPage + <span class="number">1</span>;</span><br><span class="line">       &#125;</span><br><span class="line"></span><br><span class="line">       <span class="keyword">this</span>.setState(&#123;</span><br><span class="line">           currentPage: activePage</span><br><span class="line">       &#125;);</span><br><span class="line"></span><br><span class="line">       <span class="comment">// 计算偏移</span></span><br><span class="line">       <span class="keyword">var</span> offSetX = activePage * screenWidth;</span><br><span class="line">       scrollView.scrollResponderScrollTo(&#123;<span class="attr">x</span>: offSetX , <span class="attr">y</span>: <span class="number">0</span>, <span class="attr">animated</span>: <span class="literal">true</span>&#125;)&#125;, <span class="number">1000</span>);</span><br><span class="line"> &#125;</span><br><span class="line"></span><br><span class="line"> <span class="comment">// 开始拖拽</span></span><br><span class="line"> <span class="comment">// 需要把ScrollView自身作为参数传入</span></span><br><span class="line"> onScrollBeginDrag(e) &#123;</span><br><span class="line">     <span class="comment">// ES6清除计时器</span></span><br><span class="line">     clearInterval(<span class="keyword">this</span>.timer1);</span><br><span class="line"> &#125;</span><br><span class="line"></span><br><span class="line"> <span class="comment">// 结束拖拽</span></span><br><span class="line"> onScrollEndDrag(e) &#123;</span><br><span class="line">     <span class="keyword">this</span>.startTimer();</span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure></p>
+<p>以上就是使用RN实现的简单轮播图组件demo，整体来看比iOS Native实现起来更为方便快捷（重点是简明🙂，项目工程地址文后）接着我们来看看RN中的ListView。</p>
+<p>在学习ListView过程中实现了三个小demo，普通列表展示、吸顶列表展示（对比iOS tableView的group样式）、九宫格。其中，给我的感觉如果只是使用到ListView做一些简单的数据展示，那真的是无比的舒服，并且得益于RN自身的架构设计，我们能够很好的处理数据源的切换。</p>
+<p>普通列表的实现方法在吸顶列表中有重复，在此我们只对吸顶列列表做讲解（在讲解中大家将会看见是有多么的恶心🙂）</p>
+<p>首先我们需要给ListView设置数据源，而ListView的数据源设置带了我一个无比的震撼（太尼玛麻烦了🙂）<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">constructor</span>(props) &#123;</span><br><span class="line">  <span class="keyword">super</span>(props);</span><br><span class="line">  <span class="keyword">this</span>.state = &#123;</span><br><span class="line">    dataSource: <span class="keyword">new</span> ListView.DataSource(&#123;</span><br><span class="line">      rowHasChanged: <span class="function">(<span class="params">r1, r2</span>) =&gt;</span> r1 !== r2</span><br><span class="line">    &#125;)</span><br><span class="line">  &#125;;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>通过以上代码我们就定义好了关于ListView的数据加载方法，当r1行不等于r2行时，才进行ListView的数据加载。我们先不管中间数据源如何更替，我们先来看如何填充ListView的核心数据源，</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">this</span>.setState(&#123;</span><br><span class="line">      dataSource: <span class="keyword">this</span>.state.dataSource.cloneWithRowsAndSections(dataBlob, sectionIDs, rowIDs)</span><br><span class="line">    &#125;);</span><br></pre></td></tr></table></figure>
+<p>通过以上方法，我们会调起RN的setState异步赋值方法，其实我觉得RN从架构上就是MVVM（不知道猜的对不对），当我们在setState方法中更改了相关的属性值，使用到这些相关属性值的对应组件会自动异步的刷新UI，这点超强大的好不好🙂。在iOS中单是要实现MVVM架构思想，就得拉出KVO这种看上去非常难受的东西🙂。</p>
+<p>如果你曾经有过iOS开发经验（没有也行），要实现的吸顶效果，实际上就是对ListView做了分组，取名为Section，组内的每一行称之为Row，因此我们实现section和row的数据源赋值，这些东西都需要在页面初始化方法中得到解决，因此补充完的constructor方法为，</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">constructor</span>(props)&#123;</span><br><span class="line">    <span class="keyword">super</span>(props);</span><br><span class="line">    <span class="comment">// 初始化section方法</span></span><br><span class="line">    <span class="keyword">var</span> getSectionData = <span class="function">(<span class="params">dataBlob, sectionID</span>) =&gt;</span> &#123;</span><br><span class="line">      <span class="keyword">return</span> dataBlob[sectionID];</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 初始化row方法</span></span><br><span class="line">    <span class="keyword">var</span> getRowData = <span class="function">(<span class="params">dataBlob, sectionID, rowID</span>) =&gt;</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> dataBlob[sectionID + <span class="string">":"</span> + rowID];</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">this</span>.state = &#123;</span><br><span class="line">        dataSource: <span class="keyword">new</span> ListView.DataSource(&#123;</span><br><span class="line">        <span class="comment">// 绑定section数据刷新</span></span><br><span class="line">        getSectionData: getSectionData,</span><br><span class="line">        <span class="comment">// 绑定row数据刷新</span></span><br><span class="line">        getRowData: getRowData,</span><br><span class="line">            rowHasChanged: <span class="function">(<span class="params">r1, r2</span>) =&gt;</span> r1 !== r2,</span><br><span class="line">            sectionHeaderHasChanged: <span class="function">(<span class="params">s1, s2</span>) =&gt;</span> s1 !== s2,</span><br><span class="line">        &#125;)</span><br><span class="line">    &#125;;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
+<p>我们需要搭建的界面代码如下所示，<br><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line">render() &#123;</span><br><span class="line">    <span class="keyword">return</span> (</span><br><span class="line">      &lt;View style=&#123;styles.containerStyle&#125;&gt;</span><br><span class="line">        <span class="comment">// 先假装有一个NavigationBar🙂</span></span><br><span class="line">        &lt;View style=&#123;styles.headerViewStyle&#125;&gt;</span><br><span class="line">          &lt;Text style=&#123;&#123;<span class="attr">color</span>: <span class="string">"white"</span>, <span class="attr">fontSize</span>: <span class="number">25</span>&#125;&#125;&gt;PJHubs&lt;<span class="regexp">/Text&gt;</span></span><br><span class="line"><span class="regexp">        &lt;/</span>View&gt;</span><br><span class="line">        &lt;ListView</span><br><span class="line">          dataSource=&#123;<span class="keyword">this</span>.state.dataSource&#125;</span><br><span class="line">          <span class="comment">// ListViewRow的数据绑定</span></span><br><span class="line">          renderRow=&#123;<span class="keyword">this</span>.renderRow&#125;</span><br><span class="line">          <span class="comment">// ListViewSection的数据绑定</span></span><br><span class="line">          renderSectionHeader=&#123;<span class="keyword">this</span>.renderSectionHeader&#125;</span><br><span class="line">          <span class="comment">// 设置Cell内部样式</span></span><br><span class="line">          contentContainerStyle=&#123;styles.listViewStyle&#125;</span><br><span class="line">        /&gt;</span><br><span class="line">      &lt;<span class="regexp">/View&gt;</span></span><br><span class="line"><span class="regexp">    )</span></span><br><span class="line"><span class="regexp">  &#125;</span></span><br><span class="line"><span class="regexp"></span></span><br><span class="line"><span class="regexp">  renderRow(rowData) &#123;</span></span><br><span class="line"><span class="regexp">      return (</span></span><br><span class="line"><span class="regexp">        &lt;TouchableOpacity activeOpacity=&#123;0.5&#125;&gt;</span></span><br><span class="line"><span class="regexp">          &lt;View style=&#123;styles.innerViewStyle&#125;&gt;</span></span><br><span class="line"><span class="regexp">            &lt;Image source=&#123;require("./</span>wine.png<span class="string">")&#125; style=&#123;styles.leftImageStyle&#125; /&gt;</span></span><br><span class="line"><span class="string">            &lt;Text style=&#123;&#123;fontSize: 17&#125;&#125;&gt;&#123;rowData.name&#125;&lt;/Text&gt;</span></span><br><span class="line"><span class="string">          &lt;/View&gt;</span></span><br><span class="line"><span class="string">        &lt;/TouchableOpacity&gt;</span></span><br><span class="line"><span class="string">      );</span></span><br><span class="line"><span class="string">  &#125;</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">  renderSectionHeader(sectionData, sectionID) &#123;</span></span><br><span class="line"><span class="string">    return(</span></span><br><span class="line"><span class="string">      &lt;View style=&#123;styles.sectionViewStyle&#125;&gt;</span></span><br><span class="line"><span class="string">        &lt;Text style=&#123;&#123;marginLeft: 10,&#125;&#125;&gt;&#123;sectionData&#125;&lt;/Text&gt;</span></span><br><span class="line"><span class="string">      &lt;/View&gt;</span></span><br><span class="line"><span class="string">    )</span></span><br><span class="line"><span class="string">  &#125;</span></span><br></pre></td></tr></table></figure></p>
+<p>因为ListView的数据加载属于耗时操作（不管数据在本地还是网络上），RN官方推荐所以的耗时操作统统给我放到<code>componentDidMount</code>方法中（组件加载完毕），因此补充完的<code>componentDidMount</code>方法如下所示，</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">componentDidMount() &#123;</span><br><span class="line">    <span class="keyword">this</span>.loadDataFromJson()</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  loadDataFromJson() &#123;</span><br><span class="line">    <span class="keyword">var</span> jsonData = wine.data;</span><br><span class="line">    <span class="keyword">var</span> dataBlob = &#123;&#125;,</span><br><span class="line">        sectionIDs = [],</span><br><span class="line">        rowIDs = [],</span><br><span class="line">        cars = [];</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; jsonData.length; i++) &#123;</span><br><span class="line">      sectionIDs.push(i);</span><br><span class="line">      dataBlob[i] = jsonData[i].title;</span><br><span class="line">      cars = jsonData[i].cars;</span><br><span class="line">      rowIDs[i] = [];</span><br><span class="line"></span><br><span class="line">      <span class="keyword">for</span> (<span class="keyword">var</span> j = <span class="number">0</span>; j &lt; cars.length; j ++) &#123;</span><br><span class="line">        rowIDs[i].push(j);</span><br><span class="line">        <span class="comment">// 这是最恶心的地方，我们需要按照固定格式去填充输数据</span></span><br><span class="line">        dataBlob[i + <span class="string">":"</span> + j] = cars[j];</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 随后数据更新即可异步刷新UI</span></span><br><span class="line">    <span class="keyword">this</span>.setState(&#123;</span><br><span class="line">      dataSource: <span class="keyword">this</span>.state.dataSource.cloneWithRowsAndSections(dataBlob, sectionIDs, rowIDs)</span><br><span class="line">    &#125;);</span><br><span class="line">  &#125;</span><br></pre></td></tr></table></figure>
+<p>一些其它的小细节和CSS就不放出来了，项目细节见文末，po一张吸顶完成图</p>
+<p><img src="https://i.loli.net/2018/02/14/5a843cb9db199.gif" width="40%" height="40%" align="center"></p>
+<p>在RN中实现九宫格，你可以认为是iOS中collectionView，主要还是用到了ListView组件，只不过修改的内容在ListView的CSS中，核心ListView CSS如下所示，</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">listViewStyle</span>: &#123;</span><br><span class="line">    asd</span><br><span class="line">  &#125;,</span><br></pre></td></tr></table></figure>
+
+  </div>
+
+</article>
+
+
+
+    </div>
+    
+      <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/archives/">All</a></li>
+         
+          <li><a href="https://github.com/windstormeye">Projects</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      
+    </div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=http://pjhubs.com/2018/02/14/React-Native记（二）/"><i class="fa fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=http://pjhubs.com/2018/02/14/React-Native记（二）/&text=React-Native记（二）"><i class="fa fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=http://pjhubs.com/2018/02/14/React-Native记（二）/&title=React-Native记（二）"><i class="fa fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http://pjhubs.com/2018/02/14/React-Native记（二）/&is_video=false&description=React-Native记（二）"><i class="fa fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=React-Native记（二）&body=Check out this article: http://pjhubs.com/2018/02/14/React-Native记（二）/"><i class="fa fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=http://pjhubs.com/2018/02/14/React-Native记（二）/&title=React-Native记（二）"><i class="fa fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=http://pjhubs.com/2018/02/14/React-Native记（二）/&title=React-Native记（二）"><i class="fa fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=http://pjhubs.com/2018/02/14/React-Native记（二）/&title=React-Native记（二）"><i class="fa fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=http://pjhubs.com/2018/02/14/React-Native记（二）/&title=React-Native记（二）"><i class="fa fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=http://pjhubs.com/2018/02/14/React-Native记（二）/&name=React-Native记（二）&description="><i class="fa fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+      <ul>
+        <li id="toc"><a class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fa fa-list fa-lg" aria-hidden="true"></i> TOC</a></li>
+        <li id="share"><a class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fa fa-share-alt fa-lg" aria-hidden="true"></i> Share</a></li>
+        <li id="top" style="display:none"><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a></li>
+        <li id="menu"><a class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fa fa-bars fa-lg" aria-hidden="true"></i> Menu</a></li>
+      </ul>
+    </div>
+
+  </div>
+</div>
+
+    
+    <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy; 2018 Piron
+	<span id="busuanzi_container_site_pv">
+  		总访问<span id="busuanzi_value_site_pv"></span>次
+	</span>		
+</div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/archives/">All</a></li>
+         
+          <li><a href="https://github.com/windstormeye">Projects</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+</footer>
+
+</body>
+</html>
+<!-- styles -->
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+<link rel="stylesheet" href="/lib/meslo-LG/styles.css">
+<link rel="stylesheet" href="/lib/justified-gallery/justifiedGallery.min.css">
+
+<!-- jquery -->
+<script src="/lib/jquery/jquery.min.js"></script>
+<script src="/lib/justified-gallery/jquery.justifiedGallery.min.js"></script>
+<script src="/js/main.js"></script>
+<!-- search -->
+
+<!-- Google Analytics -->
+
+    <script type="text/javascript">
+        (function(i,s,o,g,r,a,m) {i['GoogleAnalyticsObject']=r;i[r]=i[r]||function() {
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-86660611-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+
+<!-- Disqus Comments -->
+
+
