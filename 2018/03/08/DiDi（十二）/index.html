@@ -13,7 +13,7 @@
 <meta property="og:url" content="http://pjhubs.com/2018/03/08/DiDi（十二）/index.html">
 <meta property="og:site_name" content="PJHubs">
 <meta property="og:description" content="2018-03-06今天的任务就一个，完成滴滴数据App的国际化！说到国际化，这是一个被炒烂了的实现，基本上大家都一样的做法，基本上没什么可说的，套路跟网上的一样。 不过，再次我想跟各位产品经理说一声，“能不能在产品开始之前就做好切实的需求分析！”，做完国际化眼睛都快瞎了，两个屏幕都不够看的，每个文件刷刷刷的过一遍，Xcode又没有AS那么智能，能够直接给你筛出所有中文。 如果有正在准备做App的">
-<meta property="og:updated_time" content="2018-03-08T14:43:01.166Z">
+<meta property="og:updated_time" content="2018-03-09T14:45:03.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="DiDi（十二）">
 <meta name="twitter:description" content="2018-03-06今天的任务就一个，完成滴滴数据App的国际化！说到国际化，这是一个被炒烂了的实现，基本上大家都一样的做法，基本上没什么可说的，套路跟网上的一样。 不过，再次我想跟各位产品经理说一声，“能不能在产品开始之前就做好切实的需求分析！”，做完国际化眼睛都快瞎了，两个屏幕都不够看的，每个文件刷刷刷的过一遍，Xcode又没有AS那么智能，能够直接给你筛出所有中文。 如果有正在准备做App的">
@@ -94,7 +94,7 @@
 
     </div>
     <div id="toc">
-      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#2018-03-06"><span class="toc-number">1.</span> <span class="toc-text">2018-03-06</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2018-03-08"><span class="toc-number">2.</span> <span class="toc-text">2018-03-08</span></a></li></ol>
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#2018-03-06"><span class="toc-number">1.</span> <span class="toc-text">2018-03-06</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2018-03-08"><span class="toc-number">2.</span> <span class="toc-text">2018-03-08</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2018-03-09"><span class="toc-number">3.</span> <span class="toc-text">2018-03-09</span></a></li></ol>
     </div>
   </span>
 </div>
@@ -155,6 +155,23 @@
 <p>经过几轮的反反复复，最终确定了原因。原来是虽然我们本地的Podfile文件中写明了<code>AfantySDK</code>的tag是0.6.11，但是pod updata后找到的确实0.5.8！刚好0.5.8是又是小笑脸国际化时出错的tag。所以必须要提回到0.6.11的tag中。</p>
 <p>最大的问题又来了，这也是让我身心俱疲的地方，都把整个pod依赖都删了，重新执行pod相关命令重新做了项目依赖，居然再次执行pod update找到的还是0.5.8。整个人都不好了，开始怀疑是不是公司发的Mac环境没配好，开始各种怀疑。。。</p>
 <p>折腾来折腾去，吃了晚饭再接着弄，到最后都快下班了，还是没弄好，就在刚才回到实验室的时候用了自己的电脑执行了一次pod update，woc！！！居然也是索引到了0.5.8的库！！！换了三台Mac都是一样的问题，这就说明了与我一点无关！</p>
+<h2 id="2018-03-09"><a href="#2018-03-09" class="headerlink" title="2018-03-09"></a>2018-03-09</h2><p>咳咳。因为昨晚回到实验室用了自己的Mac尝试了重新拉库，发现版本不对劲后，刚好今天是周五，遇到了上线了空档期，就励志在今天之内一定要把这个问题给解决！</p>
+<ul>
+<li><p>我再次把项目工程中对pod的依赖所有相关内容全都删除，新建Podfile文件，再次执行pod update后，再次发现好吧还是0.5.8。又遇到死角了，我开始把这个问题仔仔细细的描述了一遍，丢入公司的iOS讨论群中并且还给之前负责这个产品的工程师也吐了苦水，可是人家都转组了好几个月了根本记不住当初是怎么做的了。这个时候有个群里有个大佬回了我，“版本号没变化有可能是因为podspec里版本号没更新”，刚开始我以为他说的是自己本地项目中的podspec文件里的版本信息，如下所示，</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">Pod::Spec.new do |s|</span><br><span class="line">  s.name             = "DiDiData"</span><br><span class="line">  s.version          = "0.1.0"</span><br><span class="line">  s.summary          = “滴滴数据平台”</span><br><span class="line">  s.description      = &lt;&lt;-DESC.gsub(/^\s*\|?/,'')</span><br><span class="line">                       An optional longer description of DiDiData</span><br><span class="line"></span><br><span class="line">                       | * Markdown format.</span><br><span class="line">                       | * Don't worry about the indent, we strip it!</span><br><span class="line">                       DESC</span><br><span class="line">  s.homepage         = "https://git.xiaojukeji.com/one-ios/DiDiData"</span><br><span class="line"><span class="meta">  #</span> s.screenshots     = "www.example.com/screenshots_1", "www.example.com/screenshots_2"</span><br><span class="line">  s.license          = 'BSD'</span><br><span class="line">  s.author           = &#123; "yeqingnaruto" =&gt; "yeqingnaruto@didichuxing.com" &#125;</span><br><span class="line">  s.source           = &#123; :git =&gt; "https://git.xiaojukeji.com/one-ios/DiDiData.git", :branch =&gt; "develop" &#125;</span><br><span class="line"><span class="meta">  #</span> s.social_media_url = 'https://twitter.com/&lt;TWITTER_USERNAME&gt;'</span><br></pre></td></tr></table></figure>
+<p>  仔仔细细看了好几遍，发现并没有关于AfantySDK的任何东西呀，于是就去私聊了这位大佬，经过几轮的询问才发现，是AfantySDK里的podspec文件version版本号没有更新，导致每次pod update时索引到的也都只是0.5.8版本，但是因为AfantySDK使用打tag的方式去执行迭代，实际每次update时都是索引到了最新版本，但是这种看不见到底是不是真下载了最新版本库的感觉不太好。</p>
+<p>  当我把这个情况告知AfantySDK相关负责人后，人家跟我说现在的更新方式都不更新version了，都是走tag的更新，而且只要你的tag没填错就一定不会错的！弄得人家小姐姐都不好意思的说，“那我以后还是同步更新version吧”。。。我跟她说，0.5.8的AfantySDK一集成就被Swarm缺少多语言服务的断言中止了，是不是因为缺少对应的多语言服务的问题，人家说，“那这我就不知道了，我们只是调用了他们的接口，至于是不是你得去问Swarm的人”。。。当时我内心都快哭出来了。</p>
+<p>  没办法，我只能又去问了Swarm的负责人，一直都没有得到回复。。。但是我也不能干等着，虽然并不能看懂Swarm和AfantySDK之间有什么神奇的py交易，但是干等着时间也一点点流失了。</p>
+<p>  开始重新构建，看断言中止之后的栈调用信息，慢慢发现了规律，确实是少了SwarmMutiLanguageService，但是怎么给Swarm这个宿主添加新的服务呢？这个时候记起来好像Swarm的负责人之前有给我发过集成文档的图片！！！年后公司居然把所以的wiki资料做了分级，实习生已经没有权限去看这种内部工具的配置文档了，真的很苦逼。</p>
+<p>  对照着还算完整的文档集成图片和之前工程师写好的服务接入代码，一点一点的居然把多语言服务写出来了，本以为构建成功能给自己一个意外的惊喜，但还是不幸的又中了断言，这回被告知缺少的不是多语言服务，居然一个之前已经没问题的服务SwarmToggleService（根本不知道用来干啥的服务）被告知缺少！！！吓得我又全部撤回了。</p>
+<p>  出师不捷，午饭之后困意上来了，看了一眼给Swarm负责人发的消息还是“未读”状态。眯了一下眼后，心里憋得慌，毕竟事情没做完，又继续再次仔仔细细的研究了一下相关方法调用，这个时候，Swarm的负责人终于回了我，但是好像他没搞懂我的意思，问了我“所以你的问题是？”，😂。。。我又再次精简的把问题再次描述了一遍，来来去去沟通了几轮，最后他还是推荐我自己再把Swarm的相关代码过一遍，实在不行再去另外一个办公区找他帮我看看。。。他说到这，我又想起了当初leader带着我们两个iOS实习生去线下debug的情况。。</p>
+<p>  最后在过一遍代码的时候，发现了一个非常尴尬的情况！我居然在给Swarm配置多语言服务时忘了在“service”和“name”之间加逗号！！！</p>
+<p>  没想到最后是Xcode的锅！JSON格式不对Xcode也不告知，而且还不渲染JSON！真的，Xcode成功的拿下最烂IDE称号！！！</p>
+</li>
+<li><p>今天还做了App名称国际化的事情，实际上做法跟App内容国际化是一样的，都是需要起一个string file文件，不过对文件的名称有严格的要求，如果你做的是对App内容国际化，那就是需要把文件名称限定为<code>Localizable.strings</code>，如果你做的App名称国际化，那就得把文件名称限定为<code>InfoPlist.strings</code>即可。</p>
+</li>
+</ul>
+<p>总之啊，今天可算是把困扰了我将近一个星期的问题给解决了，也学会了Swarm的那一套流程，还是赶在上线前，不亏！</p>
 
   </div>
 
@@ -180,7 +197,7 @@
     </div>
 
     <div id="toc-footer" style="display: none">
-      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#2018-03-06"><span class="toc-number">1.</span> <span class="toc-text">2018-03-06</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2018-03-08"><span class="toc-number">2.</span> <span class="toc-text">2018-03-08</span></a></li></ol>
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#2018-03-06"><span class="toc-number">1.</span> <span class="toc-text">2018-03-06</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2018-03-08"><span class="toc-number">2.</span> <span class="toc-text">2018-03-08</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2018-03-09"><span class="toc-number">3.</span> <span class="toc-text">2018-03-09</span></a></li></ol>
     </div>
 
     <div id="share-footer" style="display: none">
