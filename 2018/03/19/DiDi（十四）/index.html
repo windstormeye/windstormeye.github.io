@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="description" content="2018-03-06好了，今天欢送同组的iOS实习生撤了，不知道为啥心里有种轻松解脱感？？？尴尬。 简单分析了一下，自定义了一个升级弹窗。首先是为了满足产想要让文本左对齐的需求，其次是为了能够和整体App的UI风格进行统一，我也想学习一波编写一波通用性UI类库。最核心的地方就是要保证能够在Window上显示出来，所以做法就是非常粗暴的直接通过shareApplication拿到keyWindow">
+<meta name="keywords" content="DiDi,iOS">
+<meta property="og:type" content="article">
+<meta property="og:title" content="DiDi（十四）">
+<meta property="og:url" content="http://pjhubs.com/2018/03/19/DiDi（十四）/index.html">
+<meta property="og:site_name" content="PJHubs">
+<meta property="og:description" content="2018-03-06好了，今天欢送同组的iOS实习生撤了，不知道为啥心里有种轻松解脱感？？？尴尬。 简单分析了一下，自定义了一个升级弹窗。首先是为了满足产想要让文本左对齐的需求，其次是为了能够和整体App的UI风格进行统一，我也想学习一波编写一波通用性UI类库。最核心的地方就是要保证能够在Window上显示出来，所以做法就是非常粗暴的直接通过shareApplication拿到keyWindow">
+<meta property="og:updated_time" content="2018-03-19T14:23:00.021Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="DiDi（十四）">
+<meta name="twitter:description" content="2018-03-06好了，今天欢送同组的iOS实习生撤了，不知道为啥心里有种轻松解脱感？？？尴尬。 简单分析了一下，自定义了一个升级弹窗。首先是为了满足产想要让文本左对齐的需求，其次是为了能够和整体App的UI风格进行统一，我也想学习一波编写一波通用性UI类库。最核心的地方就是要保证能够在Window上显示出来，所以做法就是非常粗暴的直接通过shareApplication拿到keyWindow">
+    
+    
+        
+          
+              <link rel="shortcut icon" href="/images/favicon.ico">
+          
+        
+        
+          
+            <link rel="icon" type="image/png" href="/images/favicon-192x192.png" sizes="192x192">
+          
+        
+        
+          
+            <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+          
+        
+    
+    <!-- title -->
+    <title>DiDi（十四）</title>
+    <!-- styles -->
+    <link rel="stylesheet" href="/css/style.css">
+    <!-- rss -->
+    
+    
+</head>
+
+<body>
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#"><i class="fa fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fa fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fa fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/archives/">All</a></li>
+         
+          <li><a href="https://github.com/windstormeye">Projects</a></li>
+        
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        
+        <li><a class="icon" href="/2018/03/17/DiDi（十三）/"><i class="fa fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        
+        <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" href="#"><i class="fa fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=http://pjhubs.com/2018/03/19/DiDi（十四）/"><i class="fa fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=http://pjhubs.com/2018/03/19/DiDi（十四）/&text=DiDi（十四）"><i class="fa fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=http://pjhubs.com/2018/03/19/DiDi（十四）/&title=DiDi（十四）"><i class="fa fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http://pjhubs.com/2018/03/19/DiDi（十四）/&is_video=false&description=DiDi（十四）"><i class="fa fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=DiDi（十四）&body=Check out this article: http://pjhubs.com/2018/03/19/DiDi（十四）/"><i class="fa fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=http://pjhubs.com/2018/03/19/DiDi（十四）/&title=DiDi（十四）"><i class="fa fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=http://pjhubs.com/2018/03/19/DiDi（十四）/&title=DiDi（十四）"><i class="fa fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=http://pjhubs.com/2018/03/19/DiDi（十四）/&title=DiDi（十四）"><i class="fa fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=http://pjhubs.com/2018/03/19/DiDi（十四）/&title=DiDi（十四）"><i class="fa fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=http://pjhubs.com/2018/03/19/DiDi（十四）/&name=DiDi（十四）&description="><i class="fa fa-tumblr " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#2018-03-06"><span class="toc-number">1.</span> <span class="toc-text">2018-03-06</span></a></li></ol>
+    </div>
+  </span>
+</div>
+
+    
+    <div class="content index width mx-auto px2 my4">
+        
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        DiDi（十四）
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">PJHubs</span>
+      </span>
+      
+    <div class="postdate">
+        <time datetime="2018-03-19T13:33:26.000Z" itemprop="datePublished">2018-03-19</time>
+    </div>
+
+
+      
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link" href="/tags/DiDi/">DiDi</a>, <a class="tag-link" href="/tags/iOS/">iOS</a>
+    </div>
+
+
+      <span id="busuanzi_container_page_pv">
+  	总阅读<span id="busuanzi_value_page_pv"></span>次
+      </span>
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <h2 id="2018-03-06"><a href="#2018-03-06" class="headerlink" title="2018-03-06"></a>2018-03-06</h2><p>好了，今天欢送同组的iOS实习生撤了，不知道为啥心里有种轻松解脱感？？？尴尬。</p>
+<p>简单分析了一下，自定义了一个升级弹窗。首先是为了满足产想要让文本左对齐的需求，其次是为了能够和整体App的UI风格进行统一，我也想学习一波编写一波通用性UI类库。最核心的地方就是要保证能够在Window上显示出来，所以做法就是非常粗暴的直接通过shareApplication拿到keyWindow即可，然后在Appdelegate中的didFinishLaunching…和applicationWillEnterForeground方法中调用版本检查，po出这个自定义的升级弹窗即可。</p>
+<p>初步简单的研究了一个内部库<code>ONEUIKit/ONEProgressHUD</code>的实现，等我再花一些时间研究透彻了再来给大家分享一波（这个库就是滴滴出行App中的HUD！！！），其中又发现了一个好玩的API——<code>UIAccessibilityPostNotification</code>，使用起来就只需要post一个通知，然后跟上文本信息，居然就能够在当用户开启了VoiceOver后进行读屏操作，真是有趣！当初还以为VoiceOver也要打一个target去做呢。先欠大家一篇正式解说！</p>
+<p>大半个下午的时间都在重构之前同事因为他没听清产品需求，从而导致了Android同学之前天天“日了狗”，正确的需求是：当用户进入到通用浏览器后，允许开启横竖屏，当用户点击左上角的回退时，关闭所有页面的横竖屏开关，并且当用户是横屏退出时，把它给强制转换成竖屏。</p>
+<p>对，你没看错，我又重新写了一遍所有逻辑，把之前花了巨大力气才做好的所有页面横竖屏代码统统删掉，因为在中午的时候我突然意识到，如果这一次不这么做了，以后的任何一个新需求，要出新页面，都会被逼去写一大坨恶心的横竖屏代码！！！不要再问我为什么要写这么横竖屏适配代码了！因为从未使用过SB/xib，我内心已经非常草泥马了。所以今天下定决心，一定要把正确的需求给改回来。（第一次把花了巨大力气写好的代码全都删了，感觉自己的孩子夭折了。</p>
+<p>记录一个遗忘点：@property里的readOnly属性实际上不是不可改，可以通过KVC的方式去修改，通过使用字符串标识属性间接访问对象属性，从而绕过setter/getter，给我感觉readOnly特别就想是给开发者提供一个警示或者说一种约束（我觉得协议可能比较好），只是不推荐这么做，并不是不让你改，hhhh。</p>
+<p>重载和重写：简单来说重载是同样方法名，但参数不同；重写是方法名和参数名都是相同的。（要不然我老是恍惚。）</p>
+
+  </div>
+
+</article>
+
+
+
+    </div>
+    
+      <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/archives/">All</a></li>
+         
+          <li><a href="https://github.com/windstormeye">Projects</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#2018-03-06"><span class="toc-number">1.</span> <span class="toc-text">2018-03-06</span></a></li></ol>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=http://pjhubs.com/2018/03/19/DiDi（十四）/"><i class="fa fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=http://pjhubs.com/2018/03/19/DiDi（十四）/&text=DiDi（十四）"><i class="fa fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=http://pjhubs.com/2018/03/19/DiDi（十四）/&title=DiDi（十四）"><i class="fa fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http://pjhubs.com/2018/03/19/DiDi（十四）/&is_video=false&description=DiDi（十四）"><i class="fa fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=DiDi（十四）&body=Check out this article: http://pjhubs.com/2018/03/19/DiDi（十四）/"><i class="fa fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=http://pjhubs.com/2018/03/19/DiDi（十四）/&title=DiDi（十四）"><i class="fa fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=http://pjhubs.com/2018/03/19/DiDi（十四）/&title=DiDi（十四）"><i class="fa fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=http://pjhubs.com/2018/03/19/DiDi（十四）/&title=DiDi（十四）"><i class="fa fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=http://pjhubs.com/2018/03/19/DiDi（十四）/&title=DiDi（十四）"><i class="fa fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=http://pjhubs.com/2018/03/19/DiDi（十四）/&name=DiDi（十四）&description="><i class="fa fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+      <ul>
+        <li id="toc"><a class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fa fa-list fa-lg" aria-hidden="true"></i> TOC</a></li>
+        <li id="share"><a class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fa fa-share-alt fa-lg" aria-hidden="true"></i> Share</a></li>
+        <li id="top" style="display:none"><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a></li>
+        <li id="menu"><a class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fa fa-bars fa-lg" aria-hidden="true"></i> Menu</a></li>
+      </ul>
+    </div>
+
+  </div>
+</div>
+
+    
+    <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy; 2018 Piron
+	<span id="busuanzi_container_site_pv">
+  		总访问<span id="busuanzi_value_site_pv"></span>次
+	</span>		
+</div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/archives/">All</a></li>
+         
+          <li><a href="https://github.com/windstormeye">Projects</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+</footer>
+
+</body>
+</html>
+<!-- styles -->
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+<link rel="stylesheet" href="/lib/meslo-LG/styles.css">
+<link rel="stylesheet" href="/lib/justified-gallery/justifiedGallery.min.css">
+
+<!-- jquery -->
+<script src="/lib/jquery/jquery.min.js"></script>
+<script src="/lib/justified-gallery/jquery.justifiedGallery.min.js"></script>
+<script src="/js/main.js"></script>
+<!-- search -->
+
+<!-- Google Analytics -->
+
+    <script type="text/javascript">
+        (function(i,s,o,g,r,a,m) {i['GoogleAnalyticsObject']=r;i[r]=i[r]||function() {
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-86660611-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+
+<!-- Disqus Comments -->
+
+
