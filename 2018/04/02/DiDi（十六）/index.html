@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="description" content="2018-04-02今天又中度污染，不过是可以穿短袖的一天，非常的舒服。 到了工位后又接着继续解决上周遗留下来的对接哈勃问题，不过周末这两天哈勃的RD写了个demo，去掉了用不到的依赖库。打开一看，嗯，确实是少了非常多，比起上周的一百多个现在只有不到三十个了。emmmm。😓。进入目录后直接pod install，等了一会还是上周的问题，如下所示：   第一张图片的问题出现是因为使用了滴滴的内部p">
+<meta name="keywords" content="iOS,DiDi">
+<meta property="og:type" content="article">
+<meta property="og:title" content="DiDi（十六）">
+<meta property="og:url" content="http://pjhubs.com/2018/04/02/DiDi（十六）/index.html">
+<meta property="og:site_name" content="PJHubs">
+<meta property="og:description" content="2018-04-02今天又中度污染，不过是可以穿短袖的一天，非常的舒服。 到了工位后又接着继续解决上周遗留下来的对接哈勃问题，不过周末这两天哈勃的RD写了个demo，去掉了用不到的依赖库。打开一看，嗯，确实是少了非常多，比起上周的一百多个现在只有不到三十个了。emmmm。😓。进入目录后直接pod install，等了一会还是上周的问题，如下所示：   第一张图片的问题出现是因为使用了滴滴的内部p">
+<meta property="og:image" content="https://i.loli.net/2018/04/02/5ac23362d1949.png">
+<meta property="og:image" content="https://i.loli.net/2018/04/02/5ac233627aee9.png">
+<meta property="og:updated_time" content="2018-04-02T14:10:05.853Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="DiDi（十六）">
+<meta name="twitter:description" content="2018-04-02今天又中度污染，不过是可以穿短袖的一天，非常的舒服。 到了工位后又接着继续解决上周遗留下来的对接哈勃问题，不过周末这两天哈勃的RD写了个demo，去掉了用不到的依赖库。打开一看，嗯，确实是少了非常多，比起上周的一百多个现在只有不到三十个了。emmmm。😓。进入目录后直接pod install，等了一会还是上周的问题，如下所示：   第一张图片的问题出现是因为使用了滴滴的内部p">
+<meta name="twitter:image" content="https://i.loli.net/2018/04/02/5ac23362d1949.png">
+    
+    
+        
+          
+              <link rel="shortcut icon" href="/images/favicon.ico">
+          
+        
+        
+          
+            <link rel="icon" type="image/png" href="/images/favicon-192x192.png" sizes="192x192">
+          
+        
+        
+          
+            <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+          
+        
+    
+    <!-- title -->
+    <title>DiDi（十六）</title>
+    <!-- styles -->
+    <link rel="stylesheet" href="/css/style.css">
+    <!-- rss -->
+    
+    
+</head>
+
+<body>
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#"><i class="fa fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fa fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fa fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/archives/">All</a></li>
+         
+          <li><a href="https://github.com/windstormeye">Projects</a></li>
+        
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        
+        <li><a class="icon" href="/2018/04/01/软件开发项目实践（二）/"><i class="fa fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        
+        <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" href="#"><i class="fa fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=http://pjhubs.com/2018/04/02/DiDi（十六）/"><i class="fa fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=http://pjhubs.com/2018/04/02/DiDi（十六）/&text=DiDi（十六）"><i class="fa fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=http://pjhubs.com/2018/04/02/DiDi（十六）/&title=DiDi（十六）"><i class="fa fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http://pjhubs.com/2018/04/02/DiDi（十六）/&is_video=false&description=DiDi（十六）"><i class="fa fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=DiDi（十六）&body=Check out this article: http://pjhubs.com/2018/04/02/DiDi（十六）/"><i class="fa fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=http://pjhubs.com/2018/04/02/DiDi（十六）/&title=DiDi（十六）"><i class="fa fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=http://pjhubs.com/2018/04/02/DiDi（十六）/&title=DiDi（十六）"><i class="fa fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=http://pjhubs.com/2018/04/02/DiDi（十六）/&title=DiDi（十六）"><i class="fa fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=http://pjhubs.com/2018/04/02/DiDi（十六）/&title=DiDi（十六）"><i class="fa fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=http://pjhubs.com/2018/04/02/DiDi（十六）/&name=DiDi（十六）&description="><i class="fa fa-tumblr " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#2018-04-02"><span class="toc-number">1.</span> <span class="toc-text">2018-04-02</span></a></li></ol>
+    </div>
+  </span>
+</div>
+
+    
+    <div class="content index width mx-auto px2 my4">
+        
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        DiDi（十六）
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">PJHubs</span>
+      </span>
+      
+    <div class="postdate">
+        <time datetime="2018-04-02T13:36:13.000Z" itemprop="datePublished">2018-04-02</time>
+    </div>
+
+
+      
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link" href="/tags/DiDi/">DiDi</a>, <a class="tag-link" href="/tags/iOS/">iOS</a>
+    </div>
+
+
+      <span id="busuanzi_container_page_pv">
+  	总阅读<span id="busuanzi_value_page_pv"></span>次
+      </span>
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <h2 id="2018-04-02"><a href="#2018-04-02" class="headerlink" title="2018-04-02"></a>2018-04-02</h2><p>今天又中度污染，不过是可以穿短袖的一天，非常的舒服。</p>
+<p>到了工位后又接着继续解决上周遗留下来的对接哈勃问题，不过周末这两天哈勃的RD写了个demo，去掉了用不到的依赖库。打开一看，嗯，确实是少了非常多，比起上周的一百多个现在只有不到三十个了。emmmm。😓。进入目录后直接<code>pod install</code>，等了一会还是上周的问题，如下所示：</p>
+<p><img src="https://i.loli.net/2018/04/02/5ac23362d1949.png" width="100%" height="100%" align="center"></p>
+<p><img src="https://i.loli.net/2018/04/02/5ac233627aee9.png" width="100%" height="100%" align="center"></p>
+<p>第一张图片的问题出现是因为使用了滴滴的内部pod工具<code>OneTool</code>导致的，问了之前的RD，他说<code>OneTool</code>很麻烦的。😂。。他之前也只是用过一些，现在也不用了，所以并不能解决问题。第二张图片之前从未出现过，估计是因为podfile中指定的<code>source</code>太多，刚好这些<code>source</code>中都有对应的pod版本，就导致出现了多个版本库的警告。</p>
+<p>刚开始特别懵逼，真的是搜遍了全网，SO、google、CSDN等国内外众多站点，大家遇到的问题跟我还不太相似，有极个别很类似的分析了一下也不太对，真的是第一次遇到了根本搜不到原因的问题。问了哈勃的RD，他说可以先不管，直接<code>pod install</code>能把依赖库down下来，build没问题就行，警告啥的不用管。😓。</p>
+<p>执行了命令后，居然发现给的demo居然能够成功把依赖全都down下来，这也太奇怪了（那自己之前到底在琢磨啥子。。）玩了玩demo，感觉这次接的入口等级权限还挺高，居然能够调度全国的代驾司机，虽然有权限控制，但还是感觉非常的有意思，第一次这么近距离的感受到了实时调度平台系统，而且以后说不定还会有更多的数据平台甚至跟哈勃同等级或者更高的调度系统接入呢，想起来真的是太棒了。虽然搞来搞去还是写的业务代码和业务逻辑。但是这其中可以接触到大量的优秀内部工具和库，以后尽量一个星期剖析一个库吧，上次讲的ONEProgressHUD也不够好。</p>
+<p>跑通了demo后，开始按照demo的格式把哈勃集成到主工程中，好了，苦逼的事情就这么开始了。细节就不展开了，因为真的太苦逼了，整个人差点又崩溃了。这种解决各种依赖问题和编译链接问题实在是太难受，就说几个值得注意的地方吧，</p>
+<ol>
+<li>Podfile文件格式一定要严格按照官方格式去写，我之所以现在这么苦逼，有一半是托之前写的Podfile格式不对，一个空格的原因导致整个依赖库down不下来，Podfile.lock文件都创建失败，差点以为是没给Xcode做好设置，改来改去发现都没问题，最后仔仔细细对照了给的demo格式，才发现是因为一个空格的原因。</li>
+<li>开始着手写整个工程，或者对现有整个项目做重构之前，一定要对依赖的各个库做好严格的版本限制，就因为<code>OneTool</code>的整个链的依赖库是基于AF 2.x的，而升级小助手又是基于AF 3.x的，改来改去，协调来协调去，最终顾大局而舍弃小家，把升级小助手用源码的方式进行了集成，然后又把小助手中用到AF 3.x的地方手动改为AF 2.x。我是搞不懂为啥都是内部库怎么就没有创建一个内部库时的前置要求，比如统一要求好各个内部库基于的依赖库版本等。以源码方式集成时，以拖拽方式给Xcode添加文件引用时，千万记得一定要拖完整了，就算是<code>command + A</code>全选目录下文件拖拽进Xcode工程中，也千万要记得对比一下两者之间是不是真的全都拖进去了。要不然会有一定概率跟我一样居然只拖进了.h没拖进.m，真是迷。。。</li>
+</ol>
+
+  </div>
+
+</article>
+
+
+
+    </div>
+    
+      <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/archives/">All</a></li>
+         
+          <li><a href="https://github.com/windstormeye">Projects</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#2018-04-02"><span class="toc-number">1.</span> <span class="toc-text">2018-04-02</span></a></li></ol>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=http://pjhubs.com/2018/04/02/DiDi（十六）/"><i class="fa fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=http://pjhubs.com/2018/04/02/DiDi（十六）/&text=DiDi（十六）"><i class="fa fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=http://pjhubs.com/2018/04/02/DiDi（十六）/&title=DiDi（十六）"><i class="fa fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http://pjhubs.com/2018/04/02/DiDi（十六）/&is_video=false&description=DiDi（十六）"><i class="fa fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=DiDi（十六）&body=Check out this article: http://pjhubs.com/2018/04/02/DiDi（十六）/"><i class="fa fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=http://pjhubs.com/2018/04/02/DiDi（十六）/&title=DiDi（十六）"><i class="fa fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=http://pjhubs.com/2018/04/02/DiDi（十六）/&title=DiDi（十六）"><i class="fa fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=http://pjhubs.com/2018/04/02/DiDi（十六）/&title=DiDi（十六）"><i class="fa fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=http://pjhubs.com/2018/04/02/DiDi（十六）/&title=DiDi（十六）"><i class="fa fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=http://pjhubs.com/2018/04/02/DiDi（十六）/&name=DiDi（十六）&description="><i class="fa fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+      <ul>
+        <li id="toc"><a class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fa fa-list fa-lg" aria-hidden="true"></i> TOC</a></li>
+        <li id="share"><a class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fa fa-share-alt fa-lg" aria-hidden="true"></i> Share</a></li>
+        <li id="top" style="display:none"><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a></li>
+        <li id="menu"><a class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fa fa-bars fa-lg" aria-hidden="true"></i> Menu</a></li>
+      </ul>
+    </div>
+
+  </div>
+</div>
+
+    
+    <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy; 2018 Piron
+	<span id="busuanzi_container_site_pv">
+  		总访问<span id="busuanzi_value_site_pv"></span>次
+	</span>		
+</div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/archives/">All</a></li>
+         
+          <li><a href="https://github.com/windstormeye">Projects</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+</footer>
+
+</body>
+</html>
+<!-- styles -->
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+<link rel="stylesheet" href="/lib/meslo-LG/styles.css">
+<link rel="stylesheet" href="/lib/justified-gallery/justifiedGallery.min.css">
+
+<!-- jquery -->
+<script src="/lib/jquery/jquery.min.js"></script>
+<script src="/lib/justified-gallery/jquery.justifiedGallery.min.js"></script>
+<script src="/js/main.js"></script>
+<!-- search -->
+
+<!-- Google Analytics -->
+
+    <script type="text/javascript">
+        (function(i,s,o,g,r,a,m) {i['GoogleAnalyticsObject']=r;i[r]=i[r]||function() {
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-86660611-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+
+<!-- Disqus Comments -->
+
+
