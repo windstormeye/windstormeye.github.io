@@ -15,7 +15,7 @@
 <meta property="og:description" content="2018-04-02今天又中度污染，不过是可以穿短袖的一天，非常的舒服。 到了工位后又接着继续解决上周遗留下来的对接哈勃问题，不过周末这两天哈勃的RD写了个demo，去掉了用不到的依赖库。打开一看，嗯，确实是少了非常多，比起上周的一百多个现在只有不到三十个了。emmmm。😓。进入目录后直接pod install，等了一会还是上周的问题，如下所示：   第一张图片的问题出现是因为使用了滴滴的内部p">
 <meta property="og:image" content="https://i.loli.net/2018/04/02/5ac23362d1949.png">
 <meta property="og:image" content="https://i.loli.net/2018/04/02/5ac233627aee9.png">
-<meta property="og:updated_time" content="2018-04-02T14:10:05.853Z">
+<meta property="og:updated_time" content="2018-04-03T14:08:16.805Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="DiDi（十六）">
 <meta name="twitter:description" content="2018-04-02今天又中度污染，不过是可以穿短袖的一天，非常的舒服。 到了工位后又接着继续解决上周遗留下来的对接哈勃问题，不过周末这两天哈勃的RD写了个demo，去掉了用不到的依赖库。打开一看，嗯，确实是少了非常多，比起上周的一百多个现在只有不到三十个了。emmmm。😓。进入目录后直接pod install，等了一会还是上周的问题，如下所示：   第一张图片的问题出现是因为使用了滴滴的内部p">
@@ -97,7 +97,7 @@
 
     </div>
     <div id="toc">
-      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#2018-04-02"><span class="toc-number">1.</span> <span class="toc-text">2018-04-02</span></a></li></ol>
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#2018-04-02"><span class="toc-number">1.</span> <span class="toc-text">2018-04-02</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2018-04-03"><span class="toc-number">2.</span> <span class="toc-text">2018-04-03</span></a></li></ol>
     </div>
   </span>
 </div>
@@ -151,6 +151,10 @@
 <li>Podfile文件格式一定要严格按照官方格式去写，我之所以现在这么苦逼，有一半是托之前写的Podfile格式不对，一个空格的原因导致整个依赖库down不下来，Podfile.lock文件都创建失败，差点以为是没给Xcode做好设置，改来改去发现都没问题，最后仔仔细细对照了给的demo格式，才发现是因为一个空格的原因。</li>
 <li>开始着手写整个工程，或者对现有整个项目做重构之前，一定要对依赖的各个库做好严格的版本限制，就因为<code>OneTool</code>的整个链的依赖库是基于AF 2.x的，而升级小助手又是基于AF 3.x的，改来改去，协调来协调去，最终顾大局而舍弃小家，把升级小助手用源码的方式进行了集成，然后又把小助手中用到AF 3.x的地方手动改为AF 2.x。我是搞不懂为啥都是内部库怎么就没有创建一个内部库时的前置要求，比如统一要求好各个内部库基于的依赖库版本等。以源码方式集成时，以拖拽方式给Xcode添加文件引用时，千万记得一定要拖完整了，就算是<code>command + A</code>全选目录下文件拖拽进Xcode工程中，也千万要记得对比一下两者之间是不是真的全都拖进去了。要不然会有一定概率跟我一样居然只拖进了.h没拖进.m，真是迷。。。</li>
 </ol>
+<h2 id="2018-04-03"><a href="#2018-04-03" class="headerlink" title="2018-04-03"></a>2018-04-03</h2><p>今天主要解决两个问题，哈勃因为在block中return出了<code>UIViewController</code>，然后需要在主工程中push进它，但问题就出在这个<code>UIViewController</code>上，之前自定义了NavigationBar，这就导致了UIViewController都需要手动的去加上，哈勃的第一个选择页面较为完整的解决了这个问题，但是确实没法统一到哈勃下的接着push进来的其它页面，除非让哈勃的RD引用我们这个VC拓展，很明显这是不可能的，因为哈勃还用在主App中呢，因此走入了第二步非常痛苦的重构之路。</p>
+<p>怎么个重构法呢，梳理了一下。因为在哈勃的init方法中的success block丢出了一个<code>UIViewController</code>，哈勃的RD告诉我直接拿Navigation push进去就行。但是问题就出在了NavigationController这儿，之前直接hidden掉了，直接自定义NavigationView，上午想的还是对哈勃做的改造，但是后续仔细一想，woc，这样不行啊，如果单单针对哈勃做了改造，那以后再对接其它数据平台咋办，那还不得累死，因此，NavigationBar一定不能隐藏，而且还要copy成原来的样子。</p>
+<p>其实我没搞懂为啥之前的RD会冒出自定义NavigationBar的思想，如果说是因为首页的异性headerView导致的，那完全可以针对首页把NavigationBar给hidden掉哇，搞得现在重构的话要做的事情比较啰嗦，之前我还以为最省事的办法就是直接hidden掉原生的NavigationBar，然后自己造，自从经历过iPhone X的适配后，就再也不这么想了。也算是在此给大家提个醒吧，如果能够原生控件解决的事情，就一定不要自造，因为你无法保证后续会出现什么操蛋的事情，刚来的时候我也觉得以后不会接入这么多其它数据平台，但是现在慢慢发现，自己真的是太天真了，现在开始慢慢的对整个项目架构有了比较严格的要求，一看到之前写横竖屏做了那么多的if-else简直想吐，这两天在好好整整NavigationBar的事情，退回原生，估计又能删掉一堆适配iPhone X的if-else了。</p>
+<p>还有一大部分时间是在做HUD的替换，慢慢的发现的其它数据平台的产品都在直接使用<code>ONEUIKit</code>里的组件，比如HUD、Alert等等，如果我们主工程不用，那就很突兀，主工程一套UI设计，其它子系统又一套UI设计，所以我背着产品自己做了决定，实在是看不下去放着统一的UI设计不用，自己造。</p>
 
   </div>
 
@@ -176,7 +180,7 @@
     </div>
 
     <div id="toc-footer" style="display: none">
-      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#2018-04-02"><span class="toc-number">1.</span> <span class="toc-text">2018-04-02</span></a></li></ol>
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#2018-04-02"><span class="toc-number">1.</span> <span class="toc-text">2018-04-02</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2018-04-03"><span class="toc-number">2.</span> <span class="toc-text">2018-04-03</span></a></li></ol>
     </div>
 
     <div id="share-footer" style="display: none">
