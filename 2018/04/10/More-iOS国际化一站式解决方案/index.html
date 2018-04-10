@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="description" content="关于iOS开发中的国际化（也可称为多语言）在网上的文章多如牛毛，不过总结起来就那么一回事，不是说他们写的不好我写的多好，而是说过于零散。 现在，我将结合实际场景需求进行国际化做法详解。可以肯定的是，Android的国际化做法大同小异，无非也就是各个语言版本的文件替换，我们先来分析下真实的需求是怎么一回事。 国际化需求： 只提供English和Chinese Simplified两种语言； App名">
+<meta name="keywords" content="iOS,国际化">
+<meta property="og:type" content="article">
+<meta property="og:title" content="More-iOS国际化一站式解决方案">
+<meta property="og:url" content="http://pjhubs.com/2018/04/10/More-iOS国际化一站式解决方案/index.html">
+<meta property="og:site_name" content="PJHubs">
+<meta property="og:description" content="关于iOS开发中的国际化（也可称为多语言）在网上的文章多如牛毛，不过总结起来就那么一回事，不是说他们写的不好我写的多好，而是说过于零散。 现在，我将结合实际场景需求进行国际化做法详解。可以肯定的是，Android的国际化做法大同小异，无非也就是各个语言版本的文件替换，我们先来分析下真实的需求是怎么一回事。 国际化需求： 只提供English和Chinese Simplified两种语言； App名">
+<meta property="og:image" content="https://i.loli.net/2018/04/10/5accbf4011d4d.gif">
+<meta property="og:updated_time" content="2018-04-10T13:44:29.186Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="More-iOS国际化一站式解决方案">
+<meta name="twitter:description" content="关于iOS开发中的国际化（也可称为多语言）在网上的文章多如牛毛，不过总结起来就那么一回事，不是说他们写的不好我写的多好，而是说过于零散。 现在，我将结合实际场景需求进行国际化做法详解。可以肯定的是，Android的国际化做法大同小异，无非也就是各个语言版本的文件替换，我们先来分析下真实的需求是怎么一回事。 国际化需求： 只提供English和Chinese Simplified两种语言； App名">
+<meta name="twitter:image" content="https://i.loli.net/2018/04/10/5accbf4011d4d.gif">
+    
+    
+        
+          
+              <link rel="shortcut icon" href="/images/favicon.ico">
+          
+        
+        
+          
+            <link rel="icon" type="image/png" href="/images/favicon-192x192.png" sizes="192x192">
+          
+        
+        
+          
+            <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+          
+        
+    
+    <!-- title -->
+    <title>More-iOS国际化一站式解决方案</title>
+    <!-- styles -->
+    <link rel="stylesheet" href="/css/style.css">
+    <!-- rss -->
+    
+    
+</head>
+
+<body>
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#"><i class="fa fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fa fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fa fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/archives/">All</a></li>
+         
+          <li><a href="https://github.com/windstormeye">Projects</a></li>
+        
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        
+        <li><a class="icon" href="/2018/04/09/DiDi（十七）/"><i class="fa fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        
+        <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" href="#"><i class="fa fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=http://pjhubs.com/2018/04/10/More-iOS国际化一站式解决方案/"><i class="fa fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=http://pjhubs.com/2018/04/10/More-iOS国际化一站式解决方案/&text=More-iOS国际化一站式解决方案"><i class="fa fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=http://pjhubs.com/2018/04/10/More-iOS国际化一站式解决方案/&title=More-iOS国际化一站式解决方案"><i class="fa fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http://pjhubs.com/2018/04/10/More-iOS国际化一站式解决方案/&is_video=false&description=More-iOS国际化一站式解决方案"><i class="fa fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=More-iOS国际化一站式解决方案&body=Check out this article: http://pjhubs.com/2018/04/10/More-iOS国际化一站式解决方案/"><i class="fa fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=http://pjhubs.com/2018/04/10/More-iOS国际化一站式解决方案/&title=More-iOS国际化一站式解决方案"><i class="fa fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=http://pjhubs.com/2018/04/10/More-iOS国际化一站式解决方案/&title=More-iOS国际化一站式解决方案"><i class="fa fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=http://pjhubs.com/2018/04/10/More-iOS国际化一站式解决方案/&title=More-iOS国际化一站式解决方案"><i class="fa fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=http://pjhubs.com/2018/04/10/More-iOS国际化一站式解决方案/&title=More-iOS国际化一站式解决方案"><i class="fa fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=http://pjhubs.com/2018/04/10/More-iOS国际化一站式解决方案/&name=More-iOS国际化一站式解决方案&description="><i class="fa fa-tumblr " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#国际化需求："><span class="toc-number">1.</span> <span class="toc-text">国际化需求：</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#首先创建一个工程"><span class="toc-number">1.1.</span> <span class="toc-text">首先创建一个工程</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#工程初始化"><span class="toc-number">1.2.</span> <span class="toc-text">工程初始化</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#创建语言文件"><span class="toc-number">1.3.</span> <span class="toc-text">创建语言文件</span></a></li></ol></li></ol>
+    </div>
+  </span>
+</div>
+
+    
+    <div class="content index width mx-auto px2 my4">
+        
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        More-iOS国际化一站式解决方案
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">PJHubs</span>
+      </span>
+      
+    <div class="postdate">
+        <time datetime="2018-04-10T13:10:40.000Z" itemprop="datePublished">2018-04-10</time>
+    </div>
+
+
+      
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link" href="/tags/iOS/">iOS</a>, <a class="tag-link" href="/tags/国际化/">国际化</a>
+    </div>
+
+
+      <span id="busuanzi_container_page_pv">
+  	总阅读<span id="busuanzi_value_page_pv"></span>次
+      </span>
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <p>关于iOS开发中的国际化（也可称为多语言）在网上的文章多如牛毛，不过总结起来就那么一回事，不是说他们写的不好我写的多好，而是说过于零散。</p>
+<p>现在，我将结合实际场景需求进行国际化做法详解。可以肯定的是，Android的国际化做法大同小异，无非也就是各个语言版本的文件替换，我们先来分析下真实的需求是怎么一回事。</p>
+<h2 id="国际化需求："><a href="#国际化需求：" class="headerlink" title="国际化需求："></a>国际化需求：</h2><ol>
+<li>只提供English和Chinese Simplified两种语言；</li>
+<li>App名称跟随系统语言变化；</li>
+<li>用户首次打开app时，app的语言与系统语言保持一致（系统语言为非简体中文，默认app都是英文）用户手动更改语言之后，之后都记忆用户选择的语言；</li>
+<li>用户在App内切换语言后，App本身所有文本信息全部替换成对应语言。</li>
+</ol>
+<p>根据需求，我比较纠结的地方是，App的静态文本数据可以存两份在本地，也就是English一份Chinese Simplified一份，但请求的API是同时返回两份中英文数据or分中英文两个接口？如果是要一个接口同时返回了中英文两份数据，显然会加大数据包的大小，其次用户很有可能从安装App的那天开始就不再切换App语言，甚至平均几个星期才换一次，同时返回两份数据是否多余，但是这么做几乎可以达到“无感知”数据源切换，相当于是说，一旦用户选择好了要切换语言，“啪嗒”点了完成，立马pop掉当前页面，然后整个App的数据源中英文切换可以几乎用“瞬间完成”来形容。</p>
+<p>如果是分中英文两个接口，实际上就会出现微信在进行语言切换时的loading菊花，因为要重新拉取英文版数据，不过好处是可以减少上一种做法的数据包整体大小。这两种做法我都有实践过，如果你的App是非常固定，不会频繁出现语言切换的需求，那么可以使用第二种；如果App有一天之内可能会频繁切换多次语言的情况，第一种无疑。</p>
+<p>经过一番探讨，虽然要供给拉美、北美和欧洲的同学使用，但是不会出现频繁切换语言的情况，所以，最终我们选择了第二种解决方案。先来看一张最终成果gif图，</p>
+<p><img src="https://i.loli.net/2018/04/10/5accbf4011d4d.gif" width="40%" height="40%" align="center"></p>
+<p>从上图中可以看到其实并没有对数据源进行切换，因为。。。。后台没写完😓。</p>
+<p>不过也不影响我们的讲解，首先，明确一个概念，我们能够做的国际化语言支持iOS系统中自带的所有语言，只要你能在系统设置中找到的语言，就能够对你的App做对应版本的国际化适配；其次，每对App适配一种语言，就要单创建出一个语言文件（要不然会引起冲突）。OK，我们正式进入讲解。</p>
+<h3 id="首先创建一个工程"><a href="#首先创建一个工程" class="headerlink" title="首先创建一个工程"></a>首先创建一个工程</h3><p>我起名为<code>languageTest</code>。</p>
+<h3 id="工程初始化"><a href="#工程初始化" class="headerlink" title="工程初始化"></a>工程初始化</h3><figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// AppDelegate.m</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#import <span class="meta-string">"navOneViewController.h"</span></span></span><br><span class="line"><span class="meta">#import <span class="meta-string">"navTwoViewController.h"</span></span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">@interface</span> <span class="title">AppDelegate</span> ()</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">@property</span> (<span class="keyword">nonatomic</span>, <span class="keyword">strong</span>) <span class="built_in">UITabBarController</span> *rootTabBar;</span><br><span class="line"></span><br><span class="line"><span class="keyword">@end</span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">@implementation</span> <span class="title">AppDelegate</span></span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">- (<span class="built_in">BOOL</span>)application:(<span class="built_in">UIApplication</span> *)application didFinishLaunchingWithOptions:(<span class="built_in">NSDictionary</span> *)launchOptions &#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">self</span>.window = [[<span class="built_in">UIWindow</span> alloc]initWithFrame:[<span class="built_in">UIScreen</span> mainScreen].bounds];</span><br><span class="line">    <span class="keyword">self</span>.rootTabBar = [[<span class="built_in">UITabBarController</span> alloc]init];</span><br><span class="line">    <span class="keyword">self</span>.rootTabBar.delegate = (<span class="keyword">id</span>)<span class="keyword">self</span>;</span><br><span class="line">    <span class="keyword">self</span>.window.rootViewController = <span class="keyword">self</span>.rootTabBar;</span><br><span class="line">    [[<span class="built_in">UITabBar</span> appearance] setBarTintColor:[<span class="built_in">UIColor</span> whiteColor]];</span><br><span class="line"></span><br><span class="line">    navOneViewController *navOneController = [navOneViewController new];</span><br><span class="line">    <span class="built_in">UINavigationController</span> *nav1 = [[<span class="built_in">UINavigationController</span> alloc] initWithRootViewController:navOneController];</span><br><span class="line">    nav1.title = <span class="string">@"首页"</span>;</span><br><span class="line"></span><br><span class="line">    navTwoViewController *navTwoController = [navTwoViewController new];</span><br><span class="line">    <span class="built_in">UINavigationController</span> *nav2 = [[<span class="built_in">UINavigationController</span> alloc] initWithRootViewController:navTwoController];</span><br><span class="line">    nav2.title = <span class="string">@"发现"</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">self</span>.rootTabBar.viewControllers = @[nav1, nav2];</span><br><span class="line"></span><br><span class="line">    [<span class="keyword">self</span>.window makeKeyAndVisible];</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="literal">YES</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>在<code>Appdelegate</code>中，我们创建一个具备基本展示功能的tabBar及挂载在其之上的VC，</p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// navOneViewController.m</span></span><br><span class="line"></span><br><span class="line">- (<span class="keyword">void</span>)viewDidLoad &#123;</span><br><span class="line">    [<span class="keyword">super</span> viewDidLoad];</span><br><span class="line"></span><br><span class="line">    <span class="keyword">self</span>.view.backgroundColor = [<span class="built_in">UIColor</span> blueColor];</span><br><span class="line"></span><br><span class="line">    <span class="built_in">UILabel</span> *label = [[<span class="built_in">UILabel</span> alloc] initWithFrame:<span class="built_in">CGRectMake</span>(<span class="number">100</span>, <span class="number">100</span>, <span class="number">200</span>, <span class="number">20</span>)];</span><br><span class="line">    [<span class="keyword">self</span>.view addSubview:label];</span><br><span class="line">    label.font = [<span class="built_in">UIFont</span> systemFontOfSize:<span class="number">25</span>];</span><br><span class="line">    label.textColor = [<span class="built_in">UIColor</span> whiteColor];</span><br><span class="line">    label.text = <span class="string">@"这是首页"</span>;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment">// navTwoViewController.m</span></span><br><span class="line"></span><br><span class="line">- (<span class="keyword">void</span>)viewDidLoad &#123;</span><br><span class="line">    [<span class="keyword">super</span> viewDidLoad];</span><br><span class="line"></span><br><span class="line">    <span class="keyword">self</span>.view.backgroundColor = [<span class="built_in">UIColor</span> orangeColor];</span><br><span class="line"></span><br><span class="line">    <span class="built_in">UILabel</span> *label = [[<span class="built_in">UILabel</span> alloc] initWithFrame:<span class="built_in">CGRectMake</span>(<span class="number">100</span>, <span class="number">100</span>, <span class="number">200</span>, <span class="number">20</span>)];</span><br><span class="line">    [<span class="keyword">self</span>.view addSubview:label];</span><br><span class="line">    label.font = [<span class="built_in">UIFont</span> systemFontOfSize:<span class="number">25</span>];</span><br><span class="line">    label.textColor = [<span class="built_in">UIColor</span> whiteColor];</span><br><span class="line">    label.text = <span class="string">@"这是发现"</span>;</span><br><span class="line"></span><br><span class="line">    <span class="built_in">UIButton</span> *button = [[<span class="built_in">UIButton</span> alloc] initWithFrame:<span class="built_in">CGRectMake</span>(<span class="number">100</span>, <span class="number">300</span>, <span class="number">100</span>, <span class="number">100</span>)];</span><br><span class="line">    [<span class="keyword">self</span>.view addSubview:button];</span><br><span class="line">    [button addTarget:<span class="keyword">self</span> action:<span class="keyword">@selector</span>(buttonClick) forControlEvents:<span class="built_in">UIControlEventTouchUpInside</span>];</span><br><span class="line">    button.backgroundColor = [<span class="built_in">UIColor</span> blueColor];</span><br><span class="line">    [button setTitle:<span class="string">@"改变语言"</span> forState:<span class="built_in">UIControlStateNormal</span>];</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">- (<span class="keyword">void</span>)buttonClick &#123;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>在各自对应的VC中写下相关UI，并预留相关Button点击事件即可。</p>
+<h3 id="创建语言文件"><a href="#创建语言文件" class="headerlink" title="创建语言文件"></a>创建语言文件</h3><p>创建路径： file -&gt; new -&gt; file… -&gt; String File，文件名严格命名为——“Localizable”，创建好该文件后，点击该文件，并打开Xcode的右边功能区（不知道应该叫啥），在Localization功能区勾选语言版本，如果此时你并未看到或者只有English可选，我们需要到PROJECT -&gt; info -&gt; Localization，添加需要的语言。</p>
+<p>添加完成后，会在之前创建的Localization.string文件下看到多出来的语言文件，我选择了English和Chinese Simplified。现在，我们已经可以在对应生成的语言文件中进行需要多语言替换的字段编写了。</p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Localizable.string/English文件</span></span><br><span class="line"></span><br><span class="line"><span class="string">"home"</span> = <span class="string">"home"</span>;</span><br><span class="line"><span class="string">"homeString"</span> = <span class="string">"I'm home"</span>;</span><br><span class="line"></span><br><span class="line"><span class="string">"discover"</span> = <span class="string">"discover"</span>;</span><br><span class="line"><span class="string">"discoverString"</span> = <span class="string">"I'm discover"</span>;</span><br><span class="line"></span><br><span class="line"><span class="string">"change"</span> = <span class="string">"change"</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">// Localizable.string/Chinese(Simplified)文件</span></span><br><span class="line"></span><br><span class="line"><span class="string">"home"</span> = <span class="string">"首页"</span>;</span><br><span class="line"><span class="string">"homeString"</span> = <span class="string">"我是首页"</span>;</span><br><span class="line"></span><br><span class="line"><span class="string">"discover"</span> = <span class="string">"发现"</span>;</span><br><span class="line"><span class="string">"discoverString"</span> = <span class="string">"我是发现"</span>;</span><br><span class="line"></span><br><span class="line"><span class="string">"change"</span> = <span class="string">"改变语言"</span>;</span><br></pre></td></tr></table></figure>
+<p>并新建一个pch文件，pch文件同样也是头文件，不过这是一个特殊头文件，是一个预编译文件，位于该文件中的所有内容，能够被其他所有源文件共享和访问，详细你也看出来了，如果在pch文件中写了大量的不是必须文件，则会延长编译期时间，我们可以在.pch文件中放：</p>
+<ol>
+<li>全局宏；</li>
+<li>整个工程中都能用上的头文件；</li>
+<li>动态更加当前App运行的环境切换相关宏（debug or release）。</li>
+</ol>
+<p>因此，我们需要创建一个pch文件去存放接下来要在整个工程中都要用到的判断语言环境的中英文宏。创建一个pch文件的方式为，file -&gt; new -&gt; file… -&gt; 搜“pch”关键字，创建它。</p>
+<p>进入工程配置 -&gt; TARGET -&gt; Build Settings -&gt; 搜pch关键词 -&gt; 在“Apple LLVM 9.0 - Language”下的Prefix Header中，双击输入你的.pch文件路径，我写的是<code>$(SRCROOT)/PrefixHeader.pch</code>，填写完毕，回车，会看到生成的绝对路径，确定pch文件路径是否正确。一切都没问题后，编译通过即可。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">在pch文件中，写入以下宏定义，</span><br><span class="line">```objc</span><br><span class="line">#define AppLanguage @&quot;appLanguage&quot;</span><br><span class="line">#define PJLocalString(key) \</span><br><span class="line">[[NSBundle bundleWithPath:[[NSBundle mainBundle] pathForResource:[NSString stringWithFormat:@&quot;%@&quot;,[[NSUserDefaults standardUserDefaults] objectForKey:@&quot;appLanguage&quot;]] ofType:@&quot;lproj&quot;]] localizedStringForKey:(key) value:@&quot;&quot; table:nil]</span><br></pre></td></tr></table></figure>
+<p>首先定义了一个<code>AppLanguage</code>宏，推荐大家的命名更加多样化一些，因为OC并没有namespace，如果我们的命名过于简单，就会导致和Apple本身自定义的NSUserDefaults默认值产生冲突。</p>
+<p><code>PJLocalString(key)</code>这个宏“定义”了一个更长的方法，我们也都明确了一个概念，在iOS中的每个国际化语言，就对应着一个文件，这个文件就保存在App沙盒的根目录中，我们要做的就是在某个时机替换系统所采用的语言文件即可，而<code>PJLocalString(key)</code>这个宏所做的事情，就是替换！先从NSUserDefaults中取出对应的语言key（en还是zh-Hans），根据语言key去索引到对应的.lproj文件，最后把要替换的关键词传入，抛出找到的对应值（我觉得找的这个过程用的结构应该不是hashmap，真的很快。😨）</p>
+<p>多语言文件有了，宏也有了，那怎么用呢？举个例子！</p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">- (<span class="keyword">void</span>)viewDidLoad &#123;</span><br><span class="line">    [<span class="keyword">super</span> viewDidLoad];</span><br><span class="line"></span><br><span class="line">    <span class="keyword">self</span>.view.backgroundColor = [<span class="built_in">UIColor</span> blueColor];</span><br><span class="line"></span><br><span class="line">    <span class="built_in">UILabel</span> *label = [[<span class="built_in">UILabel</span> alloc] initWithFrame:<span class="built_in">CGRectMake</span>(<span class="number">100</span>, <span class="number">100</span>, <span class="number">200</span>, <span class="number">20</span>)];</span><br><span class="line">    [<span class="keyword">self</span>.view addSubview:label];</span><br><span class="line">    label.font = [<span class="built_in">UIFont</span> systemFontOfSize:<span class="number">25</span>];</span><br><span class="line">    label.textColor = [<span class="built_in">UIColor</span> whiteColor];</span><br><span class="line">    label.text = PJLocalString(<span class="string">@"homeString"</span>);</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>只需要在多语言文字的地方调用<code>PJLocalString()</code>宏，传入对应key即可。但是此时运行工程，会发现啥都没了，是因为我们并未对NSUserDefaults中做当前语言的设置，这就导致了取出的值为nil。所以，还需要在<code>AppDelegate</code>文件中设置初始语言，<br><figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span>(![[<span class="built_in">NSUserDefaults</span> standardUserDefaults] objectForKey:AppLanguage])&#123;</span><br><span class="line">        [[<span class="built_in">NSUserDefaults</span> standardUserDefaults] setObject:<span class="string">@"zh-Hans"</span> forKey:AppLanguage];</span><br><span class="line">        [[<span class="built_in">NSUserDefaults</span> standardUserDefaults] synchronize];</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure></p>
+<p>这样，我们即可完成对</p>
+<p>未完待续……</p>
+
+  </div>
+
+</article>
+
+
+
+    </div>
+    
+      <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/archives/">All</a></li>
+         
+          <li><a href="https://github.com/windstormeye">Projects</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#国际化需求："><span class="toc-number">1.</span> <span class="toc-text">国际化需求：</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#首先创建一个工程"><span class="toc-number">1.1.</span> <span class="toc-text">首先创建一个工程</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#工程初始化"><span class="toc-number">1.2.</span> <span class="toc-text">工程初始化</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#创建语言文件"><span class="toc-number">1.3.</span> <span class="toc-text">创建语言文件</span></a></li></ol></li></ol>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=http://pjhubs.com/2018/04/10/More-iOS国际化一站式解决方案/"><i class="fa fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=http://pjhubs.com/2018/04/10/More-iOS国际化一站式解决方案/&text=More-iOS国际化一站式解决方案"><i class="fa fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=http://pjhubs.com/2018/04/10/More-iOS国际化一站式解决方案/&title=More-iOS国际化一站式解决方案"><i class="fa fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http://pjhubs.com/2018/04/10/More-iOS国际化一站式解决方案/&is_video=false&description=More-iOS国际化一站式解决方案"><i class="fa fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=More-iOS国际化一站式解决方案&body=Check out this article: http://pjhubs.com/2018/04/10/More-iOS国际化一站式解决方案/"><i class="fa fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=http://pjhubs.com/2018/04/10/More-iOS国际化一站式解决方案/&title=More-iOS国际化一站式解决方案"><i class="fa fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=http://pjhubs.com/2018/04/10/More-iOS国际化一站式解决方案/&title=More-iOS国际化一站式解决方案"><i class="fa fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=http://pjhubs.com/2018/04/10/More-iOS国际化一站式解决方案/&title=More-iOS国际化一站式解决方案"><i class="fa fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=http://pjhubs.com/2018/04/10/More-iOS国际化一站式解决方案/&title=More-iOS国际化一站式解决方案"><i class="fa fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=http://pjhubs.com/2018/04/10/More-iOS国际化一站式解决方案/&name=More-iOS国际化一站式解决方案&description="><i class="fa fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+      <ul>
+        <li id="toc"><a class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fa fa-list fa-lg" aria-hidden="true"></i> TOC</a></li>
+        <li id="share"><a class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fa fa-share-alt fa-lg" aria-hidden="true"></i> Share</a></li>
+        <li id="top" style="display:none"><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a></li>
+        <li id="menu"><a class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fa fa-bars fa-lg" aria-hidden="true"></i> Menu</a></li>
+      </ul>
+    </div>
+
+  </div>
+</div>
+
+    
+    <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy; 2018 Piron
+	<span id="busuanzi_container_site_pv">
+  		总访问<span id="busuanzi_value_site_pv"></span>次
+	</span>		
+</div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/archives/">All</a></li>
+         
+          <li><a href="https://github.com/windstormeye">Projects</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+</footer>
+
+</body>
+</html>
+<!-- styles -->
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+<link rel="stylesheet" href="/lib/meslo-LG/styles.css">
+<link rel="stylesheet" href="/lib/justified-gallery/justifiedGallery.min.css">
+
+<!-- jquery -->
+<script src="/lib/jquery/jquery.min.js"></script>
+<script src="/lib/justified-gallery/jquery.justifiedGallery.min.js"></script>
+<script src="/js/main.js"></script>
+<!-- search -->
+
+<!-- Google Analytics -->
+
+    <script type="text/javascript">
+        (function(i,s,o,g,r,a,m) {i['GoogleAnalyticsObject']=r;i[r]=i[r]||function() {
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-86660611-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+
+<!-- Disqus Comments -->
+
+
