@@ -6,17 +6,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="HandheldFriendly" content="True">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-    <meta name="description" content="2018-04-09今天把小助手替换成了ONEAlertView，这是下次的分析😝。然后重点又再次分析了一遍ONEProgressHUD，有兴趣的同学可以看这篇文章。 浅析ONEUIKit/ONEProgressHUD 2018-04-09又开始练车了，太痛苦了，困得不行。科三第一次模拟器一点用处没有啊，就听教练讲啊讲啊讲，然后盯着所谓的模拟器，这模拟器简直了，只能摸，甚至都不能用，只能跟着视频">
-<meta name="keywords" content="iOS,DiDi">
+    <meta name="description" content="2018-04-09今天把小助手替换成了ONEAlertView，这是下次的分析😝。然后重点又再次分析了一遍ONEProgressHUD，有兴趣的同学可以看这篇文章。 浅析ONEUIKit/ONEProgressHUD 2018-04-10又开始练车了，太痛苦了，困得不行。科三第一次模拟器一点用处没有啊，就听教练讲啊讲啊讲，然后盯着所谓的模拟器，这模拟器简直了，只能摸，甚至都不能用，只能跟着视频">
+<meta name="keywords" content="DiDi,iOS">
 <meta property="og:type" content="article">
 <meta property="og:title" content="DiDi（十七）">
 <meta property="og:url" content="http://pjhubs.com/2018/04/09/DiDi（十七）/index.html">
 <meta property="og:site_name" content="PJHubs">
-<meta property="og:description" content="2018-04-09今天把小助手替换成了ONEAlertView，这是下次的分析😝。然后重点又再次分析了一遍ONEProgressHUD，有兴趣的同学可以看这篇文章。 浅析ONEUIKit/ONEProgressHUD 2018-04-09又开始练车了，太痛苦了，困得不行。科三第一次模拟器一点用处没有啊，就听教练讲啊讲啊讲，然后盯着所谓的模拟器，这模拟器简直了，只能摸，甚至都不能用，只能跟着视频">
-<meta property="og:updated_time" content="2018-04-10T13:36:12.036Z">
+<meta property="og:description" content="2018-04-09今天把小助手替换成了ONEAlertView，这是下次的分析😝。然后重点又再次分析了一遍ONEProgressHUD，有兴趣的同学可以看这篇文章。 浅析ONEUIKit/ONEProgressHUD 2018-04-10又开始练车了，太痛苦了，困得不行。科三第一次模拟器一点用处没有啊，就听教练讲啊讲啊讲，然后盯着所谓的模拟器，这模拟器简直了，只能摸，甚至都不能用，只能跟着视频">
+<meta property="og:updated_time" content="2018-04-11T13:31:19.373Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="DiDi（十七）">
-<meta name="twitter:description" content="2018-04-09今天把小助手替换成了ONEAlertView，这是下次的分析😝。然后重点又再次分析了一遍ONEProgressHUD，有兴趣的同学可以看这篇文章。 浅析ONEUIKit/ONEProgressHUD 2018-04-09又开始练车了，太痛苦了，困得不行。科三第一次模拟器一点用处没有啊，就听教练讲啊讲啊讲，然后盯着所谓的模拟器，这模拟器简直了，只能摸，甚至都不能用，只能跟着视频">
+<meta name="twitter:description" content="2018-04-09今天把小助手替换成了ONEAlertView，这是下次的分析😝。然后重点又再次分析了一遍ONEProgressHUD，有兴趣的同学可以看这篇文章。 浅析ONEUIKit/ONEProgressHUD 2018-04-10又开始练车了，太痛苦了，困得不行。科三第一次模拟器一点用处没有啊，就听教练讲啊讲啊讲，然后盯着所谓的模拟器，这模拟器简直了，只能摸，甚至都不能用，只能跟着视频">
     
     
         
@@ -96,7 +96,7 @@
 
     </div>
     <div id="toc">
-      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#2018-04-09"><span class="toc-number">1.</span> <span class="toc-text">2018-04-09</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2018-04-09-1"><span class="toc-number">2.</span> <span class="toc-text">2018-04-09</span></a></li></ol>
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#2018-04-09"><span class="toc-number">1.</span> <span class="toc-text">2018-04-09</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2018-04-10"><span class="toc-number">2.</span> <span class="toc-text">2018-04-10</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2018-04-11"><span class="toc-number">3.</span> <span class="toc-text">2018-04-11</span></a></li></ol>
     </div>
   </span>
 </div>
@@ -140,7 +140,7 @@
   <div class="content" itemprop="articleBody">
     <h2 id="2018-04-09"><a href="#2018-04-09" class="headerlink" title="2018-04-09"></a>2018-04-09</h2><p>今天把小助手替换成了ONEAlertView，这是下次的分析😝。然后重点又再次分析了一遍ONEProgressHUD，有兴趣的同学可以看这篇文章。</p>
 <p><a href="http://pjhubs.com/2018/04/09/ONEUIKit-ONEProgressHUD/">浅析ONEUIKit/ONEProgressHUD</a></p>
-<h2 id="2018-04-09-1"><a href="#2018-04-09-1" class="headerlink" title="2018-04-09"></a>2018-04-09</h2><p>又开始练车了，太痛苦了，困得不行。科三第一次模拟器一点用处没有啊，就听教练讲啊讲啊讲，然后盯着所谓的模拟器，这模拟器简直了，只能摸，甚至都不能用，只能跟着视频YY。</p>
+<h2 id="2018-04-10"><a href="#2018-04-10" class="headerlink" title="2018-04-10"></a>2018-04-10</h2><p>又开始练车了，太痛苦了，困得不行。科三第一次模拟器一点用处没有啊，就听教练讲啊讲啊讲，然后盯着所谓的模拟器，这模拟器简直了，只能摸，甚至都不能用，只能跟着视频YY。</p>
 <p>中午到工位上喝了一大杯茉莉茶，瞬间回血，重新整理1.3.5需求，发现Native剩下的内容就只有：</p>
 <ol>
 <li>push改造。要做成动态配置，不过还是得到友盟后台去手工填单子，这两天再琢磨琢磨。</li>
@@ -153,6 +153,9 @@
 <p>然后又稍微看了看ONEAlertView，只看了一个secondary初始化方法的调用栈，然后接着扫了其它文件，woc，吓了一跳，这一个小的UI库近3000行代码。莫名害怕，这波分析起来感觉压力开始有了。🙄</p>
 <p>最后开始电面了一个东北大学的大三iOS，问的问题全在之前发的《如何招到一个靠谱的iOS实习生》里，还拓展了几个小问题，前面几个概念基础答得一塌糊涂，int和NSInterger的区别只能说到，使用NSInterger更安全，问到底是安全啥，稀里糊涂的最后也踩到点上了，因为前天晚上拿到他的简历后，把这位同学的GitHub和掘金都刷了一遍（他自己放上来的），看到GitHub的时候，内心是拒绝的，但是看到掘金的时候一下子来了兴趣，先不管里边的文章内容有多少来自网络，但是至少能够发出来，而且排版还不错，说明了应该是有点料的。在后续的一来一回问答中，故意抛了他比较擅长的tableView调优和Block理解以及runtime的一些基础内容上，答的都还可以，基本上点都踩到了，所以咧，最后我给他的定义是，对平常经常使用的基础内容没有深究，但是却对iOS开发中的中等知识把握的还行，项目做的少，对项目的整体把握比较懵逼。</p>
 <p>一般来说应届包括我自己都会走两个极端，一种是对基础掌握的非常好，但是对项目的整体把握有欠缺，另外一种是项目或者东西做的非常多，但是针对一些基础知识稍微欠缺（我是第二种🙂），但是我个人比较喜欢第二种，因为一般第二种同学一点就通，因为很多东西他平时都用过，稍微提醒他一下，引导引导，就能把这些基础知识都串起来了，不是说第一种同学不好，而是说基础夯实确实有必要，但是很多基础不一定能解近渴。</p>
+<h2 id="2018-04-11"><a href="#2018-04-11" class="headerlink" title="2018-04-11"></a>2018-04-11</h2><p>今天科三第一次实际道路，以前总以为家里人开车上路是个非常简单的事情，但是今天第一次上路后彻底慌了，好几次差点在大马路上熄火，再加上车有点弱鸡，二挡老是换不过来，开完两圈后背全吓湿了。😓</p>
+<p>拖着疲惫的身躯到了公司后，开始对接昨天整理出来的遗漏需求，弄完了消息页的下拉刷新后整个人都不好了，眯了一会接着撸push改造。我不太懂我之前的实习生同事是怎么跟产品定的push规则，产品已经好几次一脸懵逼的跟我对接了好几次这个规则，估计还得再对接个两三次这push功能的改造才算完事，但是之前的同事呢居然已经把所有push规则都写好了，然后Android那边啥都没有。。。😓规则写的也是乱七八糟，不知道在干啥，居然把整个友盟的push官方模板代码全都贴进了<code>AppDelegate</code>中，瞬间拉长了两倍的代码。</p>
+<p>重新严格的按照wiki上与产品约定好的规则全部重写。。。嗯，今天的砖比较迷，都看不懂。</p>
 
   </div>
 
@@ -178,7 +181,7 @@
     </div>
 
     <div id="toc-footer" style="display: none">
-      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#2018-04-09"><span class="toc-number">1.</span> <span class="toc-text">2018-04-09</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2018-04-09-1"><span class="toc-number">2.</span> <span class="toc-text">2018-04-09</span></a></li></ol>
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#2018-04-09"><span class="toc-number">1.</span> <span class="toc-text">2018-04-09</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2018-04-10"><span class="toc-number">2.</span> <span class="toc-text">2018-04-10</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2018-04-11"><span class="toc-number">3.</span> <span class="toc-text">2018-04-11</span></a></li></ol>
     </div>
 
     <div id="share-footer" style="display: none">
