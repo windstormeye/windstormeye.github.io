@@ -13,7 +13,7 @@
 <meta property="og:url" content="http://pjhubs.com/2018/04/23/DiDi（十九）/index.html">
 <meta property="og:site_name" content="PJHubs">
 <meta property="og:description" content="2018-04-23今天早上做完了实验才去的公司，修复了点击push消息打开webView时只能从首页进入的bug，原因是因为之前从tabBarController选择navigationController时直接写死了0，正确的做法应该是拿到当前tabBarController.selectIndex，接着又完善了在全部报表部分需要的调整修改的视图。 睡了一觉，起来后居然萌生了想要翻译苹果官方文">
-<meta property="og:updated_time" content="2018-04-24T14:57:15.036Z">
+<meta property="og:updated_time" content="2018-04-26T13:52:05.931Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="DiDi（十九）">
 <meta name="twitter:description" content="2018-04-23今天早上做完了实验才去的公司，修复了点击push消息打开webView时只能从首页进入的bug，原因是因为之前从tabBarController选择navigationController时直接写死了0，正确的做法应该是拿到当前tabBarController.selectIndex，接着又完善了在全部报表部分需要的调整修改的视图。 睡了一觉，起来后居然萌生了想要翻译苹果官方文">
@@ -94,7 +94,7 @@
 
     </div>
     <div id="toc">
-      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#2018-04-23"><span class="toc-number">1.</span> <span class="toc-text">2018-04-23</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2018-04-24"><span class="toc-number">2.</span> <span class="toc-text">2018-04-24</span></a></li></ol>
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#2018-04-23"><span class="toc-number">1.</span> <span class="toc-text">2018-04-23</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2018-04-24"><span class="toc-number">2.</span> <span class="toc-text">2018-04-24</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2018-04-26"><span class="toc-number">3.</span> <span class="toc-text">2018-04-26</span></a></li></ol>
     </div>
   </span>
 </div>
@@ -142,6 +142,13 @@
 <h2 id="2018-04-24"><a href="#2018-04-24" class="headerlink" title="2018-04-24"></a>2018-04-24</h2><p>今天本来是要接待新iOS开发同学的，一直在疯狂补相关的开发文档，补完了弄来弄去居然没等来人🙄。我有种预感，他应该不会来了。</p>
 <p>邻近中午的时候完成了一个巨大的壮举！！！（对于我自己来说），我居然真的能够靠一己之力完成一个GitHub超过100star的项目！！！刚好一星期，真是人生中的第一次！！！随后继续完成我的翻译工作，感觉通过翻译官方文档的这种行为真的能弥补自己的很多不足🙄。</p>
 <p>下午的时候又开了一个新坑！！！把现在的滴滴数据App用Swift替换，慢慢替换吧，感觉每天都做一些的话，至少得一个月。😔。</p>
+<h2 id="2018-04-26"><a href="#2018-04-26" class="headerlink" title="2018-04-26"></a>2018-04-26</h2><p>今天有一个好消息一个坏消息。</p>
+<p><strong>好消息</strong>：成功的把“多语言”设置模块完全迁移到了Swift上，这是一块儿相对小的模块迁移，还算是平滑的迁移完成了，达到了练手的目的。现在是各完成一份OC和Swift的多语言转换模块，给我感觉Swift版本的更赞一些。hhhh，下次有时间找个机会开源出来，😝。还有<code>segementView</code>Swift版本，把之前OC的版本不管从功能上、视觉上、使用上都做了优化，但是某些还不够Swifty，还是有些OC的味道在里边，慢慢做吧，给自己定下的期限是一个月，也就是五月份底，那个时候应该能够替换到70%以上（按模块算）。</p>
+<p>好了坏消息来了。在Swift中使用cocoapods，需要使用<code>use_frameworks!</code>，但问题就出在这，使用<code>use_frameworks!</code>会让Swift的第三方库以动态链接库的方式进行集成，但正是因为这样导致了集成其它的第三方库出现了问题，原本集成好好的库居然被报找不到。细节我就不展开了，给大家一个链接自瞅瞅吧<a href="https://segmentfault.com/a/1190000007076865" target="_blank" rel="noopener">https://segmentfault.com/a/1190000007076865</a></p>
+<p>最后我的解决方案是不使用cocoapods去集成Swift需要用用到的库，改用Carthage。给大家个使用文档<a href="https://blog.csdn.net/Mazy_ma/article/details/70185547" target="_blank" rel="noopener">https://blog.csdn.net/Mazy_ma/article/details/70185547</a></p>
+<p>在集成的过程中，还出现了这篇博客中所阐述的问题<a href="https://blog.csdn.net/asdf_2012/article/details/50800791" target="_blank" rel="noopener">https://blog.csdn.net/asdf_2012/article/details/50800791</a></p>
+<p>最后build通过后，推上git，Jenkins构建，等了一会，没想到居然构建失败了。看了Jenkins报告，好吧，刚通过Carthage集成link进去的SwiftJSON没找到😂。突然焕然大悟，这肯定找不到啊。我是通过Carthage在本地链接到工程中，Jenkins上哪知道我link了啥啊。问了Jenkins的同学，还确实是Jenkins只对Cocoapods做了配置，后边再仔细一想，确实应该只对cocoapods做配置，这工具确实很方便。</p>
+<p>那最后怎么办了呢？我下班跑路了，刚才又翻到了一遍博客<a href="https://www.jianshu.com/p/d0dc92d9a31b" target="_blank" rel="noopener">https://www.jianshu.com/p/d0dc92d9a31b</a>，虽然跟这篇博客中的表述的内容不太一样，是直接连库都找不到，报红了。不管怎么说，今天至少迁移到Swift上还是比较顺利，明天再继续苦逼吧。😔</p>
 
   </div>
 
@@ -167,7 +174,7 @@
     </div>
 
     <div id="toc-footer" style="display: none">
-      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#2018-04-23"><span class="toc-number">1.</span> <span class="toc-text">2018-04-23</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2018-04-24"><span class="toc-number">2.</span> <span class="toc-text">2018-04-24</span></a></li></ol>
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#2018-04-23"><span class="toc-number">1.</span> <span class="toc-text">2018-04-23</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2018-04-24"><span class="toc-number">2.</span> <span class="toc-text">2018-04-24</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2018-04-26"><span class="toc-number">3.</span> <span class="toc-text">2018-04-26</span></a></li></ol>
     </div>
 
     <div id="share-footer" style="display: none">
