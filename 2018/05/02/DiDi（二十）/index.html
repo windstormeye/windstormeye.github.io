@@ -13,7 +13,7 @@
 <meta property="og:url" content="http://pjhubs.com/2018/05/02/DiDi（二十）/index.html">
 <meta property="og:site_name" content="PJHubs">
 <meta property="og:description" content="2018-05-2今天主要把消息模块的整体全部迁移到了Swift上，然后又双踩了之前工程师埋下的坑，在第二次拉数据时，先做一次判断，如果第一次拉回来的数据不为空，那就把给第二次的某个参数（假设为A）设置为第一次拉回来数据的第一个data中的A，最后才能去拉数据。 刚开始说实话没看懂要干嘛，po出数据后发现A是代表了当前数据的自增id，这个接口没有做分页，我就在猜想，会不会是通过这个A参数值做上下拉">
-<meta property="og:updated_time" content="2018-05-03T15:14:57.000Z">
+<meta property="og:updated_time" content="2018-05-04T14:50:54.759Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="DiDi（二十）">
 <meta name="twitter:description" content="2018-05-2今天主要把消息模块的整体全部迁移到了Swift上，然后又双踩了之前工程师埋下的坑，在第二次拉数据时，先做一次判断，如果第一次拉回来的数据不为空，那就把给第二次的某个参数（假设为A）设置为第一次拉回来数据的第一个data中的A，最后才能去拉数据。 刚开始说实话没看懂要干嘛，po出数据后发现A是代表了当前数据的自增id，这个接口没有做分页，我就在猜想，会不会是通过这个A参数值做上下拉">
@@ -94,7 +94,7 @@
 
     </div>
     <div id="toc">
-      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#2018-05-2"><span class="toc-number">1.</span> <span class="toc-text">2018-05-2</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2018-05-03"><span class="toc-number">2.</span> <span class="toc-text">2018-05-03</span></a></li></ol>
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#2018-05-2"><span class="toc-number">1.</span> <span class="toc-text">2018-05-2</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2018-05-03"><span class="toc-number">2.</span> <span class="toc-text">2018-05-03</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2018-05-04"><span class="toc-number">3.</span> <span class="toc-text">2018-05-04</span></a></li></ol>
     </div>
   </span>
 </div>
@@ -153,6 +153,10 @@
 <p>以上言论均为第一次交流给我的感觉，不是他嫌弃滴滴垃圾，嫌弃滴滴福利不好，我都嫌弃他没本事还要出来干啥子，没本事就先别嫌弃环境啊。md，真想说去年这个时候的自己连去个外包实习都被压榨周末时间，周末被喊去加班不但要自己买吃的加班费都没有，一个破本科生第一次实习能来滴滴算是我面试他的时候瞎了眼，跟leader说得再来至少一轮的逻辑面，就是不听我话，电面的结果只能算是他能不能参加面试而已啊！不是说就要定这个人了，😔，可能leader并不太能理解我的意思吧，给大家一个劝告，没有经历过面试就要的人，千万谨慎。</p>
 <p>最令我伤心和气愤的是，在班车上他跟我说，“这个App挺简单的，也不需要这么多人吧？”，我说，“嗯，是挺简单的”，他一脸无奈的说，“那为啥要让我来这个组啊”。当时真是X了狗了，我也觉得微信挺简单的啊，我一个人也可以做出来啊，但是可能得做三年吧，更何况，我认为的挺简单，跟你所认为的是一个水平的简单么？费尽心思的重构了这么久，就是让你来看到就觉得非常的简单，是不是应该谢谢我哪？🙂。希望以后你真能给我一个不一样的解决思路吧。</p>
 <p>以上均为气话。这次是我第一次当面试官的失败，承认我的失败。</p>
+<h2 id="2018-05-04"><a href="#2018-05-04" class="headerlink" title="2018-05-04"></a>2018-05-04</h2><p>今天新同学又被<code>pod install</code>和<code>pod update</code>坑了，我无法理解的是为啥明明每次都是<code>pod install</code>成功，到头来却build失败，被告知缺少对应库，真是奇了怪，上次就一直被坑着，没想到这次又来，不过我估计可能是因为中途并未做“有效性验证”，导致在私有地址下的私有库并未拉下真正的库，我也没法看他的terminal，每次pod完就关掉，真是无语😶。反正下周新Mac也来了，就先拖着吧。</p>
+<p>今天和他交流的过程中，我又发现了有个很奇怪的特点，问了下他之前有搞过RN、Weex么？我是没想到居然回了我，“没有，之前想学来着，但是没去成阿里就算了”，woc这是尼玛的什么回答。心里凉凉。。。</p>
+<p>今天三分之一的时间在忙活首页断网下的提示，做着做着发现需求提的有问题，断网后，出现横栏，横栏上提示用户当前网络状况及出现重试按钮，点击重试按钮尝试重新连接服务器并load数据，做到最后发现不太对劲，这个横栏是用来检测用户设备当前的网络状态的，只要用户设备是连着网，就不会出现，一旦出现了横栏，那就说明当前用户设备是没网的，那问题就来了，居然都处在了断网的情况下，那重试按钮的意义何在呢？下周去跟PM仔细聊聊。</p>
+<p>另外三分之一的时间在重写通用浏览器，参考了内网平台桔子堆的设计，每条消息分为公网或内网可见，当用户设备没网时直接显示没网状态视图，有网但不在内网环境下时显示连接内网视图，以上两个条件都满足后再显示出正式数据，按照之前滴滴数据App老版本的通用浏览器设计，之前的iOS实习生已经把它改成一坨屎了，加了一堆BOOL变量，变量名起的一点都不信达雅，如果这次我再不把这坨屎擦干净了，估计下次会成为一坨更大的屎，遂在已经完成Swift一期迁移的工作下再次挑起了通用浏览器Swift迁移，其实下午刚开始迁移的时候我心里是一点谱没有，真害怕最后玩崩了，不过毕竟是面向运气编程嘛，一次过，不过纠结了一下内外网的判断依据，之前的工程师是根据返回的数据中<code>appId</code>字段进行判断，但是在群里问相关的后端RD，居然跟我说内外网的判断不应该根据<code>appId</code>去做，这我就一脸懵逼了，难道说之前上的这四五个版本全特么是错的？😂。最后告诉我应该根据域名去做判断，好吧好吧，那看来以后又得强制用户升级一波了，PM估计要被气死，hhhh。</p>
 
   </div>
 
@@ -178,7 +182,7 @@
     </div>
 
     <div id="toc-footer" style="display: none">
-      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#2018-05-2"><span class="toc-number">1.</span> <span class="toc-text">2018-05-2</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2018-05-03"><span class="toc-number">2.</span> <span class="toc-text">2018-05-03</span></a></li></ol>
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#2018-05-2"><span class="toc-number">1.</span> <span class="toc-text">2018-05-2</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2018-05-03"><span class="toc-number">2.</span> <span class="toc-text">2018-05-03</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2018-05-04"><span class="toc-number">3.</span> <span class="toc-text">2018-05-04</span></a></li></ol>
     </div>
 
     <div id="share-footer" style="display: none">
