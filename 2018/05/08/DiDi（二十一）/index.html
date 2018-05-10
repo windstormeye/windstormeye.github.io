@@ -13,7 +13,7 @@
 <meta property="og:url" content="http://pjhubs.com/2018/05/08/DiDi（二十一）/index.html">
 <meta property="og:site_name" content="PJHubs">
 <meta property="og:description" content="2018-05-08阿西，今天累爆了，因为最近有个应用开发大赛专门针对iOS的，传送门在此，导致我昨晚一直没睡好。可是为啥一个比赛就会让我睡不好呢？这就得扯到前年参加的一个比赛，那个比赛也是专门针对iOS的，不过那个比赛我啥都没准备啊，我只是随意交了些材料，然后就特么拿奖了，虽然说这个奖迟到了整整一年！！！而且虽然也是三等奖！但是居然三等奖是个iPad Pro（10.5）！！！ 真的是给苹果爸爸跪">
-<meta property="og:updated_time" content="2018-05-08T15:00:26.785Z">
+<meta property="og:updated_time" content="2018-05-10T14:42:54.376Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="DiDi（二十一）">
 <meta name="twitter:description" content="2018-05-08阿西，今天累爆了，因为最近有个应用开发大赛专门针对iOS的，传送门在此，导致我昨晚一直没睡好。可是为啥一个比赛就会让我睡不好呢？这就得扯到前年参加的一个比赛，那个比赛也是专门针对iOS的，不过那个比赛我啥都没准备啊，我只是随意交了些材料，然后就特么拿奖了，虽然说这个奖迟到了整整一年！！！而且虽然也是三等奖！但是居然三等奖是个iPad Pro（10.5）！！！ 真的是给苹果爸爸跪">
@@ -94,7 +94,7 @@
 
     </div>
     <div id="toc">
-      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#2018-05-08"><span class="toc-number">1.</span> <span class="toc-text">2018-05-08</span></a></li></ol>
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#2018-05-08"><span class="toc-number">1.</span> <span class="toc-text">2018-05-08</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2018-05-09"><span class="toc-number">2.</span> <span class="toc-text">2018-05-09</span></a></li></ol>
     </div>
   </span>
 </div>
@@ -142,6 +142,9 @@
 <hr>
 <p>今天给工程擦着擦着屁股，越擦越难受。PM提了个要求首页顶部功能入口是动态可调配、顺序是可换的。这就跟之前的做法完全乱了，之前的1.1.x版本功能特别简单，简单到差点给我个错觉之前的工程师是瞎写的，然后之前的那位同学趁我上学期期末考试+回家，又加了一波屎，一点封装概念都没有啊，太难受了，这回差点想彻底重构了，首页的逻辑真的太乱了，虽然也能顺下来，但是结构一点都不好。</p>
 <p>新来的iOS同学还没看出来实力如何，今天写着写着再联想现在手上负责的事情，有点冒出了想要辞职的想法，想要去做更有意义的事情。在看看吧，不管怎么说，先把滴滴数据App这个“儿子”培养好了吧。😔</p>
+<h2 id="2018-05-09"><a href="#2018-05-09" class="headerlink" title="2018-05-09"></a>2018-05-09</h2><p>今天早餐奶都没来得喝，就被小哥喊去解决问题。其实这个问题从半个月之前就存在了，我也忘了当时到底是怎么解决的，导致最后emmm，这个问题居然搞到了12点半！！！一大早上的时间都扑在了这个问题上。没想到问题居然出在log太多刷掉了cocoapods的报错！！！这些log还没法啥向上翻，一直以为是机器出了什么问题，一上午基本上翻遍了全网90%的相关内容！！！最后搞得我实在是崩溃，盯着log一行一行的扫过去，这才发现了被告知需要打开<code>use_framework!</code>！！！之前打开过一次它的注释，但是打开后导致了一个内部库的头文件找不到，索性只能继续打上该<code>use_framework!</code>的注释，把报错提示<code>ReactCocoa</code>删掉（其实并不知道之前为啥需要这个库）</p>
+<p>下午的时间接着扫1.4.0的需求，弄完了部分断网检测后开始了最后一个大需求——数据缓存，在iOS中数据缓存有很多方法，简单的、使用最广的无非就是<code>NSUserDefault</code>，其次就是<code>NSKeyedArchiver</code>，最后是直接写文件和操作数据库了。我最终采取的做法是基于<code>NSkeyedArchiver</code>自己写了个<code>PJCache</code>，合适的时候po出来啦~刚开始的时候有想过使用<code>Core Data</code>或<code>FMDB</code>，仔细一想，我只需要缓存四个入口，实际上不超过10个文件，拉上个数据库未免有点太过分了，杀鸡用牛刀。hhhh</p>
+<p>整体来说结合滴滴内部网络判断库<code>ONEReachbility</code>整体来说能够起到一个不错的效果，但是这其中需要设置几个标志位去做<code>loadCacheData</code>的操作。</p>
 
   </div>
 
@@ -167,7 +170,7 @@
     </div>
 
     <div id="toc-footer" style="display: none">
-      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#2018-05-08"><span class="toc-number">1.</span> <span class="toc-text">2018-05-08</span></a></li></ol>
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#2018-05-08"><span class="toc-number">1.</span> <span class="toc-text">2018-05-08</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2018-05-09"><span class="toc-number">2.</span> <span class="toc-text">2018-05-09</span></a></li></ol>
     </div>
 
     <div id="share-footer" style="display: none">
