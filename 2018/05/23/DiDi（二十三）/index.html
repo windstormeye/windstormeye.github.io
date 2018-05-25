@@ -13,7 +13,7 @@
 <meta property="og:url" content="http://pjhubs.com/2018/05/23/DiDi（二十三）/index.html">
 <meta property="og:site_name" content="PJHubs">
 <meta property="og:description" content="2018-05-23emmm，今天本想着待在学校准备明天的科四，而且在昨晚睡觉时终于下定决心要离职，好好准备一个多月后的考试以及四六级，其实就是单纯的不想去了，而且想要调整自己的归零心态，为下半年的秋招好好准备准备，上午上课的时候在钉钉上给leader发了要离职的消息，过了一会看到了为“已读”，然后等了一会才发来“下午我们找个时间聊下”，我原本以为是非常快速的回我：“好的”，上课还酝酿着今天就不去">
-<meta property="og:updated_time" content="2018-05-24T16:18:48.331Z">
+<meta property="og:updated_time" content="2018-05-25T13:51:51.418Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="DiDi（二十三）">
 <meta name="twitter:description" content="2018-05-23emmm，今天本想着待在学校准备明天的科四，而且在昨晚睡觉时终于下定决心要离职，好好准备一个多月后的考试以及四六级，其实就是单纯的不想去了，而且想要调整自己的归零心态，为下半年的秋招好好准备准备，上午上课的时候在钉钉上给leader发了要离职的消息，过了一会看到了为“已读”，然后等了一会才发来“下午我们找个时间聊下”，我原本以为是非常快速的回我：“好的”，上课还酝酿着今天就不去">
@@ -66,6 +66,8 @@
     <span id="actions">
       <ul>
         
+        <li><a class="icon" href="/2018/05/25/More-iOS的Ping/"><i class="fa fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
+        
         
         <li><a class="icon" href="/2018/05/14/DiDi（二十二）/"><i class="fa fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
         
@@ -94,7 +96,7 @@
 
     </div>
     <div id="toc">
-      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#2018-05-23"><span class="toc-number">1.</span> <span class="toc-text">2018-05-23</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2018-05-24"><span class="toc-number">2.</span> <span class="toc-text">2018-05-24</span></a></li></ol>
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#2018-05-23"><span class="toc-number">1.</span> <span class="toc-text">2018-05-23</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2018-05-24"><span class="toc-number">2.</span> <span class="toc-text">2018-05-24</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2018-05-25"><span class="toc-number">3.</span> <span class="toc-text">2018-05-25</span></a></li></ol>
     </div>
   </span>
 </div>
@@ -157,6 +159,17 @@
 <p>为啥就不知道给缓存加个判nil。</p>
 <p>好了，以上都是扯淡，也不能怪人家，毕竟经验不足，可是就算经验再怎么不足，也不能特么今天发版就我一个人苦逼搞到晚上10点半，晚饭都紧张到没定也忘了吃，这位大兄弟居然到了下班点准时走人。刷新了我的三观，就这还想转正，还嫌弃做的东西简单，嫌弃没人带，嫌弃人少，嫌弃福利，嫌弃环境。🙂</p>
 <p>==== 以上都是我的个人想法，别当真，别当真。。。</p>
+<h2 id="2018-05-25"><a href="#2018-05-25" class="headerlink" title="2018-05-25"></a>2018-05-25</h2><p>今天总算是结束了，从明天开始就有一段两个月的长假啦~</p>
+<p>大概是中午11点40左右，开始过1.5.0的PRD，持续了大概半个多小时，总的来说做的事情有趣程度跟1.4.0不相上下，也非常值得花费时间精力去好好做，很多地方都涉及到了动态上下线和动态路由选择，尤其动态路由选择，这块可以说也是我的一个盲区，之前也只是听说过、看过，没有几乎上手。</p>
+<p>下午花了些时间对1.5.0的部分需求做了调研，目前拆出来最核心的需求：</p>
+<ol>
+<li>视频播放；</li>
+<li>动态路由选择；</li>
+<li>轮播图；</li>
+<li>复杂tableView构建；</li>
+</ol>
+<p>不过基本上还算有把握，这次版本直接把一个入口给整体替换掉了，估计开发周期得至少一个月往上开，刚好这段时间我还在放假。hhhh。</p>
+<p>在这篇文章中把昨天做的关于<code>ping</code>内容总结了一波，供大家参考（More-iOS中的ping），也算是开启了自己复习网络相关内容的一个出发点吧。</p>
 
   </div>
 
@@ -182,7 +195,7 @@
     </div>
 
     <div id="toc-footer" style="display: none">
-      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#2018-05-23"><span class="toc-number">1.</span> <span class="toc-text">2018-05-23</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2018-05-24"><span class="toc-number">2.</span> <span class="toc-text">2018-05-24</span></a></li></ol>
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#2018-05-23"><span class="toc-number">1.</span> <span class="toc-text">2018-05-23</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2018-05-24"><span class="toc-number">2.</span> <span class="toc-text">2018-05-24</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#2018-05-25"><span class="toc-number">3.</span> <span class="toc-text">2018-05-25</span></a></li></ol>
     </div>
 
     <div id="share-footer" style="display: none">

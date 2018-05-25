@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="description" content="这篇文章是我在项目中需要判断内外网环境根据网上的资料及自己的改造所得结果，有些不足之处望指出。 使用ping命令来检测数据包（ICMP，Internet Control Message Protocol，互联网控制报文协议）能够通过IP协议到达特定主机，并收到主机的应答，以检查网络是否连通和网络连接速度，帮助我们分析和判定网络故障。因为互联网操作是路由器严密监控的。当路由器端处理报文时若有意外发生">
+<meta name="keywords" content="iOS,Ping">
+<meta property="og:type" content="article">
+<meta property="og:title" content="More-iOS的Ping">
+<meta property="og:url" content="http://pjhubs.com/2018/05/25/More-iOS的Ping/index.html">
+<meta property="og:site_name" content="PJHubs">
+<meta property="og:description" content="这篇文章是我在项目中需要判断内外网环境根据网上的资料及自己的改造所得结果，有些不足之处望指出。 使用ping命令来检测数据包（ICMP，Internet Control Message Protocol，互联网控制报文协议）能够通过IP协议到达特定主机，并收到主机的应答，以检查网络是否连通和网络连接速度，帮助我们分析和判定网络故障。因为互联网操作是路由器严密监控的。当路由器端处理报文时若有意外发生">
+<meta property="og:updated_time" content="2018-05-25T13:51:02.766Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="More-iOS的Ping">
+<meta name="twitter:description" content="这篇文章是我在项目中需要判断内外网环境根据网上的资料及自己的改造所得结果，有些不足之处望指出。 使用ping命令来检测数据包（ICMP，Internet Control Message Protocol，互联网控制报文协议）能够通过IP协议到达特定主机，并收到主机的应答，以检查网络是否连通和网络连接速度，帮助我们分析和判定网络故障。因为互联网操作是路由器严密监控的。当路由器端处理报文时若有意外发生">
+    
+    
+        
+          
+              <link rel="shortcut icon" href="/images/favicon.ico">
+          
+        
+        
+          
+            <link rel="icon" type="image/png" href="/images/favicon-192x192.png" sizes="192x192">
+          
+        
+        
+          
+            <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+          
+        
+    
+    <!-- title -->
+    <title>More-iOS的Ping</title>
+    <!-- styles -->
+    <link rel="stylesheet" href="/css/style.css">
+    <!-- rss -->
+    
+    
+</head>
+
+<body>
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#"><i class="fa fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fa fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fa fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/archives/">All</a></li>
+         
+          <li><a href="https://github.com/windstormeye">Projects</a></li>
+        
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        
+        <li><a class="icon" href="/2018/05/23/DiDi（二十三）/"><i class="fa fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        
+        <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" href="#"><i class="fa fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=http://pjhubs.com/2018/05/25/More-iOS的Ping/"><i class="fa fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=http://pjhubs.com/2018/05/25/More-iOS的Ping/&text=More-iOS的Ping"><i class="fa fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=http://pjhubs.com/2018/05/25/More-iOS的Ping/&title=More-iOS的Ping"><i class="fa fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http://pjhubs.com/2018/05/25/More-iOS的Ping/&is_video=false&description=More-iOS的Ping"><i class="fa fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=More-iOS的Ping&body=Check out this article: http://pjhubs.com/2018/05/25/More-iOS的Ping/"><i class="fa fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=http://pjhubs.com/2018/05/25/More-iOS的Ping/&title=More-iOS的Ping"><i class="fa fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=http://pjhubs.com/2018/05/25/More-iOS的Ping/&title=More-iOS的Ping"><i class="fa fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=http://pjhubs.com/2018/05/25/More-iOS的Ping/&title=More-iOS的Ping"><i class="fa fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=http://pjhubs.com/2018/05/25/More-iOS的Ping/&title=More-iOS的Ping"><i class="fa fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=http://pjhubs.com/2018/05/25/More-iOS的Ping/&name=More-iOS的Ping&description="><i class="fa fa-tumblr " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#初始化方法"><span class="toc-number">1.</span> <span class="toc-text">初始化方法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#实例方法"><span class="toc-number">2.</span> <span class="toc-text">实例方法:</span></a></li></ol>
+    </div>
+  </span>
+</div>
+
+    
+    <div class="content index width mx-auto px2 my4">
+        
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        More-iOS的Ping
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">PJHubs</span>
+      </span>
+      
+    <div class="postdate">
+        <time datetime="2018-05-25T13:50:31.000Z" itemprop="datePublished">2018-05-25</time>
+    </div>
+
+
+      
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link" href="/tags/Ping/">Ping</a>, <a class="tag-link" href="/tags/iOS/">iOS</a>
+    </div>
+
+
+      <span id="busuanzi_container_page_pv">
+  	总阅读<span id="busuanzi_value_page_pv"></span>次
+      </span>
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <p><strong>这篇文章是我在项目中需要判断内外网环境根据网上的资料及自己的改造所得结果，有些不足之处望指出。</strong></p>
+<p>使用<code>ping</code>命令来检测数据包（ICMP，Internet Control Message Protocol，互联网控制报文协议）能够通过IP协议到达特定主机，并收到主机的应答，以检查网络是否连通和网络连接速度，帮助我们分析和判定网络故障。因为互联网操作是路由器严密监控的。当路由器端处理报文时若有意外发生，事件通过ICMP报告给发送端。</p>
+<p>SimplePing是Appl给开发者提供的一套封装了底层<code>BSD Sockets ping</code>函数的类，SimplePing下载地址：<a href="https://developer.apple.com/library/content/samplecode/SimplePing/Introduction/Intro.html" target="_blank" rel="noopener">https://developer.apple.com/library/content/samplecode/SimplePing/Introduction/Intro.html</a></p>
+<p>下面我们一一介绍 SimplePing 类的各个属性、方法以及<code>delegate</code>回调方法的含义及作用。</p>
+<h3 id="初始化方法"><a href="#初始化方法" class="headerlink" title="初始化方法"></a>初始化方法</h3><figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">- (<span class="keyword">instancetype</span>)init <span class="built_in">NS_UNAVAILABLE</span>;</span><br><span class="line">- (<span class="keyword">instancetype</span>)initWithHostName:(<span class="built_in">NSString</span> *)hostName <span class="built_in">NS_DESIGNATED_INITIALIZER</span>;</span><br></pre></td></tr></table></figure>
+<p>SimplePing中，禁用了<code>init</code>方法，只提供<code>initWithHostName:</code>这个指定构造方法，它可以用于初始化一个<code>ping</code>指定的主机实例对象。其中<code>hostName</code>参数可以是主机的<code>DNS</code>域名，或者是<code>IPv4/IPv6</code>地址的字符串形式。</p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">@property</span> (<span class="keyword">nonatomic</span>, <span class="keyword">copy</span>, <span class="keyword">readonly</span>) <span class="built_in">NSString</span> * hostName;</span><br></pre></td></tr></table></figure>
+<p>hostName：只读，保存由初始化方法<code>initWithHostName:</code>传入的<code>ping</code>操作要连接的主机域名或<code>IP</code>地址。</p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">@property</span> (<span class="keyword">nonatomic</span>, <span class="keyword">assign</span>, <span class="keyword">readwrite</span>) SimplePingAddressStyle addressStyle;</span><br></pre></td></tr></table></figure>
+<p>addressStyle：主机的<code>IP</code>地址类型，如<code>IPv4/IPv6</code>等，其中<code>SimplePingAddressStyle</code>枚举类型的定义如下：</p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">typedef</span> <span class="built_in">NS_ENUM</span>(<span class="built_in">NSInteger</span>, SimplePingAddressStyle) &#123;</span><br><span class="line">        SimplePingAddressStyleAny,    <span class="comment">// IPv4 或 IPv6</span></span><br><span class="line">        SimplePingAddressStyleICMPv4, <span class="comment">// IPv4</span></span><br><span class="line">        SimplePingAddressStyleICMPv6  <span class="comment">// IPv6</span></span><br><span class="line">    &#125;;</span><br></pre></td></tr></table></figure>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">@property</span> (<span class="keyword">nonatomic</span>, <span class="keyword">copy</span>, <span class="keyword">readonly</span>, <span class="keyword">nullable</span>) <span class="built_in">NSData</span> * hostAddress;</span><br></pre></td></tr></table></figure>
+<p>hostAddress：只读，在<code>start</code>方法调用之后，根据<code>hostName</code>得到的要<code>ping</code>的主机的<code>IP</code>地址，它是<code>struct sockaddr</code>形式的<code>NSData</code>数据。当<code>SimplePing</code>实例处于<code>stopped</code>状态，或者实例调用了<code>start</code>方法，但在<code>simplePing:didStartWithAddress:</code>方法被调用之前，hostAddress 的值都是<code>nil</code>。</p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">@property</span> (<span class="keyword">nonatomic</span>, <span class="keyword">assign</span>, <span class="keyword">readonly</span>) sa_family_t hostAddressFamily;</span><br></pre></td></tr></table></figure>
+<p>hostAddressFamily：只读，<code>hostAddress</code>的地址族，如果<code>hostAddress</code>为<code>nil</code>，则其值为：<code>AF_UNSPEC</code>。</p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">@property</span> (<span class="keyword">nonatomic</span>, <span class="keyword">assign</span>, <span class="keyword">readonly</span>) uint16_t identifier;</span><br></pre></td></tr></table></figure>
+<p>identifier：只读，当创建一个<code>SimplePing</code>实例对象时，会自动生成一个的随机的标识符，用来唯一标识当前<code>ping</code>对象。</p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">@property</span> (<span class="keyword">nonatomic</span>, <span class="keyword">assign</span>, <span class="keyword">readonly</span>) uint16_t nextSequenceNumber;</span><br></pre></td></tr></table></figure>
+<p>nextSequenceNumber：只读，<code>ping</code>每发送一次数据包都会有一个对应的序列号<code>sequence number</code>，此值为下一次<code>ping</code>操作要发送数据时的序列号，从0开始递增，当<code>ping</code>成功发送一次数据到主机并收到应答时，该值+1。而对于本次<code>ping</code>的<code>sequence number</code>在成功发送数据(request)和成功接收到响应(response)的<code>delegate</code>回调方法里都会以方法参数返回，以便进行<code>ping</code>操作耗时的计算等等。</p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">@property</span> (<span class="keyword">nonatomic</span>, <span class="keyword">weak</span>, <span class="keyword">readwrite</span>, <span class="keyword">nullable</span>) <span class="keyword">id</span> delegate;</span><br></pre></td></tr></table></figure>
+<p>delegate：当前对象的回调，<code>delegate</code>中的回调方法将在对象调用<code>start</code>方法所在的线程对应的<code>run loop</code>中以默认的<code>run loop model</code>执行。</p>
+<h3 id="实例方法"><a href="#实例方法" class="headerlink" title="实例方法:"></a>实例方法:</h3><figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">- (<span class="keyword">void</span>)start;</span><br></pre></td></tr></table></figure>
+<p>start 方法：开始一个<code>ping</code>操作，在调用此方法前，必须给<code>SimplePing</code>实例对象的<code>delegete</code>以及其他参数赋值。当<code>start</code>方法成功执行时，会回调<code>delegate</code>中的<code>simplePing:didStartWithAddress:</code>方法，在该回调方法里，就可以通过<code>sendPingWithData:</code>开始发送<code>ICMP</code>数据包，并等待接受主机应答的数据包。另外需要注意的是，当一个实例已经<code>started</code>，又一次调用此<code>start</code>方法会出错。</p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">- (<span class="keyword">void</span>)sendPingWithData:(<span class="keyword">nullable</span> <span class="built_in">NSData</span> *)data;</span><br></pre></td></tr></table></figure>
+<p>sendPingWithData: 方法：向主机发送特定格式的<code>ICMP</code>数据包，调用此方法前必须保证实例已经<code>started</code>并且要等待<code>simplePing:didStartWithAddress:</code>回调执行才能开始发送数据。参数<code>data</code>为要向主机发送的<code>ICMP</code>数据包，可以为<code>nil</code>，默认会发一个标准的<code>64 byte</code>数据包。</p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">- (<span class="keyword">void</span>)stop;</span><br></pre></td></tr></table></figure>
+<p>stop 方法：当结束要<code>ping</code>操作时，调用此方法。与<code>start</code>方法不同的是，当一个实例已经<code>stopped</code>，再次调用此方法也没事。</p>
+<p><code>delegate</code>回调方法:</p>
+<p><code>start</code>方法执行结果的回调:</p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// start 方法成功执行，可在此开始发送数据，其中 address 为主机的 IP 地址；</span></span><br><span class="line">- (<span class="keyword">void</span>)simplePing:(SimplePing *)pinger didStartWithAddress:(<span class="built_in">NSData</span> *)address;</span><br><span class="line"><span class="comment">// start 方法执行失败，返回错误信息；</span></span><br><span class="line">- (<span class="keyword">void</span>)simplePing:(SimplePing *)pinger didFailWithError:(<span class="built_in">NSError</span> *)error;</span><br></pre></td></tr></table></figure>
+<p>sendPingWithData: 方法执行结果的回调，每发送一次数据，都会同步地回调以下两个方法其中一个（除非你在发送途中调用了<code>stop</code>方法）：</p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 成功发送 ICMP 数据包到指定主机，在此传回已发送的数据包以及本次 ping 对应的序列号；</span></span><br><span class="line">- (<span class="keyword">void</span>)simplePing:(SimplePing *)pinger didSendPacket:(<span class="built_in">NSData</span> *)packet sequenceNumber:(uint16_t)sequenceNumber;</span><br><span class="line"><span class="comment">// 发送数据失败，并返回错误信息，绝大部分原因由于 hostName 解析失败。另，当此方法调用时，ping 实例状态会自动转为stopped，不用再显示调用stop方法；</span></span><br><span class="line">- (<span class="keyword">void</span>)simplePing:(SimplePing *)pinger didFailToSendPacket:(<span class="built_in">NSData</span> *)packet sequenceNumber:(uint16_t)sequenceNumber error:(<span class="built_in">NSError</span> *)error;</span><br></pre></td></tr></table></figure>
+<p>接收到主机返回应答数据的回调：<br><figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 成功接收到主机回传的与之前发送相匹配的 ICMP 数据包；</span></span><br><span class="line">- (<span class="keyword">void</span>)simplePing:(SimplePing *)pinger didReceivePingResponsePacket:(<span class="built_in">NSData</span> *)packet sequenceNumber:(uint16_t)sequenceNumber;</span><br><span class="line"><span class="comment">// 收到的未知的数据包。</span></span><br><span class="line">- (<span class="keyword">void</span>)simplePing:(SimplePing *)pinger didReceiveUnexpectedPacket:(<span class="built_in">NSData</span> *)packet;</span><br></pre></td></tr></table></figure></p>
+<p>注：以上回调方法中的 packet 数据包只包含了 ICMP header 和 sendPingWithData: 中传入的数据，但不包含任何 IP 层的 header。</p>
+<p>封装了一个简单<code>SimplePing</code>类，因为只有一个类，就不开repo了：</p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//</span></span><br><span class="line"><span class="comment">//  PJPingManager.h</span></span><br><span class="line"><span class="comment">//  DiDiData</span></span><br><span class="line"><span class="comment">//</span></span><br><span class="line"><span class="comment">//  Created by PJ on 2018/5/25.</span></span><br><span class="line"><span class="comment">//  Copyright © 2018年 pjhubs All rights reserved.</span></span><br><span class="line"><span class="comment">//</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#import <span class="meta-string">&lt;Foundation/Foundation.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">void</span>(^PingSuccessCallback)();</span><br><span class="line"><span class="keyword">typedef</span> <span class="keyword">void</span>(^PingFailureCallback)();</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">@interface</span> <span class="title">IPLPingManager</span> : <span class="title">NSObject</span></span></span><br><span class="line"></span><br><span class="line"><span class="keyword">@property</span> (<span class="keyword">nonatomic</span>, <span class="keyword">copy</span>) PingSuccessCallback pingSuccessCallback;</span><br><span class="line"><span class="keyword">@property</span> (<span class="keyword">nonatomic</span>, <span class="keyword">copy</span>) PingFailureCallback pingFailureCallback;</span><br><span class="line"></span><br><span class="line">- (<span class="keyword">void</span>)startPing;</span><br><span class="line"></span><br><span class="line"><span class="keyword">@end</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br><span class="line">163</span><br><span class="line">164</span><br><span class="line">165</span><br><span class="line">166</span><br><span class="line">167</span><br><span class="line">168</span><br><span class="line">169</span><br><span class="line">170</span><br><span class="line">171</span><br><span class="line">172</span><br><span class="line">173</span><br><span class="line">174</span><br><span class="line">175</span><br><span class="line">176</span><br><span class="line">177</span><br><span class="line">178</span><br><span class="line">179</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//</span></span><br><span class="line"><span class="comment">//  PJPingManager.m</span></span><br><span class="line"><span class="comment">//  DiDiData</span></span><br><span class="line"><span class="comment">//</span></span><br><span class="line"><span class="comment">//  Created by PJ on 2018/5/25.</span></span><br><span class="line"><span class="comment">//  Copyright © 2018年 pjhubs All rights reserved.</span></span><br><span class="line"><span class="comment">//</span></span><br><span class="line"></span><br><span class="line"><span class="meta">#import <span class="meta-string">"PJPingManager.h"</span></span></span><br><span class="line"><span class="meta">#import <span class="meta-string">"SimplePing.h"</span></span></span><br><span class="line"><span class="meta">#include <span class="meta-string">&lt;netdb.h&gt;</span></span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">@interface</span> <span class="title">PJPingManager</span> ()&lt;<span class="title">SimplePingDelegate</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">@property</span> (<span class="keyword">nonatomic</span>, <span class="keyword">strong</span>) SimplePing *pinger;</span><br><span class="line"><span class="keyword">@property</span> (<span class="keyword">nonatomic</span>, <span class="keyword">strong</span>) <span class="built_in">NSTimer</span> *sendTimer;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">@end</span></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">@implementation</span> <span class="title">PJPingManager</span></span></span><br><span class="line"></span><br><span class="line">- (<span class="keyword">instancetype</span>)init &#123;</span><br><span class="line">    <span class="keyword">self</span> = [<span class="keyword">super</span> init];</span><br><span class="line">    <span class="keyword">if</span> (<span class="keyword">self</span>) &#123;</span><br><span class="line">        <span class="built_in">NSString</span> *hostName = <span class="string">@"your hostName"</span>;</span><br><span class="line">        <span class="keyword">self</span>.pinger = [[SimplePing alloc] initWithHostName:hostName];</span><br><span class="line">        <span class="keyword">self</span>.pinger.addressStyle = SimplePingAddressStyleAny;</span><br><span class="line">        <span class="keyword">self</span>.pinger.delegate = <span class="keyword">self</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">self</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">- (<span class="keyword">void</span>)startPing &#123;</span><br><span class="line">    [<span class="keyword">self</span> start];</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">- (<span class="keyword">void</span>)start &#123;</span><br><span class="line">    [<span class="keyword">self</span>.pinger start];</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">- (<span class="keyword">void</span>)stop &#123;</span><br><span class="line">    [<span class="keyword">self</span>.pinger stop];</span><br><span class="line">    <span class="keyword">self</span>.pinger = <span class="literal">nil</span>;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">if</span> ([<span class="keyword">self</span>.sendTimer isValid])</span><br><span class="line">    &#123;</span><br><span class="line">        [<span class="keyword">self</span>.sendTimer invalidate];</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">self</span>.sendTimer = <span class="literal">nil</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">- (<span class="keyword">void</span>)sendPing &#123;</span><br><span class="line">    [<span class="keyword">self</span>.pinger sendPingWithData:<span class="literal">nil</span>];</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="meta">#pragma mark - pinger delegate</span></span><br><span class="line"></span><br><span class="line">- (<span class="keyword">void</span>)simplePing:(SimplePing *)pinger didStartWithAddress:(<span class="built_in">NSData</span> *)address &#123;</span><br><span class="line">    <span class="built_in">NSLog</span>(<span class="string">@"pinging %@"</span>, [<span class="keyword">self</span> displayAddressForAddress:address]);</span><br><span class="line">    </span><br><span class="line">    [<span class="keyword">self</span> sendPing];</span><br><span class="line">    </span><br><span class="line">    </span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">- (<span class="keyword">void</span>)simplePing:(SimplePing *)pinger didFailWithError:(<span class="built_in">NSError</span> *)error &#123;</span><br><span class="line">    <span class="built_in">NSLog</span>(<span class="string">@"failed: %@"</span>, [<span class="keyword">self</span> shortErrorFromError:error]);</span><br><span class="line">    </span><br><span class="line">    [<span class="keyword">self</span> stop];</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">if</span> (<span class="keyword">self</span>.pingFailureCallback) &#123;</span><br><span class="line">        <span class="keyword">self</span>.pingFailureCallback();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">- (<span class="keyword">void</span>)simplePing:(SimplePing *)pinger didSendPacket:(<span class="built_in">NSData</span> *)packet sequenceNumber:(uint16_t)sequenceNumber &#123;</span><br><span class="line">    <span class="built_in">NSLog</span>(<span class="string">@"#%u sent"</span>, (<span class="keyword">unsigned</span> <span class="keyword">int</span>) sequenceNumber);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">- (<span class="keyword">void</span>)simplePing:(SimplePing *)pinger didFailToSendPacket:(<span class="built_in">NSData</span> *)packet sequenceNumber:(uint16_t)sequenceNumber error:(<span class="built_in">NSError</span> *)error &#123;</span><br><span class="line">    <span class="built_in">NSLog</span>(<span class="string">@"#%u send failed: %@"</span>, (<span class="keyword">unsigned</span> <span class="keyword">int</span>) sequenceNumber, [<span class="keyword">self</span> shortErrorFromError:error]);</span><br><span class="line">    </span><br><span class="line">    [<span class="keyword">self</span> stop];</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">if</span> (<span class="keyword">self</span>.pingFailureCallback) &#123;</span><br><span class="line">        <span class="keyword">self</span>.pingFailureCallback();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">- (<span class="keyword">void</span>)simplePing:(SimplePing *)pinger didReceivePingResponsePacket:(<span class="built_in">NSData</span> *)packet sequenceNumber:(uint16_t)sequenceNumber &#123;</span><br><span class="line">    <span class="built_in">NSLog</span>(<span class="string">@"#%u received, size=%zu"</span>, (<span class="keyword">unsigned</span> <span class="keyword">int</span>) sequenceNumber, (size_t) packet.length);</span><br><span class="line">    </span><br><span class="line">    [<span class="keyword">self</span> stop];</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">if</span> (<span class="keyword">self</span>.pingSuccessCallback) &#123;</span><br><span class="line">        <span class="keyword">self</span>.pingSuccessCallback();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">- (<span class="keyword">void</span>)simplePing:(SimplePing *)pinger didReceiveUnexpectedPacket:(<span class="built_in">NSData</span> *)packet &#123;</span><br><span class="line">    <span class="built_in">NSLog</span>(<span class="string">@"unexpected packet, size=%zu"</span>, (size_t) packet.length);</span><br><span class="line">    </span><br><span class="line">    [<span class="keyword">self</span> stop];</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">if</span> (<span class="keyword">self</span>.pingSuccessCallback) &#123;</span><br><span class="line">        <span class="keyword">self</span>.pingSuccessCallback();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="meta">#pragma mark - Others mothods</span></span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 将ping接收的数据转换成ip地址</span></span><br><span class="line"><span class="comment"> * @param address 接受的ping数据</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line">- (<span class="built_in">NSString</span> *)displayAddressForAddress:(<span class="built_in">NSData</span> *)address &#123;</span><br><span class="line">    <span class="keyword">int</span> err;</span><br><span class="line">    <span class="built_in">NSString</span> *result;</span><br><span class="line">    <span class="keyword">char</span> hostStr[NI_MAXHOST];</span><br><span class="line">    </span><br><span class="line">    result = <span class="literal">nil</span>;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">if</span> (address != <span class="literal">nil</span>) &#123;</span><br><span class="line">        err = getnameinfo([address bytes], (socklen_t)[address length], hostStr, <span class="keyword">sizeof</span>(hostStr),</span><br><span class="line">                          <span class="literal">NULL</span>, <span class="number">0</span>, NI_NUMERICHOST);</span><br><span class="line">        <span class="keyword">if</span> (err == <span class="number">0</span>) &#123;</span><br><span class="line">            result = [<span class="built_in">NSString</span> stringWithCString:hostStr encoding:<span class="built_in">NSASCIIStringEncoding</span>];</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">if</span> (result == <span class="literal">nil</span>) &#123;</span><br><span class="line">        result = <span class="string">@"?"</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">return</span> result;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/*</span></span><br><span class="line"><span class="comment"> * 解析错误数据并翻译</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line">- (<span class="built_in">NSString</span> *)shortErrorFromError:(<span class="built_in">NSError</span> *)error &#123;</span><br><span class="line">    <span class="built_in">NSString</span> *result;</span><br><span class="line">    <span class="built_in">NSNumber</span> *failureNum;</span><br><span class="line">    <span class="keyword">int</span> failure;</span><br><span class="line">    <span class="keyword">const</span> <span class="keyword">char</span> *failureStr;</span><br><span class="line">    </span><br><span class="line">    result = <span class="literal">nil</span>;</span><br><span class="line">    </span><br><span class="line">    <span class="comment">// Handle DNS errors as a special case.</span></span><br><span class="line">    </span><br><span class="line">    <span class="keyword">if</span> ([[error domain] isEqual:(<span class="built_in">NSString</span> *)kCFErrorDomainCFNetwork] &amp;&amp;</span><br><span class="line">        ([error code] == kCFHostErrorUnknown)) &#123;</span><br><span class="line">        failureNum = [[error userInfo] objectForKey:(<span class="keyword">id</span>)kCFGetAddrInfoFailureKey];</span><br><span class="line">        <span class="keyword">if</span> ([failureNum isKindOfClass:[<span class="built_in">NSNumber</span> <span class="keyword">class</span>]]) &#123;</span><br><span class="line">            failure = [failureNum intValue];</span><br><span class="line">            <span class="keyword">if</span> (failure != <span class="number">0</span>) &#123;</span><br><span class="line">                failureStr = gai_strerror(failure);</span><br><span class="line">                <span class="keyword">if</span> (failureStr != <span class="literal">NULL</span>) &#123;</span><br><span class="line">                    result = [<span class="built_in">NSString</span> stringWithUTF8String:failureStr];</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">if</span> (result == <span class="literal">nil</span>) &#123;</span><br><span class="line">        result = [error localizedFailureReason];</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> (result == <span class="literal">nil</span>) &#123;</span><br><span class="line">        result = [error localizedDescription];</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span> (result == <span class="literal">nil</span>) &#123;</span><br><span class="line">        result = [error description];</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">return</span> result;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">@end</span></span><br></pre></td></tr></table></figure>
+<p>给出的代码中使用到的<code>netdb</code>库为Unix和Linux特有的头文件，主要定义了与网络有关的结构、变量类型、宏、函数等。这里有篇在Unix中该函数库相关介绍：<a href="http://pubs.opengroup.org/onlinepubs/7908799/xns/netdb.h.html" target="_blank" rel="noopener">http://pubs.opengroup.org/onlinepubs/7908799/xns/netdb.h.html</a></p>
+<p><code>NI_MAXHOST</code>给出主机字符串存储空间的最大长度，值为1025；</p>
+<p><code>NI_MAXSERV</code>给出服务字符串存储空间的最大长度，值为32.</p>
+<p>其中还有一些会使用到的宏，如下所示：<br>宏|解释<br>–|–</p>
+<p>#define    NI_NOFQDN            0x00000001   |   只返回FQDN的主机名部分 </p>
+<p>#define    NI_NUMERICHOST       0x00000002   |   以数串格式返回主机字符串                  </p>
+<p>#define    NI_NAMEREQD          0x00000004   |   若不能从地址解析出名字则返回错误</p>
+<p>#define    NI_NUMERICSERV       0x00000008   |   以数串格式返回服务字符串</p>
+<p>#define    NI_NUMERICSCOPE      0x00000100   |   以数串格式返回范围标识字符串</p>
+<p>#define    NI_DGRAM             0x00000010   |   数据报服务</p>
+<p>使用方法：</p>
+<ol>
+<li>新建<code>ping</code>类，复制以上代码；</li>
+<li>创建一个<code>NSTimer</code>类型属性且初始化timer。<code>self.timer = [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(pingNetWork) userInfo:nil repeats:YES];</code>。在这里为啥要初始化一个NSTimer呢？因为如果<code>ping</code>失败后，也就是发送的测试报文成功，但一直没收到响应的报文，此时却不会有任何的回调方法告知我们，而只<code>ping</code>一次结果也不准确，更何况<code>ping</code>花费的时间非常之短，故我在此加了个<code>NSTimer</code>多次进行<code>ping</code>，或者也可以使用<code>performSelector</code>进行延时判断，一般0.3~0.8s的延时即可。如果在这期间内未收到响应则可视为超时。</li>
+<li>对应的方法为：<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">- (<span class="keyword">void</span>)pingNetWork&#123;    </span><br><span class="line">    <span class="keyword">self</span>.pingManager = [[IPLPingManager alloc] init];</span><br><span class="line">    <span class="keyword">self</span>.pingManager.pingSuccessCallback = ^&#123;</span><br><span class="line">        </span><br><span class="line">    &#125;;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">self</span>.pingManager.pingFailureCallback = ^&#123;</span><br><span class="line"></span><br><span class="line">    &#125;;</span><br><span class="line">    </span><br><span class="line">    [<span class="keyword">self</span>.pingManager startPing];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>跑起工程后每秒都会<code>ping</code>目标主机，如果你不并想每秒都执行一次，再自定义一个属性去标记吧。当然，你也可也完全不必使用我提供的这个封装，直接使用<code>SimplePing</code>自行编写也行。</p>
+
+  </div>
+
+</article>
+
+
+
+    </div>
+    
+      <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/archives/">All</a></li>
+         
+          <li><a href="https://github.com/windstormeye">Projects</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#初始化方法"><span class="toc-number">1.</span> <span class="toc-text">初始化方法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#实例方法"><span class="toc-number">2.</span> <span class="toc-text">实例方法:</span></a></li></ol>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=http://pjhubs.com/2018/05/25/More-iOS的Ping/"><i class="fa fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=http://pjhubs.com/2018/05/25/More-iOS的Ping/&text=More-iOS的Ping"><i class="fa fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=http://pjhubs.com/2018/05/25/More-iOS的Ping/&title=More-iOS的Ping"><i class="fa fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http://pjhubs.com/2018/05/25/More-iOS的Ping/&is_video=false&description=More-iOS的Ping"><i class="fa fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=More-iOS的Ping&body=Check out this article: http://pjhubs.com/2018/05/25/More-iOS的Ping/"><i class="fa fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=http://pjhubs.com/2018/05/25/More-iOS的Ping/&title=More-iOS的Ping"><i class="fa fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=http://pjhubs.com/2018/05/25/More-iOS的Ping/&title=More-iOS的Ping"><i class="fa fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=http://pjhubs.com/2018/05/25/More-iOS的Ping/&title=More-iOS的Ping"><i class="fa fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=http://pjhubs.com/2018/05/25/More-iOS的Ping/&title=More-iOS的Ping"><i class="fa fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=http://pjhubs.com/2018/05/25/More-iOS的Ping/&name=More-iOS的Ping&description="><i class="fa fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+      <ul>
+        <li id="toc"><a class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fa fa-list fa-lg" aria-hidden="true"></i> TOC</a></li>
+        <li id="share"><a class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fa fa-share-alt fa-lg" aria-hidden="true"></i> Share</a></li>
+        <li id="top" style="display:none"><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a></li>
+        <li id="menu"><a class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fa fa-bars fa-lg" aria-hidden="true"></i> Menu</a></li>
+      </ul>
+    </div>
+
+  </div>
+</div>
+
+    
+    <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy; 2018 Piron
+	<span id="busuanzi_container_site_pv">
+  		总访问<span id="busuanzi_value_site_pv"></span>次
+	</span>		
+</div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+         
+          <li><a href="/">Home</a></li>
+         
+          <li><a href="/archives/">All</a></li>
+         
+          <li><a href="https://github.com/windstormeye">Projects</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+</footer>
+
+</body>
+</html>
+<!-- styles -->
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+<link rel="stylesheet" href="/lib/meslo-LG/styles.css">
+<link rel="stylesheet" href="/lib/justified-gallery/justifiedGallery.min.css">
+
+<!-- jquery -->
+<script src="/lib/jquery/jquery.min.js"></script>
+<script src="/lib/justified-gallery/jquery.justifiedGallery.min.js"></script>
+<script src="/js/main.js"></script>
+<!-- search -->
+
+<!-- Google Analytics -->
+
+    <script type="text/javascript">
+        (function(i,s,o,g,r,a,m) {i['GoogleAnalyticsObject']=r;i[r]=i[r]||function() {
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-86660611-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+
+<!-- Disqus Comments -->
+
+
