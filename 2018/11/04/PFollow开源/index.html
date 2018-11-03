@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="description" content="PFollow 简介PFollow 为今年暑假新开的项目，期末考试完后和女票一同去了重庆青海西安十日游。在游玩的过程中，使用众多 app 协助旅行，在青海时，会经常到查看 iOS 自带的“指南针” app 看当前海拔。同时也因为在高原的天气变化多端，会非常注意第二天的天气等等这些习惯就被强制性的养成了。 旅行结束后，躺在宿舍床上慢慢回想这旅行的这段时间，很多回忆都留在了一张张照片上，虽然照片会带上">
+<meta name="keywords" content="iOS,Swift,开源,项目">
+<meta property="og:type" content="article">
+<meta property="og:title" content="PFollow开源">
+<meta property="og:url" content="http://pjhubs.com/2018/11/04/PFollow开源/index.html">
+<meta property="og:site_name" content="PJHubs">
+<meta property="og:description" content="PFollow 简介PFollow 为今年暑假新开的项目，期末考试完后和女票一同去了重庆青海西安十日游。在游玩的过程中，使用众多 app 协助旅行，在青海时，会经常到查看 iOS 自带的“指南针” app 看当前海拔。同时也因为在高原的天气变化多端，会非常注意第二天的天气等等这些习惯就被强制性的养成了。 旅行结束后，躺在宿舍床上慢慢回想这旅行的这段时间，很多回忆都留在了一张张照片上，虽然照片会带上">
+<meta property="og:image" content="https://i.loli.net/2018/11/04/5bddca958ebca.png">
+<meta property="og:image" content="https://i.loli.net/2018/11/03/5bddc2dc527a3.jpg">
+<meta property="og:image" content="https://i.loli.net/2018/11/03/5bddc386d5b5b.jpeg">
+<meta property="og:image" content="https://i.loli.net/2018/11/03/5bddc3ed51180.jpeg">
+<meta property="og:image" content="https://i.loli.net/2018/11/03/5bddc51b90b39.jpeg">
+<meta property="og:image" content="https://i.loli.net/2018/11/03/5bddc46669b93.jpeg">
+<meta property="og:image" content="https://i.loli.net/2018/11/03/5bddc4ba818d3.jpeg">
+<meta property="og:updated_time" content="2018-11-03T16:26:24.926Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="PFollow开源">
+<meta name="twitter:description" content="PFollow 简介PFollow 为今年暑假新开的项目，期末考试完后和女票一同去了重庆青海西安十日游。在游玩的过程中，使用众多 app 协助旅行，在青海时，会经常到查看 iOS 自带的“指南针” app 看当前海拔。同时也因为在高原的天气变化多端，会非常注意第二天的天气等等这些习惯就被强制性的养成了。 旅行结束后，躺在宿舍床上慢慢回想这旅行的这段时间，很多回忆都留在了一张张照片上，虽然照片会带上">
+<meta name="twitter:image" content="https://i.loli.net/2018/11/04/5bddca958ebca.png">
+    
+    
+        
+          
+              <link rel="shortcut icon" href="/images/favicon.ico">
+          
+        
+        
+          
+            <link rel="icon" type="image/png" href="/images/favicon-192x192.png" sizes="192x192">
+          
+        
+        
+          
+            <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+          
+        
+    
+    <!-- title -->
+    <title>PFollow开源</title>
+    <!-- styles -->
+    <link rel="stylesheet" href="/css/style.css">
+    <!-- rss -->
+    
+    
+</head>
+
+<body>
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#"><i class="fa fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fa fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fa fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+          <li><a href="/">首页</a></li>
+         
+          <li><a href="/archives/">归档</a></li>
+         
+          <li><a href="/about/">关于</a></li>
+         
+          <li><a href="https://github.com/windstormeye">项目</a></li>
+        
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        
+        <li><a class="icon" href="/2018/11/02/复盘一次令人头大的上线/"><i class="fa fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        
+        <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" href="#"><i class="fa fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=http://pjhubs.com/2018/11/04/PFollow开源/"><i class="fa fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=http://pjhubs.com/2018/11/04/PFollow开源/&text=PFollow开源"><i class="fa fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=http://pjhubs.com/2018/11/04/PFollow开源/&title=PFollow开源"><i class="fa fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http://pjhubs.com/2018/11/04/PFollow开源/&is_video=false&description=PFollow开源"><i class="fa fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=PFollow开源&body=Check out this article: http://pjhubs.com/2018/11/04/PFollow开源/"><i class="fa fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=http://pjhubs.com/2018/11/04/PFollow开源/&title=PFollow开源"><i class="fa fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=http://pjhubs.com/2018/11/04/PFollow开源/&title=PFollow开源"><i class="fa fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=http://pjhubs.com/2018/11/04/PFollow开源/&title=PFollow开源"><i class="fa fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=http://pjhubs.com/2018/11/04/PFollow开源/&title=PFollow开源"><i class="fa fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=http://pjhubs.com/2018/11/04/PFollow开源/&name=PFollow开源&description="><i class="fa fa-tumblr " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#PFollow"><span class="toc-number">1.</span> <span class="toc-text">PFollow</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#简介"><span class="toc-number">1.1.</span> <span class="toc-text">简介</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#调研"><span class="toc-number">1.2.</span> <span class="toc-text">调研</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#设计"><span class="toc-number">1.3.</span> <span class="toc-text">设计</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#实施"><span class="toc-number">1.4.</span> <span class="toc-text">实施</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#展示"><span class="toc-number">1.5.</span> <span class="toc-text">展示</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#地图"><span class="toc-number">1.5.1.</span> <span class="toc-text">地图</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#缩放地图"><span class="toc-number">1.5.2.</span> <span class="toc-text">缩放地图</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#放大地图"><span class="toc-number">1.5.3.</span> <span class="toc-text">放大地图</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#聚点详情"><span class="toc-number">1.5.4.</span> <span class="toc-text">聚点详情</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#聚点瓶"><span class="toc-number">1.5.5.</span> <span class="toc-text">聚点瓶</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#上线计划"><span class="toc-number">1.6.</span> <span class="toc-text">上线计划</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#思考"><span class="toc-number">1.7.</span> <span class="toc-text">思考</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#项目地址"><span class="toc-number">1.8.</span> <span class="toc-text">项目地址</span></a></li></ol></li></ol>
+    </div>
+  </span>
+</div>
+
+    
+    <div class="content index width mx-auto px2 my4">
+        
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        PFollow开源
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">PJHubs</span>
+      </span>
+      
+    <div class="postdate">
+        <time datetime="2018-11-03T16:26:01.000Z" itemprop="datePublished">2018-11-04</time>
+    </div>
+
+
+      
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link" href="/tags/Swift/">Swift</a>, <a class="tag-link" href="/tags/iOS/">iOS</a>, <a class="tag-link" href="/tags/开源/">开源</a>, <a class="tag-link" href="/tags/项目/">项目</a>
+    </div>
+
+
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <h1 id="PFollow"><a href="#PFollow" class="headerlink" title="PFollow"></a>PFollow</h1><p><img src="https://i.loli.net/2018/11/04/5bddca958ebca.png" width="100%" height="100%" align="center"></p>
+<h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>PFollow 为今年暑假新开的项目，期末考试完后和女票一同去了重庆青海西安十日游。在游玩的过程中，使用众多 app 协助旅行，在青海时，会经常到查看 iOS 自带的“指南针” app 看当前海拔。同时也因为在高原的天气变化多端，会非常注意第二天的天气等等这些习惯就被强制性的养成了。</p>
+<p>旅行结束后，躺在宿舍床上慢慢回想这旅行的这段时间，很多回忆都留在了一张张照片上，虽然照片会带上当时拍摄时的一些地点及其它信息，相册也会自动识别并对照片进行归类，甚至还能自动归档生成一段回忆视频。</p>
+<p>但是我总觉得还是不能很好的回忆起当时旅行中的一些美好的细节，因为往往会因为时间或者地点的因素被覆盖掉，却会在故地重游时再现。当时我脑海里就在想，如果我能够把游客此时所在地点配上文字和图片，形成一个个的“点”打在地图上，日后回想起这段旅程时，就可以顺着地图上的“点”，回忆起当初在这里发生的一些事情，这该是一件多么有趣的事情啊！</p>
+<p>遂开干！</p>
+<h2 id="调研"><a href="#调研" class="headerlink" title="调研"></a>调研</h2><p>我明确知道这种需求是一定被玩烂了的，就开始去 app store 中搜了一遍旅行类、记录类的 app，甚至也把知乎上关于“旅行记录/打卡”的相关问题都过了一遍，发现确实已经有产品在解决这些问题，总结出了以下几点：</p>
+<ul>
+<li>体验不佳；</li>
+<li>太丑；</li>
+<li>广告太多；</li>
+<li>忘了初心（名义上是旅行打卡，实质则为其它，例如：推销旅游产品）</li>
+<li>过于复杂；</li>
+<li>旅行打卡不是主要业务，入口太深</li>
+</ul>
+<p>以上几点当然是都经过考虑的，有可能是因为单纯做“旅行打卡”工具类 app 难以存活；玩不出新花样；用户变现等等问题导致产品的方向发生了变化，都能理解。</p>
+<p>但是，既然各个开发商都不愿意做这赔本事情，那为了满足个人需要就自己开干。</p>
+<h2 id="设计"><a href="#设计" class="headerlink" title="设计"></a>设计</h2><p>在设计阶段花的时间不多，大概只用了前前后后合计不到四五天的时间就搞定了 1.0 的设计，因为其实自己在大一的时候就萌生出了做类似的旅游产品，很多地方可以直接用之前的设计和逻辑。</p>
+<p>基本上把 app store 中“旅游”、“旅游打卡”、“旅行记录”等关键词下的 app 都使用并思考过了至少一遍，也结合了自己的使用习惯，使用 Sketch 设计出了一套符合个人习惯的 UI 。</p>
+<p>但是非常遗憾，辛辛苦苦在咖啡厅调了一天，然后重装了一次系统偏偏就是忘了备份它！！！导致代码写到后边出的成果有些地方比较“怪异”。</p>
+<h2 id="实施"><a href="#实施" class="headerlink" title="实施"></a>实施</h2><p>梳理了一遍 PFollow 中需要用到的知识，如下所示：</p>
+<ul>
+<li>自定义地图（高德、百度、MapKit）</li>
+<li>GPS</li>
+<li>陀螺仪</li>
+<li>海拔</li>
+<li>UI Dynamic</li>
+<li>SpriteKit</li>
+<li>CloudKit</li>
+<li>CoreData</li>
+<li>数据库设计</li>
+<li>UIKit</li>
+<li>Tapic Engine</li>
+<li>读取相册</li>
+<li>相机</li>
+<li>其它</li>
+</ul>
+<p>在这个项目中我对“自定义地图”、“UI Dynamic”、“Core Data”没有十足的把握，衡量了一下，可以不用停下目前正在做的事情把精力全部投入进行学习，因为我有个习惯，如果发现准备要做的事情超出了自己目前的知识储备，就会 all in 到学习这个事情中去，弄懂后再开始。</p>
+<p>到最后我发现其实坑还是在 “Core Data” 这块，因为它跟我以往用过的、打着相同口号的 ORM 框架有很多不一样的地方，所以不光是思维的转换上需要斟酌斟酌，还有写法上也不太一样，需要熟悉一段时间。</p>
+<p>不过好在到现在已经对 “Core Data” 有了一定的了解，并且也把习得的知识用在了实习公司的产品中，替换了大部分数据缓存策略。</p>
+<h2 id="展示"><a href="#展示" class="headerlink" title="展示"></a>展示</h2><p><img src="https://i.loli.net/2018/11/03/5bddc2dc527a3.jpg" alt="IMG_0305.jpg"></p>
+<h3 id="地图"><a href="#地图" class="headerlink" title="地图"></a>地图</h3><p><img src="https://i.loli.net/2018/11/03/5bddc386d5b5b.jpeg" width="60%" height="100%" align="center"></p>
+<h3 id="缩放地图"><a href="#缩放地图" class="headerlink" title="缩放地图"></a>缩放地图</h3><p><img src="https://i.loli.net/2018/11/03/5bddc3ed51180.jpeg" width="60%" height="100%" align="center"></p>
+<h3 id="放大地图"><a href="#放大地图" class="headerlink" title="放大地图"></a>放大地图</h3><p><img src="https://i.loli.net/2018/11/03/5bddc51b90b39.jpeg" width="60%" height="100%" align="center"></p>
+<h3 id="聚点详情"><a href="#聚点详情" class="headerlink" title="聚点详情"></a>聚点详情</h3><p><img src="https://i.loli.net/2018/11/03/5bddc46669b93.jpeg" width="60%" height="100%" align="center"></p>
+<h3 id="聚点瓶"><a href="#聚点瓶" class="headerlink" title="聚点瓶"></a>聚点瓶</h3><p><img src="https://i.loli.net/2018/11/03/5bddc4ba818d3.jpeg" width="60%" height="100%" align="center"></p>
+<h2 id="上线计划"><a href="#上线计划" class="headerlink" title="上线计划"></a>上线计划</h2><p>目前 PFollow 暂无上线计划，因为我在前段时间的一篇文章中了解到 Instagram 居然就是做“地点签到”起家的，后来因为各种原因而改变了产品方向，在当时我瞬间就明白了，Ins 一定是遇到了某些问题，这些问题会在 PFollow 上线后随着时间的流逝而暴露出来，我坚信！</p>
+<p>因此，PFollow 我将会以开源项目的方式进行下去。</p>
+<h2 id="思考"><a href="#思考" class="headerlink" title="思考"></a>思考</h2><p>在开发 PFollow 的过程中带给我最多的思考还是如何把自己的想法转换成实际一行行的代码，这其中会有许多的妥协和坚持，我们最终坚持下来的东西很有可能就是我们当时内心深处最真实的想法，妥协掉一些累赘。</p>
+<p>当然 1.0 版本还有些许缺陷，很大一部分原因是因为开学了我要有其它的事情去做了，PFollow 算是在这个炎热的暑假中让我静心学习的好助手，让我重新调整了自己的状态迎接大学最后一年。</p>
+<h2 id="项目地址"><a href="#项目地址" class="headerlink" title="项目地址"></a>项目地址</h2><p>GitHub：<a href="https://github.com/windstormeye/PFollow" target="_blank" rel="noopener">https://github.com/windstormeye/PFollow</a></p>
+
+  </div>
+
+</article>
+
+
+
+    </div>
+    
+      <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="/">首页</a></li>
+         
+          <li><a href="/archives/">归档</a></li>
+         
+          <li><a href="/about/">关于</a></li>
+         
+          <li><a href="https://github.com/windstormeye">项目</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#PFollow"><span class="toc-number">1.</span> <span class="toc-text">PFollow</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#简介"><span class="toc-number">1.1.</span> <span class="toc-text">简介</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#调研"><span class="toc-number">1.2.</span> <span class="toc-text">调研</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#设计"><span class="toc-number">1.3.</span> <span class="toc-text">设计</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#实施"><span class="toc-number">1.4.</span> <span class="toc-text">实施</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#展示"><span class="toc-number">1.5.</span> <span class="toc-text">展示</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#地图"><span class="toc-number">1.5.1.</span> <span class="toc-text">地图</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#缩放地图"><span class="toc-number">1.5.2.</span> <span class="toc-text">缩放地图</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#放大地图"><span class="toc-number">1.5.3.</span> <span class="toc-text">放大地图</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#聚点详情"><span class="toc-number">1.5.4.</span> <span class="toc-text">聚点详情</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#聚点瓶"><span class="toc-number">1.5.5.</span> <span class="toc-text">聚点瓶</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#上线计划"><span class="toc-number">1.6.</span> <span class="toc-text">上线计划</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#思考"><span class="toc-number">1.7.</span> <span class="toc-text">思考</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#项目地址"><span class="toc-number">1.8.</span> <span class="toc-text">项目地址</span></a></li></ol></li></ol>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=http://pjhubs.com/2018/11/04/PFollow开源/"><i class="fa fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=http://pjhubs.com/2018/11/04/PFollow开源/&text=PFollow开源"><i class="fa fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=http://pjhubs.com/2018/11/04/PFollow开源/&title=PFollow开源"><i class="fa fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http://pjhubs.com/2018/11/04/PFollow开源/&is_video=false&description=PFollow开源"><i class="fa fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=PFollow开源&body=Check out this article: http://pjhubs.com/2018/11/04/PFollow开源/"><i class="fa fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=http://pjhubs.com/2018/11/04/PFollow开源/&title=PFollow开源"><i class="fa fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=http://pjhubs.com/2018/11/04/PFollow开源/&title=PFollow开源"><i class="fa fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=http://pjhubs.com/2018/11/04/PFollow开源/&title=PFollow开源"><i class="fa fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=http://pjhubs.com/2018/11/04/PFollow开源/&title=PFollow开源"><i class="fa fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=http://pjhubs.com/2018/11/04/PFollow开源/&name=PFollow开源&description="><i class="fa fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+      <ul>
+        <li id="toc"><a class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fa fa-list fa-lg" aria-hidden="true"></i> TOC</a></li>
+        <li id="share"><a class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fa fa-share-alt fa-lg" aria-hidden="true"></i> Share</a></li>
+        <li id="top" style="display:none"><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a></li>
+        <li id="menu"><a class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fa fa-bars fa-lg" aria-hidden="true"></i> Menu</a></li>
+      </ul>
+    </div>
+
+  </div>
+</div>
+
+    
+    <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy; 2018 Piron
+</div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+         
+          <li><a href="/">首页</a></li>
+         
+          <li><a href="/archives/">归档</a></li>
+         
+          <li><a href="/about/">关于</a></li>
+         
+          <li><a href="https://github.com/windstormeye">项目</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+</footer>
+
+</body>
+</html>
+<!-- styles -->
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+<link rel="stylesheet" href="/lib/meslo-LG/styles.css">
+<link rel="stylesheet" href="/lib/justified-gallery/justifiedGallery.min.css">
+
+<!-- jquery -->
+<script src="/lib/jquery/jquery.min.js"></script>
+<script src="/lib/justified-gallery/jquery.justifiedGallery.min.js"></script>
+<script src="/js/main.js"></script>
+<!-- search -->
+
+<!-- Google Analytics -->
+
+    <script type="text/javascript">
+        (function(i,s,o,g,r,a,m) {i['GoogleAnalyticsObject']=r;i[r]=i[r]||function() {
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-86660611-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+
+<!-- Disqus Comments -->
+
+
