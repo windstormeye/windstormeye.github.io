@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="description" content="这是我另外一个项目其中一个组件——品种选择器，因为今天是周六，磨磨唧唧的造出了它。一眼看过去跟现有的通讯录样式和操作方式基本一致，但大家也知道我的尿性，从最开始能用三方组件就用三方到现在能自己写就自己写。 因为前后端都是我自己一个人在做（创业狗就是惨 = =）所以在今天萌生了很多好玩的想法，刚把这个组建弄出来后觉得有必要跟大家分享一些好玩的事情。 UI先来看看 UI 样式，  最开始看到设计图时，">
+<meta name="keywords" content="Swift">
+<meta property="og:type" content="article">
+<meta property="og:title" content="品种选择器组件开发历程">
+<meta property="og:url" content="http://pjhubs.com/2018/11/10/品种选择器组件开发历程/index.html">
+<meta property="og:site_name" content="PJHubs">
+<meta property="og:description" content="这是我另外一个项目其中一个组件——品种选择器，因为今天是周六，磨磨唧唧的造出了它。一眼看过去跟现有的通讯录样式和操作方式基本一致，但大家也知道我的尿性，从最开始能用三方组件就用三方到现在能自己写就自己写。 因为前后端都是我自己一个人在做（创业狗就是惨 = =）所以在今天萌生了很多好玩的想法，刚把这个组建弄出来后觉得有必要跟大家分享一些好玩的事情。 UI先来看看 UI 样式，  最开始看到设计图时，">
+<meta property="og:image" content="https://i.loli.net/2018/11/10/5be6db6437d14.png">
+<meta property="og:image" content="https://i.loli.net/2018/11/10/5be6dbb67a54a.png">
+<meta property="og:image" content="https://i.loli.net/2018/11/10/5be6dc222f041.png">
+<meta property="og:updated_time" content="2018-11-10T14:18:21.848Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="品种选择器组件开发历程">
+<meta name="twitter:description" content="这是我另外一个项目其中一个组件——品种选择器，因为今天是周六，磨磨唧唧的造出了它。一眼看过去跟现有的通讯录样式和操作方式基本一致，但大家也知道我的尿性，从最开始能用三方组件就用三方到现在能自己写就自己写。 因为前后端都是我自己一个人在做（创业狗就是惨 = =）所以在今天萌生了很多好玩的想法，刚把这个组建弄出来后觉得有必要跟大家分享一些好玩的事情。 UI先来看看 UI 样式，  最开始看到设计图时，">
+<meta name="twitter:image" content="https://i.loli.net/2018/11/10/5be6db6437d14.png">
+    
+    
+        
+          
+              <link rel="shortcut icon" href="/images/favicon.ico">
+          
+        
+        
+          
+            <link rel="icon" type="image/png" href="/images/favicon-192x192.png" sizes="192x192">
+          
+        
+        
+          
+            <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+          
+        
+    
+    <!-- title -->
+    <title>品种选择器组件开发历程</title>
+    <!-- styles -->
+    <link rel="stylesheet" href="/css/style.css">
+    <!-- rss -->
+    
+    
+</head>
+
+<body>
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#"><i class="fa fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fa fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fa fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+          <li><a href="/">首页</a></li>
+         
+          <li><a href="/archives/">归档</a></li>
+         
+          <li><a href="/about/">关于</a></li>
+         
+          <li><a href="https://github.com/windstormeye">项目</a></li>
+        
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        
+        <li><a class="icon" href="/2018/11/04/PFollow开源/"><i class="fa fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        
+        <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" href="#"><i class="fa fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=http://pjhubs.com/2018/11/10/品种选择器组件开发历程/"><i class="fa fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=http://pjhubs.com/2018/11/10/品种选择器组件开发历程/&text=品种选择器组件开发历程"><i class="fa fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=http://pjhubs.com/2018/11/10/品种选择器组件开发历程/&title=品种选择器组件开发历程"><i class="fa fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http://pjhubs.com/2018/11/10/品种选择器组件开发历程/&is_video=false&description=品种选择器组件开发历程"><i class="fa fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=品种选择器组件开发历程&body=Check out this article: http://pjhubs.com/2018/11/10/品种选择器组件开发历程/"><i class="fa fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=http://pjhubs.com/2018/11/10/品种选择器组件开发历程/&title=品种选择器组件开发历程"><i class="fa fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=http://pjhubs.com/2018/11/10/品种选择器组件开发历程/&title=品种选择器组件开发历程"><i class="fa fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=http://pjhubs.com/2018/11/10/品种选择器组件开发历程/&title=品种选择器组件开发历程"><i class="fa fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=http://pjhubs.com/2018/11/10/品种选择器组件开发历程/&title=品种选择器组件开发历程"><i class="fa fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=http://pjhubs.com/2018/11/10/品种选择器组件开发历程/&name=品种选择器组件开发历程&description="><i class="fa fa-tumblr " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#UI"><span class="toc-number">1.</span> <span class="toc-text">UI</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#思考（一）"><span class="toc-number">2.</span> <span class="toc-text">思考（一）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#实践（一）"><span class="toc-number">3.</span> <span class="toc-text">实践（一）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#思考（二）"><span class="toc-number">4.</span> <span class="toc-text">思考（二）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#实践（二）"><span class="toc-number">5.</span> <span class="toc-text">实践（二）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#思考和总结"><span class="toc-number">6.</span> <span class="toc-text">思考和总结</span></a></li></ol>
+    </div>
+  </span>
+</div>
+
+    
+    <div class="content index width mx-auto px2 my4">
+        
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        品种选择器组件开发历程
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">PJHubs</span>
+      </span>
+      
+    <div class="postdate">
+        <time datetime="2018-11-10T14:17:30.000Z" itemprop="datePublished">2018-11-10</time>
+    </div>
+
+
+      
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link" href="/tags/Swift/">Swift</a>
+    </div>
+
+
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <p>这是我另外一个项目其中一个组件——品种选择器，因为今天是周六，磨磨唧唧的造出了它。一眼看过去跟现有的通讯录样式和操作方式基本一致，但大家也知道我的尿性，从最开始能用三方组件就用三方到现在能自己写就自己写。</p>
+<p>因为前后端都是我自己一个人在做（创业狗就是惨 = =）所以在今天萌生了很多好玩的想法，刚把这个组建弄出来后觉得有必要跟大家分享一些好玩的事情。</p>
+<h2 id="UI"><a href="#UI" class="headerlink" title="UI"></a>UI</h2><p>先来看看 UI 样式，</p>
+<p><img src="https://i.loli.net/2018/11/10/5be6db6437d14.png" height="50%"></p>
+<p>最开始看到设计图时，并不认为这是一个有多少搞头的东西，一直拖到今天。这是最终实现的成果，</p>
+<p><img src="https://i.loli.net/2018/11/10/5be6dbb67a54a.png" height="50%"></p>
+<h2 id="思考（一）"><a href="#思考（一）" class="headerlink" title="思考（一）"></a>思考（一）</h2><p>给到我的文案是个 .docx 格式的文档，如下所示：</p>
+<p><img src="https://i.loli.net/2018/11/10/5be6dc222f041.png" height="50%"></p>
+<p>之前沟通过了一次，给我按照字母表顺序排好就行了。最开始我的设计非常简单，因为后端是用 python 写的，直接从文件中读出数据，<code>split</code> 一下丢入库里就好了，接口直接返回 <code>id</code> 和 <code>zh_name</code> 即可，遂开干。</p>
+<h2 id="实践（一）"><a href="#实践（一）" class="headerlink" title="实践（一）"></a>实践（一）</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 初始化：尽量通过 python shell 调用该方法</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">init_dog_breed</span><span class="params">()</span>:</span></span><br><span class="line">     f = open(settings.DOG_BREED_DIR, <span class="string">'r'</span>)</span><br><span class="line">     f_str = f.read()</span><br><span class="line">     f_str_arr = f_str.split()</span><br><span class="line">     <span class="keyword">for</span> dog_name <span class="keyword">in</span> f_str_arr:</span><br><span class="line">         dog_breed(zh_name=dog_name).save()</span><br><span class="line">     f.close()</span><br></pre></td></tr></table></figure>
+<p>从本地路径读取转化成 <code>.txt</code> 文件（本人对直接读 .docx 没把握）后简单的操作下入库完事，这个方法并未暴露在接口中，而且只是第一次初始化数据时需要调用该方法。为了方便后续产品迭代添加宠物品种信息，做了另外一个简单的方法：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 新增狗品种</span></span><br><span class="line"> <span class="function"><span class="keyword">def</span> <span class="title">add_dog_breed</span><span class="params">(breed_name)</span>:</span></span><br><span class="line">     dog_breed(zh_name=breed_name).save()</span><br></pre></td></tr></table></figure>
+<p>当然，也会有猫的，因为基本上差不多就不展开了。接口上这么写：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@decorator.request_methon('GET')</span></span><br><span class="line"><span class="meta">@decorator.request_check_args(['pet_type'])</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">get_breeds</span><span class="params">(request)</span>:</span></span><br><span class="line">    pet_type = request.GET.get(<span class="string">'pet_type'</span>, <span class="string">''</span>)</span><br><span class="line">    functions = &#123;</span><br><span class="line">        <span class="string">'dog'</span>: dog(),</span><br><span class="line">        <span class="string">'cat'</span>: cat()</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> pet_type <span class="keyword">in</span> functions.keys():</span><br><span class="line">        json = &#123;</span><br><span class="line">            <span class="string">'breeds'</span>: functions[pet_type]</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> utils.SuccessResponse(json, request)</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="keyword">return</span> utils.ErrorResponse(<span class="string">'2333'</span>, <span class="string">'不支持该物种'</span>, request)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 获取所有狗品种</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">dog</span><span class="params">()</span>:</span></span><br><span class="line">    dog_breeds = dog_breed.objects.all()</span><br><span class="line">    breeds = []</span><br><span class="line">    <span class="keyword">for</span> breed <span class="keyword">in</span> dog_breeds:</span><br><span class="line">        json = &#123;</span><br><span class="line">            <span class="string">'id'</span>: breed.pk,</span><br><span class="line">            <span class="string">'zh_name'</span>: breed.zh_name,</span><br><span class="line">        &#125;</span><br><span class="line">        breeds.append(json)</span><br><span class="line">    <span class="keyword">return</span> breeds</span><br></pre></td></tr></table></figure>
+<p>猜测后续产品可能还会引入其它宠物，毕竟现代人对宠物的需求是越来越奇葩了，没有直接 <code>if-else</code> ，想用 <code>switch</code> ，但发现 python 中并没有 <code>switch</code> 语句，查阅一番资料后，发现居然可以用 <code>key-value</code> 完成，虽然有些稍许麻烦，但第一次见还可以把键值对玩成这样！</p>
+<p>访问对应接口后拿到的 JSON 格式数据如下：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="string">"msgCode"</span>: <span class="number">666</span>,</span><br><span class="line">    <span class="string">"msg"</span>: &#123;</span><br><span class="line">        <span class="string">"breeds"</span>: [</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="string">"id"</span>: <span class="number">89</span>,</span><br><span class="line">                <span class="string">"zh_name"</span>: <span class="string">"拉布拉多寻回犬"</span></span><br><span class="line">            &#125;,</span><br><span class="line">            &#123;·</span><br><span class="line">                <span class="string">"id"</span>: <span class="number">90</span>,</span><br><span class="line">                <span class="string">"zh_name"</span>: <span class="string">"拉萨犬"</span></span><br><span class="line">            &#125;,</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="string">"id"</span>: <span class="number">91</span>,</span><br><span class="line">                <span class="string">"zh_name"</span>: <span class="string">"腊肠犬"</span></span><br><span class="line">            &#125;,</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="string">"id"</span>: <span class="number">92</span>,</span><br><span class="line">                <span class="string">"zh_name"</span>: <span class="string">"兰波格犬"</span></span><br><span class="line">            &#125;,</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="string">"id"</span>: <span class="number">93</span>,</span><br><span class="line">                <span class="string">"zh_name"</span>: <span class="string">"猎水獭犬"</span></span><br><span class="line">            &#125;,</span><br><span class="line">        ]</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>一切顺利，看起来不错，开始造客户端 UI。客户端上的实现同样也是比较轻松，一个 <code>tableView</code> 的正常渲染流程即可。</p>
+<p>数据渲染出来后，脑子已经在快速运转，站起来活动活动，发现肚子有些饿，纠结了一会是食堂呢还是饿了么，最后因为贫穷而选择了食堂。</p>
+<h2 id="思考（二）"><a href="#思考（二）" class="headerlink" title="思考（二）"></a>思考（二）</h2><p>午饭结束后，继续干活。开始做数据分组，思考并发现了问题所在，如果按照上午接口所返回的数据格式去做，那么就需要端上做数据分组，把宠物品种按照 <code>A～Z</code> 的顺序放到一个个的 <code>section</code> 中，这样不但 iOS 需要做一遍，以后 Android 也要再做一遍，而且极其有可能还是我写，本来我就十分厌烦 Android，多花费一分钟甚至一秒钟都是极其不乐意的。</p>
+<p>所有，重新思考接口返回的数据格式。可以确保的是，数据都已经按照字母序排好了，我们只需要对数据做分组，把第一个字的拼音的第一个字母相同的品种归类为一组，最后把所有组都放到一个大的列表中，序列化为 JSON 返回即可完事。</p>
+<p>遂又开干！</p>
+<h2 id="实践（二）"><a href="#实践（二）" class="headerlink" title="实践（二）"></a>实践（二）</h2><p>首先给品种模型新增了一个字段 <code>group</code> 用于标记所属组别，中途考虑到了不想多增迁移文件，居然脑残的把之前生成的表给删了，导致后边生成迁移文件时对不上，最后又删库重来，真是多此一举 = =。</p>
+<p>重新把基本操作都弄完后，改造初始化数据的方法，用到了一个中文转拼音的库 <code>pinyin</code>：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 初始化：尽量通过 python shell 调用该方法</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">init_dog_breed</span><span class="params">()</span>:</span></span><br><span class="line">    f = open(settings.DOG_BREED_DIR, <span class="string">'r'</span>)</span><br><span class="line">    f_str = f.read()</span><br><span class="line">    f_str_arr = f_str.split()</span><br><span class="line">    <span class="comment"># 删除 array 中的第一个 'A'</span></span><br><span class="line">    <span class="keyword">del</span> f_str_arr[<span class="number">0</span>]</span><br><span class="line">    group = <span class="string">'A'</span></span><br><span class="line">    <span class="keyword">for</span> dog_name <span class="keyword">in</span> f_str_arr:</span><br><span class="line">        first_cat_name = pinyin.get(dog_name, format=<span class="string">'strip'</span>)[<span class="number">0</span>:<span class="number">1</span>].upper()</span><br><span class="line">        <span class="keyword">if</span> first_cat_name != group:</span><br><span class="line">            group = first_cat_name</span><br><span class="line">            <span class="comment"># 切换 group 时跳过</span></span><br><span class="line">            <span class="keyword">continue</span></span><br><span class="line">        dog_breed(zh_name=dog_name, group=group).save()</span><br><span class="line"></span><br><span class="line">    f.close()</span><br></pre></td></tr></table></figure>
+<p>这样清洗过数据后，数据就十分清晰漂亮了：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">+-----+-------+--------------------------------+</span><br><span class="line">| id  | group | zh_name                        |</span><br><span class="line">+-----+-------+--------------------------------+</span><br><span class="line">|   1 | A     | 阿富汗猎犬                     |</span><br><span class="line">|   2 | A     | 阿拉斯加雪橇犬                 |</span><br><span class="line">|   3 | A     | 爱尔兰梗                       |</span><br><span class="line">|   4 | A     | 爱尔兰红白雪达犬               |</span><br><span class="line">|   5 | A     | 爱尔兰猎狼犬                   |</span><br><span class="line">|   6 | A     | 爱尔兰软毛梗                   |</span><br><span class="line">|   7 | A     | 爱尔兰水猎犬                   |</span><br><span class="line">|   8 | A     | 爱尔兰峡谷梗                   |</span><br><span class="line">+-----+-------+--------------------------------+</span><br></pre></td></tr></table></figure>
+<p>而接口，只需要进行拼接同类数据即可，</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 获取所有狗品种</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">dog</span><span class="params">()</span>:</span></span><br><span class="line">    dog_breeds = dog_breed.objects.all()</span><br><span class="line">    <span class="comment"># 所有种类</span></span><br><span class="line">    breeds = []</span><br><span class="line">    <span class="comment"># 当前种类名</span></span><br><span class="line">    breed_groups = []</span><br><span class="line">    group = <span class="string">"A"</span></span><br><span class="line">    <span class="keyword">for</span> breed <span class="keyword">in</span> dog_breeds:</span><br><span class="line">        <span class="keyword">if</span> breed.group != group:</span><br><span class="line">            breed_group = &#123;</span><br><span class="line">                <span class="string">'group'</span>: group,</span><br><span class="line">                <span class="string">'breeds'</span>: breed_groups,</span><br><span class="line">            &#125;</span><br><span class="line">            breeds.append(breed_group)</span><br><span class="line">            group = breed.group</span><br><span class="line">            breed_groups = []</span><br><span class="line">        b_group = &#123;</span><br><span class="line">            <span class="string">'id'</span>: breed.pk,</span><br><span class="line">            <span class="string">'zh_name'</span>: breed.zh_name,</span><br><span class="line">        &#125;</span><br><span class="line">        breed_groups.append(b_group)</span><br><span class="line">    <span class="keyword">return</span> breeds</span><br></pre></td></tr></table></figure>
+<p>这样，客户端就能够拿到已经分组好的数据：</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="attr">"msgCode"</span>: <span class="number">666</span>,</span><br><span class="line">    <span class="attr">"msg"</span>: &#123;</span><br><span class="line">        <span class="attr">"breeds"</span>: [</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="attr">"group"</span>: <span class="string">"A"</span>,</span><br><span class="line">                <span class="attr">"breeds"</span>: [</span><br><span class="line">                    &#123;</span><br><span class="line">                        <span class="attr">"group"</span>: <span class="string">"T"</span>,</span><br><span class="line">                        <span class="attr">"breeds"</span>: [</span><br><span class="line">                            &#123;</span><br><span class="line">                                <span class="attr">"id"</span>: <span class="number">137</span>,</span><br><span class="line">                                <span class="attr">"zh_name"</span>: <span class="string">"田野小猎犬"</span></span><br><span class="line">                            &#125;</span><br><span class="line">                        ]</span><br><span class="line">                    &#125;,</span><br><span class="line">                ]</span><br><span class="line">            &#125;,</span><br><span class="line">            &#123;</span><br><span class="line">                <span class="attr">"group"</span>: <span class="string">"W"</span>,</span><br><span class="line">                <span class="attr">"breeds"</span>: [</span><br><span class="line">                    &#123;</span><br><span class="line">                        <span class="attr">"id"</span>: <span class="number">138</span>,</span><br><span class="line">                        <span class="attr">"zh_name"</span>: <span class="string">"玩具猎狐梗"</span></span><br><span class="line">                    &#125;,</span><br><span class="line">                    &#123;</span><br><span class="line">                        <span class="attr">"id"</span>: <span class="number">139</span>,</span><br><span class="line">                        <span class="attr">"zh_name"</span>: <span class="string">"玩具曼彻斯特犬"</span></span><br><span class="line">                    &#125;,</span><br><span class="line">                ]</span><br><span class="line">            &#125;</span><br><span class="line">        ]</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>那客户端接下来要做的事情稍微冗余一些，但不复杂。首先先确定 <code>tableView.sections</code> 的值，然后返回 <code>sectionHeaderView</code>，接着编写 <code>cellForRow</code> 渲染 cell 的方法，依然是正常的 <code>tableView</code> 渲染流程。</p>
+<p>剩下的就是一些其它 UI 和交互细节上的修修补补了。</p>
+<h2 id="思考和总结"><a href="#思考和总结" class="headerlink" title="思考和总结"></a>思考和总结</h2><p>这次做的这个组件前后端花费的时间比例大约在 7:3，主要时间都花在客户端上，因为是第一次做类似于这种通讯录组件的开发，再加上是周六，让自己的大脑和心情都放松了下来，没有把时间抓得特别紧。</p>
+<p>给我最大的收获是最开始只考虑了后端处理数据的便利，而忘了前端处理数据的复杂，到后边转换了思维，用前端的思维对接口格式进行了修改，这一来一回让自己更加明白了前后端配合是才能够把一个东西做好，做到极致。</p>
+
+  </div>
+
+</article>
+
+
+
+    </div>
+    
+      <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="/">首页</a></li>
+         
+          <li><a href="/archives/">归档</a></li>
+         
+          <li><a href="/about/">关于</a></li>
+         
+          <li><a href="https://github.com/windstormeye">项目</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#UI"><span class="toc-number">1.</span> <span class="toc-text">UI</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#思考（一）"><span class="toc-number">2.</span> <span class="toc-text">思考（一）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#实践（一）"><span class="toc-number">3.</span> <span class="toc-text">实践（一）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#思考（二）"><span class="toc-number">4.</span> <span class="toc-text">思考（二）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#实践（二）"><span class="toc-number">5.</span> <span class="toc-text">实践（二）</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#思考和总结"><span class="toc-number">6.</span> <span class="toc-text">思考和总结</span></a></li></ol>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=http://pjhubs.com/2018/11/10/品种选择器组件开发历程/"><i class="fa fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=http://pjhubs.com/2018/11/10/品种选择器组件开发历程/&text=品种选择器组件开发历程"><i class="fa fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=http://pjhubs.com/2018/11/10/品种选择器组件开发历程/&title=品种选择器组件开发历程"><i class="fa fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http://pjhubs.com/2018/11/10/品种选择器组件开发历程/&is_video=false&description=品种选择器组件开发历程"><i class="fa fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=品种选择器组件开发历程&body=Check out this article: http://pjhubs.com/2018/11/10/品种选择器组件开发历程/"><i class="fa fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=http://pjhubs.com/2018/11/10/品种选择器组件开发历程/&title=品种选择器组件开发历程"><i class="fa fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=http://pjhubs.com/2018/11/10/品种选择器组件开发历程/&title=品种选择器组件开发历程"><i class="fa fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=http://pjhubs.com/2018/11/10/品种选择器组件开发历程/&title=品种选择器组件开发历程"><i class="fa fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=http://pjhubs.com/2018/11/10/品种选择器组件开发历程/&title=品种选择器组件开发历程"><i class="fa fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=http://pjhubs.com/2018/11/10/品种选择器组件开发历程/&name=品种选择器组件开发历程&description="><i class="fa fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+      <ul>
+        <li id="toc"><a class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fa fa-list fa-lg" aria-hidden="true"></i> TOC</a></li>
+        <li id="share"><a class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fa fa-share-alt fa-lg" aria-hidden="true"></i> Share</a></li>
+        <li id="top" style="display:none"><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a></li>
+        <li id="menu"><a class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fa fa-bars fa-lg" aria-hidden="true"></i> Menu</a></li>
+      </ul>
+    </div>
+
+  </div>
+</div>
+
+    
+    <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy; 2018 Piron
+</div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+         
+          <li><a href="/">首页</a></li>
+         
+          <li><a href="/archives/">归档</a></li>
+         
+          <li><a href="/about/">关于</a></li>
+         
+          <li><a href="https://github.com/windstormeye">项目</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+</footer>
+
+</body>
+</html>
+<!-- styles -->
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+<link rel="stylesheet" href="/lib/meslo-LG/styles.css">
+<link rel="stylesheet" href="/lib/justified-gallery/justifiedGallery.min.css">
+
+<!-- jquery -->
+<script src="/lib/jquery/jquery.min.js"></script>
+<script src="/lib/justified-gallery/jquery.justifiedGallery.min.js"></script>
+<script src="/js/main.js"></script>
+<!-- search -->
+
+<!-- Google Analytics -->
+
+    <script type="text/javascript">
+        (function(i,s,o,g,r,a,m) {i['GoogleAnalyticsObject']=r;i[r]=i[r]||function() {
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-86660611-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+
+<!-- Disqus Comments -->
+
+
