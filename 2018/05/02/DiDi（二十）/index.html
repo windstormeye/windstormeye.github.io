@@ -7,7 +7,7 @@
     <meta name="HandheldFriendly" content="True">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
     <meta name="description" content="2018-05-2今天主要把消息模块的整体全部迁移到了Swift上，然后又双踩了之前工程师埋下的坑，在第二次拉数据时，先做一次判断，如果第一次拉回来的数据不为空，那就把给第二次的某个参数（假设为A）设置为第一次拉回来数据的第一个data中的A，最后才能去拉数据。 刚开始说实话没看懂要干嘛，po出数据后发现A是代表了当前数据的自增id，这个接口没有做分页，我就在猜想，会不会是通过这个A参数值做上下拉">
-<meta name="keywords" content="iOS,DiDi">
+<meta name="keywords" content="DiDi,iOS">
 <meta property="og:type" content="article">
 <meta property="og:title" content="DiDi（二十）">
 <meta property="og:url" content="http://pjhubs.com/2018/05/02/DiDi（二十）/index.html">

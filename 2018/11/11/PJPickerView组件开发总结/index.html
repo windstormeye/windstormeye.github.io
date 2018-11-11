@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="description" content="今天周日继续撸码，继续完成另一个组件，给之取名为——PJPickerView，别以为它真的只是个View 哦，为了让它看上去显得不是太“重”，从而取了这个名字，本质上是个 UIViewController，可能你会觉得有些奇怪，为什么一个组件要上 UIViewController 呢？刚开始我也不想这么玩，听我慢慢道来。 UI还是先来看 UI，  UI 已经画得十分清楚了，就是要让我们分离出一个组">
+<meta name="keywords" content="Swift">
+<meta property="og:type" content="article">
+<meta property="og:title" content="PJPickerView组件开发总结">
+<meta property="og:url" content="http://pjhubs.com/2018/11/11/PJPickerView组件开发总结/index.html">
+<meta property="og:site_name" content="PJHubs">
+<meta property="og:description" content="今天周日继续撸码，继续完成另一个组件，给之取名为——PJPickerView，别以为它真的只是个View 哦，为了让它看上去显得不是太“重”，从而取了这个名字，本质上是个 UIViewController，可能你会觉得有些奇怪，为什么一个组件要上 UIViewController 呢？刚开始我也不想这么玩，听我慢慢道来。 UI还是先来看 UI，  UI 已经画得十分清楚了，就是要让我们分离出一个组">
+<meta property="og:image" content="https://i.loli.net/2018/11/11/5be8174e1e7d1.png">
+<meta property="og:image" content="https://i.loli.net/2018/11/11/5be83e60dbc91.png">
+<meta property="og:image" content="https://i.loli.net/2018/11/11/5be83e9728cd3.png">
+<meta property="og:image" content="https://i.loli.net/2018/11/11/5be83ebd45295.png">
+<meta property="og:updated_time" content="2018-11-11T14:38:29.245Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="PJPickerView组件开发总结">
+<meta name="twitter:description" content="今天周日继续撸码，继续完成另一个组件，给之取名为——PJPickerView，别以为它真的只是个View 哦，为了让它看上去显得不是太“重”，从而取了这个名字，本质上是个 UIViewController，可能你会觉得有些奇怪，为什么一个组件要上 UIViewController 呢？刚开始我也不想这么玩，听我慢慢道来。 UI还是先来看 UI，  UI 已经画得十分清楚了，就是要让我们分离出一个组">
+<meta name="twitter:image" content="https://i.loli.net/2018/11/11/5be8174e1e7d1.png">
+    
+    
+        
+          
+              <link rel="shortcut icon" href="/images/favicon.ico">
+          
+        
+        
+          
+            <link rel="icon" type="image/png" href="/images/favicon-192x192.png" sizes="192x192">
+          
+        
+        
+          
+            <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+          
+        
+    
+    <!-- title -->
+    <title>PJPickerView组件开发总结</title>
+    <!-- styles -->
+    <link rel="stylesheet" href="/css/style.css">
+    <!-- rss -->
+    
+    
+</head>
+
+<body>
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#"><i class="fa fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fa fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fa fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+          <li><a href="/">首页</a></li>
+         
+          <li><a href="/archives/">归档</a></li>
+         
+          <li><a href="/about/">关于</a></li>
+         
+          <li><a href="https://github.com/windstormeye">项目</a></li>
+        
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        
+        <li><a class="icon" href="/2018/11/10/品种选择器组件开发历程/"><i class="fa fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        
+        <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" href="#"><i class="fa fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=http://pjhubs.com/2018/11/11/PJPickerView组件开发总结/"><i class="fa fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=http://pjhubs.com/2018/11/11/PJPickerView组件开发总结/&text=PJPickerView组件开发总结"><i class="fa fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=http://pjhubs.com/2018/11/11/PJPickerView组件开发总结/&title=PJPickerView组件开发总结"><i class="fa fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http://pjhubs.com/2018/11/11/PJPickerView组件开发总结/&is_video=false&description=PJPickerView组件开发总结"><i class="fa fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=PJPickerView组件开发总结&body=Check out this article: http://pjhubs.com/2018/11/11/PJPickerView组件开发总结/"><i class="fa fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=http://pjhubs.com/2018/11/11/PJPickerView组件开发总结/&title=PJPickerView组件开发总结"><i class="fa fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=http://pjhubs.com/2018/11/11/PJPickerView组件开发总结/&title=PJPickerView组件开发总结"><i class="fa fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=http://pjhubs.com/2018/11/11/PJPickerView组件开发总结/&title=PJPickerView组件开发总结"><i class="fa fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=http://pjhubs.com/2018/11/11/PJPickerView组件开发总结/&title=PJPickerView组件开发总结"><i class="fa fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=http://pjhubs.com/2018/11/11/PJPickerView组件开发总结/&name=PJPickerView组件开发总结&description="><i class="fa fa-tumblr " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#UI"><span class="toc-number">1.</span> <span class="toc-text">UI</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#思考"><span class="toc-number">2.</span> <span class="toc-text">思考</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#实践"><span class="toc-number">3.</span> <span class="toc-text">实践</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#自定义-UIPickerView"><span class="toc-number">3.1.</span> <span class="toc-text">自定义 UIPickerView</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#闭包回调"><span class="toc-number">3.2.</span> <span class="toc-text">闭包回调</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#蒙版"><span class="toc-number">3.3.</span> <span class="toc-text">蒙版</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#成果"><span class="toc-number">3.4.</span> <span class="toc-text">成果</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#总结"><span class="toc-number">4.</span> <span class="toc-text">总结</span></a></li></ol>
+    </div>
+  </span>
+</div>
+
+    
+    <div class="content index width mx-auto px2 my4">
+        
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        PJPickerView组件开发总结
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">PJHubs</span>
+      </span>
+      
+    <div class="postdate">
+        <time datetime="2018-11-11T14:35:29.000Z" itemprop="datePublished">2018-11-11</time>
+    </div>
+
+
+      
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link" href="/tags/Swift/">Swift</a>
+    </div>
+
+
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <p>今天周日继续撸码，继续完成另一个组件，给之取名为——<code>PJPickerView</code>，别以为它真的只是个<code>View</code> 哦，为了让它看上去显得不是太“重”，从而取了这个名字，本质上是个 <code>UIViewController</code>，可能你会觉得有些奇怪，为什么一个组件要上 <code>UIViewController</code> 呢？刚开始我也不想这么玩，听我慢慢道来。</p>
+<h2 id="UI"><a href="#UI" class="headerlink" title="UI"></a>UI</h2><p>还是先来看 UI，</p>
+<p><img src="https://i.loli.net/2018/11/11/5be8174e1e7d1.png" width="70%"></p>
+<p>UI 已经画得十分清楚了，就是要让我们分离出一个组件来，而且还是能够自定义数据源的。</p>
+<h2 id="思考"><a href="#思考" class="headerlink" title="思考"></a>思考</h2><ul>
+<li>肯定要用到 <code>UIPickerView</code> 和 <code>UIDatePickerView</code> ，只不过需要在 <code>UIPickerView</code> 上自定义一下；</li>
+<li>要处理好蒙版。如果这还像之前那般偷懒，直接把整个组件添加到当前控制器视图上，蒙版的显示区域只能是 <code>UINavigationBar</code> 下的区域，这样会少了头部遮罩，十分奇怪；如果是把组件添加到当前显示的 <code>UIWindow</code> 上，那么 <code>statusBar</code> 里的运营商、电量和时间等信息也不会被遮罩，而且会异常明显的被高亮出来，如果你感兴趣的话，可以尝试把一个黑色的 <code>UIView</code> 直接添加到当前 <code>UIWindow</code> 上。</li>
+<li>因为是个组件，所以是肯定不能走代理回调的。第一，Apple 自家的各种系统组件基本上都走的代理回调，再多写几个代理给自己或者其它人调用估计得炸了；第二，这可是高大上的 <code>Swift</code>，怎么还能屈服于老土的 <code>Objective-C</code> 时代的各种回调呢？闭包是一定要闭的！</li>
+</ul>
+<h2 id="实践"><a href="#实践" class="headerlink" title="实践"></a>实践</h2><h3 id="自定义-UIPickerView"><a href="#自定义-UIPickerView" class="headerlink" title="自定义 UIPickerView"></a>自定义 UIPickerView</h3><p><code>UIPickerView</code> 的各种回调使用方式和流程与 <code>UITableView</code> 及其类似，同样需要继承 <code>UIPickerViewDelegate, UIPickerViewDataSource</code>，并实现以下几个方法即可：</p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// MARK: - Delegate</span></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">numberOfComponents</span><span class="params">(<span class="keyword">in</span> pickerView: UIPickerView)</span></span> -&gt; <span class="type">Int</span> &#123;</span><br><span class="line">    <span class="comment">// 告诉 UIPickerView 有多少组</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">pickerView</span><span class="params">(<span class="number">_</span> pickerView: UIPickerView,</span></span></span><br><span class="line"><span class="function"><span class="params">                numberOfRowsInComponent component: Int)</span></span> -&gt; <span class="type">Int</span> &#123;</span><br><span class="line">    <span class="comment">// 告诉 UIPickerView 每组下有多少条数据，component 为组别</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">pickerView</span><span class="params">(<span class="number">_</span> pickerView: UIPickerView,</span></span></span><br><span class="line"><span class="function"><span class="params">                titleForRow row: Int,</span></span></span><br><span class="line"><span class="function"><span class="params">                forComponent component: Int)</span></span> -&gt; <span class="type">String</span>? &#123;</span><br><span class="line">    <span class="comment">// 返回 UIPickerView 每组下每条数据需要显示的内容，只能是字符串，如果要自定义 View 走 `pickerView(_ pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusing view: UIView?) -&gt; UIView` 这个方法</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">pickerView</span><span class="params">(<span class="number">_</span> pickerView: UIPickerView,</span></span></span><br><span class="line"><span class="function"><span class="params">                didSelectRow row: Int,</span></span></span><br><span class="line"><span class="function"><span class="params">                inComponent component: Int)</span></span> &#123;</span><br><span class="line">    <span class="comment">// 拿到 UIPickerView 当前组别和条数，相当于 section 和 row，注意：如果用户什么都选，默认在第一条，但此时因为用户并未进行操作，所以该代理方法里写的内容不会被执行</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>只要按照对应代理方法所提供的作用填写代码即可，因为 <code>PJPickerView</code> 最多只做两组数据，所以直接拿了一个二维数组去做了数据源，当然，如果调用者非得塞下超过两列的内容也不是不行，但显示出来的效果就会畸变，目前我除了再自定义一个数据源模型替代二维字符串数组外没有更好的想法。</p>
+<h3 id="闭包回调"><a href="#闭包回调" class="headerlink" title="闭包回调"></a>闭包回调</h3><p>在之前很长的一段时间里，我非常喜欢用代理回调做组件间，甚至 vc 间的事件处理回调，可能因为当时觉得这是最简单的一种方式了吧，到今年这段时间强制性压迫自己且到 <code>Swift</code> 上，如果在 <code>Swift</code> 上还用 OC 那一套流程去写代理回调，出来的效果全是浓浓到 OC 味道，一点都不 <code>Swifty</code>。</p>
+<p>所以，我采用如下方式来进行处理回调：</p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 声明一个中间闭包，作为后边逃逸闭包的引用</span></span><br><span class="line"><span class="keyword">private</span> <span class="keyword">var</span> complationHandler: ((<span class="type">String</span>) -&gt; <span class="type">Void</span>)?</span><br><span class="line"></span><br><span class="line"><span class="comment">// ...</span></span><br><span class="line"></span><br><span class="line"><span class="comment">// MARK: - Public</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">func</span> <span class="title">showPickerView</span>(<span class="title">viewModel</span>: ((<span class="title">_</span> <span class="title">model</span>: <span class="title">inout</span> <span class="title">PickerModel</span>) -&gt; <span class="title">Void</span>)?, <span class="title">complationHandler</span>: @<span class="title">escaping</span> (<span class="title">String</span>) -&gt; <span class="title">Void</span>) </span>&#123;</span><br><span class="line">    <span class="keyword">let</span> picker = <span class="type">PJPickerView</span>()</span><br><span class="line">    picker.viewModel = <span class="type">PickerModel</span>()</span><br><span class="line">    <span class="keyword">if</span> viewModel != <span class="literal">nil</span> &#123;</span><br><span class="line">        viewModel!(&amp;picker.viewModel!)</span><br><span class="line">        picker.initView()</span><br><span class="line">    &#125;</span><br><span class="line">        </span><br><span class="line">    picker.complationHandler = complationHandler</span><br><span class="line">    <span class="comment">// 这是重点方法，后文讲解</span></span><br><span class="line">    picker.showPicker()</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>因为涉及到许多变量，所以在此我用了一个结构体去做了承载：</p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">PickerModel</span> </span>&#123;</span><br><span class="line">    <span class="keyword">var</span> pickerType: pickerType = .time</span><br><span class="line">    <span class="keyword">var</span> dataArray = [[<span class="type">String</span>]]()</span><br><span class="line">    <span class="keyword">var</span> titleString = <span class="string">""</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">enum</span> <span class="title">pickerType</span> </span>&#123;</span><br><span class="line">    <span class="keyword">case</span> time</span><br><span class="line">    <span class="keyword">case</span> custom</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>不想在外部调用初始化器对 <code>PJPickerView</code> 做初始化，采用了类方法供外部调用，且在类方法内部对 <code>viewModel</code> 做初始化，通过 <code>inout</code> 关键字修改其为可变参数传出给外部，这样就可以达到在外部对 <code>viewModel</code> 设置好相关参数后，在类内部直接使用即可。</p>
+<p>最后使用 <code>@escaping</code> 关键字把跟随的闭包设置为了逃逸闭包，用之前声明的 <code>complationHandler</code> 对该逃逸闭包进行引用，供对应方法进行调用，调用方式所示：</p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@objc</span> <span class="keyword">fileprivate</span> <span class="function"><span class="keyword">func</span> <span class="title">okButtonTapped</span><span class="params">()</span></span> &#123;</span><br><span class="line">   </span><br><span class="line">    <span class="comment">// ...</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">// finalString 为 UIPickerView 选中的字符串，在 didSelectRow 方法进行设置</span></span><br><span class="line">    <span class="keyword">if</span> complationHandler != <span class="literal">nil</span> &#123;</span><br><span class="line">        complationHandler!(finalString)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>这样就完成了当对 <code>UIPickerView</code> 进行选择时可以回调给调用方，而调用方可以这么来进行调用：</p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">PJPickerView</span>.showPickerView(viewModel: &#123; (viewModel) <span class="keyword">in</span></span><br><span class="line">    viewModel.titleString = <span class="string">"感情状态"</span></span><br><span class="line">    viewModel.pickerType = .custom</span><br><span class="line">    viewModel.dataArray = [[<span class="string">"单身"</span>, <span class="string">"约会中"</span>, <span class="string">"已婚"</span>]]</span><br><span class="line">&#125;) &#123; [<span class="keyword">weak</span> <span class="keyword">self</span>] finalString <span class="keyword">in</span></span><br><span class="line">    <span class="keyword">if</span> <span class="keyword">let</span> `<span class="keyword">self</span>` = <span class="keyword">self</span> &#123;</span><br><span class="line">        <span class="keyword">self</span>.loveTextField.text = finalString</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>以上的这种调用方式就是为内心中相对较为完美的调用方法了！🤓</p>
+<h3 id="蒙版"><a href="#蒙版" class="headerlink" title="蒙版"></a>蒙版</h3><p>经过以上几个步骤后，我们基本上已经把 <code>UIPickerView</code> 的主体搭建完毕，接下来进行蒙版的设计。</p>
+<p>如果此时我们把 <code>PJPickerView</code> 带上蒙版（实际就是个 <code>UIView</code>）直接添加到 <code>ViewController.view</code> 上，蒙版只会占据 <code>ViewController.view.frame</code> 的区域，如果当前的这个 <code>ViewController</code> 在 <code>UINavigationBar</code> 下，会导致头部区域无法被蒙版覆盖，所以是肯定不能直接添加到 <code>ViewController</code> 上的。</p>
+<p>之前我的偷懒做法是直接把组件添加到当前 <code>topWindow</code> 上，这样就能够除了顶部状态栏上以外全覆盖了，但问题是如果我们就想把包括顶部状态栏也一起覆盖掉呢？此时直接用 <code>UIApplications</code> 里的 <code>UIWindow</code>，比如这么把最上层 <code>UIWindow</code> 拿出来：</p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">+ (<span class="built_in">UIWindow</span> *)TopWindow &#123;</span><br><span class="line">    <span class="built_in">UIWindow</span> * window = [[<span class="built_in">UIApplication</span> sharedApplication].delegate window];</span><br><span class="line">    <span class="keyword">if</span> ([[<span class="built_in">UIApplication</span> sharedApplication] windows].count &gt; <span class="number">1</span>) &#123;</span><br><span class="line">        <span class="built_in">NSArray</span> *windowsArray = [[<span class="built_in">UIApplication</span> sharedApplication] windows];</span><br><span class="line">        window = [windowsArray lastObject];</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> window;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>默认情况且我们不做其它任何修改，这样拿到的 <code>UIWindow</code> 的 <code>windowLevel</code> 是 <code>normal</code>，而我们的状态栏所在的 <code>UIWindow</code> 是 <code>statusBar</code> 级别， <code>UIWindowLevel</code> 的三种级别排序为：<code>normal</code> &lt; <code>statusBar</code> &lt; <code>alert</code>，所以这才会出现了如果我们直接把组件添加到当前 <code>UIWindow</code> 上蒙版并不能覆盖到顶部状态栏部分。</p>
+<p>所以解决办法时，再造一个 <code>UIWindow.Level == .alert</code> 的 <code>UIWindow</code> 作为组件的容器，为了更好的让 <code>UIWindow</code> 对组件进行管理，此时也就引出了为什么 <code>PJPickerView</code> 底层是个 <code>UIViewController</code> 而不是 <code>UIView</code> 的原因：</p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">private</span> <span class="function"><span class="keyword">func</span> <span class="title">initView</span><span class="params">()</span></span> &#123;</span><br><span class="line">    <span class="comment">// 把当前 window 拿到</span></span><br><span class="line">    mainWindow = windowFromLevel(level: .normal)</span><br><span class="line">    pickerWindow = windowFromLevel(level: .alert)</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">if</span> pickerWindow == <span class="literal">nil</span> &#123;</span><br><span class="line">        pickerWindow = <span class="type">UIWindow</span>(frame: <span class="type">UIScreen</span>.main.bounds)</span><br><span class="line">        pickerWindow?.windowLevel = .alert</span><br><span class="line">        pickerWindow?.backgroundColor = .clear</span><br><span class="line">    &#125;</span><br><span class="line">    pickerWindow?.rootViewController = <span class="keyword">self</span></span><br><span class="line">    pickerWindow?.isUserInteractionEnabled = <span class="literal">true</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">// ...</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">windowFromLevel</span><span class="params">(level: UIWindow.Level)</span></span> -&gt; <span class="type">UIWindow</span>? &#123;</span><br><span class="line">    <span class="keyword">let</span> windows = <span class="type">UIApplication</span>.shared.windows</span><br><span class="line">    <span class="keyword">for</span> window <span class="keyword">in</span> windows &#123;</span><br><span class="line">        <span class="keyword">if</span> (level == window.windowLevel) &#123;</span><br><span class="line">            <span class="keyword">return</span> window</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="literal">nil</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// show 方法</span></span><br><span class="line"><span class="keyword">private</span> <span class="function"><span class="keyword">func</span> <span class="title">showPicker</span><span class="params">()</span></span> &#123;</span><br><span class="line">    pickerWindow?.makeKeyAndVisible()</span><br><span class="line"></span><br><span class="line">    <span class="comment">// ...</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// MARK: - Actions</span></span><br><span class="line">    <span class="meta">@objc</span> <span class="keyword">fileprivate</span> <span class="function"><span class="keyword">func</span> <span class="title">dismissView</span><span class="params">()</span></span> &#123;</span><br><span class="line">        <span class="type">UIView</span>.animate(withDuration: <span class="number">0.25</span>, animations: &#123;</span><br><span class="line">            <span class="comment">// ...</span></span><br><span class="line">        &#125;) &#123; (finished) <span class="keyword">in</span></span><br><span class="line">            <span class="keyword">if</span> finished &#123;</span><br><span class="line">                <span class="type">UIView</span>.animate(withDuration: <span class="number">0.25</span>, animations: &#123;</span><br><span class="line">                    <span class="keyword">self</span>.pickerWindow?.isHidden = <span class="literal">true</span></span><br><span class="line">                    <span class="keyword">self</span>.pickerWindow?.removeFromSuperview()</span><br><span class="line">                    <span class="keyword">self</span>.pickerWindow?.rootViewController = <span class="literal">nil</span></span><br><span class="line">                    <span class="keyword">self</span>.pickerWindow = <span class="literal">nil</span></span><br><span class="line">                &#125;, completion: &#123; (finished) <span class="keyword">in</span></span><br><span class="line">                    <span class="keyword">if</span> finished &#123;</span><br><span class="line">                        <span class="keyword">self</span>.mainWindow?.makeKeyAndVisible()</span><br><span class="line">                    &#125;</span><br><span class="line">                &#125;)</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+<h3 id="成果"><a href="#成果" class="headerlink" title="成果"></a>成果</h3><p><img src="https://i.loli.net/2018/11/11/5be83e60dbc91.png" width="60%"></p>
+<p><img src="https://i.loli.net/2018/11/11/5be83e9728cd3.png" width="60%"></p>
+<p><img src="https://i.loli.net/2018/11/11/5be83ebd45295.png" width="60%"></p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>在实现 <code>PJPickerView</code> 的过程中，第一场较为完整的学习和经历了以下事情：<br>·</p>
+<ul>
+<li>自定义 <code>UIPickerView</code>；</li>
+<li>简单的闭包回调的设计；</li>
+<li>对蒙版的思考；</li>
+</ul>
+<p>总的来说在实现的过程中自己主要是在反思“高内聚，低耦合”的指导，之前的做法都太简单粗暴，而且太过啰嗦，第一次较为完整的思考了整个流程，肯定还是有不足之处，等到后续功力慢慢增长再来对它好好修补一翻吧～</p>
+<p>只放出了部分核心代码，不保证能够完全复现，只提供个思路～不管怎么说这周末的过的很开心，把手上的事情又往前推进了一大步！</p>
+
+  </div>
+
+</article>
+
+
+
+    </div>
+    
+      <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="/">首页</a></li>
+         
+          <li><a href="/archives/">归档</a></li>
+         
+          <li><a href="/about/">关于</a></li>
+         
+          <li><a href="https://github.com/windstormeye">项目</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#UI"><span class="toc-number">1.</span> <span class="toc-text">UI</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#思考"><span class="toc-number">2.</span> <span class="toc-text">思考</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#实践"><span class="toc-number">3.</span> <span class="toc-text">实践</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#自定义-UIPickerView"><span class="toc-number">3.1.</span> <span class="toc-text">自定义 UIPickerView</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#闭包回调"><span class="toc-number">3.2.</span> <span class="toc-text">闭包回调</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#蒙版"><span class="toc-number">3.3.</span> <span class="toc-text">蒙版</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#成果"><span class="toc-number">3.4.</span> <span class="toc-text">成果</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#总结"><span class="toc-number">4.</span> <span class="toc-text">总结</span></a></li></ol>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=http://pjhubs.com/2018/11/11/PJPickerView组件开发总结/"><i class="fa fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=http://pjhubs.com/2018/11/11/PJPickerView组件开发总结/&text=PJPickerView组件开发总结"><i class="fa fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=http://pjhubs.com/2018/11/11/PJPickerView组件开发总结/&title=PJPickerView组件开发总结"><i class="fa fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http://pjhubs.com/2018/11/11/PJPickerView组件开发总结/&is_video=false&description=PJPickerView组件开发总结"><i class="fa fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=PJPickerView组件开发总结&body=Check out this article: http://pjhubs.com/2018/11/11/PJPickerView组件开发总结/"><i class="fa fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=http://pjhubs.com/2018/11/11/PJPickerView组件开发总结/&title=PJPickerView组件开发总结"><i class="fa fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=http://pjhubs.com/2018/11/11/PJPickerView组件开发总结/&title=PJPickerView组件开发总结"><i class="fa fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=http://pjhubs.com/2018/11/11/PJPickerView组件开发总结/&title=PJPickerView组件开发总结"><i class="fa fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=http://pjhubs.com/2018/11/11/PJPickerView组件开发总结/&title=PJPickerView组件开发总结"><i class="fa fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=http://pjhubs.com/2018/11/11/PJPickerView组件开发总结/&name=PJPickerView组件开发总结&description="><i class="fa fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+      <ul>
+        <li id="toc"><a class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fa fa-list fa-lg" aria-hidden="true"></i> TOC</a></li>
+        <li id="share"><a class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fa fa-share-alt fa-lg" aria-hidden="true"></i> Share</a></li>
+        <li id="top" style="display:none"><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a></li>
+        <li id="menu"><a class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fa fa-bars fa-lg" aria-hidden="true"></i> Menu</a></li>
+      </ul>
+    </div>
+
+  </div>
+</div>
+
+    
+    <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy; 2018 Piron
+</div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+         
+          <li><a href="/">首页</a></li>
+         
+          <li><a href="/archives/">归档</a></li>
+         
+          <li><a href="/about/">关于</a></li>
+         
+          <li><a href="https://github.com/windstormeye">项目</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+</footer>
+
+</body>
+</html>
+<!-- styles -->
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+<link rel="stylesheet" href="/lib/meslo-LG/styles.css">
+<link rel="stylesheet" href="/lib/justified-gallery/justifiedGallery.min.css">
+
+<!-- jquery -->
+<script src="/lib/jquery/jquery.min.js"></script>
+<script src="/lib/justified-gallery/jquery.justifiedGallery.min.js"></script>
+<script src="/js/main.js"></script>
+<!-- search -->
+
+<!-- Google Analytics -->
+
+    <script type="text/javascript">
+        (function(i,s,o,g,r,a,m) {i['GoogleAnalyticsObject']=r;i[r]=i[r]||function() {
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-86660611-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+
+<!-- Disqus Comments -->
+
+
