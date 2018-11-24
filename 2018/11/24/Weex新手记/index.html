@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="description" content="前言上周五 leader 跟我说了一下，想让我转大前端，周一让前端组长跟我聊一下，当时我内心还是比较兴奋的，因为这跟我最开始对自己的定位是完全一致的，但后续做了一些后端的东西后，发现自己对后端也有感觉，不过实话实说都还在比较浅薄的层面上。 上周末我想了两天，发现自己确实得在大前端这块上继续“抛头颅，洒热血”，不单是再精进一些之前已掌握的知识，更是拓展了自己在稍微擅长的一个领域站得更稳，刚好最近负责">
+<meta name="keywords" content="iOS,Weex">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Weex新手记">
+<meta property="og:url" content="http://pjhubs.com/2018/11/24/Weex新手记/index.html">
+<meta property="og:site_name" content="PJHubs">
+<meta property="og:description" content="前言上周五 leader 跟我说了一下，想让我转大前端，周一让前端组长跟我聊一下，当时我内心还是比较兴奋的，因为这跟我最开始对自己的定位是完全一致的，但后续做了一些后端的东西后，发现自己对后端也有感觉，不过实话实说都还在比较浅薄的层面上。 上周末我想了两天，发现自己确实得在大前端这块上继续“抛头颅，洒热血”，不单是再精进一些之前已掌握的知识，更是拓展了自己在稍微擅长的一个领域站得更稳，刚好最近负责">
+<meta property="og:image" content="https://i.loli.net/2018/11/24/5bf94c21abf1f.png">
+<meta property="og:image" content="https://i.loli.net/2018/11/24/5bf9564943b55.png">
+<meta property="og:image" content="https://i.loli.net/2018/11/24/5bf95686d9727.png">
+<meta property="og:image" content="https://i.loli.net/2018/11/24/5bf956a8ae508.png">
+<meta property="og:image" content="https://i.loli.net/2018/11/24/5bf95a719ad28.png">
+<meta property="og:updated_time" content="2018-11-24T14:20:02.450Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Weex新手记">
+<meta name="twitter:description" content="前言上周五 leader 跟我说了一下，想让我转大前端，周一让前端组长跟我聊一下，当时我内心还是比较兴奋的，因为这跟我最开始对自己的定位是完全一致的，但后续做了一些后端的东西后，发现自己对后端也有感觉，不过实话实说都还在比较浅薄的层面上。 上周末我想了两天，发现自己确实得在大前端这块上继续“抛头颅，洒热血”，不单是再精进一些之前已掌握的知识，更是拓展了自己在稍微擅长的一个领域站得更稳，刚好最近负责">
+<meta name="twitter:image" content="https://i.loli.net/2018/11/24/5bf94c21abf1f.png">
+    
+    
+        
+          
+              <link rel="shortcut icon" href="/images/favicon.ico">
+          
+        
+        
+          
+            <link rel="icon" type="image/png" href="/images/favicon-192x192.png" sizes="192x192">
+          
+        
+        
+          
+            <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+          
+        
+    
+    <!-- title -->
+    <title>Weex新手记</title>
+    <!-- styles -->
+    <link rel="stylesheet" href="/css/style.css">
+    <!-- rss -->
+    
+    
+</head>
+
+<body>
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#"><i class="fa fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#"><i class="fa fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fa fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+         
+          <li><a href="/">首页</a></li>
+         
+          <li><a href="/archives/">归档</a></li>
+         
+          <li><a href="/about/">关于</a></li>
+         
+          <li><a href="https://github.com/windstormeye">项目</a></li>
+        
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        
+        <li><a class="icon" href="/2018/11/11/PJPickerView组件开发总结/"><i class="fa fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        
+        <li><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" href="#"><i class="fa fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=http://pjhubs.com/2018/11/24/Weex新手记/"><i class="fa fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=http://pjhubs.com/2018/11/24/Weex新手记/&text=Weex新手记"><i class="fa fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=http://pjhubs.com/2018/11/24/Weex新手记/&title=Weex新手记"><i class="fa fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http://pjhubs.com/2018/11/24/Weex新手记/&is_video=false&description=Weex新手记"><i class="fa fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Weex新手记&body=Check out this article: http://pjhubs.com/2018/11/24/Weex新手记/"><i class="fa fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=http://pjhubs.com/2018/11/24/Weex新手记/&title=Weex新手记"><i class="fa fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=http://pjhubs.com/2018/11/24/Weex新手记/&title=Weex新手记"><i class="fa fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=http://pjhubs.com/2018/11/24/Weex新手记/&title=Weex新手记"><i class="fa fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=http://pjhubs.com/2018/11/24/Weex新手记/&title=Weex新手记"><i class="fa fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=http://pjhubs.com/2018/11/24/Weex新手记/&name=Weex新手记&description="><i class="fa fa-tumblr " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    <div id="toc">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#前言"><span class="toc-number">1.</span> <span class="toc-text">前言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Weex-简单介绍"><span class="toc-number">2.</span> <span class="toc-text">Weex 简单介绍</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#知识点"><span class="toc-number">3.</span> <span class="toc-text">知识点</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#页面展示"><span class="toc-number">4.</span> <span class="toc-text">页面展示</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#index-html"><span class="toc-number">4.1.</span> <span class="toc-text">index.html</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#add-html"><span class="toc-number">4.2.</span> <span class="toc-text">add.html</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#detail-html"><span class="toc-number">4.3.</span> <span class="toc-text">detail.html</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#开发过程"><span class="toc-number">5.</span> <span class="toc-text">开发过程</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#navbar-组件"><span class="toc-number">5.1.</span> <span class="toc-text">navbar 组件</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#相关注意点"><span class="toc-number">6.</span> <span class="toc-text">相关注意点</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#安装-Weex-工具包"><span class="toc-number">6.1.</span> <span class="toc-text">安装 Weex 工具包</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#从零开始创建-Weex-工程"><span class="toc-number">6.2.</span> <span class="toc-text">从零开始创建 Weex 工程</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#添加-iOS-工程"><span class="toc-number">6.3.</span> <span class="toc-text">添加 iOS 工程</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#构建-js-bundle"><span class="toc-number">6.4.</span> <span class="toc-text">构建 js bundle</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#切换显示"><span class="toc-number">6.5.</span> <span class="toc-text">切换显示</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#新增页面"><span class="toc-number">6.6.</span> <span class="toc-text">新增页面</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#flex-direction"><span class="toc-number">6.7.</span> <span class="toc-text">flex-direction</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#align-items"><span class="toc-number">6.8.</span> <span class="toc-text">align-items</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#align-content"><span class="toc-number">6.9.</span> <span class="toc-text">align-content</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#justify-content"><span class="toc-number">6.10.</span> <span class="toc-text">justify-content</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#align-items-1"><span class="toc-number">7.</span> <span class="toc-text">align-items</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#dist"><span class="toc-number">7.1.</span> <span class="toc-text">dist</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#在模版中，Vue-会把驼峰命名的组件自动转换成短横线连接"><span class="toc-number">7.2.</span> <span class="toc-text">在模版中，Vue 会把驼峰命名的组件自动转换成短横线连接</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Boolean"><span class="toc-number">7.3.</span> <span class="toc-text">Boolean</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Weex-SDK"><span class="toc-number">7.4.</span> <span class="toc-text">Weex SDK</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#总结"><span class="toc-number">8.</span> <span class="toc-text">总结</span></a></li></ol>
+    </div>
+  </span>
+</div>
+
+    
+    <div class="content index width mx-auto px2 my4">
+        
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle" itemprop="name headline">
+        Weex新手记
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span itemprop="name">PJHubs</span>
+      </span>
+      
+    <div class="postdate">
+        <time datetime="2018-11-24T14:16:01.000Z" itemprop="datePublished">2018-11-24</time>
+    </div>
+
+
+      
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link" href="/tags/Weex/">Weex</a>, <a class="tag-link" href="/tags/iOS/">iOS</a>
+    </div>
+
+
+    </div>
+  </header>
+  
+
+  <div class="content" itemprop="articleBody">
+    <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>上周五 leader 跟我说了一下，想让我转大前端，周一让前端组长跟我聊一下，当时我内心还是比较兴奋的，因为这跟我最开始对自己的定位是完全一致的，但后续做了一些后端的东西后，发现自己对后端也有感觉，不过实话实说都还在比较浅薄的层面上。</p>
+<p>上周末我想了两天，发现自己确实得在大前端这块上继续“抛头颅，洒热血”，不单是再精进一些之前已掌握的知识，更是拓展了自己在稍微擅长的一个领域站得更稳，刚好最近负责的产品有往“跨平台”的开发模式上转，需要提前做些调研工作，再跟上最近团队人员的变动，新来的同学有意愿切入 Weex 跨平台框架。</p>
+<p>当然，对于我个人而已，我完全不喜欢任何非原生的东西，甚至目前到了用别人的库都觉得“怪异”，今年年初的时候把当时最火的两个跨平台框架“小程序”和 “React-Native” 都摸了一遍，也都把 demo 写了出来，但就仅仅从 demo 这个级别出发，当时就已经非常的厌恶各种跨平台的开发框架了，总有些说不出的“怪异”之处，但也不能说它们毫无是处，在编写 demo 的过程中，很多基础组件上手就用，比 Native 不管是从速度上还是便利上都大大提升了不只一两倍这么简单。</p>
+<p>经过一周短暂的、磕磕碰碰的学习，也把今年学习的第三个目前也十分火爆的跨平台框架—— Weex 写出了 demo，其中大部分思路来源于 Weex 的官方文档和教学视频。如果你感兴趣的话，可以扫描下方二维码进行试玩：</p>
+<p><img src="https://i.loli.net/2018/11/24/5bf94c21abf1f.png" alt="1543064551.png" title="1543064551.png"></p>
+<h2 id="Weex-简单介绍"><a href="#Weex-简单介绍" class="headerlink" title="Weex 简单介绍"></a>Weex 简单介绍</h2><p>对于 Weex 的介绍在网上已有大量的讲解，在此用自己的话可以总结如下：</p>
+<ul>
+<li>Weex 写起来很爽，前提是：对动画无要求；对交互无要求；对性能无要求；业务逻辑不复杂。</li>
+<li>如果你司技术栈 <code>Javascript</code> 为主体且依赖 <code>Vue</code>，排除第一条后，上 Weex 几乎没有悬念，毕竟到现在 Weex 都被认为是 <code>Vue-Native</code>。</li>
+<li>如果你司已经沉淀出了大量 Native 经验，上 Weex 几乎可以认定公司要倒（只是比喻 😄 ）；反之，如果你司是 web 主导，想切入 Native 端，满足第一条后，再考虑 React-Native 是否符合自身技术栈，其次再来考虑 Weex。验证我这番话，可以对比 RN 和 Weex 的官方文档和社区，当然 Weex 还是十分的年轻，但和 React-Native 二者正式开源也就前后相隔一年左右。</li>
+<li>据我所知，目前“极客时间“、”企鹅电竞“等 App 已经是纯 Weex 开发，甚至桔厂”顺风车“也全面拥抱，可见其威力有多大！</li>
+</ul>
+<h2 id="知识点"><a href="#知识点" class="headerlink" title="知识点"></a>知识点</h2><p>该 demo 中运用到的主要相关知识点如下：</p>
+<ul>
+<li>Weex 内置组件：<code>div</code>，<code>text</code></li>
+<li>Weex 内置模块：<code>navigator</code>，<code>storage</code>，<code>dom</code></li>
+<li>Weex custom Component</li>
+<li><code>CSS</code> 基本内容</li>
+<li><code>Vue.js</code> 基本内容</li>
+<li><code>Javascript</code> 基本内容</li>
+</ul>
+<h2 id="页面展示"><a href="#页面展示" class="headerlink" title="页面展示"></a>页面展示</h2><h3 id="index-html"><a href="#index-html" class="headerlink" title="index.html"></a>index.html</h3><p><img src="https://i.loli.net/2018/11/24/5bf9564943b55.png" height="70%"></p>
+<h3 id="add-html"><a href="#add-html" class="headerlink" title="add.html"></a>add.html</h3><p><img src="https://i.loli.net/2018/11/24/5bf95686d9727.png" height="70%"></p>
+<h3 id="detail-html"><a href="#detail-html" class="headerlink" title="detail.html"></a>detail.html</h3><p><img src="https://i.loli.net/2018/11/24/5bf956a8ae508.png" height="70%"></p>
+<h2 id="开发过程"><a href="#开发过程" class="headerlink" title="开发过程"></a>开发过程</h2><p>Weex 吸收了目前最流行的 MVVM 和面向组件开发的思想，上文中我所说的“爽”就来自于此！举一个例子，<code>navbar</code> 组件，编写一个组件相对 Native 来说，真的是又快又爽！在 <code>&lt;tempalte&gt;</code> 中写好组件模版代码，在 <code>&lt;script&gt;</code> 中写好事件处理、属性定义、生命周期管理，在 <code>&lt;style&gt;</code> 中写好 <code>CSS</code> 样式布局，想要给别人用，直接拖走这个 <code>.vue</code> 文件即可完事（当然 native 也是一样）。我觉得能有如此便利，多亏 CSS，在 native 实现一个功能可能使用 CSS 只需要两三行即可完事！</p>
+<h3 id="navbar-组件"><a href="#navbar-组件" class="headerlink" title="navbar 组件"></a><code>navbar</code> 组件</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br></pre></td><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">  &lt;div class=&quot;navbar&quot;&gt;</span><br><span class="line">      &lt;!-- v-if 判断是否需要展示返回 icon --&gt;</span><br><span class="line">      &lt;text v-if=&quot;showBack&quot; class=&quot;iconfont navbar-icon&quot; @click=&quot;onBack&quot;&gt;&amp;#xe779;&lt;/text&gt;</span><br><span class="line">      &lt;text v-else class=&quot;navbar-title&quot;&gt;&lt;/text&gt;</span><br><span class="line">      &lt;text class=&quot;navbar-title&quot;&gt;&#123;&#123; title &#125;&#125;&lt;/text&gt;</span><br><span class="line">      &lt;text class=&quot;navbar-title&quot;&gt;&lt;/text&gt;</span><br><span class="line">  &lt;/div&gt;</span><br><span class="line">&lt;/template&gt;</span><br><span class="line"></span><br><span class="line">&lt;script&gt;</span><br><span class="line">const navigator = weex.requireModule(&apos;navigator&apos;)</span><br><span class="line">export default &#123;</span><br><span class="line">  name: &apos;navbar&apos;,</span><br><span class="line">  props: &#123;</span><br><span class="line">    showBack: &#123;</span><br><span class="line">      type: Boolean,</span><br><span class="line">      default: true</span><br><span class="line">    &#125;,</span><br><span class="line">    title: &#123;</span><br><span class="line">      type: String,</span><br><span class="line">      required: true</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;,</span><br><span class="line">  beforeCreate () &#123;</span><br><span class="line">    const domModule = weex.requireModule(&apos;dom&apos;)</span><br><span class="line">    domModule.addRule(&apos;fontFace&apos;, &#123;</span><br><span class="line">      &apos;fontFamily&apos;: &apos;iconfont&apos;,</span><br><span class="line">      &apos;src&apos;: &quot;url(&apos;http://at.alicdn.com/t/font_933576_ji32n9fdyki.ttf&apos;)&quot;</span><br><span class="line">    &#125;)</span><br><span class="line">  &#125;,</span><br><span class="line">  methods: &#123;</span><br><span class="line">    onBack () &#123;</span><br><span class="line">      navigator.pop(&#123;</span><br><span class="line">        animated: &apos;true&apos;</span><br><span class="line">      &#125;)</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br><span class="line">&lt;/script&gt;</span><br><span class="line"></span><br><span class="line">&lt;style scoped&gt;</span><br><span class="line">.iconfont &#123;</span><br><span class="line">    font-family: iconfont;</span><br><span class="line">  &#125;</span><br><span class="line">.navbar &#123;</span><br><span class="line">  height: 88px;</span><br><span class="line">  background-color: #50e3a4;</span><br><span class="line">  flex-direction: row;</span><br><span class="line">  justify-content: space-between;</span><br><span class="line">  align-items: center;</span><br><span class="line">  padding-left: 20px;</span><br><span class="line">  padding-right: 20px;</span><br><span class="line">&#125;</span><br><span class="line">.navbar-title &#123;</span><br><span class="line">  font-size: 32px;</span><br><span class="line">  color: #fff;</span><br><span class="line">&#125;</span><br><span class="line">.navbar-icon &#123;</span><br><span class="line">  color: #fff;</span><br><span class="line">  font-size: 36px;</span><br><span class="line">&#125;</span><br><span class="line">&lt;/style&gt;</span><br></pre></td></tr></table></figure>
+<h2 id="相关注意点"><a href="#相关注意点" class="headerlink" title="相关注意点"></a>相关注意点</h2><h3 id="安装-Weex-工具包"><a href="#安装-Weex-工具包" class="headerlink" title="安装 Weex 工具包"></a>安装 Weex 工具包</h3><p><code>npm install weex-toolkit -g</code></p>
+<h3 id="从零开始创建-Weex-工程"><a href="#从零开始创建-Weex-工程" class="headerlink" title="从零开始创建 Weex 工程"></a>从零开始创建 Weex 工程</h3><p><code>weex create awesome-app</code></p>
+<p>在创建工程的过程中，会提示一些关键信息，比如作者、是否使用 <code>vue-router</code>，<code>ESLint</code> 等等，根据提示等待即可。</p>
+<h3 id="添加-iOS-工程"><a href="#添加-iOS-工程" class="headerlink" title="添加 iOS 工程"></a>添加 iOS 工程</h3><p><code>weex platform add ios</code></p>
+<h3 id="构建-js-bundle"><a href="#构建-js-bundle" class="headerlink" title="构建 js bundle"></a>构建 js bundle</h3><p><code>weex run build</code> </p>
+<p>在 dist 文件夹下拿到对应的 js bundle 文件。</p>
+<h3 id="切换显示"><a href="#切换显示" class="headerlink" title="切换显示"></a>切换显示</h3><p>在工厂目录下执行 <code>npm start</code> 后，会在浏览器打开一个“套壳”的页面，有很多不需要的元素，如果不需要的话，可以这么做：</p>
+<ul>
+<li>假设执行 <code>nmp start</code> 后，打开的地址为：<code>http://172.20.10.4:8081/web/preview.html?page=index.js</code></li>
+<li>把地址改为：<code>http://172.20.10.4:8081/index.html</code>，这样就去除掉了多余不需要的元素了，页面变得十分干净</li>
+</ul>
+<h3 id="新增页面"><a href="#新增页面" class="headerlink" title="新增页面"></a>新增页面</h3><p>新增页面后，此时如果通过浏览器直接输入地址访问会 404，因为此次 build 出来的资源文件中并未包含我们新增的页面，需要重新执行 <code>npm start</code> 进行重新构建。</p>
+<h3 id="flex-direction"><a href="#flex-direction" class="headerlink" title="flex-direction"></a>flex-direction</h3><p>决定你的页面布局主要方向，是<strong>row</strong>（水平）还是<strong>column</strong>（垂直布局）。</p>
+<h3 id="align-items"><a href="#align-items" class="headerlink" title="align-items"></a>align-items</h3><p>决定父容器中的元素在水平方向上的布局，想要居中则设置为 <code>center</code>。</p>
+<h3 id="align-content"><a href="#align-content" class="headerlink" title="align-content"></a>align-content</h3><p>决定父容器中的元素在垂直方向上的布局，想要居中则设置为 <code>center</code>。</p>
+<h3 id="justify-content"><a href="#justify-content" class="headerlink" title="justify-content"></a>justify-content</h3><p>决定父容器中的元素在主轴上如何排列，如果想要等分布局，则设置为 <code>space-around</code>，左右边距将为中间间隔的一半。</p>
+<h2 id="align-items-1"><a href="#align-items-1" class="headerlink" title="align-items"></a>align-items</h2><p>决定元素在交叉轴上如何排列</p>
+<h3 id="dist"><a href="#dist" class="headerlink" title="dist"></a>dist</h3><p>通过 webpack 打包后生成的 <code>JS Bundle</code> 文件都在 <code>dist</code> 文件夹下。</p>
+<h3 id="在模版中，Vue-会把驼峰命名的组件自动转换成短横线连接"><a href="#在模版中，Vue-会把驼峰命名的组件自动转换成短横线连接" class="headerlink" title="在模版中，Vue 会把驼峰命名的组件自动转换成短横线连接"></a>在模版中，Vue 会把驼峰命名的组件自动转换成短横线连接</h3><h3 id="Boolean"><a href="#Boolean" class="headerlink" title="Boolean"></a>Boolean</h3><p>在 Weex 中关于 bool 值，本质上为字符串，比如<code>&quot;true&quot;</code> 这样才是“真”，<code>true</code>这样什么也不是，官方说会在未来版本中进行修复，还有很多类似这种容易引起“差评”的地方。</p>
+<h3 id="Weex-SDK"><a href="#Weex-SDK" class="headerlink" title="Weex SDK"></a>Weex SDK</h3><p>构建出来的 js bundle 直接直接可以拖入工程使用，在 iOS 下，看到的渲染后的页面层级如下：</p>
+<p><img src="https://i.loli.net/2018/11/24/5bf95a719ad28.png" width="100%"></p>
+<p>查看 WeexSDK，可以看到基本上把原生组件都按照 Weex 支持的格式封装了一遍，所以加入跨平台框架后，app 体积不上升是不可能的，只不过得看用什么个优化方法了（删删删哈哈哈～）</p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>本次 Weex demo 的练习，让自己对 Weex 和 Vue 都有了一个直观的感受，到现在给我印象最深刻的不是 Weex 而是 Vue，感触良多。对原生开发的喜爱又多了不少，在今天这个时代背景下，求快不求稳，不管怎么说，我还是一个坚定的原生开发者～</p>
+<p>原文地址：<a href="https://github.com/windstormeye/iOS-Course/blob/master/Weex/Weex新手记.md" target="_blank" rel="noopener">PJ 的 iOS 开发日常</a></p>
+
+  </div>
+
+</article>
+
+
+
+    </div>
+    
+      <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+         
+          <li><a href="/">首页</a></li>
+         
+          <li><a href="/archives/">归档</a></li>
+         
+          <li><a href="/about/">关于</a></li>
+         
+          <li><a href="https://github.com/windstormeye">项目</a></li>
+        
+      </ul>
+    </div>
+
+    <div id="toc-footer" style="display: none">
+      <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#前言"><span class="toc-number">1.</span> <span class="toc-text">前言</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Weex-简单介绍"><span class="toc-number">2.</span> <span class="toc-text">Weex 简单介绍</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#知识点"><span class="toc-number">3.</span> <span class="toc-text">知识点</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#页面展示"><span class="toc-number">4.</span> <span class="toc-text">页面展示</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#index-html"><span class="toc-number">4.1.</span> <span class="toc-text">index.html</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#add-html"><span class="toc-number">4.2.</span> <span class="toc-text">add.html</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#detail-html"><span class="toc-number">4.3.</span> <span class="toc-text">detail.html</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#开发过程"><span class="toc-number">5.</span> <span class="toc-text">开发过程</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#navbar-组件"><span class="toc-number">5.1.</span> <span class="toc-text">navbar 组件</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#相关注意点"><span class="toc-number">6.</span> <span class="toc-text">相关注意点</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#安装-Weex-工具包"><span class="toc-number">6.1.</span> <span class="toc-text">安装 Weex 工具包</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#从零开始创建-Weex-工程"><span class="toc-number">6.2.</span> <span class="toc-text">从零开始创建 Weex 工程</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#添加-iOS-工程"><span class="toc-number">6.3.</span> <span class="toc-text">添加 iOS 工程</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#构建-js-bundle"><span class="toc-number">6.4.</span> <span class="toc-text">构建 js bundle</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#切换显示"><span class="toc-number">6.5.</span> <span class="toc-text">切换显示</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#新增页面"><span class="toc-number">6.6.</span> <span class="toc-text">新增页面</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#flex-direction"><span class="toc-number">6.7.</span> <span class="toc-text">flex-direction</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#align-items"><span class="toc-number">6.8.</span> <span class="toc-text">align-items</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#align-content"><span class="toc-number">6.9.</span> <span class="toc-text">align-content</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#justify-content"><span class="toc-number">6.10.</span> <span class="toc-text">justify-content</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#align-items-1"><span class="toc-number">7.</span> <span class="toc-text">align-items</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#dist"><span class="toc-number">7.1.</span> <span class="toc-text">dist</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#在模版中，Vue-会把驼峰命名的组件自动转换成短横线连接"><span class="toc-number">7.2.</span> <span class="toc-text">在模版中，Vue 会把驼峰命名的组件自动转换成短横线连接</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Boolean"><span class="toc-number">7.3.</span> <span class="toc-text">Boolean</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Weex-SDK"><span class="toc-number">7.4.</span> <span class="toc-text">Weex SDK</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#总结"><span class="toc-number">8.</span> <span class="toc-text">总结</span></a></li></ol>
+    </div>
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" href="http://www.facebook.com/sharer.php?u=http://pjhubs.com/2018/11/24/Weex新手记/"><i class="fa fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://twitter.com/share?url=http://pjhubs.com/2018/11/24/Weex新手记/&text=Weex新手记"><i class="fa fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.linkedin.com/shareArticle?url=http://pjhubs.com/2018/11/24/Weex新手记/&title=Weex新手记"><i class="fa fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://pinterest.com/pin/create/bookmarklet/?url=http://pjhubs.com/2018/11/24/Weex新手记/&is_video=false&description=Weex新手记"><i class="fa fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Weex新手记&body=Check out this article: http://pjhubs.com/2018/11/24/Weex新手记/"><i class="fa fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="https://getpocket.com/save?url=http://pjhubs.com/2018/11/24/Weex新手记/&title=Weex新手记"><i class="fa fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://reddit.com/submit?url=http://pjhubs.com/2018/11/24/Weex新手记/&title=Weex新手记"><i class="fa fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.stumbleupon.com/submit?url=http://pjhubs.com/2018/11/24/Weex新手记/&title=Weex新手记"><i class="fa fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://digg.com/submit?url=http://pjhubs.com/2018/11/24/Weex新手记/&title=Weex新手记"><i class="fa fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="http://www.tumblr.com/share/link?url=http://pjhubs.com/2018/11/24/Weex新手记/&name=Weex新手记&description="><i class="fa fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+      <ul>
+        <li id="toc"><a class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fa fa-list fa-lg" aria-hidden="true"></i> TOC</a></li>
+        <li id="share"><a class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fa fa-share-alt fa-lg" aria-hidden="true"></i> Share</a></li>
+        <li id="top" style="display:none"><a class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a></li>
+        <li id="menu"><a class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fa fa-bars fa-lg" aria-hidden="true"></i> Menu</a></li>
+      </ul>
+    </div>
+
+  </div>
+</div>
+
+    
+    <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy; 2018 Piron
+</div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+         
+          <li><a href="/">首页</a></li>
+         
+          <li><a href="/archives/">归档</a></li>
+         
+          <li><a href="/about/">关于</a></li>
+         
+          <li><a href="https://github.com/windstormeye">项目</a></li>
+        
+      </ul>
+    </nav>
+  </div>
+<script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+</footer>
+
+</body>
+</html>
+<!-- styles -->
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css">
+<link rel="stylesheet" href="/lib/meslo-LG/styles.css">
+<link rel="stylesheet" href="/lib/justified-gallery/justifiedGallery.min.css">
+
+<!-- jquery -->
+<script src="/lib/jquery/jquery.min.js"></script>
+<script src="/lib/justified-gallery/jquery.justifiedGallery.min.js"></script>
+<script src="/js/main.js"></script>
+<!-- search -->
+
+<!-- Google Analytics -->
+
+    <script type="text/javascript">
+        (function(i,s,o,g,r,a,m) {i['GoogleAnalyticsObject']=r;i[r]=i[r]||function() {
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-86660611-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+
+<!-- Disqus Comments -->
+
+
