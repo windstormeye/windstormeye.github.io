@@ -1,0 +1,124 @@
+<!DOCTYPE html><html lang="zh-Hans"><head><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="description" content="优秀的人遵守规则，顶尖的人创造规则"><title> | PJHubs</title><link rel="stylesheet" type="text/css" href="/css/style.css?v=0.0.0"><link rel="stylesheet" type="text/css" href="//lib.baomitu.com/normalize/8.0.1/normalize.min.css"><link rel="stylesheet" type="text/css" href="//lib.baomitu.com/pure/1.0.0/pure-min.css"><link rel="stylesheet" type="text/css" href="//lib.baomitu.com/pure/1.0.0/grids-responsive-min.css"><link rel="stylesheet" href="//lib.baomitu.com/font-awesome/4.7.0/css/font-awesome.min.css"><script type="text/javascript" src="//lib.baomitu.com/jquery/3.3.1/jquery.min.js"></script><link rel="icon" mask="" sizes="any" href="/favicon.ico"><link rel="Shortcut Icon" type="image/x-icon" href="/favicon.ico"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><link rel="apple-touch-icon-precomposed" href="/apple-touch-icon.png"></head><body><div class="body_container"><div id="header"><div class="site-name"><h1 class="hidden">PJHubs</h1><a id="logo" href="/.">PJHubs</a><p class="description">优秀的人遵守规则，顶尖的人创造规则</p></div><div id="nav-menu"><a href="/."><i class="fa fa-home"> 文章</i></a><a href="/archives/"><i class="fa fa-archive"> 归档</i></a><a href="/about/"><i class="fa fa-user"> 关于</i></a><a class="current" href="/dev/"><i class="fa fa-apple"> 开发日常</i></a></div></div><div class="pure-g" id="layout"><div class="pure-u-1 pure-u-md-3-4"><div class="content_container"><div class="post"><h1 class="post-title"></h1><div class="post-content"><p>以下是我列出来的能够帮助大家招到一个 <strong>靠谱的iOS实习生</strong> 需要掌握的点，再次说明下情况：</p>
+<ol>
+<li>此份题适用于电面和face to face，更加偏向于电面；</li>
+<li>能够较为流畅的说到每道题的点上，基本上可以认为是掌握了；</li>
+<li>考虑到电面过程中，对被电面者心理素质考验非常大，所以，我本人抵制电面过程中考算法（这是一个流氓行为）此套题不涉及任何关于算法方面知识。若有此需求，推荐找专门的在线OJ进行测评。</li>
+</ol>
+<h2 id="概念部分"><a href="#概念部分" class="headerlink" title="概念部分"></a>概念部分</h2><h3 id="struct和class的区别？"><a href="#struct和class的区别？" class="headerlink" title="struct和class的区别？"></a>struct和class的区别？</h3><ul>
+<li><strong>struct中不能定义函数</strong>（针对面向过程语言，例如C）// 可不用</li>
+<li><strong>使用大括号进行初始化</strong> class和struct如果定义了构造函数，就不能用大括号初始化，若没有，则struct可以，class只有在所有成员变量均为public时才行。 // 可不用</li>
+<li><strong>默认访问权限</strong> class默认成员访问权限为private；struct默认访问你权限为public。 // 重点</li>
+<li><strong>继承方式</strong> class默认private；struct默认public。 // 重点</li>
+</ul>
+<h3 id="说出以下指针的含义："><a href="#说出以下指针的含义：" class="headerlink" title="说出以下指针的含义："></a>说出以下指针的含义：</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> **a : 指向一个指针的指针，该指针指向一个整数。</span><br><span class="line"><span class="keyword">int</span> *a[<span class="number">10</span>] : 指向一个有<span class="number">10</span>个指针的数组，每个指针指向一个整数。</span><br><span class="line"><span class="keyword">int</span> (*a)[<span class="number">10</span>] : 指向一个有<span class="number">10</span>个整数数组的指针。</span><br><span class="line"><span class="keyword">int</span> (*a)(<span class="keyword">int</span>) : 指向一个函数的指针，该函数有一个整数参数，并返回一个整数。</span><br></pre></td></tr></table></figure>
+<h3 id="int-和-NSInterger-的区别："><a href="#int-和-NSInterger-的区别：" class="headerlink" title="int 和 NSInterger 的区别："></a>int 和 NSInterger 的区别：</h3><ul>
+<li>以C语言举例，int和long的字节数和当前操作系统中的指针所占位数是相等的，也就是说，long的长度永远 ≥ int，并且我们需要去考虑此时是使用int还是long比较合适，会不会因为一时疏忽选择了int而导致位数不够造成溢出。</li>
+<li>而在OC中使用 NSInterger ，苹果对其进行了一个宏定义的判断（cmd+鼠标左键进去看吧），这个宏定义会自动判断当前App运行的硬件环境，到底是32位机还是64位机等等，从而自动返回最大的类型，而不用我们去思考此时到底应该是用int还是long。</li>
+</ul>
+<h3 id="深拷贝和浅拷贝的区别："><a href="#深拷贝和浅拷贝的区别：" class="headerlink" title="深拷贝和浅拷贝的区别："></a>深拷贝和浅拷贝的区别：</h3><ul>
+<li>浅拷贝：又称“指针拷贝”。不增加新内存，只增加一个指针指向原来的内存区域。</li>
+<li>深拷贝：又称“内容拷贝”。同时拷贝指正和指针所指向的内存，新增指针指向新增内存。</li>
+<li>// 可对OC中的可变对象和不可变对象做拓展，此问题只是单纯的概念。</li>
+</ul>
+<h3 id="内存中的区域是怎么划分的？"><a href="#内存中的区域是怎么划分的？" class="headerlink" title="内存中的区域是怎么划分的？"></a>内存中的区域是怎么划分的？</h3><ul>
+<li>用之前做的一张图进行描述：<br><img src="https://i.loli.net/2018/04/08/5aca1d572b81b.jpeg" width="100%" height="100%" align="center"></li>
+</ul>
+<h2 id="语言部分"><a href="#语言部分" class="headerlink" title="语言部分"></a>语言部分</h2><h3 id="nil、Nil、NULL和NSNULL的区别："><a href="#nil、Nil、NULL和NSNULL的区别：" class="headerlink" title="nil、Nil、NULL和NSNULL的区别："></a>nil、Nil、NULL和NSNULL的区别：</h3><ul>
+<li><strong>nil：</strong> 把对象置空，置空后是一个空对象且完全从内存中释放；</li>
+<li><strong>Nil：</strong> 用nil的地方均可用Nil替换，Nil表示置空一个类；</li>
+<li><strong>NULL：</strong> 表示把一个指针置空。（空指针）</li>
+<li><strong>NSNULL：</strong> 把一个OC对象置空，但想保留其容器（大小）。</li>
+</ul>
+<h3 id="category和extension的区别："><a href="#category和extension的区别：" class="headerlink" title="category和extension的区别："></a>category和extension的区别：</h3><ul>
+<li><strong>category：</strong>为已知类增加新方法。<ul>
+<li>新增方法被子类集成；</li>
+<li>新增的方法比原有类具备更高的优先级，且不可重名，防止被覆盖；</li>
+<li>不能增加成员变量。</li>
+</ul>
+</li>
+<li><strong>extension：</strong> 为当前类增加私有变量和私有方法，添加的方法是必须实现的。</li>
+</ul>
+<h3 id="Property关键词及其相关关键字的理解："><a href="#Property关键词及其相关关键字的理解：" class="headerlink" title="@Property关键词及其相关关键字的理解："></a>@Property关键词及其相关关键字的理解：</h3><ul>
+<li>根据被修改的可能性，、@Property中关键字的排列推荐为：原子性、读写性、内存管理特性；</li>
+<li><strong>原子性：</strong> automatic和nonautomatic。决定了该属性是否为原子性的，即在多线程的操作中，不能被其它线程打断的特性，一旦使用了该变量的操作不能被完整执行时，将会回到该变量操作之前的状态，但原子性即automatic因为是原语操作（保证setter/getter的原语执行），会损耗性能，在iOS开发中一般不用，而在macOS开发中随意。</li>
+<li><strong>读写性：</strong> readOnly和readWrite。默认为readWrite，编译器会帮助生成serter/getter方法，而readOnly只会帮助生成getter方法。 // 此处可拓展，非要修改readOnly修饰的变量怎么办，可用KVC，又可继续拓展KVC相关知识。</li>
+<li><strong>内存管理特性：</strong> assign、weak、strong、unsafe_unretained。<ul>
+<li>assign：一般用于值类型，比如int、BOOL等（还可用于修饰OC对象）；</li>
+<li>weak：用于修饰引用类型（弱引用，只能修饰OC对象）；</li>
+<li>strong：用于修饰引用类型（强引用）；</li>
+<li>unsafe_unretained：只用于修饰引用类型（弱引用），与weak的区别在于，被unsafe_unretained修饰的对象被销毁后，其指针并不会被自动置空，此时指向了一个野地址。</li>
+</ul>
+</li>
+</ul>
+<h3 id="OC中如何定义一个枚举？"><a href="#OC中如何定义一个枚举？" class="headerlink" title="OC中如何定义一个枚举？"></a>OC中如何定义一个枚举？</h3><ul>
+<li><p>在OC中定义一个枚举有三种做法：</p>
+<ul>
+<li>因为OC是兼容C的，所以可以使用C语言风格的enum进行定义。</li>
+<li>使用<code>NS_ENUM</code>宏进行定义；</li>
+<li>使用<code>NS_OPTIONS</code>宏进行定义；</li>
+</ul>
+</li>
+<li><p><code>NS_ENUM</code>为定义通用性枚举，只能单选，<code>NS_OPTIONS</code>为定义位移枚举，可多选。 // 枚举为啥要这么分？因为涉及到是否使用C++模式进行编译有关。</p>
+</li>
+</ul>
+<h3 id="Block和函数的关系（对Block的理解）？"><a href="#Block和函数的关系（对Block的理解）？" class="headerlink" title="Block和函数的关系（对Block的理解）？"></a>Block和函数的关系（对Block的理解）？</h3><ul>
+<li>Block与函数指针非常类似，但Block能够访问函数以外、词法作用域以外的外部变量的值；</li>
+<li>Block不仅实现了函数的功能，还携带了函数的执行环境；</li>
+<li>Block实际上是指向结构体的指针；（可参考<a href="https://www.cnblogs.com/yoon/p/4953618.html" target="_blank" rel="noopener">这篇文章</a>）</li>
+<li>Block会把进入其内部的基本数据类型变量当做常量处理。】</li>
+<li>Block执行的是一个回调，并不知道其中的对象合适被释放，所以为了防止在使用对象之前就被释放掉了，会自动给其内部所使用的对象进行retain一次。</li>
+<li>Block使用<code>copy</code>修饰符进行修饰，且不能使用<code>retain</code>进行修饰，因为<code>retain</code>只是进行了一次回调，但block的内存还是放在了栈空间中，在栈上的变量随时会被系统回收，且Block在创建的时候内存默认就已经分配在栈空间中，其本身的作用域限于其创建时，一旦在超出其创建时的作用域之外使用，则会导致程序的崩溃，故使用<code>copy</code>修饰，使其拷贝到堆空间中，block有时还会用到一些本地变量，只有将其copy到堆空间中，才能使用这些变量。</li>
+</ul>
+<h3 id="deletegate需要weak修饰的原因？"><a href="#deletegate需要weak修饰的原因？" class="headerlink" title="deletegate需要weak修饰的原因？"></a>deletegate需要weak修饰的原因？</h3><ul>
+<li>以图说明，图中所表示的是VC对tableView的持有，如果此时的tableView.deletegate对VC也是强引用，会导致循环引用，同时也给了我们敲了警钟，当出现两个对象都是强引用时，万分小心！<br><img src="https://i.loli.net/2018/04/08/5aca2289b3f16.jpeg" width="100%" height="100%" align="center"></li>
+</ul>
+<h3 id="解释一下这段代码的输出："><a href="#解释一下这段代码的输出：" class="headerlink" title="解释一下这段代码的输出："></a>解释一下这段代码的输出：</h3><ul>
+<li><p>简写：</p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">Computer : <span class="built_in">NSObject</span></span><br><span class="line">Mac : Computer</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">@implementation</span> <span class="title">Mac</span></span></span><br><span class="line"></span><br><span class="line"><span class="built_in">NSLog</span>(<span class="string">@"%@"</span>, [<span class="keyword">self</span> <span class="keyword">class</span>]);</span><br><span class="line"><span class="built_in">NSLog</span>(<span class="string">@"%@"</span>, [<span class="keyword">super</span> <span class="keyword">class</span>])</span><br><span class="line"></span><br><span class="line"><span class="keyword">@end</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>二者都会输出Mac。</p>
+<ul>
+<li><p>[self class]：当使用self调用方法时，从当前类方法列表中找，若没有则再去父类中找。调用[self class]时，会转化成<code>objc_msgSend</code>函数，其定义为<code>id objc_msgSend(id self, SEL op, ...)</code>，第一个参数是Mac实例，但其并无<code>-(Class)class</code>方法，此时去父类Computer中寻找，发现也没有，再去其父类<code>NSObject</code>中找，找到了！返回的就是<code>self</code>其本身，可猜测其方法实现如下：</p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">- (Class)<span class="keyword">class</span> &#123;</span><br><span class="line">  <span class="keyword">return</span> object_getClass(<span class="keyword">self</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>[super class]：从父类方法列表中开始找，调用父类方法。当调用[super class]时，转换成<code>objc_msgSendSuper</code>函数，其定义为<code>id objc_msgSendSuper(struct objc_super *super, SEL op, ...)</code>，而<code>struct objc_super</code>结构体的定义为：</p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">struct</span> objc_super &#123;</span><br><span class="line">  __<span class="keyword">unsafe_unretained</span> <span class="keyword">id</span> receiver;</span><br><span class="line">  __<span class="keyword">unsafe_unretained</span> Class super_class;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>所以转换成<code>objc_msgSendSuper</code>函数后，第一步要先去构造<code>objc_super</code>结构体，结构的第一个成员<code>receiver</code>就是<code>self</code>，第二个成员是<code>(id)class_getSuperclass(object_getClass(&quot;Mac&quot;))</code>，该函数输出的结果为super_class值，即<code>Computer</code>，第二步，则去<code>Computer</code>类中去找<code>- (Class)class</code>，发现并未找到，接着去NSObject中找，找到了！最后是使用了<code>objc_msgSend(objc_super-&gt;receiver, @selector(class))</code>去调用了，这个时候已经跟之前的[self class]调用输出结果重复了，返回结果还是<code>Mac</code>。</p>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="iOS部分"><a href="#iOS部分" class="headerlink" title="iOS部分"></a>iOS部分</h2><h3 id="UITableView性能调优的方法："><a href="#UITableView性能调优的方法：" class="headerlink" title="UITableView性能调优的方法："></a>UITableView性能调优的方法：</h3><ul>
+<li>Cell重用：<ul>
+<li>数据源方法优化：创建一个静态变量重用ID，例如：<code>static NSString *cellID = @&quot;cellID&quot;;</code>防止因为调用次数过多，static保证只创建一次，提高性能（感觉性能的提升可以忽略不记emmm）</li>
+<li>缓存池获取可重用Cell的两个方法：<code>dequeueReusableCellWithIdentifier:(NSString *)ID</code>会查询可重用Cell，若注册了原型Cell则能够查询到，否则为nil，故需要先判断<code>if(cell == nil)</code></li>
+<li><code>dequeueReusableCellWithIdentifier:(NSString *)ID indexPath:(NSIndexPath *)indexPath</code>，使用之前必须通过SB/class进行可重用Cell的注册（registerNib/registerClass），不需要判断nil，一定会返回cell，若缓冲区Cell不存在，会使用原型Cell重新实例化一个新Cell。</li>
+</ul>
+</li>
+<li>尽量使用一种类型的Cell：能够减少代码量，减小Nib文件的数量；保证只有一种类型的Cell，实际上App运后只有N个Cell，但若有M种Cell，则实际上运行最多却可能会是MxN 个。</li>
+<li>善用hidden隐藏subview：把所有不同类型的view都定义好，通过cell的枚举类型变量及hidden显示/隐藏不同类型的内容，因为在实际快速滑动中，单纯的显示/隐藏subview比实时创建快得多。</li>
+<li>提前计算并缓存Cell的高度。如果我们不预估行高，则优先调用<code>heightForRowAtIndexPath</code>获取每个Cell即将显示的高度，实际上就是要确定总的tableView.contenSize，最后才又接着调用<code>cellForRowAtIndexPath</code>，可以建一个frame模型，保存下提前计算好的cell高度。</li>
+<li>异步绘制：这是目前最火的tableView性能调优方法，新浪微博是这么做的，可以使用<code>ASDK</code>这个库进行。</li>
+<li>tableView滑动时，按需加载：识别tableView静止或减速滑动结束后，异步加载，在快速滑动过程中，只按需加载目标方位内的Cell。</li>
+<li>避免大量使用图片缩放、颜色渐变、透明图层、CALayer特效（阴影）等操作，尽量显示大小刚好合适的图片资源。</li>
+</ul>
+<h3 id="内存优化方案："><a href="#内存优化方案：" class="headerlink" title="内存优化方案："></a>内存优化方案：</h3><ul>
+<li>首先ARC。但要注意防止循环引用，避免内存泄露；</li>
+<li>懒加载。延迟创建对象，用时再创建；</li>
+<li>复用。比如tableView、collectionView单元格的复用；</li>
+<li>巧妙使用单例，而不是全都使用单例！</li>
+</ul>
+<h3 id="单例的写法？"><a href="#单例的写法？" class="headerlink" title="单例的写法？"></a>单例的写法？</h3><figure class="highlight objc"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">static</span> User *user;</span><br><span class="line">+ (User *)shareInstance &#123;</span><br><span class="line">  <span class="keyword">if</span> (user == <span class="literal">nil</span>) &#123;</span><br><span class="line">    <span class="keyword">@synchronized</span>(<span class="keyword">self</span>) &#123;</span><br><span class="line">      <span class="comment">// 加锁</span></span><br><span class="line">      user = [User alloc] init];</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> user;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">+ (User *)shareInstance &#123;</span><br><span class="line">  <span class="keyword">static</span> dispatch_onec_t onecToken;</span><br><span class="line">  dispatch_onece(&amp;onceToken, ^&#123;</span><br><span class="line">    user = [User alloc] init;</span><br><span class="line">  &#125;)</span><br><span class="line">  <span class="keyword">return</span> user;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="iOS的远程推送过程？"><a href="#iOS的远程推送过程？" class="headerlink" title="iOS的远程推送过程？"></a>iOS的远程推送过程？</h3><ul>
+<li>以图讲解：<br><img src="https://i.loli.net/2018/04/08/5aca38905387f.jpeg" width="100%" height="100%" align="center"></li>
+</ul>
+<h3 id="iOS中多线程的概念：（单问概念）"><a href="#iOS中多线程的概念：（单问概念）" class="headerlink" title="iOS中多线程的概念：（单问概念）"></a>iOS中多线程的概念：（单问概念）</h3><ul>
+<li>多线程优点：提高程序执行效率。缺点：开启线程需要一定的内存控件。</li>
+<li>同步和异步：决定了要不要开启新的线程。同步：在当前线程中执行任务，不具备开启新线程能力；异步：在新线程中执行任务，具备开启新线程的能力。</li>
+<li>并行和串行：决定了任务的执行方式。并行：多个任务并发（同时）执行，类似迅雷多任务同时下载；串行：一个任务执行完毕后，再执行下一个任务，类似一个一个下载。</li>
+<li><strong>重点：</strong> 必须要明确iOS中只有一个主线程——UI线程，且不可将耗时任务放在主线程执行，否则会造成卡顿。</li>
+</ul>
+<p>总结：再次说明，实际电面过程中，本套题只可作为参考，而且在电面过程中会有追问和等待的过程，所以最佳电面时间为三十分钟内最佳，嫌短？记好了！这招的是实习生，而且这还是电面！！！别学啥大公司的戾气，一个实习生的电面你要搞一个小时甚至快两个小时，没有必要。如果是face to face随你问一两个小时，但重点是这是电面！不要把这种“隔空喊话”的面试方式作为考核一个人是否具备对应的工作能力的最终标准，除非能够确定以后的工作方式就是“隔空喊话”和“隔空撸码”。</p>
+<p>也不推荐把本套题中的内容作为一面，一面应该是作为了解应聘者的职业状况，基础水平（也是就是逻辑能力），推荐本套题作为二面，涵盖基本的iOS开发基础知识，而且时间能够较好的把握在三十分钟内，三面应该侧重项目实际情况，而且最好face to face。四面就HR面了吧，尽量不要有五面了，太难受了。其实三面是最佳的。</p>
+<p>记住！不要套题，而应该是触类旁通，引出其它问题。</p>
+</div></div></div></div><div class="pure-u-1 pure-u-md-1-4"><div id="sidebar"><div class="widget"><div class="widget-title"><i class="fa fa-star-o"> 标签</i></div><div class="tagcloud"><a href="/tags/iBistu/" style="font-size: 15px;">iBistu</a> <a href="/tags/总结/" style="font-size: 15px;">总结</a> <a href="/tags/游戏开发/" style="font-size: 15px;">游戏开发</a> <a href="/tags/DiDi/" style="font-size: 15px;">DiDi</a> <a href="/tags/iOS/" style="font-size: 15px;">iOS</a> <a href="/tags/比赛/" style="font-size: 15px;">比赛</a> <a href="/tags/internship/" style="font-size: 15px;">internship</a> <a href="/tags/Audio/" style="font-size: 15px;">Audio</a> <a href="/tags/国际化/" style="font-size: 15px;">国际化</a> <a href="/tags/Ping/" style="font-size: 15px;">Ping</a> <a href="/tags/Flutter/" style="font-size: 15px;">Flutter</a> <a href="/tags/跨平台/" style="font-size: 15px;">跨平台</a> <a href="/tags/弹幕/" style="font-size: 15px;">弹幕</a> <a href="/tags/页面传值/" style="font-size: 15px;">页面传值</a> <a href="/tags/HUD/" style="font-size: 15px;">HUD</a> <a href="/tags/React-Native/" style="font-size: 15px;">React-Native</a> <a href="/tags/Swift/" style="font-size: 15px;">Swift</a> <a href="/tags/开源/" style="font-size: 15px;">开源</a> <a href="/tags/项目/" style="font-size: 15px;">项目</a> <a href="/tags/swift/" style="font-size: 15px;">swift</a> <a href="/tags/PhotosKit/" style="font-size: 15px;">PhotosKit</a> <a href="/tags/crash/" style="font-size: 15px;">crash</a> <a href="/tags/我的大学/" style="font-size: 15px;">我的大学</a> <a href="/tags/回忆录/" style="font-size: 15px;">回忆录</a> <a href="/tags/Weex/" style="font-size: 15px;">Weex</a> <a href="/tags/技术/" style="font-size: 15px;">技术</a> <a href="/tags/建站/" style="font-size: 15px;">建站</a> <a href="/tags/ifLab/" style="font-size: 15px;">ifLab</a> <a href="/tags/Cocos/" style="font-size: 15px;">Cocos</a> <a href="/tags/macOS/" style="font-size: 15px;">macOS</a> <a href="/tags/编译原理/" style="font-size: 15px;">编译原理</a> <a href="/tags/感想/" style="font-size: 15px;">感想</a> <a href="/tags/Playground/" style="font-size: 15px;">Playground</a> <a href="/tags/树莓派/" style="font-size: 15px;">树莓派</a> <a href="/tags/Arduino/" style="font-size: 15px;">Arduino</a> <a href="/tags/Linux/" style="font-size: 15px;">Linux</a> <a href="/tags/Python/" style="font-size: 15px;">Python</a> <a href="/tags/微信/" style="font-size: 15px;">微信</a> <a href="/tags/django/" style="font-size: 15px;">django</a> <a href="/tags/小程序/" style="font-size: 15px;">小程序</a> <a href="/tags/面试/" style="font-size: 15px;">面试</a> <a href="/tags/随笔/" style="font-size: 15px;">随笔</a> <a href="/tags/实习/" style="font-size: 15px;">实习</a> <a href="/tags/滴滴/" style="font-size: 15px;">滴滴</a> <a href="/tags/Docker/" style="font-size: 15px;">Docker</a> <a href="/tags/搞事情系列/" style="font-size: 15px;">搞事情系列</a> <a href="/tags/UML/" style="font-size: 15px;">UML</a> <a href="/tags/数据库/" style="font-size: 15px;">数据库</a> <a href="/tags/七牛云/" style="font-size: 15px;">七牛云</a> <a href="/tags/Java/" style="font-size: 15px;">Java</a> <a href="/tags/Spring/" style="font-size: 15px;">Spring</a> <a href="/tags/Mybatis/" style="font-size: 15px;">Mybatis</a> <a href="/tags/Junit/" style="font-size: 15px;">Junit</a> <a href="/tags/log4j/" style="font-size: 15px;">log4j</a> <a href="/tags/mysql/" style="font-size: 15px;">mysql</a> <a href="/tags/Spring-MVC/" style="font-size: 15px;">Spring MVC</a> <a href="/tags/旅行/" style="font-size: 15px;">旅行</a></div></div><div class="widget"><div class="widget-title"><i class="fa fa-external-link"> 友链</i></div><ul></ul><a href="https://lonespectator.xyz" title="思旧穴" target="_blank">思旧穴</a><ul></ul><a href="https://www.xuzhengke.cn" title="XuZhengKe" target="_blank">XuZhengKe</a><ul></ul><a href="http://blog.hylstudio.cn" title="HYL Studio" target="_blank">HYL Studio</a><ul></ul><a href="https://www.imzfz.cn" title="Fz" target="_blank">Fz</a></div></div></div><div class="pure-u-1 pure-u-md-3-4"><div id="footer">Copyright © 2019 <a href="/." rel="nofollow">PJHubs</a></div></div></div><script type="text/javascript" src="/js/totop.js?v=0.0.0" async></script><script type="text/javascript" src="//lib.baomitu.com/fancybox/3.5.2/jquery.fancybox.min.js" async></script><script type="text/javascript" src="/js/fancybox.js?v=0.0.0" async></script><link rel="stylesheet" type="text/css" href="//lib.baomitu.com/fancybox/3.5.2/jquery.fancybox.min.css"><script type="text/javascript" src="/js/codeblock-resizer.js?v=0.0.0"></script><script type="text/javascript" src="/js/smartresize.js?v=0.0.0"></script></div></body></html>

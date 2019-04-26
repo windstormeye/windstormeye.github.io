@@ -1,0 +1,136 @@
+<!DOCTYPE html><html lang="zh-Hans"><head><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="description" content="优秀的人遵守规则，顶尖的人创造规则"><title> | PJHubs</title><link rel="stylesheet" type="text/css" href="/css/style.css?v=0.0.0"><link rel="stylesheet" type="text/css" href="//lib.baomitu.com/normalize/8.0.1/normalize.min.css"><link rel="stylesheet" type="text/css" href="//lib.baomitu.com/pure/1.0.0/pure-min.css"><link rel="stylesheet" type="text/css" href="//lib.baomitu.com/pure/1.0.0/grids-responsive-min.css"><link rel="stylesheet" href="//lib.baomitu.com/font-awesome/4.7.0/css/font-awesome.min.css"><script type="text/javascript" src="//lib.baomitu.com/jquery/3.3.1/jquery.min.js"></script><link rel="icon" mask="" sizes="any" href="/favicon.ico"><link rel="Shortcut Icon" type="image/x-icon" href="/favicon.ico"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><link rel="apple-touch-icon-precomposed" href="/apple-touch-icon.png"></head><body><div class="body_container"><div id="header"><div class="site-name"><h1 class="hidden">PJHubs</h1><a id="logo" href="/.">PJHubs</a><p class="description">优秀的人遵守规则，顶尖的人创造规则</p></div><div id="nav-menu"><a href="/."><i class="fa fa-home"> 文章</i></a><a href="/archives/"><i class="fa fa-archive"> 归档</i></a><a href="/about/"><i class="fa fa-user"> 关于</i></a><a class="current" href="/dev/"><i class="fa fa-apple"> 开发日常</i></a></div></div><div class="pure-g" id="layout"><div class="pure-u-1 pure-u-md-3-4"><div class="content_container"><div class="post"><h1 class="post-title"></h1><div class="post-content"><h1 id="UML"><a href="#UML" class="headerlink" title="UML"></a>UML</h1><h2 id="面向对象技术概述"><a href="#面向对象技术概述" class="headerlink" title="面向对象技术概述"></a>面向对象技术概述</h2><p>面向对象的基本建模原则：抽象、封装、继承和分类。</p>
+<p>面向对象的基本软件工程：OOA（面向对象的分析）、OOD（面向对象的设计）、OOP（面向对象的编程）和OOSM（面向对象的软件维护）</p>
+<p>对象的概念是：对问题域中某个实体的抽象；类的概念是：对具有项目属性和行为的一个或多个对象的描述</p>
+<p>属性的定义：描述对象静态特征的数据项；服务的定义：描述对象的动态特征（行为）的一个操作序列。</p>
+<p>类的定义要包括：名称、属性和操作三要素。</p>
+<p>面向对象呈现设计的三大特性：封装、继承和多态。</p>
+<p>面向对象的系统分析要确立 3 个系统模型是对象模型、功能模型和动态模型。</p>
+<h2 id="用例图"><a href="#用例图" class="headerlink" title="用例图"></a>用例图</h2><h3 id="参与者"><a href="#参与者" class="headerlink" title="参与者"></a>参与者</h3><p><strong>参与者</strong>是指系统以外的、需要使用系统或与系统交互的外部实体，包括<strong>人、设备、外部系统</strong>等。</p>
+<h3 id="用例"><a href="#用例" class="headerlink" title="用例"></a>用例</h3><p>用例是对一个活动者使用系统的一项功能时所进行的交互过程的一个文字描述序列。可以说，软件开发的过程是<strong>用例驱动</strong>的。</p>
+<p>用例是对系统行为的动态描述，属于 UML 的动态建模部分。UML 中的建模机制包括<strong>静态建模</strong>和<strong>动态建模</strong>两部分，其中静态建模机制包括类图、对象图、构件图和部署图；动态建模机制包括用例图、顺序图、协作图、状态图和活动图。</p>
+<p>理论上可以把一个软件系统的所有用例都画出来，但实际开发过程中，进行用例分析时只需把那些<strong>重要的、交互过程复杂的用例</strong>找出来。不要试图把所有的需求都以用例的方式表示出来。需求有两种基本形式：功能性需求和非功能性需求。用例描述的只是功能性方面的需求，那些难以用 UML 表示的需求很多是非功能性需求。</p>
+<h4 id="泛化关系"><a href="#泛化关系" class="headerlink" title="泛化关系"></a>泛化关系</h4><p>官方解释：泛化代表一般的与特殊的关系，在用例之间的泛化关系中，子用例继承了父用例的行为和含义，子用例也可以增加新的行为和含义或覆盖父用例中的行为和含义。</p>
+<p>PJ 的解释：子类和父类的关系。</p>
+<p><img src="https://i.loli.net/2019/01/01/5c2b5f04f3e3a.png" alt="用例图——泛化关系.png"></p>
+<h4 id="包含关系"><a href="#包含关系" class="headerlink" title="包含关系"></a>包含关系</h4><p>官方解释：包含关系指的是两个用例之间的关系，其中一个用例（基本用例）的行为包含了另一个用例（包含用例）的行为。</p>
+<p>PJ 的解释：把某一个功能进行重用。</p>
+<p>【例 1】银行的 ATM 系统中，有“存款”、“取款”、“账户余额查询”和“转账”四个用例，都要求用户必须登录了 ATM 机。也就是说，它们都包含了用户登录系统的行为。因此，用户登录系统的行为是这些用例中相同的动作，可以将它提取出来，单独的作为一个包含用例。</p>
+<p>“存款”、“取款”、“查询用户余额”和“转账”是基本用例，“登录”是包含用例，如下图所示：</p>
+<p><img src="https://i.loli.net/2019/01/01/5c2b61c637949.png" alt="银行 ATM 系统中用例之间的包含关系.png"></p>
+<p>由于将共同的用户登录系统行为提取出来，“存款”、“取款”、“查询用户余额”和“转账”四个基本用例都不再含有用户登录系统的行为。</p>
+<p>【例 2】网上购物系统，当注册会员在线购物时，网上购物系统需要对顾客的信用卡进行检查，检查输入的信用卡号是否有效，信用卡是否有足够的资金进行支付。</p>
+<p><img src="https://i.loli.net/2019/01/01/5c2b65c9f225d.png" alt="网上购物系统中用例之间的包含关系.png"></p>
+<p>上图中有没有必要将检查信用的行为提取出来，单独构成一个用例（作为包含用例），当信用检查的行为只发生在“在线购物”活动中时，可以不用提取出来。当信用检查的行为还发生在其它活动中时，应该提取出来，以便实现软件重用。</p>
+<h4 id="拓展关系"><a href="#拓展关系" class="headerlink" title="拓展关系"></a>拓展关系</h4><p>官方解释：在拓展关系中，对于拓展用例的执行有更多的规则限制，基本用例必须声明若干个“拓展点”，而拓展用例只能在这些拓展点上增加新的行为和含义。</p>
+<p>PJ 的解释：基本用例在满足一定条件后可进行选择执行拓展用例。</p>
+<p>【例 3】图书借阅系统。当读者还书时，如果借书时间超期，则需要缴纳一定的滞纳金，作为罚款。</p>
+<p><img src="https://i.loli.net/2019/01/01/5c2b69e8c68e5.png" alt="图书借阅系统中还书时用例之间的拓展关系.png"></p>
+<h4 id="综合"><a href="#综合" class="headerlink" title="综合"></a>综合</h4><p>【例 4】 网上购物系统，当注册会员浏览网站时，他可能临时决定购买商品，当他决定购买商品后，就必须将商品放进购物车，然后下订单。</p>
+<p><img src="https://i.loli.net/2019/01/01/5c2b6c1e44ed8.png" alt="客户网站购物的用例图（一）.png"></p>
+<p>如果网上购物系统的需求改为了：注册会员即可以直接在线购物，又可以浏览商品后临时决定在线购物，则可以改为下图所示：</p>
+<p><img src="https://i.loli.net/2019/01/01/5c2b6d2106196.png" alt="客户网站购物的用例图（二）.png"></p>
+<h3 id="用例描述"><a href="#用例描述" class="headerlink" title="用例描述"></a>用例描述</h3><blockquote>
+<p>没有描述的用例就像是一本书的目录，人们只知道该目录的标题，但并不知道该目录的具体内容是什么，仅用图形符号表示的用例本身并不能提供该用例所具备的全部信息，必须通过文本的方式描述该用例的完整功能。实际上，用例的描述才是用例的主要部分，是后续的交互图分析和类图分析必不可少的部分。</p>
+</blockquote>
+<p>用例描述了参与者和软件系统进行交互时，系统所执行的一系列动作序列，因此这些动作序列应该包含正常使用的各种动作序列（主事件流），而且还包含对非正常使用时软件系统的动作序列（子事件流）。</p>
+<p>【例 1】 在银行 ATM 系统的 ATM 机上“取款”用例一个简单用例描述可以采取如下格式</p>
+<table>
+<thead>
+<tr>
+<th>描述项</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>用例名称</td>
+<td>取款。</td>
+</tr>
+<tr>
+<td>用例描述</td>
+<td>在储户账户有足够金额的情况下，为储户提供现金，并从储户账户中减去所取金额。</td>
+</tr>
+<tr>
+<td>参与者</td>
+<td>储户。</td>
+</tr>
+<tr>
+<td>前置条件</td>
+<td>储户正确登录系统。</td>
+</tr>
+<tr>
+<td>后置条件</td>
+<td>储户账户余额被调整。</td>
+</tr>
+<tr>
+<td>主事件流</td>
+<td>（1）储户在主界面选择“取款”选项，<strong>开始用例</strong>（这个词的出现很重要）。（2）ATM 机提示储户输入欲取金额。（3）储户输入欲取金额。（4）ATM 确认该储户账户是否有足够的金额。如果金额不够，则执行子事件流 <code>b</code> 。<strong>如果与主机连接有问题，则执行异常事件流 <code>e</code></strong>。（5）ATM 机从储户帐号中减去所取金额。（6）ATM 机向储户提供要取的现金。（7）ATM 机打印取款凭证。（8）进入主界面。ATM 机提供以下选项：存款、取款、查询和转账。<strong>用例结束</strong>（这个词的出现同样很重要）。</td>
+</tr>
+<tr>
+<td>子事件流 <code>b</code></td>
+<td>b1. 提示储户余额不够。b2. 返回主界面，等待储户重新选择选项。</td>
+</tr>
+<tr>
+<td>异常事件流 <code>e</code></td>
+<td>e1. 提示储户主机连接不上。e2. 系统自动关闭，退出储户银行卡，用例结束。</td>
+</tr>
+</tbody>
+</table>
+<p>一个复杂用例主要体现在基本操作流程和可选操作流程的步骤和分之过多，此时，可以采用“场景（或称脚本）”的技术来描述用例，而不是用大量的分之和附属流来描述用例。</p>
+<h3 id="用例建模"><a href="#用例建模" class="headerlink" title="用例建模"></a>用例建模</h3><p>用例模型主要应用在需求分析时使用。</p>
+<h4 id="步骤"><a href="#步骤" class="headerlink" title="步骤"></a>步骤</h4><ul>
+<li>找出<strong>系统外部</strong>的参与者和外部系统，确定系统的边界和范围；</li>
+<li>确定每一个参与者所期望的系统行为，参与者对系统的基本业务需求；</li>
+<li>把这些<strong>系统行为作为基本用例</strong>；</li>
+<li>区分用例的优先级；</li>
+<li>细化用例。使用泛化、包含、拓展等关系进行处理；</li>
+<li>编写每个用例的用例描述；</li>
+<li>绘制用例图；</li>
+<li>编写项目词汇表。</li>
+</ul>
+<h4 id="确定系统边界"><a href="#确定系统边界" class="headerlink" title="确定系统边界"></a>确定系统边界</h4><p>系统边界是指系统与系统之间的界限。系统可以认为是一系列的相互作用的元素形成的具有特定功能的有机整体。不属于这个有机整体的部分可以认为是<strong>外部系统</strong>。因此系统边界定义了<strong>油谁或什么参与者来使用系统</strong>，系统能够为参与者提供什么特定服务。<strong>系统边界决定了参与者</strong>。</p>
+<p>【例 1】在一个仅为交易客户提供买卖基金的基金交易系统中，<strong>参与者</strong>为交易客户，交易客户能够操作的系统功能有买入基金和卖出基金。因此，系统有两个用例：买入基金和卖出基金。</p>
+<p>进一步分析发现，基金的品种应该存在与该系统中，否则交易客户无法进行基金的买卖。但系统已存的两个用例都不能完成基金品种的管理，所以可以确认基金品种的管理应该在别的系统中完成。</p>
+<p>所以，我们需要开发这个系统，仅存在两个用例：买入基金、卖出基金。</p>
+<p><img src="https://i.loli.net/2019/01/04/5c2f81bb9cd84.png" alt="仅完成基金买卖的“基金交易系统”的系统边界.png"></p>
+<p>【例 2】对例 1 做个调整。在一个既提供基金买卖又提供基金品种录入的基金交易系统中，交易客户，能够进行基金的买入和卖出。因为还需要对基金品种进行管理（录入、修改、删除和查询），由基金公司员工进行操作。所以该系统的参与者有交易客户和基金公司员工。系统边界可以改为下图所示：</p>
+<p><img src="https://i.loli.net/2019/01/05/5c309b74d8f8d.png" alt="拓展了基金品种管理的“基金交易系统”的系统边界.png"></p>
+<h4 id="如何确定参与者"><a href="#如何确定参与者" class="headerlink" title="如何确定参与者"></a>如何确定参与者</h4><ul>
+<li>谁将使用系统的主要功能？</li>
+<li>谁将需要系统的支持来完成她们的日常工作？</li>
+<li>谁将必须维护、管理和确保系统正常工作？</li>
+<li>谁将给系统提供信息、使用信息和维护信息？</li>
+<li>系统需要处理哪些硬件设备？</li>
+<li>系统使用外部资源吗？</li>
+<li>系统需要与其他系统交互吗？ </li>
+<li>谁对系统产生的结果感兴趣？</li>
+</ul>
+<p>需要注意的问题：</p>
+<ul>
+<li>只要是参与者，对于子系统而言都是外部的；</li>
+<li>参与者直接与系统进行交互；</li>
+<li>参与者指的与系统直接交互时所扮演的角色，而不是特定的人或事物。比如，不是 PJ 与教务系统产生交互而是学生与教务系统产生交互；</li>
+</ul>
+<h4 id="如何确定用例"><a href="#如何确定用例" class="headerlink" title="如何确定用例"></a>如何确定用例</h4><p>识别用例可以从列出的参与者列表中从头开始寻找，考虑每个参与者如何使用系统，需要系统提供什么样的服务。</p>
+<ul>
+<li>参与者要向系统请求什么功能？</li>
+<li>每个参与者的特定任务是什么？</li>
+<li>参与者需要读取、创建、撤销、修改和存储系统的某些信息吗？</li>
+<li>参与者是否有需要通知系统的事件？系统是否有需要通知参与者的事件？</li>
+<li>这些事件代表了哪些功能？</li>
+<li>系统需要哪些输入输出功能？</li>
+<li>是否所有的功能需求都被用例使用了？</li>
+</ul>
+<p>需要注意以下问题：</p>
+<ul>
+<li>每个用例至少有一个参与者；</li>
+<li>每个参与者至少一个用例；</li>
+<li>如果存在没有参与者的用例，再三检查后，还是没有参与者，可以考虑把该用例并入其他用例中；</li>
+<li>如果存在没有用例的参与者，再三检查后，该参与者还是没有用例，可以考虑该参与者是如何与系统产生交互的，或由该参与者确定一个新的用例，或实际上该参与者本身就是多余的。</li>
+</ul>
+<h4 id="项目词汇表"><a href="#项目词汇表" class="headerlink" title="项目词汇表"></a>项目词汇表</h4><p>这什么鬼，没见过，没听说过……</p>
+<h3 id="其他问题"><a href="#其他问题" class="headerlink" title="其他问题"></a>其他问题</h3><h4 id="需求应该有层次的组织"><a href="#需求应该有层次的组织" class="headerlink" title="需求应该有层次的组织"></a>需求应该有层次的组织</h4><p>系统的高层需求一版用不超过 12 个左右的用例进行表示，在其下的层次中，用例的数量不应超过当前用例的 5～10 倍。可以将用例划分为<strong>业务用例</strong>、<strong>系统用例</strong>和<strong>组件用例</strong>等。</p>
+<h4 id="不要从用例直接推导设计"><a href="#不要从用例直接推导设计" class="headerlink" title="不要从用例直接推导设计"></a>不要从用例直接推导设计</h4><p>用例应该描述参与者使用系统所遵循的顺序，但用例绝不说明系统内部采用什么步骤来响应参与者的刺激。</p>
+<h3 id="用例包"><a href="#用例包" class="headerlink" title="用例包"></a>用例包</h3><h4 id="用例模型的调整"><a href="#用例模型的调整" class="headerlink" title="用例模型的调整"></a>用例模型的调整</h4><p>如果两个用例总是以同样的顺序被激活，可能需要将它们合并为一个用例。</p>
+<h4 id="不要过于详细"><a href="#不要过于详细" class="headerlink" title="不要过于详细"></a>不要过于详细</h4><p>在进行用例描述时还没有考虑系统的设计方案，那么也不会涉及用户界面。</p>
+</div></div></div></div><div class="pure-u-1 pure-u-md-1-4"><div id="sidebar"><div class="widget"><div class="widget-title"><i class="fa fa-star-o"> 标签</i></div><div class="tagcloud"><a href="/tags/iBistu/" style="font-size: 15px;">iBistu</a> <a href="/tags/总结/" style="font-size: 15px;">总结</a> <a href="/tags/游戏开发/" style="font-size: 15px;">游戏开发</a> <a href="/tags/DiDi/" style="font-size: 15px;">DiDi</a> <a href="/tags/iOS/" style="font-size: 15px;">iOS</a> <a href="/tags/比赛/" style="font-size: 15px;">比赛</a> <a href="/tags/internship/" style="font-size: 15px;">internship</a> <a href="/tags/Audio/" style="font-size: 15px;">Audio</a> <a href="/tags/国际化/" style="font-size: 15px;">国际化</a> <a href="/tags/Ping/" style="font-size: 15px;">Ping</a> <a href="/tags/Flutter/" style="font-size: 15px;">Flutter</a> <a href="/tags/跨平台/" style="font-size: 15px;">跨平台</a> <a href="/tags/弹幕/" style="font-size: 15px;">弹幕</a> <a href="/tags/页面传值/" style="font-size: 15px;">页面传值</a> <a href="/tags/HUD/" style="font-size: 15px;">HUD</a> <a href="/tags/React-Native/" style="font-size: 15px;">React-Native</a> <a href="/tags/Swift/" style="font-size: 15px;">Swift</a> <a href="/tags/开源/" style="font-size: 15px;">开源</a> <a href="/tags/项目/" style="font-size: 15px;">项目</a> <a href="/tags/swift/" style="font-size: 15px;">swift</a> <a href="/tags/PhotosKit/" style="font-size: 15px;">PhotosKit</a> <a href="/tags/crash/" style="font-size: 15px;">crash</a> <a href="/tags/我的大学/" style="font-size: 15px;">我的大学</a> <a href="/tags/回忆录/" style="font-size: 15px;">回忆录</a> <a href="/tags/Weex/" style="font-size: 15px;">Weex</a> <a href="/tags/技术/" style="font-size: 15px;">技术</a> <a href="/tags/建站/" style="font-size: 15px;">建站</a> <a href="/tags/ifLab/" style="font-size: 15px;">ifLab</a> <a href="/tags/Cocos/" style="font-size: 15px;">Cocos</a> <a href="/tags/macOS/" style="font-size: 15px;">macOS</a> <a href="/tags/编译原理/" style="font-size: 15px;">编译原理</a> <a href="/tags/感想/" style="font-size: 15px;">感想</a> <a href="/tags/Playground/" style="font-size: 15px;">Playground</a> <a href="/tags/树莓派/" style="font-size: 15px;">树莓派</a> <a href="/tags/Arduino/" style="font-size: 15px;">Arduino</a> <a href="/tags/Linux/" style="font-size: 15px;">Linux</a> <a href="/tags/Python/" style="font-size: 15px;">Python</a> <a href="/tags/微信/" style="font-size: 15px;">微信</a> <a href="/tags/django/" style="font-size: 15px;">django</a> <a href="/tags/小程序/" style="font-size: 15px;">小程序</a> <a href="/tags/面试/" style="font-size: 15px;">面试</a> <a href="/tags/随笔/" style="font-size: 15px;">随笔</a> <a href="/tags/实习/" style="font-size: 15px;">实习</a> <a href="/tags/滴滴/" style="font-size: 15px;">滴滴</a> <a href="/tags/Docker/" style="font-size: 15px;">Docker</a> <a href="/tags/搞事情系列/" style="font-size: 15px;">搞事情系列</a> <a href="/tags/UML/" style="font-size: 15px;">UML</a> <a href="/tags/数据库/" style="font-size: 15px;">数据库</a> <a href="/tags/七牛云/" style="font-size: 15px;">七牛云</a> <a href="/tags/Java/" style="font-size: 15px;">Java</a> <a href="/tags/Spring/" style="font-size: 15px;">Spring</a> <a href="/tags/Mybatis/" style="font-size: 15px;">Mybatis</a> <a href="/tags/Junit/" style="font-size: 15px;">Junit</a> <a href="/tags/log4j/" style="font-size: 15px;">log4j</a> <a href="/tags/mysql/" style="font-size: 15px;">mysql</a> <a href="/tags/Spring-MVC/" style="font-size: 15px;">Spring MVC</a> <a href="/tags/旅行/" style="font-size: 15px;">旅行</a></div></div><div class="widget"><div class="widget-title"><i class="fa fa-external-link"> 友链</i></div><ul></ul><a href="https://lonespectator.xyz" title="思旧穴" target="_blank">思旧穴</a><ul></ul><a href="https://www.xuzhengke.cn" title="XuZhengKe" target="_blank">XuZhengKe</a><ul></ul><a href="http://blog.hylstudio.cn" title="HYL Studio" target="_blank">HYL Studio</a><ul></ul><a href="https://www.imzfz.cn" title="Fz" target="_blank">Fz</a></div></div></div><div class="pure-u-1 pure-u-md-3-4"><div id="footer">Copyright © 2019 <a href="/." rel="nofollow">PJHubs</a></div></div></div><script type="text/javascript" src="/js/totop.js?v=0.0.0" async></script><script type="text/javascript" src="//lib.baomitu.com/fancybox/3.5.2/jquery.fancybox.min.js" async></script><script type="text/javascript" src="/js/fancybox.js?v=0.0.0" async></script><link rel="stylesheet" type="text/css" href="//lib.baomitu.com/fancybox/3.5.2/jquery.fancybox.min.css"><script type="text/javascript" src="/js/codeblock-resizer.js?v=0.0.0"></script><script type="text/javascript" src="/js/smartresize.js?v=0.0.0"></script></div></body></html>
