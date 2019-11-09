@@ -18,23 +18,24 @@ date: 2018-10-19 09:38:31
 ## 旅行
 PJHubs [@Instagram](https://www.instagram.com/pjhubs/)
 
-圣何塞、旧金山、新疆、青海、重庆、西安、北京、天津、海南
+张家界、圣何塞、旧金山、新疆、青海、重庆、西安、北京、天津、海南
 
 ## 书籍影视
 PJHubs [@豆瓣](https://www.douban.com/people/142311182/)
 
 ## 电台
-* 《PJHubs》 [@网易云音乐](https://music.163.com/#/djradio?id=527553635)
-* 《PJHubs》[@播客 URL](https://getpodcast.xyz/data/163/527553635.xml)
+《PJHubs》 [@网易云音乐](https://music.163.com/#/djradio?id=527553635)
+《PJHubs》[@播客 URL](https://getpodcast.xyz/data/163/527553635.xml)
 
 ## 骑行
-PJHubs @[行者](https://www.imxingzhe.com/portal/#!/)（欢迎加入 ifLab 业余骑行队
+PJHubs @[行者](https://www.imxingzhe.com/portal/#!/)（筹备环中国游中......
 
 
 ## 志愿活动
 活动 | 职位
 --- | ---
-2019 北京信息科技大学计算机学院《开源软件开发技术》课程 | 校外导师
+[CodeLab](https://www.codelab.club)-北京外国语大学 少儿编程活动 | 技术志愿者
+2019 北京信息科技大学计算机学院《开源软件开发技术》课程 | 导师
 2019 Apple Store 西单店“六一儿童节”编程特别活动 [@TimCook](https://m.weibo.cn/5524254784/4378269463566752) | 嘉宾
 第一届北京信息科技大学编程马拉松（BISTUHackathon）| 技术顾问
 2019 北京 Qcon 全球软件开发大会 | 讲师助理
@@ -63,9 +64,13 @@ WTM 2019 @ GDG Beijing:《Python 从 0 到 1》| 助教
     - 熟悉 API 去了...
 
 ## 专业
-PJHubs [@GitHub](https://github.com/windstormeye)
-PJHubs [@掘金](https://juejin.im/user/584980a961ff4b0058ce97e6)
-《Swift 游戏开发》 [@小专栏](https://xiaozhuanlan.com/pjhubs-swift-game)
+平台 | ✍️
+--- | ---
+GitHub | [PJHubs](https://github.com/windstormeye)
+掘金 | [PJHubs]((https://juejin.im/user/584980a961ff4b0058ce97e6))
+小专栏 | [《Swift 游戏开发》](https://xiaozhuanlan.com/pjhubs-swift-game)
+「知识小集」 | 专栏作者
+「`iOS Tips`」 | 专栏作者
 
 ### Github Trending repos
 * `Objective-C` 最高全球第一
