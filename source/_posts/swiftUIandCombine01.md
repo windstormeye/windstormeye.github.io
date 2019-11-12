@@ -7,14 +7,12 @@ tags:
 - 响应式
 ---
 
-> 本文档为西瓜视频 iOS 新人串讲系列《从实际问题看 SwiftUI 和 Combine 编程》分享讲义，其中内容有问题可以@翁培钧 。
+## 0x00 | 前言
+假设大家已对 Swift 语法有基本了解，并且已经上手体验过。虽在工作中可能并不会立即介入 SwiftUI 和 Combine，但通过对这两个框架的学习和使用可以从侧面给我们提供一个优化的思路，从以往「流程化」和「命令式」的编程思维中转变出来，提升开发效率。
 
-## 0x00 前言
-假设大家已对 Swift 语法有基本了解，并且已经上手体验过。虽在工作中可能并不会立即介入 SwiftUI 和 Combine，但通过对这两个框架的学习和使用可以从侧面给我们提供一个优化的思路，从以往「流程化」和「命令式」的变成思维中转变出来，提升开发效率。
+此次分享在于快速对 SwiftUI 和 Combine 框架有一个基本认识，通过一个常规业务 demo 来验证 SwiftUI 和 Combine 提升效率的可能性，分享我在学习 SwiftUI 和 Combine 遇到问题和值得开心的地方。
 
-此次分享在于快速对 SwiftUI 和 Combine 框架有一个基本认识，通过几个常规业务 demo 来验证 SwiftUI 和 Combine 提升效率的可能性，分享我在学习 SwiftUI 和 Combine 遇到惊奇的点和问题。
-
-## 0x01 SwiftUI
+## 0x01 | SwiftUI
 ### 1. SwiftUI 是什么？
 - ~~指令式编程~~ 响应式编程。
 - 基于 `UIKit`、`Core Graphics`、`Core Text` 等系统框架封装了完整而优美的 DSL。
@@ -25,14 +23,13 @@ tags:
 - 提供了一套通用的语法和基础数据类型，抹平 Apple 自家平台差异性，降低同生态跨端难度。
 - 抛弃 `ViewController` 概念。
 - 在 API 层面上，有 RAC 链式调用的影子和 Combine 的强依赖实现。
-- 
 
 ### 2. Combine 是什么？
 - SwiftUI 中处理数据的本体，响应式框架。
 - 提供给 SwiftUI 中与数据源双向绑定的能力。
 - 数据流式处理「链式」调用。与 SwiftUI 的「链式」组织 UI 不同，SwiftUI 是通过链式调用构造出一个确定的单一对象（语法糖），但 Combine 的每一次链式调用都会生成一个新的源数据。
 
-## 0x02 实现一个 Context Menu
+## 0x02 | 实现一个 Context Menu
 
 ![Context Menu](https://i.loli.net/2019/11/09/GgvzAkcDW4LtMjm.png)
 
@@ -215,7 +212,7 @@ struct MASSquareMenuView<Content: View>: View {
 对这个 `MunuView` 初始化的时候，不给 `init` 方法，补齐 `content`，并且因为在 Swift 5.x 中最后一个闭包可省略，这就出现了之前的 API 格式。
 
 
-## 0x03 Combine 与 CoreData
+## 0x03 | Combine 与 CoreData
 这里引入 `CoreData` 的意义只是能够给了一个相对稳定的数据来源，目前暂时还未结合网络请求进行验证。
 
 这个例子想要完成的事情有：
@@ -291,4 +288,100 @@ struct MASSquareHostView: View {
     }
 }
 ```
+
+从写法 1 发现了一个奇怪的地方（写法 2 可暂时理解为是写法 1 的语法糖）， `ObservableObjectPublisher` 是怎么做到「自动监听」的呢？来看看其定义：
+
+```swift
+@available(iOS 13.0, OSX 10.15, tvOS 13.0, watchOS 6.0, *)
+final public class ObservableObjectPublisher : Publisher {
+
+    public typealias Output = Void
+
+    public typealias Failure = Never
+
+    public init()
+
+    final public func receive<S>(subscriber: S) where S : Subscriber, S.Failure == ObservableObjectPublisher.Failure, S.Input == ObservableObjectPublisher.Output
+
+    final public func send()
+}
+```
+
+其中 `ObservableObjectPublisher` 是继承自 `Publisher` 类，而 `Publisher` 是 Combine 中三大支柱之一，具体定义为：
+
+```swift
+@available(OSX 10.15, iOS 13.0, tvOS 13.0, watchOS 6.0, *)
+public protocol Publisher {
+
+    associatedtype Output
+
+    associatedtype Failure : Error
+
+    func receive<S>(subscriber: S) where S : Subscriber, Self.Failure == S.Failure, Self.Output == S.Input
+}
+```
+
+### Combine 中的三大支柱
+
+* `Publisher`，负责发布事件；
+* `Operator`，负责订阅事件；
+* `Subscribe`，负责转换事件和数据。
+
+这三者都是协议，且都是 `@propertyWrapper` 的具体应用。
+
+#### Publisher
+`Publisher` 最主要的工作其实有两个:发布新的事件及其数据，以及准备好被 `Subscriber` 订阅。`Output` 及 `Failure` 定义了某个 `Publisher` 所发布的值的类型，以及可能产生的错误 的类型。
+
+`Publisher` 可以发布三种事件：
+
+1. 类型为 `Output` 的新值:这代表事件流中出现了新的值；
+2. 类型为 `Failure` 的错误:这代表事件流中发生了问题，事件流到此终止；
+3. 完成事件：表示事件流中所有的元素都已经发布结束，事件流到此终止。
+
+`Publisher` 的这三种事件不是必须的，也就是说，`Publisher` 可能只发一个或者一个都不发，也有可能一直在发，永远不会停止，这就是**无限事件流**，还有可能通过发出 `failure` 或者 `finished` 的事件表明不会再发出新的事件，这是**有限事件流**。
+
+![Apple 提供了满足几乎所有场景的 Publiser](https://i.loli.net/2019/11/12/9P1pQS7YdGgLurH.png)
+
+#### Operator
+
+每个 `Operator` 的行为模式都一样：它们使用上游 `Publisher` 所发布的数据作为输入，以此产生的新的数据，然后自身成为新的 `Publisher`，并将这些新的数据作为输出，发布给下游，这样相当于得到了一个响应式的 `Publisher` 链条。
+
+当链条最上端的 `Publisher` 发布某个事件后，链条中的各个 `Operator` 对事件和数据进行处理。在链条的末端我们希望最终能得到可以直接驱动 UI 状态的事件和数据。这样，终端的消费者可以直接使用这些准备好的数据。
+
+## 总结
+问题一：其不适合直接使用在当前「树形操作流」的工程里，用户对 App 的操作以目前的情况来看是一种「树形结构」，但 SwiftUI 与 Combine 的强依赖，导致了必须写大量的兼容代码去兼容 Combine 的开发哲学，但 Combine 自身的「线性开发模型」与现在的模型是冲突且难以兼容的。所以，问题不仅仅只是在对系统版本的依赖上这么简单而已。
+
+问题二：目前 SwiftUI 并不具备多行文本组件，只能通过 `UITextView` 包一层，包完了以后在模拟器上一跑就卡死，只能走真机。换句话说，如果是从零开始想要搞一个大事情，全部基于 SwiftUI 去 UI 表现层上的内容，几乎不可能，非常非常痛苦。
+
+这两个问题在我看来都是可解的，尤其是问题二，正是因为其能够完美的无缝兼容 `UIKit`，在接入成本上可以忽略不计，反而是问题一带来的影响会更大，虽然 Combine 与现在 Rx 等一套有异曲同工之处，但对已有业务的改造成本不小，比如埋点，可能会需要从以往的跟随视图的变化变为跟随数据流。
+
+
+## 参考链接
+### demo
+
+[Masq](https://github.com/windstormeye/Masq-iOS)
+
+[能否关个灯](https://github.com/windstormeye/SwiftGame)
+
+### 相关内容
+[SwiftUI Tutorials](https://developer.apple.com/tutorials/swiftui/)
+
+[SwiftUI 的一些初步探索 (一)](https://onevcat.com/2019/06/swift-ui-firstlook/)
+
+[SwiftUI 的一些初步探索 (二)](https://onevcat.com/2019/06/swift-ui-firstlook-2/)
+
+[SwiftUI 与 Combine 编程](https://objccn.io/products/swift-ui)
+
+[历时五天用 SwiftUI 做了一款 APP，阿里工程师如何做的？](https://mp.weixin.qq.com/s/QgDSuTFjwFlXzhksfgmkIQ)
+
+[SwiftUI 怎么实现一个「更多菜单」？](http://pjhubs.com/2019/08/06/swiftui01/)
+
+[SwiftUI 怎么和 Core Data 结合？](http://pjhubs.com/2019/08/12/swiftui02/)
+
+
+### 开源库
+[CombineX](https://github.com/cx-org/CombineX)
+
+[MovieSwiftUI](https://github.com/Dimillian/MovieSwiftUI)
+
 
