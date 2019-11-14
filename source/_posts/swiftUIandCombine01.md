@@ -209,7 +209,7 @@ struct MASSquareMenuView<Content: View>: View {
 }
 ```
 
-对这个 `MunuView` 初始化的时候，不给 `init` 方法，补齐 `content`，并且因为在 Swift 5.x 中最后一个闭包可省略，这就出现了之前的 API 格式。
+对这个 `MunuView` 初始化的时候，不给 `init` 方法，补齐 `content`，并且因为在 Swift 5.x 中最后一个闭包可省略，这就出现了之前的 API 格式。在封装 SwiftUI 组件的适合，可以不用一开始就着手封装，而是先「一锅端」，最好再利用 Xcode 11 提供的快捷操作，直接把位于一个上下文中的组件进行「一键抽离」。
 
 
 ## 0x03 | Combine 与 CoreData
@@ -245,6 +245,8 @@ struct MASSquareMenuView<Content: View>: View {
 ```
 
 使用 `@State` 来修饰 `showingSheet` 变量作为控制「输入框」是否弹出的标识位，使用 `@Binding` 来修饰 `text` 从「弹出框」中**引用**出用户输入的内容，使用 `@ObservedObject` 修饰 `aritcleManager` 对象，其作为连接首页数据交互的中枢。
+
+`@State` 的作用本质上非常像「自动合成」了被修饰变量的 `setter` 和 `getter` 方法，我们如果直接使用 `didSet`/`willSet` 监听方法，也确实能够完成 `@State` 做的事情，这部分事情之前也确实有人做过。在 SwiftUI 中每当去触发一个 `@State` 修饰变量的 `setter` 方法时，`body` 属性都会根据新值跑一遍 diff，找出需要被刷新的视图，并生成新的视图进行刷新。
 
 `AritcleManager` 作为首页数据处理的中枢，其承担了「输入」和「搜索」两个任务，而为了保证单一数据源的理念，引入了 `@Published` 修饰其内部持有的真正数据源 `articles`，每当 `articles` 发生改变时，都向外部订阅者发布通知。
 
@@ -324,8 +326,8 @@ public protocol Publisher {
 ### Combine 中的三大支柱
 
 * `Publisher`，负责发布事件；
-* `Operator`，负责订阅事件；
-* `Subscribe`，负责转换事件和数据。
+* `Operator`，负责转换事件和数据；
+* `Subscribe`，负责订阅事件。
 
 这三者都是协议，且都是 `@propertyWrapper` 的具体应用。
 
@@ -355,6 +357,7 @@ public protocol Publisher {
 
 这两个问题在我看来都是可解的，尤其是问题二，正是因为其能够完美的无缝兼容 `UIKit`，在接入成本上可以忽略不计，反而是问题一带来的影响会更大，虽然 Combine 与现在 Rx 等一套有异曲同工之处，但对已有业务的改造成本不小，比如埋点，可能会需要从以往的跟随视图的变化变为跟随数据流。
 
+SwiftUI 与 SB 和 xib 一样，我认为其只是个 UI 表现层，且可以认为是用于布局等最上层的操作，对待其应该使用 SB 和 xib 的思路去使用。
 
 ## 参考链接
 ### demo
