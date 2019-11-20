@@ -68,7 +68,7 @@ WTM 2019 @ GDG Beijing:《Python 从 0 到 1》| 助教
 --- | ---
 GitHub | [PJHubs](https://github.com/windstormeye)
 掘金 | [PJHubs]((https://juejin.im/user/584980a961ff4b0058ce97e6))
-小专栏 | [《Swift 游戏开发》](https://xiaozhuanlan.com/pjhubs-swift-game)
+小专栏 | [《Swift 游戏开发》](https://xiaozhuanlan.com/pjhubs-swift-game)（入选 [「2019 一些值得订阅的优秀 iOS 开发专栏」](https://mp.weixin.qq.com/s/kYbMgqOs7BZzi4hoP__vSg)）
 「知识小集」 | 专栏作者
 「`iOS Tips`」 | 专栏作者
 
