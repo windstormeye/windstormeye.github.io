@@ -34,7 +34,9 @@ PJHubs @[行者](https://www.imxingzhe.com/portal/#!/)（筹备环中国游中..
 ## 志愿活动
 活动 | 职位
 --- | ---
-[CodeLab](https://www.codelab.club)-北京外国语大学 少儿编程活动 | 技术志愿者
+[CodeLab](https://www.codelab.club) - 国家图书馆少年儿童馆 少儿编程活动 | 技术志愿者
+2019 北京信息科技大学计算机学院《开源软件开发技术》课程 | 导师
+[CodeLab](https://www.codelab.club) - 北京外国语大学 少儿编程活动 | 技术志愿者
 2019 北京信息科技大学计算机学院《开源软件开发技术》课程 | 导师
 2019 Apple Store 西单店“六一儿童节”编程特别活动 [@TimCook](https://m.weibo.cn/5524254784/4378269463566752) | 嘉宾
 第一届北京信息科技大学编程马拉松（BISTUHackathon）| 技术顾问
