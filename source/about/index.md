@@ -25,18 +25,18 @@ PJHubs [@豆瓣](https://www.douban.com/people/142311182/)
 
 ## 电台
 《PJHubs》 [@网易云音乐](https://music.163.com/#/djradio?id=527553635)
-《PJHubs》[@播客 URL](https://getpodcast.xyz/data/163/527553635.xml)
 
 ## 骑行
 PJHubs @[行者](https://www.imxingzhe.com/portal/#!/)（筹备环中国游中......
 
 
-## 志愿活动
+## 活动
 活动 | 职位
 --- | ---
-[CodeLab](https://www.codelab.club) - 国家图书馆少年儿童馆 少儿编程活动 | 技术志愿者
+2019 北京师范大学 iOS Club 学生沙龙 | 讲师
+2019 [CodeLab](https://www.codelab.club) - 国家图书馆少年儿童馆 少儿编程活动 | 技术志愿者
 2019 北京信息科技大学计算机学院《开源软件开发技术》课程 | 导师
-[CodeLab](https://www.codelab.club) - 北京外国语大学 少儿编程活动 | 技术志愿者
+2019 [CodeLab](https://www.codelab.club) - 北京外国语大学 少儿编程活动 | 技术志愿者
 2019 北京信息科技大学计算机学院《开源软件开发技术》课程 | 导师
 2019 Apple Store 西单店“六一儿童节”编程特别活动 [@TimCook](https://m.weibo.cn/5524254784/4378269463566752) | 嘉宾
 第一届北京信息科技大学编程马拉松（BISTUHackathon）| 技术顾问
@@ -69,10 +69,13 @@ WTM 2019 @ GDG Beijing:《Python 从 0 到 1》| 助教
 平台 | ✍️
 --- | ---
 GitHub | [PJHubs](https://github.com/windstormeye)
-掘金 | [PJHubs]((https://juejin.im/user/584980a961ff4b0058ce97e6))
-小专栏 | [《Swift 游戏开发》](https://xiaozhuanlan.com/pjhubs-swift-game)（入选 [「2019 一些值得订阅的优秀 iOS 开发专栏」](https://mp.weixin.qq.com/s/kYbMgqOs7BZzi4hoP__vSg)）
-「知识小集」 | 专栏作者
-「`iOS Tips`」 | 专栏作者
+掘金 | [PJHubs](https://juejin.im/user/584980a961ff4b0058ce97e6)
+小专栏 | [《Swift 游戏开发》](https://xiaozhuanlan.com/pjhubs-swift-game)
+Apple |  Apple Teacher
+CodeLab 非盈利少儿编程组织  | [技术志愿者](https://www.codelab.club)
+信息科大 iOS Club | 导师
+知识小集 | 专栏作者
+iOS Tips | 专栏作者
 
 ### Github Trending repos
 * `Objective-C` 最高全球第一
@@ -96,10 +99,20 @@ GitHub | [PJHubs](https://github.com/windstormeye)
 ### 开源
 项目 | 简介
 ---- | ----
-[Peek](https://github.com/windstormeye/Peek) | 基于 `OpenCV` 将实体文本转换并归档为虚拟小册，支持红蓝双色荧光笔的「覆盖」和「切割」识别
+[Swift 游戏开发](https://github.com/windstormeye/SwiftGame) | 最大化 Swift + Xcode 的能力完成一些游戏开发实例
+[Peek](https://github.com/windstormeye/Peek) | 基于 `OpenCV` 将实体文本转换归档为虚拟小册，支持红蓝荧光笔覆盖、切割识别
 [watchDog](https://github.com/windstormeye/watchDog) | 使用微信＋树莓派＋Arduino＋服务器构建你的看门狗
 [PFollow](https://github.com/windstormeye/PFollow) | 全新旅行打卡工具
 [iBistu 4.0](https://github.com/ifLab/iCampus-iOS) | OpenSource App Solution For Universities. (iOS)
+
+### 演讲/分享
+
+年份 | 次数
+---- | ----
+2017 | 2
+2018 | 2
+2019 | 4
+
 
 ### 作品
 
@@ -125,18 +138,6 @@ iBistu | 信息科大移动校园应用 | 团队 | leader & iOS
 --- | --- | --- | ---
 
 ![](https://i.loli.net/2019/07/08/5d23671e6c97789922.png)
-
-## 2019 计划
-
-- [ ] ~~完善 [Bonfire](https://github.com/windstormeye/Bonfire) 开源项目~~（政策原因放弃
-- [x] ~~争取 [iOS-Course](https://github.com/windstormeye/iOS-Course) 拿到 1k star~~（已整体拿到 1k star，佛系目标
-- [ ] ~~毕设输出 >15 篇文章~~（只完成了三分之一左右
-- [x] ~~iOS 方向 >10 篇文章~~（继续输出
-- [ ] 跨端技术方向 >5 篇文章
-- [ ]  AI 方向 >5 篇文章
-- [ ] 阅读书籍 >50
-- [ ] 去~~「南京、上海、杭州、苏州、成都、云南」~~「湖南」旅行（这种东西还得看心情
-- [x] ~~练习厨艺~~（大大超出预期
 
 ## 联系我
 * PJHubs [@微博](https://weibo.com/3307534462/profile?rightmod=1&wvr=6&mod=personinfo&is_all=1) 
