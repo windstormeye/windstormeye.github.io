@@ -74,8 +74,6 @@ widgets: ## Six widgets in sidebar provided: search, category, tag, recent_posts
   - links
 
 links:
-  - title: 信息科大 iOS Club
-    url: https://iosclub.iflab.org
   - title: 思旧穴
     url: https://lonespectator.xyz
   - title: XuZhengKe
@@ -84,6 +82,8 @@ links:
     url: http://blog.hylstudio.cn
   - title: Fz
     url: https://www.imzfz.cn
+  - title: Mint Jian
+    url: https://www.mintjian.com
 
 # Static files
 js: js

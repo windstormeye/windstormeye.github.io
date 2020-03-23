@@ -27,8 +27,9 @@ PJHubs [@豆瓣](https://www.douban.com/people/142311182/)
 《PJHubs》 [@网易云音乐](https://music.163.com/#/djradio?id=527553635)
 
 ## 骑行
-PJHubs @[行者](https://www.imxingzhe.com/portal/#!/)（筹备环中国游中......
+PJHubs @[行者](https://www.imxingzhe.com/portal/#!/)
 
+PJHubs @[顽鹿竞技]()
 
 ## 活动
 活动 | 职位
@@ -104,36 +105,41 @@ iOS Tips | 专栏作者
 [PFollow](https://github.com/windstormeye/PFollow) | 全新旅行打卡工具
 [iBistu 4.0](https://github.com/ifLab/iCampus-iOS) | OpenSource App Solution For Universities. (iOS)
 
-### 演讲/分享
+### 演讲/分享/采访
 
 年份 | 次数
 ---- | ----
 2017 | 2
 2018 | 2
-2019 | 4
+2019 | 5
+2020 | 1
 
 
 ### 作品
 
-PIGPEN | 我们是宠物届的 Ins | 团队 | leader & 服务端 & iOS
+PIGPEN（Pending） | 我们是宠物届的 Ins | 团队 | leader & 服务端 & iOS
 --- | --- | --- | ---
 
 Coding...
 
 
-Masq | 一个有趣的社会实验 | 团队 | leader & 服务端 & iOS
+Masq（TestFlight） | 一个有趣的社会实验 | 团队 | leader & 服务端 & iOS
 --- | --- | --- | ----
 
 Coding...
 
+星球罐子（[App Store](https://apps.apple.com/cn/app/%E6%98%9F%E7%90%83%E7%BD%90%E5%AD%90/id1502901744)） | 拥有属于你的宇宙 | 团队 | iOS
+--- | --- | --- | --- 
+![](http://img.pjhubs.com/截屏2020-03-18下午3.57.43.png)
 
-Vary | 重量级创作工具，轻量级社交网络 | 团队 | iOS
+
+Vary（[App Store](https://apps.apple.com/cn/app/vary/id1190496148)） | 重量级创作工具，轻量级社交网络 | 团队 | iOS
 --- | --- | --- | --- 
 
 ![](https://blogfile.dandyweng.com/2017/02/wall-of-cards-1920x1080-copyright.jpg)
 
 
-iBistu | 信息科大移动校园应用 | 团队 | leader & iOS
+iBistu（已下架） | 信息科大移动校园应用 | 团队 | leader & iOS
 --- | --- | --- | ---
 
 ![](https://i.loli.net/2019/07/08/5d23671e6c97789922.png)
@@ -142,3 +148,4 @@ iBistu | 信息科大移动校园应用 | 团队 | leader & iOS
 * PJHubs [@微博](https://weibo.com/3307534462/profile?rightmod=1&wvr=6&mod=personinfo&is_all=1) 
 * 877302410@qq.com [@email]()
 * `WPJsummer` [@WeChat]()
+* [2020 计划](https://github.com/users/windstormeye/projects/4)
