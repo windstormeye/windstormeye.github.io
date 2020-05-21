@@ -27,9 +27,15 @@ PJHubs [@豆瓣](https://www.douban.com/people/142311182/)
 《PJHubs》 [@网易云音乐](https://music.163.com/#/djradio?id=527553635)
 
 ## 骑行
-PJHubs @[行者](https://www.imxingzhe.com/portal/#!/)
+
+总距离：3802.8km
+2020 骑行计划：2154.8/3000km
+
+PJ @[Strava](https://www.strava.com/athletes/51366484)
 
 PJHubs @[顽鹿竞技]()
+
+PJHubs @[行者](https://www.imxingzhe.com/portal/#!/)~~
 
 ## 活动
 活动 | 职位
