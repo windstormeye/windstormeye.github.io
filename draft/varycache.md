@@ -1,12 +1,12 @@
 ---
-title: Vary——“卡片草稿”和“自动保存”功能的实现和思考
+title: “实体草稿”和“自动保存”功能的实现和思考
 date: 2019-03-13 20:30:39
 tags:
 - 总结
 - 项目 
 ---
 
-![Vary app](https://blogfile.dandyweng.com/2017/02/wall-of-cards-1920x1080-copyright.jpg)
+![](https://blogfile.dandyweng.com/2017/02/wall-of-cards-1920x1080-copyright.jpg)
 
 ## 前言
 Vary 是一款我十分喜欢的工具，官方 slogan 为“分享不拘一格”，是“轻量级的社交网络，重量级的创造工具”。从去年 8 月 9 日加入 Vary 开发组到现在已经整整过去半年了......在 17 年初时，从知乎上得知到了 Dandy Weng 对 Vary 的宣传。没记错的话，当时应该是在上软件工程课，刷知乎看到了[这篇文章](https://zhuanlan.zhihu.com/p/25751703)。刷完后我又把作者的所有相关信息都看了一遍，赶紧申请了 TestFlight 的测试资格，非常幸运的申请到了。

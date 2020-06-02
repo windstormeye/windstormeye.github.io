@@ -13,8 +13,6 @@ date: 2018-10-19 09:38:31
 * 小学 [@海南省东方市铁路小学]()
 * 幼儿园 [@海南省东方市铁路幼儿园]()
 
-~~PS: 找幼儿园校友也～🥺~~
-
 ## 旅行
 PJHubs [@Instagram](https://www.instagram.com/pjhubs/)
 
@@ -27,19 +25,16 @@ PJHubs [@豆瓣](https://www.douban.com/people/142311182/)
 《PJHubs》 [@网易云音乐](https://music.163.com/#/djradio?id=527553635)
 
 ## 骑行
-
-总距离：3802.8km
-2020 骑行计划：2154.8/3000km
-
 PJ @[Strava](https://www.strava.com/athletes/51366484)
 
 PJHubs @[顽鹿竞技]()
 
-PJHubs @[行者](https://www.imxingzhe.com/portal/#!/)~~
+PJHubs @[行者](https://www.imxingzhe.com/portal/#!/)
 
 ## 活动
 活动 | 职位
 --- | ---
+2020 freeCodeCamp 《更高效更有趣的学习编程和编程教学》| 嘉宾
 2019 北京师范大学 iOS Club 学生沙龙 | 讲师
 2019 [CodeLab](https://www.codelab.club) - 国家图书馆少年儿童馆 少儿编程活动 | 技术志愿者
 2019 北京信息科技大学计算机学院《开源软件开发技术》课程 | 导师
@@ -60,10 +55,11 @@ WTM 2019 @ GDG Beijing:《Python 从 0 到 1》| 助教
 
 * iOS 开发工程师 [@字节跳动](https://bytedance.com/zh) 
     - 2019.07 ~ 至今
-    - 「今日头条」&「西瓜视频」 - iOS 客户端及其相关
+    - 「今日头条」&「西瓜视频」 - iOS 客户端
 * iOS 开发实习生 [@滴滴出行](https://www.didiglobal.com) 
     - 2017.11 ~ 2019.06
-    - 「滴滴数据」 - iOS / Web 端
+    - 「滴滴数据」 - iOS / Web - 大前端
+    - 「北极星」 - iOS - 客户端
 * iOS 开发实习生 [@蜗牛睡眠](http://www.seblong.com) 
     - 2017.07 ~ 2017.10
     - 「蜗牛睡不着」 - 基于 `Cocos2d-x` 的射击类游戏
@@ -89,8 +85,10 @@ iOS Tips | 专栏作者
 * `Swift` 最高全球第九
 
 ### 奖项
-赛事 | 奖项
+主体 | 奖项
 --- | ---
+2020 西瓜视频 - iOS | 3 ~ 4 双月业务先锋奖
+2019 西瓜视频 - iOS | 9 ~ 10 双月团队贡献奖
 [**北京信息科技大学毕业设计**](https://github.com/windstormeye/PIGPEN-Docs) | 优秀
 北京信息科技大学计算机学院毕业设计 | 优秀
 [** WWDC19 Scholarship**](https://github.com/windstormeye/WWDC19_brocadeOfLiNationality) | Accepted
@@ -110,16 +108,6 @@ iOS Tips | 专栏作者
 [watchDog](https://github.com/windstormeye/watchDog) | 使用微信＋树莓派＋Arduino＋服务器构建你的看门狗
 [PFollow](https://github.com/windstormeye/PFollow) | 全新旅行打卡工具
 [iBistu 4.0](https://github.com/ifLab/iCampus-iOS) | OpenSource App Solution For Universities. (iOS)
-
-### 演讲/分享/采访
-
-年份 | 次数
----- | ----
-2017 | 2
-2018 | 2
-2019 | 5
-2020 | 1
-
 
 ### 作品
 
