@@ -27,13 +27,17 @@ PJHubs [@豆瓣](https://www.douban.com/people/142311182/)
 ## 骑行
 PJ @[Strava](https://www.strava.com/athletes/51366484)
 
-PJHubs @[顽鹿竞技]()
+骑货（北京）单车俱乐部 - 领队
 
-PJHubs @[行者](https://www.imxingzhe.com/portal/#!/)
+比赛 | 成绩 | 名次
+--- | --- | ---
+2020 北京士博途 100 环京北 | 5:04:48 | 88/226 名 
 
 ## 活动
 活动 | 职位
 --- | ---
+2020 字节跳动今日头条 & 西瓜视频 Swift 培训 | 作者
+2020 北京大学教育学院 - 远程编程学习分享 | 嘉宾
 2020 freeCodeCamp 《更高效更有趣的学习编程和编程教学》| 嘉宾
 2019 北京师范大学 iOS Club 学生沙龙 | 讲师
 2019 [CodeLab](https://www.codelab.club) - 国家图书馆少年儿童馆 少儿编程活动 | 技术志愿者
@@ -141,5 +145,5 @@ iBistu（已下架） | 信息科大移动校园应用 | 团队 | leader & iOS
 ## 联系我
 * PJHubs [@微博](https://weibo.com/3307534462/profile?rightmod=1&wvr=6&mod=personinfo&is_all=1) 
 * 877302410@qq.com [@email]()
-* `WPJsummer` [@WeChat]()
+* `pjhubscom` [@WeChat]()
 * [2020 计划](https://github.com/users/windstormeye/projects/4)
