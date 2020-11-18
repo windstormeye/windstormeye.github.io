@@ -22,7 +22,10 @@ PJHubs [@Instagram](https://www.instagram.com/pjhubs/)
 PJHubs [@豆瓣](https://www.douban.com/people/142311182/)
 
 ## 电台
-《PJHubs》 [@网易云音乐](https://music.163.com/#/djradio?id=527553635)
+《如果否则》[泛用型播客平台（Apple Podcast 等）]()
+《如果否则》[喜马拉雅](https://www.ximalaya.com/gerenchengzhang/41614854/)
+《如果否则》[@网易云音乐](https://music.163.com/#/djradio?id=527553635)
+
 
 ## 骑行
 PJ @[Strava](https://www.strava.com/athletes/51366484)
@@ -37,6 +40,7 @@ PJ @[Strava](https://www.strava.com/athletes/51366484)
 ## 活动
 活动 | 职位
 --- | ---
+2020 北京信息科技大学计算机学院《开源软件开发技术》课程 | 导师
 2020 字节跳动今日头条 & 西瓜视频 Swift 培训 | 作者
 2020 北京大学教育学院 - 远程编程学习分享 | 嘉宾
 2020 freeCodeCamp 《更高效更有趣的学习编程和编程教学》| 嘉宾
