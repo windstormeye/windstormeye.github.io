@@ -16,7 +16,9 @@ date: 2018-10-19 09:38:31
 ## 旅行
 PJHubs [@Instagram](https://www.instagram.com/pjhubs/)
 
-张家界、圣何塞、旧金山、新疆、青海、重庆、西安、北京、天津、海南
+青岛、杭州、舟山、上海、德令哈、大柴旦、丹霞镇、张掖、敦煌、亚丁、成都、张家界、圣何塞、旧金山、新疆、青海、重庆、西安、武汉、北京、天津、海南
+
+![](http://img.pjhubs.com/20210628091309.png)
 
 ## 书籍影视
 PJHubs [@豆瓣](https://www.douban.com/people/142311182/)
@@ -34,6 +36,7 @@ PJ @[Strava](https://www.strava.com/athletes/51366484)
 
 比赛 | 成绩 | 名次
 --- | --- | ---
+20201 北京自行车联赛（昌平站）- 爬坡计时赛 - 团体 ｜ 第三、副将
 2020 北京自行车联赛（昌平站）- 爬坡计时赛 | 14:04 | 37/180 名 
 2020 北京士博途 100 环京北 | 5:04:48 | 88/226 名 
 
@@ -96,6 +99,8 @@ iOS Tips | 专栏作者
 ### 奖项
 主体 | 奖项
 --- | ---
+2021 西瓜视频 - iOS | 3 ~ 4 双月业务先锋奖
+2020 掘金 12 月专栏 | 月度作者
 2020 西瓜视频 - iOS | 3 ~ 4 双月业务先锋奖
 2019 西瓜视频 - iOS | 9 ~ 10 双月团队贡献奖
 [**北京信息科技大学毕业设计**](https://github.com/windstormeye/PIGPEN-Docs) | 优秀
@@ -151,4 +156,6 @@ iBistu（已下架） | 信息科大移动校园应用 | 团队 | leader & iOS
 * PJHubs [@微博](https://weibo.com/3307534462/profile?rightmod=1&wvr=6&mod=personinfo&is_all=1) 
 * 877302410@qq.com [@email]()
 * `pjhubscom` [@WeChat]()
-* [2020 计划](https://github.com/users/windstormeye/projects/4)
+* B 站：[https://space.bilibili.com/25392474](https://space.bilibili.com/25392474)
+* 西瓜：[https://www.ixigua.com/home/58846790581](https://www.ixigua.com/home/58846790581)
+* 抖音号：pjhubscom
