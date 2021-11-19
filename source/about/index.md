@@ -7,13 +7,13 @@ date: 2018-10-19 09:38:31
 我的 ID 是`PJHubs`。喜欢做一些有趣的事情，对技术有敬仰，对生活有追求。这里会分享一些在学习或生活上完整的、成体系的看法和总结，零碎的知识点发布在 [PJ 的开发日常](https://github.com/windstormeye/iOS-Course)。
 
 ## 工作经历
-* iOS 资深工程师 [@字节跳动](https://bytedance.com/zh)  2019.07 ~ 至今
+* iOS [@字节跳动](https://bytedance.com/zh)  2019.07 ~ 至今
     - 西瓜视频 & 今日头条 
-* iOS 实习生 [@滴滴出行](https://www.didiglobal.com)  2017.11 ~ 2019.05
+* 大前端 [@滴滴出行](https://www.didiglobal.com)  2017.11 ~ 2019.05
     - 滴滴数据 & 北极星
-* iOS 实习生 [@蜗牛睡眠](http://www.seblong.com)  2017.07 ~ 2017.10
+* iOS [@蜗牛睡眠](http://www.seblong.com)  2017.07 ~ 2017.10
     - 蜗牛睡不着
-* iOS 实习生 [@某外包公司]()  2017.03 ~ 2017.05
+* iOS [@某外包公司]()  2017.03 ~ 2017.05
 
 ## 教育
 * 软件工程 [@信息科大](http://www.bistu.edu.cn) 2015 ~ 2019
