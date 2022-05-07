@@ -101,6 +101,8 @@ PJHubs [@豆瓣](https://www.douban.com/people/142311182/)
 《如果否则》[喜马拉雅](https://www.ximalaya.com/gerenchengzhang/41614854/)
 《如果否则》[@网易云音乐](https://music.163.com/#/djradio?id=527553635)
 
+## 游戏
+[Steam](https://steamcommunity.com/id/pjhubs/)
 
 ## 骑行
 PJ @[Strava](https://www.strava.com/athletes/51366484)
