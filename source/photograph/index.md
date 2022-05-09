@@ -2,6 +2,12 @@
 
 以下所有摄影作品未经本人授权不可擅自使用，若有需要，取得授权后方可提供无水印原图。
 
+### 2022.5.9 下楼核酸顺便打包午饭
+
+![](http://img.pjhubs.com/20220509213220.png)
+
+![](http://img.pjhubs.com/20220509213118.png)
+
 ### 2022.5.8 - 午睡刚醒 & 傍晚西土城公园遛猫
 
 ![](http://img.pjhubs.com/20220508222748.png)
@@ -87,5 +93,89 @@
 
 ![](http://img.pjhubs.com/20220509101812.png)
 
+![](http://img.pjhubs.com/20220509214100.png)
+
+### 2021.06.26 与薄主席青岛游
+
+![](http://img.pjhubs.com/20220509214117.png)
+
+### 2021.06.13 骑行舟山
+
+![](http://img.pjhubs.com/20220509215540.png)
+
+![](http://img.pjhubs.com/20220509222034.png)
+
+### 2021.06.02 杭州出差
+
+![](http://img.pjhubs.com/20220509215252.png)
 
 
+### 2021.05.07 青海湖边
+
+![](http://img.pjhubs.com/20220509230002.png)
+
+### 2021.05.07 茶卡盐湖
+
+![](http://img.pjhubs.com/20220509225847.png)
+
+### 2021.05.07 嘎吉尔乌珠尔山脚下的火车
+
+![](http://img.pjhubs.com/20220509225651.png)
+
+### 2021.05.06 去往茶卡盐湖路上
+
+![](http://img.pjhubs.com/20220509225603.png)
+
+### 2021.05.06 乌素特（水上）雅丹地址公园
+
+![](http://img.pjhubs.com/20220509224942.png)
+
+![](http://img.pjhubs.com/20220509225117.png)
+
+![](http://img.pjhubs.com/20220509225221.png)
+
+### 2021.05.06  小柴旦湖边
+
+![](http://img.pjhubs.com/20220509224845.png)
+
+### 2021.05.05  大柴旦翡翠湖
+
+![](http://img.pjhubs.com/20220509224243.png)
+
+![](http://img.pjhubs.com/20220509224548.png)
+
+![](http://img.pjhubs.com/20220509224619.png)
+
+### 2021.05.05 G215 国道无人区 - 前往敦煌路上
+
+![](http://img.pjhubs.com/20220509224207.png)
+
+### 2021.05.04 鸣沙山、月牙泉
+
+![](http://img.pjhubs.com/20220509223507.png)
+
+![](http://img.pjhubs.com/20220509224142.png)
+
+### 2021.05.04 莫高窟
+
+![](http://img.pjhubs.com/20220509223353.png)
+
+### 2021.05.03 敦煌城外沙漠
+
+![](http://img.pjhubs.com/20220509223314.png)
+
+### 2021.05.03 嘉峪关
+
+![](http://img.pjhubs.com/20220509223007.png)
+
+### 2021.05.02 七彩丹霞
+
+![](http://img.pjhubs.com/20220509222405.png)
+
+![](http://img.pjhubs.com/20220509222738.png)
+
+### 2021.05.02 达坂山
+
+![](http://img.pjhubs.com/20220509222053.png)
+
+![](http://img.pjhubs.com/20220509222243.png)
