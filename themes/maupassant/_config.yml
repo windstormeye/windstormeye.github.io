@@ -95,6 +95,8 @@ menu:
     directory: .
   - page: 总览
     directory: archives/
+  - page: 摄影
+    directory: photograph/
   - page: 关于
     directory: about/
 
