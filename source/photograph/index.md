@@ -1,6 +1,13 @@
-手机带给了我随心所欲摄影的机会，我很喜欢手机摄影，很喜欢这个可以随时随地就可以拍上一张的小东西，这里汇集了我开始使用手机摄影以来个人较为满意的照片，它们可能是有趣的，可能是好看的，还可能是无意中抓拍到的细节，更可能是绝美的风景，希望我们所有人都可以发现生活的美好！
+摄影是一种更加自我的表达方式，从初中时代的第一台奥林巴斯开始再到现在的黑卡 7，这中间横跨了十多年的时间，经历了无数台设备，也留下了无数的回忆。越来越觉得有些东西需要被记录，曾经也差点步入玩器材的坑，后知后觉才慢慢明白，原来拍到比拍得好更重要。看着以往的照片，定格在画面上的有些已不在人世，有些已为人父，更有甚者已形同陌路。人生啊！果然要珍惜当下。
+
 
 以下所有摄影作品未经本人授权不可擅自使用，若有需要，取得授权后方可提供无水印原图。
+
+### 2022.05.12 下楼做核酸
+
+![](http://img.pjhubs.com/20220512192144.png)
+
+![](http://img.pjhubs.com/20220512192238.png)
 
 ### 2022.05.11 下楼做核酸
 
@@ -406,17 +413,53 @@
 
 ![](http://img.pjhubs.com/20220511225921.png)
 
+![](http://img.pjhubs.com/20220512190452.png)
+
 ### 2019.06.06 圣何塞
 
 ![](http://img.pjhubs.com/20220511225809.png)
+
+![](http://img.pjhubs.com/20220512190309.png)
+
+![](http://img.pjhubs.com/20220512190402.png)
+
+### 2019.06.05 圣何塞
+
+![](http://img.pjhubs.com/20220512190228.png)
 
 ### 2019.06.04 圣何塞
 
 ![](http://img.pjhubs.com/20220511230025.png)
 
+![](http://img.pjhubs.com/20220512185442.png)
+
+![](http://img.pjhubs.com/20220512185539.png)
+
+![](http://img.pjhubs.com/20220512185828.png)
+
+![](http://img.pjhubs.com/20220512190036.png)
+
+![](http://img.pjhubs.com/20220512190119.png)
+
 ### 2019.06.03 圣何塞
 
 ![](http://img.pjhubs.com/20220511230120.png)
+
+![](http://img.pjhubs.com/20220512185131.png)
+
+![](http://img.pjhubs.com/20220512185228.png)
+
+### 2019.06.02 圣何塞
+
+![](http://img.pjhubs.com/20220512184737.png)
+
+![](http://img.pjhubs.com/20220512184944.png)
+
+### 2019.06.01 斯坦福大学
+
+![](http://img.pjhubs.com/20220512183942.png)
+
+![](http://img.pjhubs.com/20220512184125.png)
 
 ### 2019.02.16 海口假日海滩
 
@@ -430,6 +473,10 @@
 
 ![](http://img.pjhubs.com/20220511224844.png)
 
+### 2019.02.06 定安文昌阁
+
+![](http://img.pjhubs.com/20220512183618.png)
+
 ### 2019.01.24 家门口
 
 ![](http://img.pjhubs.com/20220511225523.png)
@@ -438,9 +485,53 @@
 
 ![](http://img.pjhubs.com/20220511225221.png)
 
+### 2018.11.04 ifLab 女子一日编程
+
+![](http://img.pjhubs.com/20220512182851.png)
+
+### 2018.10.15 吐鲁番博物馆
+
+![](http://img.pjhubs.com/20220512183407.png)
+
+### 2018.09.06 顺义 PIGPEN 宠物寄养公社（创业）
+
+![](http://img.pjhubs.com/20220512182714.png)
+
 ### 2018.07.13 兵马俑
 
 ![](http://img.pjhubs.com/20220511225500.png)
+
+### 2018.07.11 卓尔山
+
+![](http://img.pjhubs.com/20220512191527.png)
+
+![](http://img.pjhubs.com/20220512191606.png)
+
+![](http://img.pjhubs.com/20220512191704.png)
+
+### 2018.07.10 青海湖
+
+![](http://img.pjhubs.com/20220512191418.png)
+
+### 2018.07.09 青海湖
+
+![](http://img.pjhubs.com/20220512191257.png)
+
+### 2018.07.07 重庆武隆 天坑地缝
+
+![](http://img.pjhubs.com/20220512191043.png)
+
+![](http://img.pjhubs.com/20220512191149.png)
+
+### 2018.07.06 重庆市区
+
+![](http://img.pjhubs.com/20220512190628.png)
+
+![](http://img.pjhubs.com/20220512190714.png)
+
+![](http://img.pjhubs.com/20220512190818.png)
+
+![](http://img.pjhubs.com/20220512190921.png)
 
 ### 2018.02.14 三亚亚特兰蒂斯
 
@@ -492,3 +583,29 @@
 ### 2017.03.26 圆明园
 
 ![](http://img.pjhubs.com/20220511231548.png)
+
+### 2014 高二 早操
+
+![](http://img.pjhubs.com/default(15).jpeg)
+
+### 2012.12.27 海师附中 运动会
+
+![](http://img.pjhubs.com/default(14).jpeg)
+
+![](http://img.pjhubs.com/default(16).jpeg)
+
+### 2012.4.24 东方中学（原名）中考体育
+
+![](http://img.pjhubs.com/default(12).jpeg)
+
+![](http://img.pjhubs.com/default(13).jpeg)
+
+### 2011.09.17 鱼鳞洲
+
+![](http://img.pjhubs.com/default7.jpeg)
+
+![](http://img.pjhubs.com/default(8).jpeg)
+
+![](http://img.pjhubs.com/default(9).jpeg)
+
+![](http://img.pjhubs.com/default(11).jpeg)
