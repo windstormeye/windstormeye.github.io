@@ -3,13 +3,23 @@
 
 以下所有摄影作品未经本人授权不可擅自使用，若有需要，取得授权后方可提供无水印原图。
 
+### 2022.05.15 下楼做核酸
+
+![](http://img.pjhubs.com/20220515145248.png)
+
+![](http://img.pjhubs.com/20220515145401.png)
+
+![](http://img.pjhubs.com/20220515145445.png)
+
+![](http://img.pjhubs.com/20220515145808.png)
+
 ### 2022.05.14 下楼遛猫
 
 ![](http://img.pjhubs.com/20220514212906.png)
 
 ![](http://img.pjhubs.com/20220514213419.png)
 
-![](http://img.pjhubs.com/20220514213532.png)
+![](http://img.pjhubs.com/20220515145641.png)
 
 ![](http://img.pjhubs.com/20220514213638.png)
 
