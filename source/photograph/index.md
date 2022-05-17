@@ -3,6 +3,34 @@
 
 以下所有摄影作品未经本人授权不可擅自使用，若有需要，取得授权后方可提供无水印原图。
 
+### 2022.05.17 下楼做核酸
+
+![](/images/DSC00368.jpg)
+
+![](/images/DSC00373.jpg)
+
+![](/images/DSC00377.jpg)
+
+![](/images/DSC00381.jpg)
+
+![](/images/DSC00386.jpg)
+
+![](/images/DSC00393.jpg)
+
+![](/images/DSC00402.jpg)
+
+![](/images/DSC00404.jpg)
+
+![](/images/DSC00405.jpg)
+
+![](/images/DSC00407.jpg)
+
+![](/images/DSC00418.jpg)
+
+![](/images/DSC00390.jpg)
+
+![](/images/DSC00392.jpg)
+
 ### 2022.05.16 下楼做核酸
 
 ![](http://img.pjhubs.com/20220516230353.png)
