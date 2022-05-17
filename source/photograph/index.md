@@ -33,681 +33,683 @@
 
 ### 2022.05.16 下楼做核酸
 
-![](http://img.pjhubs.com/20220516230353.png)
+![](/images/DSC00357.jpg)
 
-![](http://img.pjhubs.com/20220516230434.png)
+![](/images/DSC00356.jpg)
 
-![](http://img.pjhubs.com/20220516230522.png)
+![](/images/DSC00355.jpg)
 
-![](http://img.pjhubs.com/20220516230549.png)
+![](/images/DSC00354.jpg)
 
-![](http://img.pjhubs.com/20220516230614.png)
+![](/images/DSC00334.jpg)
 
-![](http://img.pjhubs.com/20220516230642.png)
+![](/images/DSC00329.jpg)
 
-![](http://img.pjhubs.com/20220516230714.png)
+![](/images/DSC00328.jpg)
 
-![](http://img.pjhubs.com/20220516230807.png)
+![](/images/DSC00327.jpg)
 
-![](http://img.pjhubs.com/20220516230842.png)
+![](/images/DSC00326.jpg)
 
-![](http://img.pjhubs.com/20220516230910.png)
+![](/images/DSC00325.jpg)
 
-![](http://img.pjhubs.com/20220516230951.png)
+![](/images/DSC00324.jpg)
 
-![](http://img.pjhubs.com/20220516231016.png)
+![](/images/DSC00322.jpg)
 
-![](http://img.pjhubs.com/20220516231037.png)
+![](/images/DSC00318.jpg)
 
-![](http://img.pjhubs.com/20220516231120.png)
+![](/images/DSC00312.jpg)
+
+![](/images/DSC00311.jpg)
 
 ### 2022.05.15 下楼做核酸
 
-![](http://img.pjhubs.com/20220515145248.png)
+![](/images/qiniu_img/20220515145248.png)
 
-![](http://img.pjhubs.com/20220515145401.png)
+![](/images/qiniu_img/20220515145401.png)
 
-![](http://img.pjhubs.com/20220515145445.png)
+![](/images/qiniu_img/20220515145445.png)
 
-![](http://img.pjhubs.com/20220515145808.png)
+![](/images/qiniu_img/20220515145808.png)
 
 ### 2022.05.14 下楼遛猫
 
-![](http://img.pjhubs.com/20220514212906.png)
+![](/images/qiniu_img/20220514212906.png)
 
-![](http://img.pjhubs.com/20220514213419.png)
+![](/images/qiniu_img/20220514213419.png)
 
-![](http://img.pjhubs.com/20220515145641.png)
+![](/images/qiniu_img/20220515145641.png)
 
-![](http://img.pjhubs.com/20220514213638.png)
+![](/images/qiniu_img/20220514213638.png)
 
 ### 2022.05.14 下楼做核酸
 
-![](http://img.pjhubs.com/20220514150149.png)
+![](/images/qiniu_img/20220514150149.png)
 
-![](http://img.pjhubs.com/20220514150718.png)
+![](/images/qiniu_img/20220514150718.png)
 
 ### 2022.05.13 傍晚西土城公园遛猫
 
-![](http://img.pjhubs.com/20220513214629.png)
+![](/images/qiniu_img/20220513214629.png)
 
-![](http://img.pjhubs.com/20220513214750.png)
+![](/images/qiniu_img/20220513214750.png)
 
-![](http://img.pjhubs.com/20220513214847.png)
+![](/images/qiniu_img/20220513214847.png)
 
 ### 2022.05.13 下楼做核酸
 
-![](http://img.pjhubs.com/20220513132747.png)
+![](/images/qiniu_img/20220513132747.png)
 
-![](http://img.pjhubs.com/20220513134316.png)
+![](/images/qiniu_img/20220513134316.png)
 
-![](http://img.pjhubs.com/20220513133307.png)
+![](/images/qiniu_img/20220513133307.png)
 
-![](http://img.pjhubs.com/20220513133430.png)
+![](/images/qiniu_img/20220513133430.png)
 
 ### 2022.05.12 下楼做核酸
 
-![](http://img.pjhubs.com/20220512192144.png)
+![](/images/qiniu_img/20220512192144.png)
 
-![](http://img.pjhubs.com/20220512192238.png)
+![](/images/qiniu_img/20220512192238.png)
 
 ### 2022.05.11 下楼做核酸
 
-![](http://img.pjhubs.com/20220511192608.png)
+![](/images/qiniu_img/20220511192608.png)
 
 ### 2022.05.09 下楼核酸顺便打包午饭
 
-![](http://img.pjhubs.com/20220509213220.png)
+![](/images/qiniu_img/20220509213220.png)
 
-![](http://img.pjhubs.com/20220509213118.png)
+![](/images/qiniu_img/20220509213118.png)
 
 ### 2022.05.08 - 午睡刚醒 & 傍晚西土城公园遛猫
 
-![](http://img.pjhubs.com/20220508222748.png)
+![](/images/qiniu_img/20220508222748.png)
 
-![](http://img.pjhubs.com/20220508222804.png)
+![](/images/qiniu_img/20220508222804.png)
 
-![](http://img.pjhubs.com/20220508222820.png)
+![](/images/qiniu_img/20220508222820.png)
 
-![](http://img.pjhubs.com/20220508222838.png)
+![](/images/qiniu_img/20220508222838.png)
 
 ### 2022.04.23 去看大恐龙（北京自然博物馆）
 
-![](http://img.pjhubs.com/20220508222656.png)
+![](/images/qiniu_img/20220508222656.png)
 
-![](http://img.pjhubs.com/20220508222724.png)
+![](/images/qiniu_img/20220508222724.png)
 
 ### 2022.04.09 骑行双大路
 
-![](http://img.pjhubs.com/20220508222624.png)
+![](/images/qiniu_img/20220508222624.png)
 
 ### 2022.04.05 红砖美术馆
 
-![](http://img.pjhubs.com/20220508223618.png)
+![](/images/qiniu_img/20220508223618.png)
 
-![](http://img.pjhubs.com/20220508223805.png)
+![](/images/qiniu_img/20220508223805.png)
 
-![](http://img.pjhubs.com/20220508223959.png)
+![](/images/qiniu_img/20220508223959.png)
 
 ### 2022.03.26 骑行永宁古城
 
-![](http://img.pjhubs.com/20220508224530.png)
+![](/images/qiniu_img/20220508224530.png)
 
 ### 2022.03.24 仔仔晒太阳
 
-![](http://img.pjhubs.com/20220508224916.png)
+![](/images/qiniu_img/20220508224916.png)
 
 ### 2022.02.19 西山晴雪
 
-![](http://img.pjhubs.com/20220508230842.png)
+![](/images/qiniu_img/20220508230842.png)
 
-![](http://img.pjhubs.com/20220508231938.png)
+![](/images/qiniu_img/20220508231938.png)
 
 ### 2022.01.08  奥森滑冰
 
-![](http://img.pjhubs.com/20220508231855.png)
+![](/images/qiniu_img/20220508231855.png)
 
 ### 2021.12.11 骑行 新十八盘-五连拐-老望京台
 
-![](http://img.pjhubs.com/20220508232831.png)
+![](/images/qiniu_img/20220508232831.png)
 
-![](http://img.pjhubs.com/20220508232858.png)
+![](/images/qiniu_img/20220508232858.png)
 
-![](http://img.pjhubs.com/20220508233144.png)
+![](/images/qiniu_img/20220508233144.png)
 
 ### 2021.12.4 北京石刻艺术博物馆
 
-![](http://img.pjhubs.com/20220508233624.png)
+![](/images/qiniu_img/20220508233624.png)
 
 ### 2021.11.12 仔仔的注视
 
-![](http://img.pjhubs.com/20220508234406.png)
+![](/images/qiniu_img/20220508234406.png)
 
 ### 2021.10.23 西山森林公园
 
-![](http://img.pjhubs.com/20220509094945.png)
+![](/images/qiniu_img/20220509094945.png)
 
 ### 2021.10.10 国庆海南返程北京家中
 
-![](http://img.pjhubs.com/20220509095704.png)
+![](/images/qiniu_img/20220509095704.png)
 
 
 ### 2021.09.29 国庆海南
 
-![](http://img.pjhubs.com/20220509100745.png)
+![](/images/qiniu_img/20220509100745.png)
 
 ### 2021.09.21 字节校招海报拍摄
 
-![](http://img.pjhubs.com/20220509100802.png)
+![](/images/qiniu_img/20220509100802.png)
 
 ### 2021.09.06 劳委北京游
 
-![](http://img.pjhubs.com/20220509101511.png)
+![](/images/qiniu_img/20220509101511.png)
 
-![](http://img.pjhubs.com/20220509101812.png)
+![](/images/qiniu_img/20220509101812.png)
 
-![](http://img.pjhubs.com/20220509214100.png)
+![](/images/qiniu_img/20220509214100.png)
 
 ### 2021.06.26 与薄主席青岛游
 
-![](http://img.pjhubs.com/20220509214117.png)
+![](/images/qiniu_img/20220509214117.png)
 
 ### 2021.06.13 骑行舟山
 
-![](http://img.pjhubs.com/20220509215540.png)
+![](/images/qiniu_img/20220509215540.png)
 
-![](http://img.pjhubs.com/20220509222034.png)
+![](/images/qiniu_img/20220509222034.png)
 
 ### 2021.06.02 杭州出差
 
-![](http://img.pjhubs.com/20220509215252.png)
+![](/images/qiniu_img/20220509215252.png)
 
 
 ### 2021.05.07 青海湖边
 
-![](http://img.pjhubs.com/20220509230002.png)
+![](/images/qiniu_img/20220509230002.png)
 
 ### 2021.05.07 茶卡盐湖
 
-![](http://img.pjhubs.com/20220509225847.png)
+![](/images/qiniu_img/20220509225847.png)
 
 ### 2021.05.07 嘎吉尔乌珠尔山脚下的火车
 
-![](http://img.pjhubs.com/20220509225651.png)
+![](/images/qiniu_img/20220509225651.png)
 
 ### 2021.05.06 去往茶卡盐湖路上
 
-![](http://img.pjhubs.com/20220509225603.png)
+![](/images/qiniu_img/20220509225603.png)
 
 ### 2021.05.06 乌素特（水上）雅丹地址公园
 
-![](http://img.pjhubs.com/20220509224942.png)
+![](/images/qiniu_img/20220509224942.png)
 
-![](http://img.pjhubs.com/20220509225117.png)
+![](/images/qiniu_img/20220509225117.png)
 
-![](http://img.pjhubs.com/20220509225221.png)
+![](/images/qiniu_img/20220509225221.png)
 
 ### 2021.05.06  小柴旦湖边
 
-![](http://img.pjhubs.com/20220509224845.png)
+![](/images/qiniu_img/20220509224845.png)
 
 ### 2021.05.05  大柴旦翡翠湖
 
-![](http://img.pjhubs.com/20220509224243.png)
+![](/images/qiniu_img/20220509224243.png)
 
-![](http://img.pjhubs.com/20220509224548.png)
+![](/images/qiniu_img/20220509224548.png)
 
-![](http://img.pjhubs.com/20220509224619.png)
+![](/images/qiniu_img/20220509224619.png)
 
 ### 2021.05.05 G215 国道无人区 - 前往敦煌路上
 
-![](http://img.pjhubs.com/20220509224207.png)
+![](/images/qiniu_img/20220509224207.png)
 
 ### 2021.05.04 鸣沙山、月牙泉
 
-![](http://img.pjhubs.com/20220509223507.png)
+![](/images/qiniu_img/20220509223507.png)
 
-![](http://img.pjhubs.com/20220509224142.png)
+![](/images/qiniu_img/20220509224142.png)
 
 ### 2021.05.04 莫高窟
 
-![](http://img.pjhubs.com/20220509223353.png)
+![](/images/qiniu_img/20220509223353.png)
 
 ### 2021.05.03 敦煌城外沙漠
 
-![](http://img.pjhubs.com/20220509223314.png)
+![](/images/qiniu_img/20220509223314.png)
 
 ### 2021.05.03 嘉峪关
 
-![](http://img.pjhubs.com/20220509223007.png)
+![](/images/qiniu_img/20220509223007.png)
 
 ### 2021.05.02 七彩丹霞
 
-![](http://img.pjhubs.com/20220509222405.png)
+![](/images/qiniu_img/20220509222405.png)
 
-![](http://img.pjhubs.com/20220509222738.png)
+![](/images/qiniu_img/20220509222738.png)
 
 ### 2021.05.02 达坂山
 
-![](http://img.pjhubs.com/20220509222053.png)
+![](/images/qiniu_img/20220509222053.png)
 
-![](http://img.pjhubs.com/20220509222243.png)
+![](/images/qiniu_img/20220509222243.png)
 
 ### 2021.04.02 清明曲冲坡扫墓
 
-![](http://img.pjhubs.com/20220510091014.png)
+![](/images/qiniu_img/20220510091014.png)
 
 ### 2021.04.02 清明东山岭扫墓
 
-![](http://img.pjhubs.com/20220510092025.png)
+![](/images/qiniu_img/20220510092025.png)
 
 ### 2021.3.26 八大处踏青
 
-![](http://img.pjhubs.com/20220510093403.png)
+![](/images/qiniu_img/20220510093403.png)
 
-![](http://img.pjhubs.com/20220510093429.png)
+![](/images/qiniu_img/20220510093429.png)
 
 ### 2021.01.31 骑行结束，阜石路回家
 
-![](http://img.pjhubs.com/20220510093508.png)
+![](/images/qiniu_img/20220510093508.png)
 
 ### 2021.01.09 仔仔来啦！
 
-![](http://img.pjhubs.com/20220510094720.png)
+![](/images/qiniu_img/20220510094720.png)
 
 ### 2020.12.24 楼下的猫咪跑上来了，还以为捡到了！
 
-![](http://img.pjhubs.com/20220510094745.png)
+![](/images/qiniu_img/20220510094745.png)
 
 ### 2020.11.14 蹦床乐园
 
-![](http://img.pjhubs.com/20220510101107.png)
+![](/images/qiniu_img/20220510101107.png)
 
 ### 2020.10.06 折多山
 
-![](http://img.pjhubs.com/20220510103205.png)
+![](/images/qiniu_img/20220510103205.png)
 
 ### 2020.10.05 卡子拉山
 
-![](http://img.pjhubs.com/20220510103000.png)
+![](/images/qiniu_img/20220510103000.png)
 
 ### 2020.10.05 稻城亚丁
 
-![](http://img.pjhubs.com/20220510102703.png)
+![](/images/qiniu_img/20220510102703.png)
 
-![](http://img.pjhubs.com/20220510102717.png)
+![](/images/qiniu_img/20220510102717.png)
 
 ### 2020.10.04 稻城亚丁
 
-![](http://img.pjhubs.com/20220510103500.png)
+![](/images/qiniu_img/20220510103500.png)
 
-![](http://img.pjhubs.com/20220510102216.png)
+![](/images/qiniu_img/20220510102216.png)
 
-![](http://img.pjhubs.com/20220510102253.png)
+![](/images/qiniu_img/20220510102253.png)
 
-![](http://img.pjhubs.com/20220510102649.png)
+![](/images/qiniu_img/20220510102649.png)
 
 ### 2020.10.03 天路十八弯观景台
 
-![](http://img.pjhubs.com/20220510101827.png)
+![](/images/qiniu_img/20220510101827.png)
 
-![](http://img.pjhubs.com/20220510103225.png)
+![](/images/qiniu_img/20220510103225.png)
 
 ### 2020.10.03 塔公草原
 
-![](http://img.pjhubs.com/20220510101604.png)
+![](/images/qiniu_img/20220510101604.png)
 
 ### 2020.10.03 八美镇
 
-![](http://img.pjhubs.com/20220510101619.png)
+![](/images/qiniu_img/20220510101619.png)
 
 ### 2020.10.02 墨石公园
 
-![](http://img.pjhubs.com/20220510101155.png)
+![](/images/qiniu_img/20220510101155.png)
 
 ### 2020.10.01 成都武侯祠
 
-![](http://img.pjhubs.com/20220510101128.png)
+![](/images/qiniu_img/20220510101128.png)
 
 ### 2020.09.19 弗老师婚礼
 
-![](http://img.pjhubs.com/20220510215251.png)
+![](/images/qiniu_img/20220510215251.png)
 
 ### 2020.09.15 知春路地铁站 下班
 
-![](http://img.pjhubs.com/20220510215444.png)
+![](/images/qiniu_img/20220510215444.png)
 
 ### 2020.09.12 骑行红井路
 
-![](http://img.pjhubs.com/20220510215851.png)
+![](/images/qiniu_img/20220510215851.png)
 
 ### 2020.08.01 古北水镇团建
 
-![](http://img.pjhubs.com/20220510220513.png)
+![](/images/qiniu_img/20220510220513.png)
 
 ### 2020.05.05 奥森散步
 
-![](http://img.pjhubs.com/20220510221622.png)
+![](/images/qiniu_img/20220510221622.png)
 
 ### 2020.04.06 骑行解字石
 
-![](http://img.pjhubs.com/20220510222008.png)
+![](/images/qiniu_img/20220510222008.png)
 
 ### 2020.04.04 春季骑行谭王路
 
-![](http://img.pjhubs.com/20220510222026.png)
+![](/images/qiniu_img/20220510222026.png)
 
 ### 2020.02.02 万宁老家后海捕鱼
 
-![](http://img.pjhubs.com/20220510222540.png)
+![](/images/qiniu_img/20220510222540.png)
 
 ### 2020.01.31 万宁老家 - 家人
 
-![](http://img.pjhubs.com/20220510223305.png)
+![](/images/qiniu_img/20220510223305.png)
 
 ### 2020.01.20 午间游泳路上
 
-![](http://img.pjhubs.com/20220510223833.png)
+![](/images/qiniu_img/20220510223833.png)
 
 ### 2020.01.06 雪后中华民族园
 
-![](http://img.pjhubs.com/20220510225247.png)
+![](/images/qiniu_img/20220510225247.png)
 
-![](http://img.pjhubs.com/20220510224003.png)
+![](/images/qiniu_img/20220510224003.png)
 
-![](http://img.pjhubs.com/20220510224116.png)
+![](/images/qiniu_img/20220510224116.png)
 
-![](http://img.pjhubs.com/20220510224227.png)
+![](/images/qiniu_img/20220510224227.png)
 
-![](http://img.pjhubs.com/20220510224725.png)
+![](/images/qiniu_img/20220510224725.png)
 
-![](http://img.pjhubs.com/20220510225142.png)
+![](/images/qiniu_img/20220510225142.png)
 
-![](http://img.pjhubs.com/20220510225155.png)
+![](/images/qiniu_img/20220510225155.png)
 
 ### 2019.12.20 路边烟囱
 
-![](http://img.pjhubs.com/20220510224356.png)
+![](/images/qiniu_img/20220510224356.png)
 
 ### 2019.10.07 骑行妙峰山
 
-![](http://img.pjhubs.com/20220510225517.png)
+![](/images/qiniu_img/20220510225517.png)
 
-![](http://img.pjhubs.com/20220510230151.png)
+![](/images/qiniu_img/20220510230151.png)
 
 ### 2019.10.03 武陵源
 
-![](http://img.pjhubs.com/20220510230211.png)
+![](/images/qiniu_img/20220510230211.png)
 
-![](http://img.pjhubs.com/20220510230422.png)
+![](/images/qiniu_img/20220510230422.png)
 
 ### 2019.10.03 张家界
 
-![](http://img.pjhubs.com/20220510230444.png)
+![](/images/qiniu_img/20220510230444.png)
 
-![](http://img.pjhubs.com/20220510230632.png)
+![](/images/qiniu_img/20220510230632.png)
 
-![](http://img.pjhubs.com/20220510230647.png)
+![](/images/qiniu_img/20220510230647.png)
 
-![](http://img.pjhubs.com/20220510230732.png)
+![](/images/qiniu_img/20220510230732.png)
 
 ### 2019.10.02 张家界大峡谷
 
-![](http://img.pjhubs.com/20220510230859.png)
+![](/images/qiniu_img/20220510230859.png)
 
-![](http://img.pjhubs.com/20220510231118.png)
+![](/images/qiniu_img/20220510231118.png)
 
 ### 2019.09.28 骑行雁西湖
 
-![](http://img.pjhubs.com/20220510231151.png)
+![](/images/qiniu_img/20220510231151.png)
 
-![](http://img.pjhubs.com/20220510231321.png)
+![](/images/qiniu_img/20220510231321.png)
 
 ### 2019.09.14 朝阳公园
 
-![](http://img.pjhubs.com/20220510231710.png)
+![](/images/qiniu_img/20220510231710.png)
 
 ### 2019.08.18 北京动物园
 
-![](http://img.pjhubs.com/20220510231740.png)
+![](/images/qiniu_img/20220510231740.png)
 
-![](http://img.pjhubs.com/20220510231904.png)
+![](/images/qiniu_img/20220510231904.png)
 
-![](http://img.pjhubs.com/20220510231958.png)
+![](/images/qiniu_img/20220510231958.png)
 
-![](http://img.pjhubs.com/20220510232339.png)
+![](/images/qiniu_img/20220510232339.png)
 
-![](http://img.pjhubs.com/20220510232357.png)
+![](/images/qiniu_img/20220510232357.png)
 
-![](http://img.pjhubs.com/20220510232412.png)
+![](/images/qiniu_img/20220510232412.png)
 
-![](http://img.pjhubs.com/20220510232500.png)
+![](/images/qiniu_img/20220510232500.png)
 
-![](http://img.pjhubs.com/20220510232621.png)
+![](/images/qiniu_img/20220510232621.png)
 
-![](http://img.pjhubs.com/20220510232713.png)
+![](/images/qiniu_img/20220510232713.png)
 
 ### 2019.08.10 中华民族园
 
-![](http://img.pjhubs.com/20220511210826.png)
+![](/images/qiniu_img/20220511210826.png)
 
-![](http://img.pjhubs.com/20220511211021.png)
+![](/images/qiniu_img/20220511211021.png)
 
-![](http://img.pjhubs.com/20220511211220.png)
+![](/images/qiniu_img/20220511211220.png)
 
-![](http://img.pjhubs.com/20220511211323.png)
+![](/images/qiniu_img/20220511211323.png)
 
-![](http://img.pjhubs.com/20220511211433.png)   
+![](/images/qiniu_img/20220511211433.png)   
 
-![](http://img.pjhubs.com/20220511211530.png)
+![](/images/qiniu_img/20220511211530.png)
 
 ### 2019.08.04 某个地铁站
 
-![](http://img.pjhubs.com/20220511211852.png)
+![](/images/qiniu_img/20220511211852.png)
 
 ### 2019.08.04 中关村 Apple 博物馆（临时）
 
-![](http://img.pjhubs.com/20220511224343.png)
+![](/images/qiniu_img/20220511224343.png)
 
 ### 2019.06.07 旧金山
 
-![](http://img.pjhubs.com/20220511225659.png)
+![](/images/qiniu_img/20220511225659.png)
 
-![](http://img.pjhubs.com/20220511225921.png)
+![](/images/qiniu_img/20220511225921.png)
 
-![](http://img.pjhubs.com/20220512190452.png)
+![](/images/qiniu_img/20220512190452.png)
 
 ### 2019.06.06 圣何塞
 
-![](http://img.pjhubs.com/20220511225809.png)
+![](/images/qiniu_img/20220511225809.png)
 
-![](http://img.pjhubs.com/20220512190309.png)
+![](/images/qiniu_img/20220512190309.png)
 
-![](http://img.pjhubs.com/20220512190402.png)
+![](/images/qiniu_img/20220512190402.png)
 
 ### 2019.06.05 圣何塞
 
-![](http://img.pjhubs.com/20220512190228.png)
+![](/images/qiniu_img/20220512190228.png)
 
 ### 2019.06.04 圣何塞
 
-![](http://img.pjhubs.com/20220511230025.png)
+![](/images/qiniu_img/20220511230025.png)
 
-![](http://img.pjhubs.com/20220512185442.png)
+![](/images/qiniu_img/20220512185442.png)
 
-![](http://img.pjhubs.com/20220512185539.png)
+![](/images/qiniu_img/20220512185539.png)
 
-![](http://img.pjhubs.com/20220512185828.png)
+![](/images/qiniu_img/20220512185828.png)
 
-![](http://img.pjhubs.com/20220512190036.png)
+![](/images/qiniu_img/20220512190036.png)
 
-![](http://img.pjhubs.com/20220512190119.png)
+![](/images/qiniu_img/20220512190119.png)
 
 ### 2019.06.03 圣何塞
 
-![](http://img.pjhubs.com/20220511230120.png)
+![](/images/qiniu_img/20220511230120.png)
 
-![](http://img.pjhubs.com/20220512185131.png)
+![](/images/qiniu_img/20220512185131.png)
 
-![](http://img.pjhubs.com/20220512185228.png)
+![](/images/qiniu_img/20220512185228.png)
 
 ### 2019.06.02 圣何塞
 
-![](http://img.pjhubs.com/20220512184737.png)
+![](/images/qiniu_img/20220512184737.png)
 
-![](http://img.pjhubs.com/20220512184944.png)
+![](/images/qiniu_img/20220512184944.png)
 
 ### 2019.06.01 斯坦福大学
 
-![](http://img.pjhubs.com/20220512183942.png)
+![](/images/qiniu_img/20220512183942.png)
 
-![](http://img.pjhubs.com/20220512184125.png)
+![](/images/qiniu_img/20220512184125.png)
 
 ### 2019.02.16 海口假日海滩
 
-![](http://img.pjhubs.com/20220511224410.png)
+![](/images/qiniu_img/20220511224410.png)
 
-![](http://img.pjhubs.com/20220511224708.png)
+![](/images/qiniu_img/20220511224708.png)
 
 ### 2019.02.08 昌化镇
 
-![](http://img.pjhubs.com/20220511224724.png)
+![](/images/qiniu_img/20220511224724.png)
 
-![](http://img.pjhubs.com/20220511224844.png)
+![](/images/qiniu_img/20220511224844.png)
 
 ### 2019.02.06 定安文昌阁
 
-![](http://img.pjhubs.com/20220512183618.png)
+![](/images/qiniu_img/20220512183618.png)
 
 ### 2019.01.24 家门口
 
-![](http://img.pjhubs.com/20220511225523.png)
+![](/images/qiniu_img/20220511225523.png)
 
 ### 2019.01.14 某展览
 
-![](http://img.pjhubs.com/20220511225221.png)
+![](/images/qiniu_img/20220511225221.png)
 
 ### 2018.11.04 ifLab 女子一日编程
 
-![](http://img.pjhubs.com/20220512182851.png)
+![](/images/qiniu_img/20220512182851.png)
 
 ### 2018.10.15 吐鲁番博物馆
 
-![](http://img.pjhubs.com/20220512183407.png)
+![](/images/qiniu_img/20220512183407.png)
 
 ### 2018.09.06 顺义 PIGPEN 宠物寄养公社（创业）
 
-![](http://img.pjhubs.com/20220512182714.png)
+![](/images/qiniu_img/20220512182714.png)
 
 ### 2018.07.13 兵马俑
 
-![](http://img.pjhubs.com/20220511225500.png)
+![](/images/qiniu_img/20220511225500.png)
 
 ### 2018.07.11 卓尔山
 
-![](http://img.pjhubs.com/20220512191527.png)
+![](/images/qiniu_img/20220512191527.png)
 
-![](http://img.pjhubs.com/20220512191606.png)
+![](/images/qiniu_img/20220512191606.png)
 
-![](http://img.pjhubs.com/20220512191704.png)
+![](/images/qiniu_img/20220512191704.png)
 
 ### 2018.07.10 青海湖
 
-![](http://img.pjhubs.com/20220512191418.png)
+![](/images/qiniu_img/20220512191418.png)
 
 ### 2018.07.09 青海湖
 
-![](http://img.pjhubs.com/20220512191257.png)
+![](/images/qiniu_img/20220512191257.png)
 
 ### 2018.07.07 重庆武隆 天坑地缝
 
-![](http://img.pjhubs.com/20220512191043.png)
+![](/images/qiniu_img/20220512191043.png)
 
-![](http://img.pjhubs.com/20220512191149.png)
+![](/images/qiniu_img/20220512191149.png)
 
 ### 2018.07.06 重庆市区
 
-![](http://img.pjhubs.com/20220512190628.png)
+![](/images/qiniu_img/20220512190628.png)
 
-![](http://img.pjhubs.com/20220512190714.png)
+![](/images/qiniu_img/20220512190714.png)
 
-![](http://img.pjhubs.com/20220512190818.png)
+![](/images/qiniu_img/20220512190818.png)
 
-![](http://img.pjhubs.com/20220512190921.png)
+![](/images/qiniu_img/20220512190921.png)
 
 ### 2018.02.14 三亚亚特兰蒂斯
 
-![](http://img.pjhubs.com/IMG_4612.JPG)
+![](/images/qiniu_img/IMG_4612.JPG)
 
 ### 2018.02.05 三亚槟榔谷
 
-![](http://img.pjhubs.com/20220511230226.png)
+![](/images/qiniu_img/20220511230226.png)
 
 ### 2018.02.05 万宁老家
 
-![](http://img.pjhubs.com/20220511230438.png)
+![](/images/qiniu_img/20220511230438.png)
 
 
 ### 2017.10.17 吐鲁番交河故城
 
-![](http://img.pjhubs.com/20220511230630.png)
+![](/images/qiniu_img/20220511230630.png)
 
 ### 2017.10.16 鄯善 库木塔格沙漠
 
-![](http://img.pjhubs.com/20220511230722.png)
+![](/images/qiniu_img/20220511230722.png)
 
-![](http://img.pjhubs.com/20220511230840.png)
+![](/images/qiniu_img/20220511230840.png)
 
 ### 2017.10.05 中国美术馆
 
-![](http://img.pjhubs.com/20220511231013.png)
+![](/images/qiniu_img/20220511231013.png)
 
 ### 2017.10.05 五道营胡同
 
-![](http://img.pjhubs.com/20220511231113.png)
+![](/images/qiniu_img/20220511231113.png)
 
 ### 2017.07.10 望京凯德茂 蜗牛睡眠 实习
 
-![](http://img.pjhubs.com/20220511231233.png)
+![](/images/qiniu_img/20220511231233.png)
 
 ### 2017.09.04 蜗牛睡眠 实习
 
-![](http://img.pjhubs.com/20220511231813.png)
+![](/images/qiniu_img/20220511231813.png)
 
 ### 2017.05.16 学校操场
 
-![](http://img.pjhubs.com/20220511231352.png)
+![](/images/qiniu_img/20220511231352.png)
 
 ### 2017.04.03 王府井
 
-![](http://img.pjhubs.com/20220511231444.png)
+![](/images/qiniu_img/20220511231444.png)
 
 ### 2017.03.26 圆明园
 
-![](http://img.pjhubs.com/20220511231548.png)
+![](/images/qiniu_img/20220511231548.png)
 
 ### 2014 高二 早操
 
-![](http://img.pjhubs.com/default(15).jpeg)
+![](/images/qiniu_img/default(15).jpeg)
 
 ### 2012.12.27 海师附中 运动会
 
-![](http://img.pjhubs.com/default(14).jpeg)
+![](/images/qiniu_img/default(14).jpeg)
 
-![](http://img.pjhubs.com/default(16).jpeg)
+![](/images/qiniu_img/default(16).jpeg)
 
 ### 2012.4.24 东方中学（原名）中考体育
 
-![](http://img.pjhubs.com/default(12).jpeg)
+![](/images/qiniu_img/default(12).jpeg)
 
-![](http://img.pjhubs.com/default(13).jpeg)
+![](/images/qiniu_img/default(13).jpeg)
 
 ### 2011.09.17 鱼鳞洲
 
-![](http://img.pjhubs.com/default7.jpeg)
+![](/images/qiniu_img/default7.jpeg)
 
-![](http://img.pjhubs.com/default(8).jpeg)
+![](/images/qiniu_img/default(8).jpeg)
 
-![](http://img.pjhubs.com/default(9).jpeg)
+![](/images/qiniu_img/default(9).jpeg)
 
-![](http://img.pjhubs.com/default(11).jpeg)
+![](/images/qiniu_img/default(11).jpeg)

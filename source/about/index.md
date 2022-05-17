@@ -91,7 +91,7 @@ PJHubs [@Instagram](https://www.instagram.com/pjhubs/)
 
 青岛、杭州、舟山、上海、德令哈、大柴旦、丹霞镇、张掖、敦煌、亚丁、成都、张家界、圣何塞、旧金山、新疆、青海、重庆、西安、武汉、北京、天津、海南
 
-![](http://img.pjhubs.com/20210628091309.png)
+![](/images/qiniu_img/20210628091309.png)
 
 ## 书籍影视
 PJHubs [@豆瓣](https://www.douban.com/people/142311182/)
@@ -121,7 +121,7 @@ BCC 车队（骑货单车俱乐部） - 队员
 星球罐子（[App Store](https://apps.apple.com/cn/app/%E6%98%9F%E7%90%83%E7%BD%90%E5%AD%90/id1502901744)）| 拥有属于你的宇宙
 --- | --- 
 
-![](http://img.pjhubs.com/截屏2020-03-18下午3.57.43.png)
+![](/images/qiniu_img/截屏2020-03-18下午3.57.43.png)
 
 
 Vary（[App Store](https://apps.apple.com/cn/app/vary/id1190496148)） | 重量级创作工具，轻量级社交网络

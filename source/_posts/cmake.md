@@ -7,7 +7,7 @@ tags:
 - 编译
 ---
  
-![](http://img.pjhubs.com/20220411233330.png)
+![](/images/qiniu_img/20220411233330.png)
 
 
 CMake 是一个用来结构化 C++ 工程的工具，可以方便开发者跨平台的统一工程结构，并可根据个人要求输出不同的目标工程，如 vs 工程等。之前只在用 OpenCV 的过程中有过部分接触，但已经完全忘掉了，最近正好有需要，从头慢慢捡起来。
@@ -36,7 +36,7 @@ cmake 语法不关心大小写，看个人喜好就行。但 cmake 变量名是�
 - 遂决定重新下载全新 MinGW，先是通过下载器安装，但在依赖文件下载时提示报错，多次尝试未果，遂重新通过源文件方式解压缩完成，成功把对应路径添加到系统路径下，通过 mingw32-make 命令可用。
   - 需要注意添加到系统路径时，并不是新起一个用户变量而是直接添加到“Path”变量下，新增一列。
 
-![](http://img.pjhubs.com/20220328101626.png)
+![](/images/qiniu_img/20220328101626.png)
 
 - make 命令调用完成，需要测试 make 直接编译
 
@@ -48,17 +48,17 @@ cmake 语法不关心大小写，看个人喜好就行。但 cmake 变量名是�
   * `cmake .. -G "MinGW Makefiles"`
 
 
-![](http://img.pjhubs.com/20220328235948.png)
+![](/images/qiniu_img/20220328235948.png)
 
 使用 CMake 进行工程
 
 
 创建好的 add.dll 动态库，在 cmakelists 中设置好了相关路径字段，`cmake` 和 `make` 都通过了，但点击构建出的产物 HELLO.exe 提示 libadd.dll 找不到，仔细检查了 cmakelists 中是否有写错什么方法，但一直无果。
-![](http://img.pjhubs.com/20220330220437.png)
+![](/images/qiniu_img/20220330220437.png)
 
 后来在一篇安装 OpenCV 的文章中才找到了类似问题的解决方案，直接把对应的动态库复制一份到系统目录 windows/System32 目录下，动态库运行时 win 会按照默认设置的系统动态库路径去找。
 
-![](http://img.pjhubs.com/20220330221741.png)
+![](/images/qiniu_img/20220330221741.png)
 
 
 ## 链接 google test
@@ -68,7 +68,7 @@ cmake 语法不关心大小写，看个人喜好就行。但 cmake 变量名是�
 
 先来看看完整的工程目录。既然是一个工程，那么源文件、测试文件、编译中间产物和主工程配置文件必然都得分开。源文件存放在 src 目录，测试文件存放在 test 目录下，编译中间产物都放在 build 目录下，主工程配置文件就工程根目录吧。
 
-![](http://img.pjhubs.com/20220331233656.png)
+![](/images/qiniu_img/20220331233656.png)
 
 创建好所需的文件夹后，接着创建工程配置文件 cmakefiles（工程根目录下），用于组织工程间的文件关系。
 
@@ -182,6 +182,6 @@ target_link_libraries(${BINARY} PUBLIC ${CMAKE_PROJECT_NAME}_lib gtest)
 
 你会发现失败了一个用例，如下图所示：
 
-![](http://img.pjhubs.com/20220331235509.png)
+![](/images/qiniu_img/20220331235509.png)
 
 至此，我们就完成了手动链接并编译 gtest！

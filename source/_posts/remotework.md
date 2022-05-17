@@ -6,7 +6,7 @@ tags:
 - 工作
 ---
 
-![](http://img.pjhubs.com/WX20200229-182121@2x.png)
+![](/images/qiniu_img/WX20200229-182121@2x.png)
 
 > 因为疫情的关系，原本打算休年假到 2 月 1 日回京，春节假期延长到 2 月 3 日，节约出了两天的年假。换句话说，从 2 月 3 日开始到今天，我总共经历了整整一个月的远程工作，并且看样子还会持续一段时间，在这段时间里思考了一些事情。
 
@@ -34,15 +34,15 @@ tags:
 毕竟是在自己家，有了更加舒服的环境。我个人对环境的要求其实也不高：
 
 * 一把坐久屁股不会发热的椅子，比如宜家 199 的这款
-![](http://img.pjhubs.com/WX20200229-161947@2x.png)
+![](/images/qiniu_img/WX20200229-161947@2x.png)
 
 * 一张能够放双屏的桌子，比如京东的这款。[购买链接](https://item.m.jd.com/product/3392185.html?wxa_abtest=o&utm_source=iosapp&utm_medium=appshare&utm_campaign=t_335139774&utm_term=CopyURL&ad_od=share)
 
-![](http://img.pjhubs.com/WX20200229-162352@2x.png)
+![](/images/qiniu_img/WX20200229-162352@2x.png)
 
 * 一盏能够调成黄光的台灯，比如小米的这款
 
-![](http://img.pjhubs.com/WX20200229-162659@2x.png)
+![](/images/qiniu_img/WX20200229-162659@2x.png)
 
 只要备齐了以上三件神器，那么我就可以打造出一个让自己非常舒服的环境
 
@@ -53,11 +53,11 @@ tags:
 
 最开始的时候我只会做个早餐，这是做的第一份早餐。
 
-![](http://img.pjhubs.com/WX20200229-163851@2x.png)
+![](/images/qiniu_img/WX20200229-163851@2x.png)
 
 后来，在「懒饭」这个 app 上学会了不限于以下的菜，准备下周再开两道新菜。
 
-![](http://img.pjhubs.com/%21%5B%5D%28httpimg.pjhubs.comWX20200229-164438%402x.png%29)
+![](/images/qiniu_img/%21%5B%5D%28httpimg.pjhubs.comWX20200229-164438%402x.png%29)
 
 其实自己做饭的话，我觉得首先是肯定比点外卖便宜，就得看自己是更加愿意把这四十分钟的时间拿去做饭还是去做别的事情了，目前来看我愿意把这四十分钟拿去做饭，刚好早上已经工作了三四个小时，可以借此机会放松大脑，调整心态。
 
@@ -66,13 +66,13 @@ tags:
 * 小米电饭锅
 * 小米电磁炉
 
-![](http://img.pjhubs.com/WX20200229-170553@2x.png)
+![](/images/qiniu_img/WX20200229-170553@2x.png)
 
 * 宜家刀具两件套
 * 宜家砧板
 * 宜家锅铲
 
-![](http://img.pjhubs.com/WX20200229-171028@2x.png)
+![](/images/qiniu_img/WX20200229-171028@2x.png)
 
 * 小汤锅
 * 炒锅

@@ -5,7 +5,7 @@ tags:
 - ifLab
 - 感想
 ---
-![](http://img.pjhubs.com/IMG_7583.JPG)
+![](/images/qiniu_img/IMG_7583.JPG)
 
 本篇文章主要想讨论 ifLab “社区”后的一些关键问题的个人思考，以及可能的活动形式、内容、走向和架构。
 
@@ -61,7 +61,7 @@ ifLab 对于我的意义、重要程度以及影响等这些问题就不用多�
 - 内推
     - 社团已有很多前辈进入了很不错的企业，是否可以维护一份内推资源列表，降低后辈信息筛选精力。
 
-![](http://img.pjhubs.com/截屏2020-12-27 上午2.14.59.png)
+![](/images/qiniu_img/截屏2020-12-27 上午2.14.59.png)
 
 ### 播客
 
@@ -78,7 +78,7 @@ ifLab 对于我的意义、重要程度以及影响等这些问题就不用多�
 - 大会观后感。
 - 志愿者后感等。
 
-![](http://img.pjhubs.com/20201227021149.png)
+![](/images/qiniu_img/20201227021149.png)
 
 网易云电台：[https://y.music.163.com/m/radio?id=527553635](https://y.music.163.com/m/radio?id=527553635)
 
@@ -98,7 +98,7 @@ Apple Podcase、Google Podcase 和小宇宙直接搜索「如果否则」。
 - 实验室日常活动、比赛 vlog/直播。
 - 人物访谈 vlog/直播等。
 
-![](http://img.pjhubs.com/image.png)
+![](/images/qiniu_img/image.png)
 
 ## ifLab Community
 

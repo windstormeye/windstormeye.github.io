@@ -6,7 +6,7 @@ tags:
 - C++ 跨端
 ---
 
-![](http://img.pjhubs.com/20220512160505.png)
+![](/images/qiniu_img/20220512160505.png)
 
 距离上一次完整写 Qt 相关的东西已经过去了整整 5 年，上一次写 Qt 时还是使用 Qt Widget，然而现在已经开始推 Qt Quike，并使用 QML 来替换 Widget 组织 UI 结构了。但因切换 CMake 作为构建工具，思维上还是没转换过来为什么 Qt Creator 作为一个 IDE，工程目录没法直接映射。
 
@@ -103,7 +103,7 @@ QRC 是 Qt Creator 中推荐的资源管理方式。这也是不理解的地方�
 
 按照文档中的步骤，需要我们手动在 Qt Creator 中创建出 qrc 资源关键文件，并在其中添加进所有的 qml 和图片资源文件。
 
-![](http://img.pjhubs.com/20220512162107.png)
+![](/images/qiniu_img/20220512162107.png)
 
 实际工程目录结构如下：
 
@@ -137,7 +137,7 @@ QRC 是 Qt Creator 中推荐的资源管理方式。这也是不理解的地方�
 
 这里也有困惑的地方，按照上图中的文件树 .cpp 和 .h 都在一个文件夹中，但不知道为何 Qt Creator 要单独拆分出 Header Files 和 Source Files。是 CMakeLists.txt 中分开索引了头文件和实现文件？
 
-![](http://img.pjhubs.com/20220512162224.png)
+![](/images/qiniu_img/20220512162224.png)
 
 ### 功能区划分
 
@@ -276,7 +276,7 @@ Q_INVOKABLE QString urlAt(int position);
 
 这般在 Qt6 中一定会有推荐的圆角设置方法，再探索一番后发现搜到的方法均不可用。最后还是重新打开 MaintenanceTool 下回了 Qt5 的相关组件。
 
-![](http://img.pjhubs.com/20220512162650.png)
+![](/images/qiniu_img/20220512162650.png)
 
 下载完成后在 QML 文件中即可使用：
 
@@ -642,7 +642,7 @@ Component {​
 
 这里还有一个 bug，应该要做到当检测到菜单的右值超出了 `window` 应该要对 `x` 值减去一个宽度单位，把菜单手动再进行一次偏移，这样就不会出现内容被遮挡的问题了。
 
-![](http://img.pjhubs.com/20220512162954.png)
+![](/images/qiniu_img/20220512162954.png)
 
 在这里又引发出了我对 `GridView` 内容刷新的困惑。我估计可能是因为 Qt 想要降低视图刷新的成本，手动要求开发者在对视图进行刷新时插入 `beginInsertRows()` 和 `endInsertRows()` 方法来协助 Qt 进行视图刷新的计算，除此之外并未提供其它的视图刷新方式。
 

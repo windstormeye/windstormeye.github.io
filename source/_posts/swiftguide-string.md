@@ -5,7 +5,7 @@ tags:
 - Swift
 ---
 
-![](http://img.pjhubs.com/20200718135156.png)
+![](/images/qiniu_img/20200718135156.png)
 
 ## 前言
 本文章为 Swift 培训系列课程《字符串》环节，分为四大部分，涵盖 Swift 字符串与 Objective-C（下文简称 OC）字符串区别对比、Swift 字符串支持的操作、注意点以及总结，并结合个人使用经验帮助各位同学快速掌握 Swift 字符串核心点，准确落地到实际场景中。
@@ -21,7 +21,7 @@ Swift 的 String 是由一个个 Character 类型的字符组成，可以通过�
 
 在 Swift 5 之前，字符串内容可以使用 UTF-16（Unicode）和 ASCII 两种编码方式进行表示，在 Swift 5 中均通过 UTF-8 编码单位集合来表示（详见此篇文章），暴露给外部是由一个个 Character 组成，而每一个 Character 由 1~4 个 UTF-8 编码单位组成。因此，当 String 作为 Character 的集合被外部使用时，String 中的每一个元素都不一定等长。在检索 String 中的某一个字符时，总是要依赖 String 的实例去生成 Index，而不能直接生成。结合 Index 的内存布局：
 
-![](http://img.pjhubs.com/20200803104553.png)
+![](/images/qiniu_img/20200803104553.png)
 
 可以看出 Index 里记录了码位的偏移量，并且其中的 UTF-8 字符编码个数不定，每个 String 下的 index 所标记出的偏移量都会有差异，所以 Index 总是要依赖 String 的实例去生成。
 

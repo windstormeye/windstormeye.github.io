@@ -5,7 +5,7 @@ tags:
 - WWDC
 ---
 
-![](http://img.pjhubs.com/IMG_6368.jpeg)
+![](/images/qiniu_img/IMG_6368.jpeg)
 
 > 这篇文章不会帮助你拿到 WWDC 奖学金，但能够给你解答第一次参加 WWDC Scholar 评选的疑惑，以下内容均为本人观念，与 Apple 无关。
 
@@ -42,7 +42,7 @@ Apple 在大中华区的官方背景比赛上文也说的七七八八了，主�
 
 #### 中国高校计算机应用大赛
 
-![](http://img.pjhubs.com/c4.png)
+![](/images/qiniu_img/c4.png)
 
 大赛官网：[appcontest.net](http://www.appcontest.net/2019/index.html)
 
@@ -54,7 +54,7 @@ C4 大赛不是此篇文章的重点，在此不做过多的展开，如果你�
 
 #### WWDC Scholarship
 
-![](http://img.pjhubs.com/wwdcScholarship.png)
+![](/images/qiniu_img/wwdcScholarship.png)
 
 大赛官网：[developer.apple.com/wwdc19](https://developer.apple.com/wwdc19/scholarships/)
 
@@ -64,7 +64,7 @@ C4 大赛不是此篇文章的重点，在此不做过多的展开，如果你�
 
 不过好在 Apple 中国维护了一个 QQ 群，这个 QQ 群里几乎涵盖了中国大陆的所有历届奖学金得主，有连续拿了三届奖学金的大佬，欢迎大家加入沟通。
 
-![](http://img.pjhubs.com/wwdc_qq_group.png)
+![](/images/qiniu_img/wwdc_qq_group.png)
 
 
 ## 项目
@@ -104,7 +104,7 @@ Playground 的限制很大，不能联网，最大不能超 25MB，必须英文�
 
 历年作品：[wwdc scholarship](https://github.com/wwdc)
 
-![](http://img.pjhubs.com/WX20200225-221904.png)
+![](/images/qiniu_img/WX20200225-221904.png)
 
 ### 提交
 在最后的提交阶段，会让我们写一些描述文字，这部分可要好好发挥！三言两语忽悠是肯定不行的，要理解出你为什么学习 computer science，你是怎么学习的，有没有帮助其他同学学习，怎么帮助的，自己都做了什么等等。
@@ -118,7 +118,7 @@ Playground 的限制很大，不能联网，最大不能超 25MB，必须英文�
 ## 结果
 经过差不多一个月的时间，评选结果就出来了，通没通过都会给你发邮件，如果你通过了，apple 会陆续的给你发一系列的邮件，确认你的 badge 上的信息，只支持英文字母（没记错的话），记得选个酷炫的名字。
 
-![](http://img.pjhubs.com/WX20200225-221746@2x.png)
+![](/images/qiniu_img/WX20200225-221746@2x.png)
 
 如果还是按照去年的标准，住得依旧是圣何塞州立大学的宿舍，两人间，可以自己选舍友，不过我毕竟第一次出国，人生地不熟，py 了个 UCSB 读书的恒宇大佬做了室友，前几天看他的朋友圈是面过了 apple 的 iWork Team，佩服！
 
