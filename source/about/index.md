@@ -51,21 +51,16 @@ date: 2018-10-19 09:38:31
 --- | ---
 2022 首届西瓜视频客户端挑战赛 | 专家评审团
 2022 字节校园 x 西瓜视频客户端系列讲座 | 讲师
-2021 ifLab 新生训练营 freeCodeCamp 分享 | 讲师
 2020 北京信息科技大学计算机学院《开源软件开发技术》课程 | 导师
-2020 字节跳动今日头条 & 西瓜视频 Swift 培训 | 作者
 2020 北京大学教育学院 - 远程编程学习分享 | 嘉宾
 2020 freeCodeCamp 《更高效更有趣的学习编程和编程教学》| 嘉宾
 2019 知识小集 | iOS 专栏作者
-2019 《iOS Tips》 | 专栏作者
-2019 信息科大 iOS Club | 导师
-2019 CodeLab 非盈利少儿编程组织 - 北京场  | [技术志愿者](https://www.codelab.club)
 2019 北京师范大学 iOS Club 学生沙龙 | 讲师
 2019 [CodeLab](https://www.codelab.club) - 国家图书馆少年儿童馆 少儿编程活动 | 技术志愿者
 2019 北京信息科技大学计算机学院《开源软件开发技术》课程 | 导师
 2019 [CodeLab](https://www.codelab.club) - 北京外国语大学 少儿编程活动 | 技术志愿者
 2019 Apple Store 西单店“六一儿童节”编程特别活动 [@TimCook](https://m.weibo.cn/5524254784/4378269463566752) | 嘉宾
-第一届北京信息科技大学编程马拉松（BISTUHackathon）| 技术顾问
+2019 第一届北京信息科技大学编程马拉松（BISTUHackathon）| 技术顾问
 2019 北京 Qcon 全球软件开发大会 | 讲师助理
 WTM 2019 @ GDG Beijing:《Python 从 0 到 1》| 助教
 [iOSCaff 社区](https://learnku.com/docs/the-swift-programming-language/4.2) Swift 4.2 官方文档中文翻译 | 审校团队 & 译者
@@ -99,7 +94,6 @@ PJHubs [@豆瓣](https://www.douban.com/people/142311182/)
 ## 电台
 《如果否则》[泛用型播客平台（Apple Podcast 等）]()
 《如果否则》[喜马拉雅](https://www.ximalaya.com/gerenchengzhang/41614854/)
-《如果否则》[@网易云音乐](https://music.163.com/#/djradio?id=527553635)
 
 ## 游戏
 [Steam](https://steamcommunity.com/id/pjhubs/)
