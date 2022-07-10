@@ -49,6 +49,7 @@ date: 2018-10-19 09:38:31
 ## 活动
 活动 | 职位
 --- | ---
+2022 WWDC22 内参 -[《Swift Playgrounds 指北》](https://xiaozhuanlan.com/topic/9107542836) | 作者
 2022 首届西瓜视频客户端挑战赛 | 专家评审团
 2022 字节校园 x 西瓜视频客户端系列讲座 | 讲师
 2020 北京信息科技大学计算机学院《开源软件开发技术》课程 | 导师
@@ -82,9 +83,7 @@ WTM 2019 @ GDG Beijing:《Python 从 0 到 1》| 助教
 
 
 ## 旅行
-PJHubs [@Instagram](https://www.instagram.com/pjhubs/)
-
-青岛、杭州、舟山、上海、德令哈、大柴旦、丹霞镇、张掖、敦煌、亚丁、成都、张家界、圣何塞、旧金山、新疆、青海、重庆、西安、武汉、北京、天津、海南
+广州、青岛、杭州、舟山、上海、德令哈、大柴旦、丹霞镇、张掖、敦煌、亚丁、成都、张家界、圣何塞、旧金山、新疆、青海、重庆、西安、武汉、北京、天津、海南
 
 ![](/images/qiniu_img/20210628091309.png)
 
@@ -92,8 +91,7 @@ PJHubs [@Instagram](https://www.instagram.com/pjhubs/)
 PJHubs [@豆瓣](https://www.douban.com/people/142311182/)
 
 ## 电台
-《如果否则》[泛用型播客平台（Apple Podcast 等）]()
-《如果否则》[喜马拉雅](https://www.ximalaya.com/gerenchengzhang/41614854/)
+《如果否则》泛用型播客平台（Apple Podcast、[喜马拉雅](https://www.ximalaya.com/gerenchengzhang/41614854/)等）
 
 ## 游戏
 [Steam](https://steamcommunity.com/id/pjhubs/)
