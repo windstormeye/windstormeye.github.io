@@ -94,7 +94,7 @@ PJHubs [@豆瓣](https://www.douban.com/people/142311182/)
 《如果否则》泛用型播客平台（Apple Podcast、[喜马拉雅](https://www.ximalaya.com/gerenchengzhang/41614854/)等）
 
 ## 游戏
-[Steam](https://steamcommunity.com/id/pjhubs/)
+PJHubs - [Steam](https://steamcommunity.com/id/pjhubs/)
 
 ## 骑行
 PJ @[Strava](https://www.strava.com/athletes/51366484)
