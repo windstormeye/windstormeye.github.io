@@ -107,14 +107,16 @@ widgets:
 links:
   - title: GitHub - PJHubs
     url: https://github.com/windstormeye
-  - title: 微博 - PJHubs
-    url: https://weibo.com/3307534462
-  - title: 邮箱 - 877302410@qq.com
-    url: .
-  - title: 微信 - pjhubscom
-    url: .
   - title: BiliBili - PJHubs
     url: https://space.bilibili.com/25392474
+  - title: Twitter - PJHubs
+    url: https://twitter.com/wengpeijun
+  - title: 微博 - PJHubs
+    url: https://weibo.com/3307534462
+  - title: 微信 - pjhubscom
+    url: .
+  - title: 邮箱 - 877302410@qq.com
+    url: .
 
 # Static files
 js: js
