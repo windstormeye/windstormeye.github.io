@@ -137,3 +137,4 @@ iBistu | 信息科大移动校园应用
 - [YiZhong's Blog](http://www.qyizhong.cn/)
 - [XIANFEI'S WEBSITE](https://xianfei.ml:8001)
 - [trembleguy](http://www.trembleguy.top/wordpress/)
+- [YBHubs](https://xifeng-chen.github.io)
