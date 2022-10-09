@@ -9,8 +9,8 @@ date: 2018-10-19 09:38:31
 这是我[今年要做的事情](https://github.com/users/windstormeye/projects/6)，如果你恰好也有类似想做的，欢迎一起完成它！
 
 ## 工作经历
-* iOS [@字节跳动](https://bytedance.com/zh)  2019.07 ~ 至今
-    - 剪映专业版、西瓜视频、今日头条 
+* 客户端 [@字节跳动](https://bytedance.com/zh)  2019.07 ~ 至今
+    - 剪映专业版(PC)、西瓜视频(iOS)、今日头条(iOS)
 * 大前端 [@滴滴出行](https://www.didiglobal.com)  2017.11 ~ 2019.05
     - 滴滴数据、北极星
 * iOS [@蜗牛睡眠](http://www.seblong.com)  2017.07 ~ 2017.10
