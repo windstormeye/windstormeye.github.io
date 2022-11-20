@@ -10,9 +10,12 @@ date: 2018-10-19 09:38:31
 
 ## 工作经历
 * 客户端 [@字节跳动](https://bytedance.com/zh)  2019.07 ~ 至今
-    - 剪映专业版(PC)、西瓜视频(iOS)、今日头条(iOS)
+    - 剪映专业版
+    - 西瓜视频
+    - 今日头条
 * 大前端 [@滴滴出行](https://www.didiglobal.com)  2017.11 ~ 2019.05
-    - 滴滴数据、北极星
+    - 滴滴数据
+    - 北极星
 * iOS [@蜗牛睡眠](http://www.seblong.com)  2017.07 ~ 2017.10
     - 蜗牛睡不着
 * iOS [@某外包公司]()  2017.03 ~ 2017.05
@@ -32,13 +35,14 @@ date: 2018-10-19 09:38:31
 ## 奖项
 主体 | 奖项
 --- | ---
+2022 剪映 - 专业版 | 9~10 双月 SpotBonus - 取得超出预期的成果
 2022 字节校园 | 优秀讲师
 2022 首届西瓜视频客户端开发挑战赛 | 年度最佳导师
-2021 西瓜视频 - iOS | 3 ~ 4 双月业务先锋奖
+2021 西瓜视频 - iOS | 3~4 双月业务先锋奖
 2020 掘金 12 月专栏 | 月度作者奖
-2020 西瓜视频 - iOS | 3 ~ 4 双月业务先锋奖
+2020 西瓜视频 - iOS | 3~4 双月业务先锋奖
 2019 [《Swift 游戏开发》](https://xiaozhuanlan.com/pjhubs-swift-game)小专栏 | 优秀开发专栏
-2019 西瓜视频 - iOS | 9 ~ 10 双月团队贡献奖
+2019 西瓜视频 - iOS | 9~10 双月团队贡献奖
 [**北京信息科技大学毕业设计**](https://github.com/windstormeye/PIGPEN-Docs) | 优秀
 北京信息科技大学计算机学院毕业设计 | 优秀
 [** WWDC19 Scholarship**](https://github.com/windstormeye/WWDC19_brocadeOfLiNationality) | Accepted
@@ -53,6 +57,8 @@ date: 2018-10-19 09:38:31
 ## 活动
 活动 | 职位
 --- | ---
+2022 字节跳动 x 武汉大学前沿技术课程 | 讲师
+2022 剪映 x 高校开学季 | 讲师
 2022 WWDC22 内参 -[《Swift Playgrounds 指北》](https://xiaozhuanlan.com/topic/9107542836) | 作者
 2022 首届西瓜视频客户端挑战赛 | 专家评审团
 2022 字节校园 x 西瓜视频客户端系列讲座 | 讲师
@@ -100,21 +106,19 @@ PJHubs [@豆瓣](https://www.douban.com/people/142311182/)
 ## 游戏
 PJHubs - [Steam](https://steamcommunity.com/id/pjhubs/)
 
-## 骑行
+## 运动
+跑步、骑车、游泳、越野跑、徒步
+
 PJ @[Strava](https://www.strava.com/athletes/51366484)
-
-BCC 骑货单车俱乐部 - 领队
-BCC 车队（骑货单车俱乐部） - 队员
-
-比赛 | 成绩 | 名次
---- | --- | ---
-2021 北京自行车联赛（昌平站）- 爬坡计时赛 - 团体 ｜ 第三、副将
-2020 北京自行车联赛（昌平站）- 爬坡计时赛 | 14:04 | 37/180 名 
-2020 北京士博途 100 环京北 | 5:04:48 | 88/226 名 
 
 ## 作品
 
-星球罐子（[App Store](https://apps.apple.com/cn/app/%E6%98%9F%E7%90%83%E7%BD%90%E5%AD%90/id1502901744)）| 拥有属于你的宇宙
+PhotoP ([App Store](https://apps.apple.com/cn/app/photop/id1639575048)) | 专注 macOS 平台的修图工具
+--- | ---
+
+![](../images/app/photop/1.0/0.jpg)
+
+星球罐子（[App Store](https://apps.apple.com/hk/app/%E6%98%9F%E7%90%83%E7%BD%90%E5%AD%90/id1502901744)）| 拥有属于你的宇宙
 --- | --- 
 
 ![](/images/qiniu_img/截屏2020-03-18下午3.57.43.png)
