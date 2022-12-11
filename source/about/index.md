@@ -134,14 +134,4 @@ Vary（[App Store](https://apps.apple.com/cn/app/vary/id1190496148)） | 重量�
 iBistu | 信息科大移动校园应用 
 --- | --- 
 
-![](https://i.loli.net/2019/07/08/5d23671e6c97789922.png)
-
-## 有趣的小伙伴们
-
-- [Dandy's Blog](https://blog.dandyweng.com)
-- [知行合一](https://wenchanyuan.com/about/)
-- [Andy's Blog](https://andywu1998.github.io)
-- [YiZhong's Blog](http://www.qyizhong.cn/)
-- [XIANFEI'S WEBSITE](https://xianfei.ml:8001)
-- [trembleguy](http://www.trembleguy.top/wordpress/)
-- [YBHubs](https://xifeng-chen.github.io)
+![](../images/app/iBistu.png)
