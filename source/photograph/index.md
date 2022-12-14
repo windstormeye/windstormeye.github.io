@@ -132,21 +132,15 @@
 
 ![](/images/20220716/1.jpg)
 
-![](/images/20220716/2.jpg)
-
 ![](/images/20220716/3.jpg)
 
 ![](/images/20220716/4.jpg)
-
-![](/images/20220716/5.jpg)
 
 ![](/images/20220716/6.jpg)
 
 ![](/images/20220716/7.jpg)
 
 ![](/images/20220716/8.jpg)
-
-![](/images/20220716/9.jpg)
 
 ![](/images/20220716/10.jpg)
 
@@ -162,19 +156,13 @@
 
 ![](/images/202207_guangzhou/0.jpg)
 
-![](/images/202207_guangzhou/1.jpg)
-
 ![](/images/202207_guangzhou/2.jpg)
-
-![](/images/202207_guangzhou/3.jpg)
 
 ![](/images/202207_guangzhou/4.jpg)
 
 ![](/images/202207_guangzhou/5.jpg)
 
 ![](/images/202207_guangzhou/6.jpg)
-
-![](/images/202207_guangzhou/7.jpg)
 
 ![](/images/202207_guangzhou/8.jpg)
 
@@ -188,13 +176,9 @@
 
 ![](/images/202207_guangzhou/guangzhouta/1.jpg)
 
-![](/images/202207_guangzhou/guangzhouta/2.JPG)
-
 ![](/images/202207_guangzhou/guangzhouta/3.JPG)
 
-![](/images/202207_guangzhou/guangzhouta/4.JPG)
-
-![](/images/202207_guangzhou/guangzhouta/5.JPG)
+![](/images/202207_guangzhou/guangzhouta/4.jpg)
 
 ### 2022.06.28 黄埔港
 
@@ -220,8 +204,6 @@
 
 ![](/images/202207_guangzhou/zhujiang/0.JPG)
 
-![](/images/202207_guangzhou/zhujiang/1.JPG)
-
 ### 2022.06.15 Nova Cycling
 
 ![](/images/20220615/00.jpg)
@@ -231,10 +213,6 @@
 ![](/images/20220604/4.JPG)
 
 ![](/images/20220604/5.JPG)
-
-![](/images/20220604/6.JPG)
-
-![](/images/20220604/7.JPG)
 
 ### 2022.06.03 中国工艺美术馆
 
@@ -249,8 +227,6 @@
 ![](/images/20220603/4.JPG)
 
 ![](/images/20220603/5.JPG)
-
-![](/images/20220603/6.JPG)
 
 ![](/images/20220603/7.JPG)
 
@@ -272,13 +248,9 @@
 
 ![](/images/20220522/DSC01045.jpg)
 
-![](/images/20220522/DSC01039.jpg)
-
 ![](/images/20220522/DSC01026.jpg)
 
 ![](/images/20220522/DSC01028.jpg)
-
-![](/images/20220522/DSC01030.jpg)
 
 ![](/images/20220522/DSC01032.jpg)
 
@@ -292,13 +264,9 @@
 
 ![](/images/20220521/DSC00742.jpg)
 
-![](/images/20220521/DSC00744.jpg)
-
 ![](/images/20220521/DSC00752.jpg)
 
 ![](/images/20220521/DSC00714.jpg)
-
-![](/images/20220521/DSC00715.jpg)
 
 ![](/images/20220521/DSC00717.jpg)
 
@@ -352,8 +320,6 @@
 ![](/images/20220519/DSC00481.jpg)
 
 ![](/images/20220519/DSC00483.jpg)
-
-![](/images/20220519/DSC00486.jpg)
 
 ![](/images/20220519/DSC00487.jpg)
 
