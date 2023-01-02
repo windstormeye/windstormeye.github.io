@@ -1,4 +1,43 @@
-看着以往的照片，定格在画面上的有些已不在人世，有些已为人父，更有甚者已形同陌路，人生啊！果然要珍惜当下。
+看着以往的照片，定格在画面上的有些已不在人世，有些已为人父，更有甚者已形同陌路。
+
+人生啊！果然要珍惜当下。
+
+### 2023 元旦 上海
+![](/images/2023/photos/24.jpg)
+![](/images/2023/photos/23.jpg)
+![](/images/2023/photos/20.jpg)
+![](/images/2023/photos/21.jpg)
+![](/images/2023/photos/22.jpg)
+
+### 2023 元旦 苏州
+![](/images/2023/photos/16.jpg)
+![](/images/2023/photos/17.jpg)
+![](/images/2023/photos/18.jpg)
+![](/images/2023/photos/19.jpg)
+
+
+### 2023 元旦 南京中山陵
+![](/images/2023/photos/11.jpg)
+![](/images/2023/photos/12.jpg)
+![](/images/2023/photos/13.jpg)
+![](/images/2023/photos/14.jpg)
+![](/images/2023/photos/15.jpg)
+
+### 2023 元旦 南京牛首山
+![](/images/2023/photos/4.jpg)
+![](/images/2023/photos/5.jpg)
+![](/images/2023/photos/6.jpg)
+![](/images/2023/photos/7.jpg)
+![](/images/2023/photos/8.jpg)
+![](/images/2023/photos/9.jpg)
+![](/images/2023/photos/10.jpg)
+
+### 2023 元旦 南京夫子庙、秦淮河
+
+![](/images/2023/photos/0.jpg)
+![](/images/2023/photos/1.jpg)
+![](/images/2023/photos/2.jpg)
+![](/images/2023/photos/3.jpg)
 
 ### 2022.12.11 香山好汉坡-曹雪芹小道
 
