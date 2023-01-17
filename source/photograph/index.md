@@ -2,6 +2,26 @@
 
 人生啊！果然要珍惜当下。
 
+### 2023.01.16 鼓浪屿、胡里山炮台滨海步道
+![](/images/2023/xiamen/6.png)
+![](/images/2023/xiamen/7.jpg)
+![](/images/2023/xiamen/8.jpg)
+![](/images/2023/xiamen/9.png)
+![](/images/2023/xiamen/10.jpg)
+![](/images/2023/xiamen/11.jpg)
+![](/images/2023/xiamen/12.jpg)
+
+### 2023.01.15 白鹭洲公园
+![](/images/2023/xiamen/4.png)
+![](/images/2023/xiamen/5.png)
+
+### 2023.01.14 厦门 曾厝安海边
+![](/images/2023/xiamen/0.png)
+![](/images/2023/xiamen/1.jpg)
+![](/images/2023/xiamen/2.jpg)
+![](/images/2023/xiamen/3.jpg)
+
+
 ### 2023 元旦 上海
 ![](/images/2023/photos/24.jpg)
 ![](/images/2023/photos/23.jpg)
