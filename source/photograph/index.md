@@ -36,7 +36,6 @@
 ![](/images/2023/xiamen/2.jpg)
 ![](/images/2023/xiamen/3.jpg)
 
-
 ### 2023 元旦 上海
 ![](/images/2023/photos/24.jpg)
 ![](/images/2023/photos/23.jpg)
