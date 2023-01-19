@@ -2,7 +2,22 @@
 
 人生啊！果然要珍惜当下。
 
-### 2023.01.16 鼓浪屿、胡里山炮台滨海步道
+### 2023.01.18 福州 于山、乌山、三坊七巷、西湖和福道
+![](/images/2023/fuzhou/6.jpg)
+![](/images/2023/fuzhou/7.jpg)
+![](/images/2023/fuzhou/8.png)
+![](/images/2023/fuzhou/9.png)
+![](/images/2023/fuzhou/10.jpg)
+
+### 2023.01.17 福州 上下杭、闽江
+![](/images/2023/fuzhou/0.png)
+![](/images/2023/fuzhou/1.jpg)
+![](/images/2023/fuzhou/2.jpg)
+![](/images/2023/fuzhou/3.jpg)
+![](/images/2023/fuzhou/4.jpg)
+![](/images/2023/fuzhou/5.jpg)
+
+### 2023.01.16 厦门 鼓浪屿、胡里山炮台滨海步道
 ![](/images/2023/xiamen/6.png)
 ![](/images/2023/xiamen/7.jpg)
 ![](/images/2023/xiamen/8.jpg)
@@ -11,7 +26,7 @@
 ![](/images/2023/xiamen/11.jpg)
 ![](/images/2023/xiamen/12.jpg)
 
-### 2023.01.15 白鹭洲公园
+### 2023.01.15 厦门 白鹭洲公园
 ![](/images/2023/xiamen/4.png)
 ![](/images/2023/xiamen/5.png)
 
