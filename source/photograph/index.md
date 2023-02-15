@@ -2,6 +2,33 @@
 
 人生啊！果然要珍惜当下。
 
+### 2023.02.12 山西大同 大同古城
+![](/images/2023/datong/15.jpg)
+![](/images/2023/datong/13.jpg)
+![](/images/2023/datong/14.jpg)
+![](/images/2023/datong/16.jpg)
+![](/images/2023/datong/17.jpg)
+![](/images/2023/datong/18.jpg)
+![](/images/2023/datong/19.jpg)
+![](/images/2023/datong/20.jpg)
+![](/images/2023/datong/21.jpg)
+![](/images/2023/datong/22.jpg)
+![](/images/2023/datong/23.jpg)
+
+### 2023.02.11 山西大同 悬空寺-恒山-云冈石窟-大同古城
+![](/images/2023/datong/0.jpg)
+![](/images/2023/datong/1.jpg)
+![](/images/2023/datong/2.jpg)
+![](/images/2023/datong/3.jpg)
+![](/images/2023/datong/4.jpg)
+![](/images/2023/datong/5.jpg)
+![](/images/2023/datong/6.jpg)
+![](/images/2023/datong/7.jpg)
+![](/images/2023/datong/8.jpg)
+![](/images/2023/datong/9.jpg)
+![](/images/2023/datong/10.jpg)
+![](/images/2023/datong/11.jpg)
+
 ### 2023.02.05 河北崇礼
 ![](/images/2023/chongli/14.jpg)
 ![](/images/2023/chongli/4.jpg)
