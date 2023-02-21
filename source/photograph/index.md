@@ -2,6 +2,25 @@
 
 人生啊！果然要珍惜当下。
 
+### 2023.02.18 河南登封 少林寺-三皇寨-白马寺-应天门
+![](/images/2023/luoyang/7.jpg)
+![](/images/2023/luoyang/8.jpg)
+![](/images/2023/luoyang/9.jpg)
+![](/images/2023/luoyang/10.jpg)
+![](/images/2023/luoyang/11.jpg)
+![](/images/2023/luoyang/12.jpg)
+![](/images/2023/luoyang/13.jpg)
+![](/images/2023/luoyang/14.jpg)
+
+### 2023.02.17 河南洛阳 龙门石窟
+![](/images/2023/luoyang/0.jpg)
+![](/images/2023/luoyang/1.jpg)
+![](/images/2023/luoyang/2.jpg)
+![](/images/2023/luoyang/3.jpg)
+![](/images/2023/luoyang/4.jpg)
+![](/images/2023/luoyang/5.jpg)
+![](/images/2023/luoyang/6.jpg)
+
 ### 2023.02.12 山西大同 大同古城
 ![](/images/2023/datong/15.jpg)
 ![](/images/2023/datong/13.jpg)
