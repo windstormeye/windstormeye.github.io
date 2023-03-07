@@ -2,6 +2,19 @@
 
 人生啊！果然要珍惜当下。
 
+### 2023.03.04 内蒙古呼和浩特
+![](/images/2023/hohhot/0.jpg)
+![](/images/2023/hohhot/24.jpg)
+![](/images/2023/hohhot/8.jpg)
+![](/images/2023/hohhot/12.jpg)
+![](/images/2023/hohhot/13.jpg)
+![](/images/2023/hohhot/14.jpg)
+![](/images/2023/hohhot/17.jpg)
+![](/images/2023/hohhot/18.jpg)
+![](/images/2023/hohhot/20.jpg)
+![](/images/2023/hohhot/22.jpg)
+
+
 ### 2023.02.18 河南登封 少林寺-三皇寨-白马寺-应天门
 ![](/images/2023/luoyang/7.jpg)
 ![](/images/2023/luoyang/8.jpg)
