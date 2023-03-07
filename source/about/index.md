@@ -106,7 +106,7 @@ PJ Hubs @[Strava](https://www.strava.com/athletes/51366484)
 ## 作品
 
 PhotoP ([App Store](https://apps.apple.com/cn/app/photop/id1639575048)) | 专注 macOS 平台的修图工具
---- | ---
+--- | --- 
 
 ![](../images/app/photop/1.0/0.jpg)
 
