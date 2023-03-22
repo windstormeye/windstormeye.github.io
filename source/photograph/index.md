@@ -2,6 +2,18 @@
 
 人生啊！果然要珍惜当下。
 
+### 2023.03.17 辽宁大连
+![](/images/2023/dalian/2.jpg)
+![](/images/2023/dalian/0.jpg)
+![](/images/2023/dalian/4.jpg)
+![](/images/2023/dalian/7.jpg)
+![](/images/2023/dalian/8.jpg)
+![](/images/2023/dalian/13.jpg)
+![](/images/2023/dalian/14.jpg)
+![](/images/2023/dalian/15.jpg)
+![](/images/2023/dalian/16.jpg)
+![](/images/2023/dalian/19.jpg)
+
 ### 2023.03.04 内蒙古呼和浩特
 ![](/images/2023/hohhot/0.jpg)
 ![](/images/2023/hohhot/24.jpg)
