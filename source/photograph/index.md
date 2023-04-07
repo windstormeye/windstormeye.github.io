@@ -2,6 +2,21 @@
 
 人生啊！果然要珍惜当下。
 
+### 2023.04.03 云南丽江、大理
+![](/images/2023/lijiangdali/17.jpg)
+![](/images/2023/lijiangdali/18.jpg)
+![](/images/2023/lijiangdali/73.jpg)
+![](/images/2023/lijiangdali/74.jpg)
+![](/images/2023/lijiangdali/76.jpg)
+![](/images/2023/lijiangdali/94.jpg)
+![](/images/2023/lijiangdali/97.jpg)
+![](/images/2023/lijiangdali/114.jpg)
+![](/images/2023/lijiangdali/116.jpg)
+![](/images/2023/lijiangdali/132.jpg)
+![](/images/2023/lijiangdali/134.jpg)
+![](/images/2023/lijiangdali/135.jpg)
+![](/images/2023/lijiangdali/136.jpg)
+
 ### 2023.03.17 辽宁大连
 ![](/images/2023/dalian/2.jpg)
 ![](/images/2023/dalian/0.jpg)

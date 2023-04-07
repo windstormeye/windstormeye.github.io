@@ -87,7 +87,7 @@ WTM 2019 @ GDG Beijing:《Python 从 0 到 1》| 助教
 
 圣何塞、旧金山
 
-![](/images/maps.png)
+![](/images/newMap.png)
 
 ## 书籍影视
 PJHubs [@豆瓣](https://www.douban.com/people/142311182/)
