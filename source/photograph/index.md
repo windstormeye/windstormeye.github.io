@@ -2,6 +2,9 @@
 
 人生啊！果然要珍惜当下。
 
+### 2023.05.16 广州 珠江
+![](/images/2023/talk/0.jpg)
+
 ### 2023.04.03 云南丽江、大理
 ![](/images/2023/lijiangdali/17.jpg)
 ![](/images/2023/lijiangdali/18.jpg)
