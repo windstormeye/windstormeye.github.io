@@ -2,8 +2,17 @@
 
 人生啊！果然要珍惜当下。
 
+### 2023.05.21 北京 西单
+![](/images/2023/xidan/0.jpg)
+![](/images/2023/xidan/1.jpg)
+
 ### 2023.05.16 广州 珠江
 ![](/images/2023/talk/0.jpg)
+![](/images/2023/shenzhen/3.jpg)
+
+### 2023.05.14 深圳
+![](/images/2023/shenzhen/1.jpg)
+![](/images/2023/shenzhen/2.jpg)
 
 ### 2023.04.03 云南丽江、大理
 ![](/images/2023/lijiangdali/17.jpg)
