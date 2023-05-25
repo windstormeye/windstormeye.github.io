@@ -2,6 +2,10 @@
 
 人生啊！果然要珍惜当下。
 
+### 2023.05.23 北京 上下班
+![](/images/2023/street_snap/0.jpg)
+![](/images/2023/street_snap/1.jpg)
+
 ### 2023.05.21 北京 西单
 ![](/images/2023/xidan/0.jpg)
 ![](/images/2023/xidan/1.jpg)
