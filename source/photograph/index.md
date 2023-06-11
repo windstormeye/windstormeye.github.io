@@ -2,6 +2,25 @@
 
 人生啊！果然要珍惜当下。
 
+### 2023.06.09 北京 上下班
+![](/images/2023/street_snap/11.jpg)
+![](/images/2023/street_snap/12.jpg)
+
+### 2023.06.08 北京 上下班
+![](/images/2023/street_snap/6.jpg)
+![](/images/2023/street_snap/8.jpg)
+![](/images/2023/street_snap/9.jpg)
+![](/images/2023/street_snap/10.jpg)
+
+### 2023.06.07 北京 上下班
+![](/images/2023/street_snap/5.jpg)
+
+### 2023.06.06 北京 上下班
+![](/images/2023/street_snap/4.jpg)
+
+### 2023.06.05 北京 上下班
+![](/images/2023/street_snap/2.jpg)
+
 ### 2023.05.28 鄂尔多斯 响沙湾
 ![](../images/2023/marathon/3.jpg)
 
