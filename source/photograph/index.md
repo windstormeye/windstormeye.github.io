@@ -2,6 +2,38 @@
 
 人生啊！果然要珍惜当下。
 
+### 2023.10 海南 国庆
+![](/images/2023/guoqing/1.jpg)
+![](/images/2023/guoqing/2.jpg)
+![](/images/2023/guoqing/3.jpg)
+![](/images/2023/guoqing/9.jpg)
+![](/images/2023/guoqing/10.jpg)
+![](/images/2023/guoqing/14.jpg)
+![](/images/2023/guoqing/15.jpg)
+
+### 2023.09 北京 街拍
+![](/images/2023/guoqing/4.jpg)
+![](/images/2023/guoqing/5.jpg)
+
+
+### 2023.08.24 威海
+![](/images/2023/photos/26.jpg)
+![](/images/2023/photos/27.jpeg)
+
+### 2023.08.16 八达岭
+![](/images/2023/photos/32.jpeg)
+![](/images/2023/photos/33.jpeg)
+![](/images/2023/photos/34.jpeg)
+![](/images/2023/photos/35.jpeg)
+
+### 2023.08 北京 街拍
+![](/images/2023/photos/31.jpeg)
+![](/images/2023/photos/28.jpg)
+![](/images/2023/photos/29.jpg)
+![](/images/2023/photos/30.jpeg)
+![](/images/2023/photos/36.jpeg)
+![](/images/2023/photos/37.jpeg)
+
 ### 2023.07 北京 上下班
 ![](/images/2023/street_snap/20.jpg)
 ![](/images/2023/street_snap/21.jpg)
