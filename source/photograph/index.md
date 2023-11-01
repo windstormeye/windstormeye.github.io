@@ -2,6 +2,31 @@
 
 人生啊！果然要珍惜当下。
 
+### 2023.10 北京 扫街
+![](/images/2023/street_snap/10/1.jpg)
+![](/images/2023/street_snap/10/2.jpg)
+![](/images/2023/street_snap/10/3.jpg)
+![](/images/2023/street_snap/10/4.jpg)
+![](/images/2023/street_snap/10/5.jpg)
+![](/images/2023/street_snap/10/6.jpg)
+![](/images/2023/street_snap/10/7.jpg)
+![](/images/2023/street_snap/10/8.jpg)
+![](/images/2023/street_snap/10/9.jpg)
+![](/images/2023/street_snap/10/10.jpg)
+![](/images/2023/street_snap/10/11.jpg)
+![](/images/2023/street_snap/10/12.jpg)
+![](/images/2023/street_snap/10/13.png)
+![](/images/2023/street_snap/10/14.jpg)
+![](/images/2023/street_snap/10/15.jpg)
+![](/images/2023/street_snap/10/16.jpg)
+![](/images/2023/street_snap/10/17.jpg)
+![](/images/2023/street_snap/10/18.jpg)
+![](/images/2023/street_snap/10/19.jpg)
+![](/images/2023/street_snap/10/20.jpg)
+![](/images/2023/street_snap/10/21.jpg)
+![](/images/2023/street_snap/10/22.jpg)
+![](/images/2023/street_snap/10/23.jpg)
+
 ### 2023.10 海南 国庆
 ![](/images/2023/guoqing/1.jpg)
 ![](/images/2023/guoqing/2.jpg)
