@@ -2,6 +2,24 @@
 
 人生啊！果然要珍惜当下。
 
+### 2023.11 香港
+
+![](/images/2023/hk/0.jpg)
+![](/images/2023/hk/1.jpg)
+![](/images/2023/hk/74.jpg)
+![](/images/2023/hk/2.jpg)
+![](/images/2023/hk/22.jpg)
+![](/images/2023/hk/3.jpg)
+![](/images/2023/hk/39.jpg)
+![](/images/2023/hk/4.jpg)
+![](/images/2023/hk/64.jpg)
+![](/images/2023/hk/5.jpg)
+![](/images/2023/hk/66.jpg)
+![](/images/2023/hk/6.jpg)
+![](/images/2023/hk/70.jpg)
+![](/images/2023/hk/73.jpg)
+
+
 ### 2023.10 北京 扫街
 ![](/images/2023/street_snap/10/1.jpg)
 ![](/images/2023/street_snap/10/2.jpg)
