@@ -2,6 +2,14 @@
 
 人生啊！果然要珍惜当下。
 
+
+### 2023.11 北京
+![](/images/2023/street_snap/11/0.jpg)
+![](/images/2023/street_snap/11/1.jpg)
+![](/images/2023/street_snap/11/2.jpg)
+![](/images/2023/street_snap/11/3.jpg)
+
+
 ### 2023.11 香港
 
 ![](/images/2023/hk/0.jpg)
