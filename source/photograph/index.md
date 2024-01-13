@@ -3,6 +3,34 @@
 人生啊！果然要珍惜当下。
 
 
+### 2024.01 桂林
+![](/images/2024/01/guilin/6.jpeg)
+![](/images/2024/01/guilin/7.jpeg)
+![](/images/2024/01/guilin/8.jpeg)
+![](/images/2024/01/guilin/9.jpeg)
+![](/images/2024/01/guilin/10.jpeg)
+![](/images/2024/01/guilin/11.jpeg)
+![](/images/2024/01/guilin/13.jpeg)
+
+![](/images/2024/01/guilin/14.jpeg)
+![](/images/2024/01/guilin/15.jpeg)
+![](/images/2024/01/guilin/17.jpeg)
+![](/images/2024/01/guilin/18.jpeg)
+![](/images/2024/01/guilin/19.jpeg)
+![](/images/2024/01/guilin/20.jpeg)
+![](/images/2024/01/guilin/21.jpeg)
+
+![](/images/2024/01/guilin/27.jpeg)
+![](/images/2024/01/guilin/28.jpeg)
+![](/images/2024/01/guilin/37.jpeg)
+![](/images/2024/01/guilin/38.jpg)
+
+### 2023.12 北京
+![](/images/2024/01/photos/0.jpg)
+![](/images/2024/01/photos/1.jpg)
+![](/images/2024/01/photos/2.jpg)
+![](/images/2024/01/photos/3.jpg)
+
 ### 2023.11 北京
 ![](/images/2023/street_snap/11/0.jpg)
 ![](/images/2023/street_snap/11/1.jpg)
