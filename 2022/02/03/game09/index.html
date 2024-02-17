@@ -1,0 +1,84 @@
+<!DOCTYPE html><html lang="zh-Hans"><head><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="description" content="优秀的人遵守规则，顶尖的人创造规则"><title>《游戏学导论》- 第七、第八讲 | PJHubs</title><link rel="stylesheet" type="text/css" href="/css/style.css?v=1.0.0"><link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/normalize.css/normalize.min.css"><link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/purecss/build/pure-min.min.css"><link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/purecss/build/grids-responsive-min.css"><link rel="stylesheet" href="//cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css"><script type="text/javascript" src="//cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script><link rel="icon" mask="" sizes="any" href="/favicon.ico"><link rel="Shortcut Icon" type="image/x-icon" href="/favicon.ico"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><link rel="apple-touch-icon-precomposed" href="/apple-touch-icon.png"><script type="text/javascript" src="//cdn.jsdelivr.net/npm/clipboard/dist/clipboard.min.js"></script><script type="text/javascript" src="//cdn.jsdelivr.net/gh/codeseven/toastr/build/toastr.min.js"></script><link rel="stylesheet" href="//cdn.jsdelivr.net/gh/codeseven/toastr/build/toastr.min.css"><meta name="generator" content="Hexo 6.2.0"></head><body><div class="body_container"><div id="header"><div class="site-name"><h1 class="hidden">《游戏学导论》- 第七、第八讲</h1><a id="logo" href="/.">PJHubs</a><p class="description">优秀的人遵守规则，顶尖的人创造规则</p></div><div id="nav-menu"><a class="current" href="/."><i class="fa undefined"> 文章</i></a><a href="/archives/"><i class="fa undefined"> 总览</i></a><a href="/photograph/"><i class="fa undefined"> 摄影</i></a><a href="/about/"><i class="fa undefined"> 关于</i></a></div></div><div class="pure-g" id="layout"><div class="pure-u-1 pure-u-md-3-4"><div class="content_container"><div class="post"><h1 class="post-title">《游戏学导论》- 第七、第八讲</h1><div class="post-meta">2022-02-03</div><div class="post-content"><p><img src="/images/qiniu_img/20220204000016.png"></p>
+<p>今天这两次课主要关注在游戏在前期设计阶段如何进行孵化，首先是如何拆分一个游戏体验的生命周期，各个节点都分别负责什么，做了什么；其次是讨论了下关于游戏交互；最后是分析了游戏框架，以及如何利用整个框架概念去完善游戏。整体而言我觉得这两次课有点偏学术化，如果我当初是在学校里上的课一定会翘的。</p>
+<h2 id="游戏剧本"><a href="#游戏剧本" class="headerlink" title="游戏剧本"></a>游戏剧本</h2><p>在展开游戏剧本相关的内容前，老师先让我们确定什么是“结构”。结构是防止摔倒的拐杖，摩天大楼的钢筋，结构能让文案策划再最开始的阶段看到剧本的整体轮廓，而且要先确定结构再开始写剧本。这点我之前做的相当不好，就单从博客文章来说，如果不是有意识到这篇文章会写好几天我是肯定不会先列出大纲结构再填充内容，经常性导致写到后面因为文章键入时间太长引起的疲惫感草草了事。</p>
+<p>结构的种类在目前市面上有中国的“起承转合”，日本的“序破急”，西洋的“三幕式结构”，通过老师给的图可以看出人类文明的共性。随后再次祭出《隐形守护者》经典作品，通过该游戏套了十分钟的结构。</p>
+<p><img src="/images/qiniu_img/20220203221312.png"></p>
+<p>在设计或编写剧本时，有几个前提需要注意：</p>
+<ul>
+<li>谁是主要角色</li>
+<li>谁是对手</li>
+<li>他们之间为什么冲突</li>
+<li>冲突的结果会带来什么改变</li>
+<li>主角需要采取哪些手段才能达成这种改变</li>
+</ul>
+<p>这本质上也是让我们在设计游戏之前先想好具体的“纠缠”相关方，好为后面的具体情节安排好穿插的故事。回到上图中给到的框架，先来看“开端”部分，其目的在于传达游戏的目的，给玩家创造游戏的动机，传达游戏的玩法，传达这是什么样的游戏。在这个环节中吸引玩家的方法主要有两种：受动型和开拓性。</p>
+<p>其中受动型是主角处在日常世界下，没有能动的想完成某事，可能会出现“因为恋人、家人或者国家被害，要复仇所以…”，而开拓型的主角有能动的想完成某事，常用于任务型游戏，推理类或恐怖类等等。老师还分享了一个有趣的“救猫咪”法则，“不管多么让人难以带入情感的角色，只要让他在开头奋不顾身救下一只即将被车轮碾压的小猫，你就会神奇的发现他将成为容易带入感情的角色。”。这个法则我第一次感受是也是在隐形守护者里胡蜂被老师推出门外导致游戏三分钟结束的，就因为这一次结束瞬间提起了我对其的兴趣。</p>
+<p>高潮的目的主要是让游戏达到目的瞬间，同时也是整个游戏体验流程中剧烈、兴奋、纠葛的最高峰、对立的最高峰，通往高潮的过程一定要有趣，如果我们设计了打败最终 boss 是游戏的高潮，那么在打败最终 boss 前尽量制作出所有角色总动员的情景，来突出高潮的过程是有趣的。</p>
+<p>通往高潮的过程可以通过设定游戏失败，或者使用以下几种章节模式：达成游戏目的的章节、推进剧本的章节、加深剧本主题的章节、偏离游戏本来目的的额外章节。这几个章节模式从字面意思上都能看出具体意思，也就不展开了。如果我们想要通过安排冲突的出现来刺激通往高潮的紧张感，可以用人与人之间的冲突、人与自然的冲突或自己与自己的冲突。其中人与人之间的冲突里与对手的冲突中，需要注意成为主角的对手一定不可以是平凡之辈，需要给它塑造特殊的性格，要坚持反派的道理，拼命的反对主角，性格可以单纯、直接，越是如此来自反派的压力、反动力越大，这里老师给了意见“没有像样的敌人，没有势均力敌的对手，主角与反派的斗争毫无乐趣”。</p>
+<p>结局部分主要是向玩家传达游戏目的达成后产生了什么结果。其中结局有完结型、开放型、续作型以及大量使用的游戏结束设定和重玩。</p>
+<p>讨论完了游戏框架就进入到了游戏内容表达和描述环节。表达方式的不同给玩家的感受完全不同，善于表达式传达游戏感情的必备元素，对发生的一件事用不同的文字去表达可以有着千奇百怪的细节，给到玩家的感受也不同，这里引出了“游戏文本”，游戏文本由台词、旁白和指示构成。旁白的作用在游戏中有阐述事实、表示视觉、时间、心理或感情，甚至是游戏里特有的旁白表达方式，比如场面一度很尴尬，在游戏文本中使用一串省略号就附着在对应角色之上就可以很好的让玩家感受到尴尬感。</p>
+<p>关于“指示”，老师给到的主要用处在于对游戏角色场景构成道具的指示，如下图中对角色和场景使用了不同的标签词进行替代，降低了团队中其他成员对角色或场景上下文的理解成本。</p>
+<p><img src="/images/qiniu_img/20220203231038.png"></p>
+<p>游戏文本的最大特征是选项，而选项天然具备交互性，恰好游戏之所以是游戏，也正是因为交互性。选项是让游戏产生交互的最佳策略，可以强行将玩家拉入游戏的世界，因为一旦玩家在游戏中触发了选项，只要不做出选择游戏进程将停滞。这里我放个课上的例子：</p>
+<p><img src="/images/qiniu_img/20220203231431.png"></p>
+<p>上图中所说“人对参与性的重视，以及对自己出力导致世界某个事件改变满足感”，仔细想想这句话背后所隐喻的东西非常之正确。现在我之所以不喜欢做 app 就因为我无法从做 app 这件事里得到满足感，甚至这部分满足感都没出去骑一次车来得大，所以周末大部分的时间我都很喜欢去骑车，去感受大自然的美好。</p>
+<p>关于选项的设计有三点需要注意，明确选择的基准；设置合理性选项；设置每个选项都值得思考的选项。</p>
+<h2 id="游戏设计思想"><a href="#游戏设计思想" class="headerlink" title="游戏设计思想"></a>游戏设计思想</h2><p>第七次课的主题重新封装了下，因为这节课老师主要通过介绍并使用几大框架来引导我们在游戏设计阶段过程中对细节问题的把控。先来搞明白两个问题：</p>
+<ul>
+<li>什么是规则问题？</li>
+<li>什么是机制问题？</li>
+</ul>
+<p>规则如果没有问题，是否等于机制也没有问题？老师引入了几个法律中看上去冲突的例子来说明。介绍了 FDD 框架，由“形式”、“戏剧”和“动态”组件，这里的形式主要是区分游戏与其它媒体，形式包括规则、资源和界限；四元法框架，由“机制”、“美学”、“技术”和“剧情”组成，其中机制指的是玩家和游戏互动的规则，美学指的是游戏如何被五感接受，例如游戏的包装盒封面，剧情指的是游戏中的叙事，在四元法中玩家最可见的部分是美学，最不可见的部分是技术，所以美学的重要性可想而知。</p>
+<p>本次课重点介绍的是“分层四元法”，从名字上可能认为是四元法的升级版，但本质上是多种游戏分析框架的结合和拓展，由内嵌层、动态层和文化层组成，内嵌层主要是从制作团队或设计师视角去看，动态层是用户视角，关注游戏过程中的行为，而文化层则是群体视角，关注游戏与社会的关系。分层四元法可以帮助理解创造游戏的各类要素，与计算机网络中的分层很类似。</p>
+<h3 id="内嵌层"><a href="#内嵌层" class="headerlink" title="内嵌层"></a>内嵌层</h3><p>内嵌层可以细分为以下几点:</p>
+<ul>
+<li>机制</li>
+<li>美学<ul>
+<li>主要是情感和五感的美学感受。</li>
+</ul>
+</li>
+<li>技术<ul>
+<li>数值策划和系统策划的核心部分。</li>
+</ul>
+</li>
+<li>叙事<ul>
+<li>文案策划的核心内容。</li>
+<li>目标<ul>
+<li>唤起情感。</li>
+<li>动机和理由：操作情绪，行为合理正当化。</li>
+<li>进程和奖励。</li>
+<li>加强机制。比如旅行串串，本质是 2048，但因为要卖串串所以 2048 的机制很合适。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>目的<ul>
+<li>就是玩家在游戏中的目的，玩家想要达成什么。目标的定义必须十分清晰，可读可视，易于理解，比如在一篇漆黑的黑夜中，善于利用光源来给玩家指路。</li>
+<li>目标的紧要性：对于目标的紧要性，用标识吸引玩家去达成（视角上进行标记）</li>
+<li>目标的重要性：主线、支线。针对不同玩家的重要性不同（视觉上进行标记）</li>
+</ul>
+</li>
+<li>玩家关系<ul>
+<li>定义玩家之间如何战斗与协作。</li>
+<li><img src="/images/qiniu_img/20220203233314.png"></li>
+<li>目前玩家之间的关系有且仅有以上 7 种。玩家关系和角色由目标定义，而游戏的核心机制与规则 ，又由玩家关系定义。</li>
+</ul>
+</li>
+<li>规则<ul>
+<li>除了明文规则，也有按暗示规则。</li>
+</ul>
+</li>
+<li>边界</li>
+<li>资源<ul>
+<li>游戏驱动过程中的价值物品。</li>
+</ul>
+</li>
+<li>空间</li>
+<li>表格</li>
+</ul>
+<h3 id="动态层"><a href="#动态层" class="headerlink" title="动态层"></a>动态层</h3><p>在游戏游玩过程中才出现。需要设计有意义的玩法，考虑可识别和相互协调性。游戏是对现实的模拟，并且玩家迟早会找出游戏的最优解并功利化的利用最优解，其结果可能有直接结果、任务结果、积累结果和最终结果四种。</p>
+<p>动态美学主要考虑“过程美学”和“环境美学”。过程美学指的是游戏中由代码生成的音乐和美术，环境美学指的是游戏环境视觉和游戏环境声音。在体贴玩家这一点上，在有余力前提下可考虑针对色盲、光敏感等一类人群的完善或优化。动态叙事包括互动叙事和涌现叙事，互动叙事大家都清楚，涌动叙事指的是比如剧本杀、明星大侦探之类的游戏向体验。</p>
+<h3 id="文化层"><a href="#文化层" class="headerlink" title="文化层"></a>文化层</h3><p>上来先给大家抛一个沉重的话题“你做的游戏能够带给社会什么？”，这又引出了游戏策划的责任，思考将你的游戏推广到超越游戏本身的意义；尊重玩家，尊重他们体验和游玩我们的作品所付出的时间与精力。如果你有希望表达的内容，思考下是否应该用游戏的形式去表达。</p>
+<p>还引出了一个新的概念“游戏性态度”，努力让玩家保持玩家的游戏性态度，就是尊重玩家，那不尊重玩家的表现都有什么呢？比如折磨式休息，每日打卡签到满足感；腐烂机制：长时间不登录就有损失。抵制这些不尊重玩家的机制，特别是互联网 app 的机制，互联网产品现在已经是摆烂姿态呈现在世人面前了，就别说互联网产品了，就现在的各种参差不齐的手机，在初始化系统时都能给你整出来一堆莫名其妙的配置，以及各种你根本无法控制的预装 app，甚至现在还出现了“预下载” app，它没进行下载但就是出现在了你的主屏上，点了还不能直接使用，得先下载，这是我十分不理解的操作，既然没下载那你为什么要出现在主屏上啊？！就冲这一点，华为是永远的垃圾。</p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>课程至此已过半，看安排已经是过去了较为枯燥的理论阶段，说实话我已经产生了疲倦感，不是对游戏学本身的疲倦，而是对这老师的讲课方式和内容安排，有些偏离我的预期，虽然每一次课的内容都还算精彩，但每次写总给时看着越来越空洞的笔记我甚至不太记得当时到底精彩的地方在哪。接下来的另一半课程应该会更有趣一些，也希望能够实打实一些。</p>
+</div><div class="tags"><a href="/tags/%E6%84%9F%E6%83%B3/"><i class="fa fa-tag"></i>感想</a><a href="/tags/%E6%B8%B8%E6%88%8F/"><i class="fa fa-tag"></i>游戏</a></div><div class="post-nav"><a class="pre" href="/2022/02/04/game10/">《游戏学导论》- 第九、第十讲</a><a class="next" href="/2022/02/01/game08/">《游戏学导论》- 第五、第六讲</a></div></div></div></div><div class="pure-u-1-4 hidden_mid_and_down"><div id="sidebar"><div class="widget"><div class="widget-title"><i class="fa fa-star-o"> 标签</i></div><div class="tagcloud"><a href="/tags/%E6%80%BB%E7%BB%93/" style="font-size: 15px;">总结</a> <a href="/tags/iOS/" style="font-size: 15px;">iOS</a> <a href="/tags/%E6%AF%94%E8%B5%9B/" style="font-size: 15px;">比赛</a> <a href="/tags/Cocos/" style="font-size: 15px;">Cocos</a> <a href="/tags/%E6%B8%B8%E6%88%8F%E5%BC%80%E5%8F%91/" style="font-size: 15px;">游戏开发</a> <a href="/tags/DiDi/" style="font-size: 15px;">DiDi</a> <a href="/tags/internship/" style="font-size: 15px;">internship</a> <a href="/tags/Flutter/" style="font-size: 15px;">Flutter</a> <a href="/tags/%E8%B7%A8%E5%B9%B3%E5%8F%B0/" style="font-size: 15px;">跨平台</a> <a href="/tags/Audio/" style="font-size: 15px;">Audio</a> <a href="/tags/Ping/" style="font-size: 15px;">Ping</a> <a href="/tags/%E5%BC%B9%E5%B9%95/" style="font-size: 15px;">弹幕</a> <a href="/tags/%E9%A1%B5%E9%9D%A2%E4%BC%A0%E5%80%BC/" style="font-size: 15px;">页面传值</a> <a href="/tags/HUD/" style="font-size: 15px;">HUD</a> <a href="/tags/Swift/" style="font-size: 15px;">Swift</a> <a href="/tags/%E5%BC%80%E6%BA%90/" style="font-size: 15px;">开源</a> <a href="/tags/%E9%A1%B9%E7%9B%AE/" style="font-size: 15px;">项目</a> <a href="/tags/PhotosKit/" style="font-size: 15px;">PhotosKit</a> <a href="/tags/React-Native/" style="font-size: 15px;">React-Native</a> <a href="/tags/swift/" style="font-size: 15px;">swift</a> <a href="/tags/Weex/" style="font-size: 15px;">Weex</a> <a href="/tags/Apple/" style="font-size: 15px;">Apple</a> <a href="/tags/%E5%8D%9A%E5%AE%A2/" style="font-size: 15px;">博客</a> <a href="/tags/%E4%BA%91/" style="font-size: 15px;">云</a> <a href="/tags/%E6%84%9F%E6%83%B3/" style="font-size: 15px;">感想</a> <a href="/tags/%E9%9A%8F%E6%83%B3/" style="font-size: 15px;">随想</a> <a href="/tags/%E5%AD%97%E8%8A%82%E8%B7%B3%E5%8A%A8/" style="font-size: 15px;">字节跳动</a> <a href="/tags/%E6%9C%88%E5%BA%A6%E6%80%BB%E7%BB%93/" style="font-size: 15px;">月度总结</a> <a href="/tags/%E9%9A%8F%E7%AC%94/" style="font-size: 15px;">随笔</a> <a href="/tags/CMake/" style="font-size: 15px;">CMake</a> <a href="/tags/makefile/" style="font-size: 15px;">makefile</a> <a href="/tags/%E7%BC%96%E8%AF%91/" style="font-size: 15px;">编译</a> <a href="/tags/CodeLab/" style="font-size: 15px;">CodeLab</a> <a href="/tags/%E5%B0%91%E5%84%BF%E7%BC%96%E7%A8%8B/" style="font-size: 15px;">少儿编程</a> <a href="/tags/%E6%88%91%E7%9A%84%E5%A4%A7%E5%AD%A6/" style="font-size: 15px;">我的大学</a> <a href="/tags/%E5%9B%9E%E5%BF%86%E5%BD%95/" style="font-size: 15px;">回忆录</a> <a href="/tags/crash/" style="font-size: 15px;">crash</a> <a href="/tags/%E9%AA%91%E8%A1%8C/" style="font-size: 15px;">骑行</a> <a href="/tags/%E8%87%AA%E8%A1%8C%E8%BD%A6/" style="font-size: 15px;">自行车</a> <a href="/tags/fcc/" style="font-size: 15px;">fcc</a> <a href="/tags/%E5%88%86%E4%BA%AB/" style="font-size: 15px;">分享</a> <a href="/tags/%E6%B8%B8%E6%88%8F/" style="font-size: 15px;">游戏</a> <a href="/tags/ifLab/" style="font-size: 15px;">ifLab</a> <a href="/tags/%E6%8A%80%E6%9C%AF/" style="font-size: 15px;">技术</a> <a href="/tags/%E5%BB%BA%E7%AB%99/" style="font-size: 15px;">建站</a> <a href="/tags/%E9%9D%A2%E8%AF%95/" style="font-size: 15px;">面试</a> <a href="/tags/%E7%A7%9F%E6%88%BF/" style="font-size: 15px;">租房</a> <a href="/tags/iBistu/" style="font-size: 15px;">iBistu</a> <a href="/tags/macOS/" style="font-size: 15px;">macOS</a> <a href="/tags/%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86/" style="font-size: 15px;">编译原理</a> <a href="/tags/%E7%9D%A1%E9%AD%94/" style="font-size: 15px;">睡魔</a> <a href="/tags/Netflix/" style="font-size: 15px;">Netflix</a> <a href="/tags/%E4%BD%9C%E5%93%81/" style="font-size: 15px;">作品</a> <a href="/tags/%E5%BC%80%E5%8F%91%E6%97%A5%E5%BF%97/" style="font-size: 15px;">开发日志</a> <a href="/tags/App/" style="font-size: 15px;">App</a> <a href="/tags/%E4%BA%A7%E5%93%81%E6%80%9D%E8%80%83/" style="font-size: 15px;">产品思考</a> <a href="/tags/%E6%91%84%E5%BD%B1/" style="font-size: 15px;">摄影</a> <a href="/tags/Playground/" style="font-size: 15px;">Playground</a> <a href="/tags/%E5%B7%A5%E4%BD%9C/" style="font-size: 15px;">工作</a> <a href="/tags/SwiftUI/" style="font-size: 15px;">SwiftUI</a> <a href="/tags/%E5%BD%B1%E8%A7%86%E5%89%A7/" style="font-size: 15px;">影视剧</a> <a href="/tags/WWDC/" style="font-size: 15px;">WWDC</a> <a href="/tags/%E5%AD%97%E8%8A%82/" style="font-size: 15px;">字节</a> <a href="/tags/%E8%B7%91%E6%AD%A5/" style="font-size: 15px;">跑步</a> <a href="/tags/%E9%A9%AC%E6%8B%89%E6%9D%BE/" style="font-size: 15px;">马拉松</a> <a href="/tags/%E8%BF%90%E5%8A%A8/" style="font-size: 15px;">运动</a> <a href="/tags/%E8%B6%8A%E9%87%8E%E8%B7%91/" style="font-size: 15px;">越野跑</a> <a href="/tags/%E6%84%9F%E8%B0%A2/" style="font-size: 15px;">感谢</a> <a href="/tags/%E6%BB%B4%E6%BB%B4/" style="font-size: 15px;">滴滴</a> <a href="/tags/%E6%80%9D%E8%80%83/" style="font-size: 15px;">思考</a> <a href="/tags/%E6%97%85%E8%A1%8C/" style="font-size: 15px;">旅行</a> <a href="/tags/%E6%84%9F%E6%80%A7/" style="font-size: 15px;">感性</a> <a href="/tags/%E9%9D%92%E5%B2%9B/" style="font-size: 15px;">青岛</a> <a href="/tags/%E5%BE%92%E6%AD%A5/" style="font-size: 15px;">徒步</a> <a href="/tags/Unity/" style="font-size: 15px;">Unity</a> <a href="/tags/Android/" style="font-size: 15px;">Android</a> <a href="/tags/WatchOS/" style="font-size: 15px;">WatchOS</a> <a href="/tags/Combine/" style="font-size: 15px;">Combine</a> <a href="/tags/django/" style="font-size: 15px;">django</a> <a href="/tags/%E5%AE%9E%E4%B9%A0/" style="font-size: 15px;">实习</a> <a href="/tags/%E5%BE%AE%E4%BF%A1/" style="font-size: 15px;">微信</a> <a href="/tags/%E5%B0%8F%E7%A8%8B%E5%BA%8F/" style="font-size: 15px;">小程序</a> <a href="/tags/UML/" style="font-size: 15px;">UML</a> <a href="/tags/%E6%90%9E%E4%BA%8B%E6%83%85%E7%B3%BB%E5%88%97/" style="font-size: 15px;">搞事情系列</a> <a href="/tags/%E4%B8%83%E7%89%9B%E4%BA%91/" style="font-size: 15px;">七牛云</a> <a href="/tags/Java/" style="font-size: 15px;">Java</a> <a href="/tags/Spring/" style="font-size: 15px;">Spring</a> <a href="/tags/Spring-MVC/" style="font-size: 15px;">Spring MVC</a> <a href="/tags/Mybatis/" style="font-size: 15px;">Mybatis</a> <a href="/tags/Junit/" style="font-size: 15px;">Junit</a> <a href="/tags/log4j/" style="font-size: 15px;">log4j</a> <a href="/tags/mysql/" style="font-size: 15px;">mysql</a> <a href="/tags/%E5%9B%BD%E9%99%85%E5%8C%96/" style="font-size: 15px;">国际化</a> <a href="/tags/%E6%BC%94%E8%AE%B2/" style="font-size: 15px;">演讲</a> <a href="/tags/%E5%8D%B3%E6%97%B6%E9%80%9A%E8%AE%AF/" style="font-size: 15px;">即时通讯</a> <a href="/tags/side-project/" style="font-size: 15px;">side project</a> <a href="/tags/Qt/" style="font-size: 15px;">Qt</a> <a href="/tags/C-%E8%B7%A8%E7%AB%AF/" style="font-size: 15px;">C++ 跨端</a> <a href="/tags/C/" style="font-size: 15px;">C++</a> <a href="/tags/%E5%93%8D%E5%BA%94%E5%BC%8F/" style="font-size: 15px;">响应式</a></div></div><div class="widget"><div class="widget-title"><i class="fa fa-external-link"> 联系我</i></div><ul></ul><a href="https://github.com/windstormeye" title="GitHub - PJHubs" target="_blank">GitHub - PJHubs</a><ul></ul><a href="https://space.bilibili.com/25392474" title="BiliBili - PJHubs" target="_blank">BiliBili - PJHubs</a><ul></ul><a href="https://twitter.com/wengpeijun" title="Twitter - PJHubs" target="_blank">Twitter - PJHubs</a><ul></ul><a href="https://weibo.com/3307534462" title="微博 - PJHubs" target="_blank">微博 - PJHubs</a><ul></ul><a href="https://www.xiaohongshu.com/user/profile/5f2cd0360000000001001470" title="小红书 - PJHusb" target="_blank">小红书 - PJHusb</a><ul></ul><a href="." title="微信 - pjhubscom" target="_blank">微信 - pjhubscom</a><ul></ul><a href="." title="邮箱 - 877302410@qq.com" target="_blank">邮箱 - 877302410@qq.com</a></div></div></div><div class="pure-u-1 pure-u-md-3-4"><div id="footer">Copyright © 2024 PJHubs</div></div></div><script type="text/javascript" src="//cdn.jsdelivr.net/gh/fancyapps/fancybox/dist/jquery.fancybox.min.js" async></script><script type="text/javascript" src="/js/fancybox.js?v=1.0.0" async></script><link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/gh/fancyapps/fancybox/dist/jquery.fancybox.min.css"><script type="text/javascript" src="/js/copycode.js" successtext="Copy Successed!"></script><link rel="stylesheet" type="text/css" href="/css/copycode.css"><script type="text/javascript" src="/js/codeblock-resizer.js?v=1.0.0"></script><script type="text/javascript" src="/js/smartresize.js?v=1.0.0"></script></div></body></html>

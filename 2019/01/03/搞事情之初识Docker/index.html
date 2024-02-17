@@ -1,0 +1,171 @@
+<!DOCTYPE html><html lang="zh-Hans"><head><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="description" content="优秀的人遵守规则，顶尖的人创造规则"><title>搞事情之初识 Docker 与尝试构建 Swift | PJHubs</title><link rel="stylesheet" type="text/css" href="/css/style.css?v=1.0.0"><link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/normalize.css/normalize.min.css"><link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/purecss/build/pure-min.min.css"><link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/purecss/build/grids-responsive-min.css"><link rel="stylesheet" href="//cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css"><script type="text/javascript" src="//cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script><link rel="icon" mask="" sizes="any" href="/favicon.ico"><link rel="Shortcut Icon" type="image/x-icon" href="/favicon.ico"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><link rel="apple-touch-icon-precomposed" href="/apple-touch-icon.png"><script type="text/javascript" src="//cdn.jsdelivr.net/npm/clipboard/dist/clipboard.min.js"></script><script type="text/javascript" src="//cdn.jsdelivr.net/gh/codeseven/toastr/build/toastr.min.js"></script><link rel="stylesheet" href="//cdn.jsdelivr.net/gh/codeseven/toastr/build/toastr.min.css"><meta name="generator" content="Hexo 6.2.0"></head><body><div class="body_container"><div id="header"><div class="site-name"><h1 class="hidden">搞事情之初识 Docker 与尝试构建 Swift</h1><a id="logo" href="/.">PJHubs</a><p class="description">优秀的人遵守规则，顶尖的人创造规则</p></div><div id="nav-menu"><a class="current" href="/."><i class="fa undefined"> 文章</i></a><a href="/archives/"><i class="fa undefined"> 总览</i></a><a href="/photograph/"><i class="fa undefined"> 摄影</i></a><a href="/about/"><i class="fa undefined"> 关于</i></a></div></div><div class="pure-g" id="layout"><div class="pure-u-1 pure-u-md-3-4"><div class="content_container"><div class="post"><h1 class="post-title">搞事情之初识 Docker 与尝试构建 Swift</h1><div class="post-meta">2019-01-03</div><div class="post-content"><blockquote>
+<p>搞事情系列文章主要是为了继续延续自己的 “T” 字形战略所做，同时也代表着毕设相关内容的学习总结。本文章是 <code>Docker</code> 部分的第一篇，主要是给自己解释与 <code>Docker</code> 有关的内容。</p>
+</blockquote>
+<h2 id="虚拟化和容器化技术"><a href="#虚拟化和容器化技术" class="headerlink" title="虚拟化和容器化技术"></a>虚拟化和容器化技术</h2><h3 id="虚拟化技术"><a href="#虚拟化技术" class="headerlink" title="虚拟化技术"></a>虚拟化技术</h3><p>虚拟化技术是一种将计算机物理资源进行抽象、转换为虚拟的计算机资源提供给程序使用的技术。这些资源包括了 CPU 提供的运算控制资源，硬盘提供的数据存储资源，网卡提供的网络传输资源等。</p>
+<h4 id="跨平台"><a href="#跨平台" class="headerlink" title="跨平台"></a>跨平台</h4><p>保证程序跨平台兼容，也就是要保证操作系统或物理硬件所提供的接口调用方式一致，程序便不需要兼容不同硬件平台的接口。此时突然想到，使用 <code>Swift</code> 编写 iOS app 时，构建出包后总是会带上 <code>Swift</code> 的整个运行时，以保证随着 iOS 系统版本的升级 app 的正常运行，因其 <code>ABI</code> 并未稳定，还不能内置在操作系统中。</p>
+<h4 id="资源管理"><a href="#资源管理" class="headerlink" title="资源管理"></a>资源管理</h4><p>可将虚拟化技术运用于计算机资源的管理，其中最实用的就是“虚拟内存”虚拟化技术能够提高计算机资源的使用率，是指利用虚拟化，可以将原来程序用不到的一些资源拿出来，分享给另外一些程序，让计算机资源不被浪费。</p>
+<h3 id="虚拟化技术的分类"><a href="#虚拟化技术的分类" class="headerlink" title="虚拟化技术的分类"></a>虚拟化技术的分类</h3><p>主要分为两大类：<strong>硬件虚拟化</strong>和<strong>软件虚拟化</strong>。</p>
+<ul>
+<li><p>硬件虚拟化：比如假设 iOS 基于的 arm 架构 CPU 能够运行基于 x86 架构的 macOS 应用程序，这是因为 CPU 能够将另外一个平台的指令集转换为自身的指令集执行（但实际上并不可能）。</p>
+</li>
+<li><p>软件虚拟化：在 2018 WWDC 中，宣布可以在 <code>UIKit</code> 层面提供一部分把 iOS app 转移到 macOS app 中的特性，可以理解为是 Apple 在 Xcode 层面协助开发者构建了迁移代码，帮开发者解决了不同平台指令的转换。也就是说，软件虚拟化实际上是通过一层夹杂在应用程序和硬件平台上的虚拟化实现软件来进行指令的转换。</p>
+</li>
+</ul>
+<p>其它虚拟化技术的分类：</p>
+<ul>
+<li><strong>平台虚拟化</strong>：在操作系统和硬件平台间搭建虚拟化设施，使得整个操作系统都运行在虚拟后的环境中。类似 <code>VMware</code>、<code>PD</code>；</li>
+<li><strong>应用程序虚拟化</strong>：在操作系统和应用程序间实现虚拟化，只让应用程序运行在虚拟化环境中。类似 <code>Python</code> 的虚拟环境；</li>
+<li><strong>内存虚拟化</strong>：将不相邻的内存区，甚至硬盘空间虚拟成统一连续的内存地址，即虚拟内存；</li>
+<li><strong>桌面虚拟化</strong>：让本地桌面程序利用远程计算机资源运行，达到控制远程计算机的目的。类似华为云的云桌面以及各种远程桌面控制软件，如 Teamviewer。</li>
+<li>……</li>
+</ul>
+<h3 id="虚拟机"><a href="#虚拟机" class="headerlink" title="虚拟机"></a>虚拟机</h3><p>虚拟机通常说法是通过一个<strong>虚拟机监视器( Virtual Machine Monitor )</strong> 的设施来隔离操作系统与硬件或应用程序和操作系统，以达到虚拟化的目的。这个虚拟机监视器，通常被称为：**<code>Hypervisor</code>**。</p>
+<p>虚拟机有一个永远都逃不掉的问题：性能低下。这种效率的低下有时候是无法容忍的，故真实的虚拟机程序常常不完全遵守 <code>Hypervisor</code> 的设计结构，而是引入一些其它技术来解决效率低下问题，比如解释执行、即时编译（Just In Time）运行机制，但这些技术的引入已不属于虚拟化的范畴了。</p>
+<h3 id="容器技术"><a href="#容器技术" class="headerlink" title="容器技术"></a>容器技术</h3><p>按分类或者实现方式来说，容器技术应该属于<strong>操作系统虚拟化</strong>，也就是在由操作系统提供虚拟化的支持。总的来说，容器技术指的是操作系统自身支持一些接口，能够让应用程序间可以互不干扰的独立运行，并能够对其在运行中所使用的资源进行干预。</p>
+<p>那这也不应该被称为“容器”呀？是的，这里所谓的容器指的是由于应用程序的运行被隔离在了一个独立的运行环境之中，这个独立的运行环境就好似一个容器，包裹了应用程序。</p>
+<p>容器这么火爆，火到一心扑在 iOS 上的我都要好好梳理一番，很重要的一个原因是其在运行性能上远超虚拟机等其它虚拟化实现，甚至在运行效率上与真实运行在物理平台的应用程序不相上下。但注意，容器技术并没有进行指令转换，运行爱容器中的应用程序自身必须支持在真实操作系统上运行，也就是必须遵守硬件平台的指令规则。</p>
+<p>曾经看到一篇文章说 <code>linux</code> <strong>内核命名空间</strong>的改进，直接推动了容器的最大化发展。</p>
+<blockquote>
+<p>利用内核命名空间，从进程 ID 到网络名称，一切都可在 Linux 内核中实现虚拟化。新增的用户命名空间“使得用户和组 ID 可以按命名空间进行映射。对于容器而言，这意味着用户和组可以在容器内部拥有执行某些操作的特权，而在容器外部则没有这种特权。”Linux 容器项目 (LXC) 还添加了用户亟需的一些工具、模板、库和语言绑定，从而推动了进步，改善了使用容器的用户体验。LXC 使得用户能够通过简单的命令行界面轻松地启动容器。（来源 <code>redhat</code> 官网）</p>
+</blockquote>
+<p>容器由于没有虚拟操作系统和虚拟机监视器这两个层次，大幅减少了应用程序带来的额外消耗。所以在容器中的应用程序其实完全运行在了宿主操作系统中，与其它真实运行在其中的应用程序在指令运行层面是完全没有任何区别的。</p>
+<h2 id="Docker-的核心组成"><a href="#Docker-的核心组成" class="headerlink" title="Docker 的核心组成"></a><code>Docker</code> 的核心组成</h2><h3 id="四大组成对象"><a href="#四大组成对象" class="headerlink" title="四大组成对象"></a>四大组成对象</h3><h4 id="镜像"><a href="#镜像" class="headerlink" title="镜像"></a>镜像</h4><p>可以理解为一个只读的文件包，其中包含了虚拟环境运行的最原始文件系统的内容。</p>
+<p>因为 <code>Docker</code> 采用 <code>AUFS</code> 作为底层文件系统的实现，实现了一种<strong>增量式</strong>的镜像结构。每次对镜像内容修改，<code>Docker</code> 都会将这些修改铸造成一个镜像层，而一个镜像本质上是由其下层所有的镜像层所组成的，而每一个镜像层单独拿出来，都可以与它之下的镜像层组成一个镜像。正是由于这种结构，<code>Docker</code> 的镜像本质上是无法被修改的，因为所以的镜像修改只会产生新的镜像，而不是更新原有的镜像。</p>
+<h4 id="容器"><a href="#容器" class="headerlink" title="容器"></a>容器</h4><p>在容器技术中，容器是用来隔离虚拟环境的基础设施，但在 <code>Docker</code> 中，被引申为隔离出来的虚拟环境。如果我们把镜像理解为类，则容器为实例对象。镜像内存放的是不可变化的东西，当以他们为基础的容器启动后，容器内也就成为类一个“活”的空间。</p>
+<p><code>Docker</code> 的容器应该有三项内容组成：</p>
+<ul>
+<li>一个 <code>Docker</code> 镜像；</li>
+<li>一个程序运行环境；</li>
+<li>一个指令集合。</li>
+</ul>
+<h4 id="网络"><a href="#网络" class="headerlink" title="网络"></a>网络</h4><p>在 <code>Docker</code> 中可对每个容器进行单独的网络配置，也可对各个容器间建立虚拟网络，将数个容器包裹其中，同时与其它网络环境隔离，并且 <code>Docker</code> 还能在容器中构造独立的 <code>DNS</code>，我们可以在不修改代码和配置的前提下直接迁移容器。</p>
+<h4 id="数据卷"><a href="#数据卷" class="headerlink" title="数据卷"></a>数据卷</h4><p>在以往的虚拟机中，大部分情况下都直接使用虚拟机的文件系统作为应用数据等文件的存储位置，但并未是完全安全的，当虚拟机或容器出现问题导致文件系统无法使用时，虽可直接通过快速的镜像进行重制文件系统以至于恢复，但数据也就丢失了。</p>
+<p>为保证数据的独立性，通常会单独挂在一个文件系统来存放数据，得意与 <code>Docker</code> 底层的 <code>Union File System</code> 技术，我们可以不用管类似于搞定挂载在不同宿主机中实现的方法、考虑挂载文件系统兼容性、虚拟机操作系统配置等问题。</p>
+<h2 id="镜像与容器"><a href="#镜像与容器" class="headerlink" title="镜像与容器"></a>镜像与容器</h2><h3 id="Docker-镜像"><a href="#Docker-镜像" class="headerlink" title="Docker 镜像"></a><code>Docker</code> 镜像</h3><p>所有的 <code>Docker</code> 镜像都是按照 <code>Docker</code> 所设定的逻辑打包的，也是收到 <code>Docker Engine</code> 所控制。常见的虚拟机镜像都是由其它用户通过各自熟悉的方式打包成镜像文件，公布到网上再被其它用户所下载后，恢复到虚拟机中的文件系统中，但 <code>Docker</code> 的镜像必须通过 <code>Docker</code> 来打包，也必须通过 <code>Docker</code> 下载或导入后使用，不能单独直接恢复成容器中的文件系统。这样，我们就可以直接在服务器之间传递 <code>Docker</code> 镜像，并配合 <code>Docker</code> 自身对镜像的管理功能，使得在不同的机器中传递和共享变得非常方便。</p>
+<p>每一个记录文件系统修改的镜像层 <code>Docker</code> 都会根据它们的信息生产一个64位的 <code>hash</code> 码，正是因为这个编码，可以能够区分不同的镜像层并保证内容和编码是一致的，我们可以在镜像之间共享镜像层。当 <code>A</code> 镜像依赖了 <code>C</code> 镜像，且 <code>B</code> 镜像也依赖了 <code>C</code> 镜像，在实际使用过程中，<code>A</code> 和 <code>B</code> 两个镜像是可以公用 <code>C</code> 镜像内部的镜像层的。</p>
+<h4 id="查看镜像"><a href="#查看镜像" class="headerlink" title="查看镜像"></a>查看镜像</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ docker images</span><br></pre></td></tr></table></figure>
+
+<h4 id="镜像命名"><a href="#镜像命名" class="headerlink" title="镜像命名"></a>镜像命名</h4><p>可以分为三部分：</p>
+<ul>
+<li><strong>username</strong>：一般都是镜像创作者，但如果不写则是由官方进行维护。</li>
+<li><strong>repository</strong>：一般都是该镜像中所包含的软件名。但镜像名归镜像名，镜像归镜像，<code>Docker</code> 对容器的设计和定义是微型容器而不是庞大臃肿的完整环境，所有通常只会在一个容器中运行一个应用程序，能够大幅降低程序之间互相的影响，利用容器技术控制每个程序所使用的资源。</li>
+<li><strong>tag</strong>：</li>
+</ul>
+<h4 id="主进程"><a href="#主进程" class="headerlink" title="主进程"></a>主进程</h4><p>在 <code>Docker</code> 的设计中，容器的生命周期与容器中 <code>PID</code> 为 1 这个进程由密切的关系，容器的启动本质上可以理解为这个进程的启动，而容器的停止也就意味着这个进程的停止。</p>
+<h3 id="写时复制"><a href="#写时复制" class="headerlink" title="写时复制"></a>写时复制</h3><p>通过镜像运行容器时并不是立即把镜像里所有内容拷贝到容器所运行的沙盒文件系统中，而是利用 <code>UnionFS</code> 将镜像以只读方式挂载到沙盒文件系统中，只有在容器对文件的修改时，修改才会体现到沙盒环境上。</p>
+<h2 id="从镜像仓库获得镜像"><a href="#从镜像仓库获得镜像" class="headerlink" title="从镜像仓库获得镜像"></a>从镜像仓库获得镜像</h2><h3 id="获取镜像"><a href="#获取镜像" class="headerlink" title="获取镜像"></a>获取镜像</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker pull ubuntu</span><br></pre></td></tr></table></figure>
+
+<h3 id="获取镜像更详细的信息"><a href="#获取镜像更详细的信息" class="headerlink" title="获取镜像更详细的信息"></a>获取镜像更详细的信息</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker inspect ubuntu</span><br></pre></td></tr></table></figure>
+
+<h3 id="搜索镜像"><a href="#搜索镜像" class="headerlink" title="搜索镜像"></a>搜索镜像</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker search django</span><br></pre></td></tr></table></figure>
+
+<h3 id="删除镜像"><a href="#删除镜像" class="headerlink" title="删除镜像"></a>删除镜像</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">docker rmi ubuntu</span><br></pre></td></tr></table></figure>
+
+<h2 id="运行和管理容器"><a href="#运行和管理容器" class="headerlink" title="运行和管理容器"></a>运行和管理容器</h2><h3 id="容器的生命周期"><a href="#容器的生命周期" class="headerlink" title="容器的生命周期"></a>容器的生命周期</h3><ul>
+<li><strong>Created</strong></li>
+<li><strong>Running</strong></li>
+<li><strong>Paused</strong></li>
+<li><strong>Stopped</strong>：容器的停止状态下，占用的资源和沙盒环境都存在，只是容器中的应用程序均已停止</li>
+<li><strong>Deleted</strong></li>
+</ul>
+<h4 id="创建容器"><a href="#创建容器" class="headerlink" title="创建容器"></a>创建容器</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ docker create ubuntu</span><br></pre></td></tr></table></figure>
+<p>如果我们之前选择的 <code>docker pull</code> 容器并不是默认的 <code>latest</code> 版本，而是手动选择了一个版本，那镜像的名字将会比如 <code>nginx:1.12</code>，对于后续的操作都十分的不方便，对此，我们可以采用 <code>--name</code> 进行重命名：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ docker create --name nginx nginx:1.12</span><br></pre></td></tr></table></figure>
+
+<h4 id="启动容器"><a href="#启动容器" class="headerlink" title="启动容器"></a>启动容器</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ docker start ubuntu</span><br></pre></td></tr></table></figure>
+
+<p>通过 <code>docker run</code> 可将上述两个命令进行合并：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ docker run --name nginx nginx:1.12</span><br></pre></td></tr></table></figure>
+
+<p>以上命令跑起来的容器运行都是运行在前台，如果我们想要容器运行在后台，可以通过 <code>-d</code>，其是 <code>-detach</code> 的简称，告诉 <code>Docker</code> 在启动后将程序和控制进行分离。：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ docker run -d ubuntu </span><br></pre></td></tr></table></figure>
+
+<h4 id="管理容器"><a href="#管理容器" class="headerlink" title="管理容器"></a>管理容器</h4><p>列出运行中的所有容器</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ docker ps </span><br></pre></td></tr></table></figure>
+
+<p>列出所有容器</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ docker ps -a/-all</span><br></pre></td></tr></table></figure>
+
+<p>其中打印出的列表需要注意的是 <strong>STATUS</strong> 字段，常见的状态表示有三种：</p>
+<ul>
+<li><strong>Create</strong>：容器已创建，没有启动过；</li>
+<li>**Up[ Time ]**：容器正在运行，[ Time ] 代表从开始运行到查看时的时间；</li>
+<li>**Exited([ Code ]) [ Time ]**：容器已结束运行，[ Code ] 表示容器结束运行时，主程序返回的程序退出码，而 [ Time ] 则表示容器结束到查看时的时间。</li>
+</ul>
+<h4 id="停止和删除容器"><a href="#停止和删除容器" class="headerlink" title="停止和删除容器"></a>停止和删除容器</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ docker stop ubuntu</span><br></pre></td></tr></table></figure>
+<p>容器停止后，其维持的文件系统沙盒环境会一直保存，内部被修改的内容也会被保留。通过 <code>docker start</code> 将容器继续启动。</p>
+<p>当需要把容器完全删除容器，可以使用：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ docker rm ubuntu</span><br></pre></td></tr></table></figure>
+<p>但在运行中的容器默认情况下是不能被删除的，但我们可以通过以下命令进行删除：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ docker rm -f ubuntu</span><br></pre></td></tr></table></figure>
+
+<h4 id="随时删除容器"><a href="#随时删除容器" class="headerlink" title="随时删除容器"></a>随时删除容器</h4><p><code>Docker</code> 与其它虚拟机不同，其所定位的轻量级设计讲究随用随开，随关随删，当我们短时间内不需要使用容器时，最佳的做法是删除它而不是仅仅停止它。</p>
+<p>如果我们要对程序做一些环境配置，完全可以直接将这些配置打包至一个新的镜像中，下次直接使用该镜像创建容器即可。对于一些重要的文件资料，不能随着容器的删除而删除，可以使用 <code>Docker</code> 中的<strong>数据卷</strong>来单独存放。</p>
+<h3 id="进入容器"><a href="#进入容器" class="headerlink" title="进入容器"></a>进入容器</h3><h4 id="直接创建，进入"><a href="#直接创建，进入" class="headerlink" title="直接创建，进入"></a>直接创建，进入</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ docker run -it --name ubuntu ubuntu </span><br></pre></td></tr></table></figure>
+
+<h4 id="已经创建完成，进入"><a href="#已经创建完成，进入" class="headerlink" title="已经创建完成，进入"></a>已经创建完成，进入</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ docker exec -it ubuntu /bin/bash</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><code>-i</code> 表示保持我们的输入流；</li>
+<li><code>-t</code> 表示启用一个伪终端，形成我们与 bash 的交互。</li>
+</ul>
+<p>当容器运行在后台，想要在将当前的输入输出流连接到指定的容器上，可以这么做：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ docker attach ubuntu</span><br></pre></td></tr></table></figure>
+<p>通过 <code>docker attach</code> 启动的容器，可以理解为与 <code>docker run -d</code> 做了相反的事情，把当前容器从后台拉回了前台。</p>
+<h2 id="为容器配置网络"><a href="#为容器配置网络" class="headerlink" title="为容器配置网络"></a>为容器配置网络</h2><h3 id="容器网络"><a href="#容器网络" class="headerlink" title="容器网络"></a>容器网络</h3><p>在 <code>Docker</code> 网络中，有三个比较核心的概念，形成了 <code>Docker</code> 的网络核心模型，即<strong>容器网络模型（Container Network Model）</strong>：</p>
+<ul>
+<li>沙盒：提供容器的虚拟网络栈。比如端口套接、<code>IP</code> 路由表、防火墙等；</li>
+<li>网络：<code>Docker</code> 内部的虚拟子网，网络内的参与者相互可见并能够进行通讯。需要注意的是，这种虚拟网络与宿主机存在隔离关系。</li>
+<li>端点：主要目的是形成一个可以控制的突破封闭网络环境的出入口，当容器的端点与网络的端点形成配对后，就如同在这两者之间搭建了桥梁，可进行数据传输。</li>
+</ul>
+<h3 id="Docker-的网络实现"><a href="#Docker-的网络实现" class="headerlink" title="Docker 的网络实现"></a><code>Docker</code> 的网络实现</h3><p>目前官方提供了五种网络驱动：</p>
+<ul>
+<li>Bridge Driver(default)：通过基于硬件或软件的网桥来实现通讯</li>
+<li>Host Driver</li>
+<li>Overlay Driver：借助 <code>Docker</code> 的集群模块 <code>Docker Swarm</code> 来搭建的跨 <code>Docker Daemon</code> 网络，可以通过它搭建跨物理主机的虚拟网络，从而让不同物理机中运行的容器感知不到多个物理机的存在。</li>
+<li>MacLan Driver</li>
+<li>None Driver</li>
+</ul>
+<p>网络剩余内容将在下篇文章中继续进行……</p>
+<h2 id="搞点事情"><a href="#搞点事情" class="headerlink" title="搞点事情"></a>搞点事情</h2><p>学习到这里后，开始对 <code>Docker</code> 所谓“轻量级”的主打理念有了一个初步的认识，准备利用 <code>Docker</code> 的这一特性做一个 <code>Swift</code> 编译服务，主要想利用 <code>Vapor</code>&#x2F;<code>Perfect</code> （这两个到底选哪一个还需调研）来搭建 HTTP 服务，接收传入的代码文本，执行并返回结果。</p>
+<p>思考了一下，需要：</p>
+<ul>
+<li>具备编译 <code>Swift</code> 能力的 <code>Docker</code> 镜像；</li>
+<li>具备 <code>Vapor</code>&#x2F;<code>Perfect</code> 框架的 <code>Docker</code> 镜像；</li>
+<li>具备 <code>Nginx</code> web 服务器的 <code>Docker</code> 镜像；</li>
+</ul>
+<p>这一套下来后，将重新发布一个“开箱即用”的提供 <code>Swift</code> 编译服务的 <code>Docker</code> 镜像～想想就是个非常美好的事情呢！接下来开始第一步</p>
+<h3 id="构建具备编译-Swift-能力的-Docker-镜像"><a href="#构建具备编译-Swift-能力的-Docker-镜像" class="headerlink" title="构建具备编译 Swift 能力的 Docker 镜像"></a>构建具备编译 <code>Swift</code> 能力的 <code>Docker</code> 镜像</h3><p>之前有看到的文章说直接可以在 <code>Ubuntu</code> 上构建自己的 <code>Swift</code> 版本，所以我的第一步先去找一个 <code>Ubuntu</code> 镜像，这点非常容易：</p>
+<figure class="highlight docker"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ docker pull ubuntu</span><br><span class="line">$ docker <span class="keyword">run</span><span class="language-bash"> -it --name ubuntu ubuntu /bin/bash</span></span><br></pre></td></tr></table></figure>
+
+<p>成功进入到 bash 后，继续下一步。找到一个万能命令，根据这个命令可以先把编译 <code>Swift</code> 需要的相关依赖都下载完成：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo apt-get install git cmake ninja-build clang python uuid-dev libicu-dev icu-devtools libbsd-dev libedit-dev libxml2-dev libsqlite3-dev swig libpython-dev libncurses5-dev pkg-config</span><br></pre></td></tr></table></figure>
+
+<p>接着，下载 <code>Swift</code> 源码：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone https://github.com/apple/swift.git</span><br></pre></td></tr></table></figure>
+
+<p>再下载项目依赖的其它源码：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">./utils/update-checkout --clone</span><br></pre></td></tr></table></figure>
+
+<p>完成后，即可开始利用源码中的工具进行编译和测试！</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">utils/build-script -t</span><br></pre></td></tr></table></figure>
+
+<p>此处将会经历漫长的等待。二十分钟后，我得到了两个报错：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">clang: error: unable to execute command: Killed</span><br><span class="line">clang: error: linker command failed due to signal (use -v to see invocation)</span><br><span class="line">ninja: build stopped: subcommand failed.</span><br><span class="line">utils/build-script: fatal error: command terminated with a non-zero exit status 1, aborting</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">clang: error: unable to execute command: Killed</span><br><span class="line">clang: error: linker command failed due to signal (use -v to see invocation)</span><br><span class="line">[1747/3019] Linking CXX shared library lib/libLTO.so.7svn</span><br><span class="line">FAILED: lib/libLTO.so.7svn </span><br></pre></td></tr></table></figure>
+
+<p>看提示是一些依赖库出了问题，刚开始以为更新下对应的依赖库就完事了，没想到在网上居然找到不对应的报错提示！这对于第一次手动编译 <code>Swift</code> 的玩家来说十分的不友好，折腾了一会儿后放弃！</p>
+<p>此时，又看到一篇文章有说可以直接利用 <code>Swift</code> 官网已经构建完成的二进制文件进行使用，地址在此 <a target="_blank" rel="noopener" href="https://swift.org/download/">https://swift.org/download/</a> ，在 <code>Docker</code> 中可以通过 <code>wget</code> 进行下载。但因未找到 <code>Swift 4.2.1</code> 的正确下载地址，并且也担心直接修改以往版本下载地址进行猜测地址不对，在宿主机上下载完成后，通过 <code>docker cp /path dockerContainer:/path</code> 命令把文件夹传递到了容器中。</p>
+<p>在添加 <code>PATH</code> 我又遇到了如下错误：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">swift: error while loading shared libraries: libatomic.so.1: cannot open shared object file: No such file or directory</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">swift: error while loading shared libraries: libedit.so.2: cannot open shared object file: No such file or directory</span><br></pre></td></tr></table></figure>
+
+<p>几乎已经把 SO 上所有的解决方案进行了尝试，皆无果，有 <code>issue</code> 说估计是 Docker 本身的问题，折腾了好一会儿，遂放弃。</p>
+<p>当时以为这已经是最后一种方案，所以折腾了特别久，没想到其实 Apple 官方居然维护了一套 <a target="_blank" rel="noopener" href="https://github.com/apple/swift-docker"><code>swift-docker</code></a>，开箱即用，特别香！！！</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ docker pull swift</span><br><span class="line">$ docker run --privileged -i -t --name swiftfun swift:latest /bin/bash</span><br></pre></td></tr></table></figure>
+
+<p>至此，第一步已经完成！这回都省去了自己构建镜像的工作了～</p>
+<p><img src="https://i.loli.net/2019/01/03/5c2e0cda12bbd.png" alt="Swift-Docker.png"></p>
+</div><div class="tags"><a href="/tags/iOS/"><i class="fa fa-tag"></i>iOS</a><a href="/tags/Swift/"><i class="fa fa-tag"></i>Swift</a><a href="/tags/%E6%90%9E%E4%BA%8B%E6%83%85%E7%B3%BB%E5%88%97/"><i class="fa fa-tag"></i>搞事情系列</a><a href="/tags/Docker/"><i class="fa fa-tag"></i>Docker</a></div><div class="post-nav"><a class="pre" href="/2019/01/05/%E6%90%9E%E4%BA%8B%E6%83%85%E4%B9%8BUML%E7%9A%84%E7%94%A8%E4%BE%8B%E5%9B%BE/">搞事情之 UML 的用例图</a><a class="next" href="/2018/12/31/2018%E6%80%BB%E7%BB%93/">2018总结</a></div></div></div></div><div class="pure-u-1-4 hidden_mid_and_down"><div id="sidebar"><div class="widget"><div class="widget-title"><i class="fa fa-star-o"> 标签</i></div><div class="tagcloud"><a href="/tags/%E6%80%BB%E7%BB%93/" style="font-size: 15px;">总结</a> <a href="/tags/iOS/" style="font-size: 15px;">iOS</a> <a href="/tags/%E6%AF%94%E8%B5%9B/" style="font-size: 15px;">比赛</a> <a href="/tags/Cocos/" style="font-size: 15px;">Cocos</a> <a href="/tags/%E6%B8%B8%E6%88%8F%E5%BC%80%E5%8F%91/" style="font-size: 15px;">游戏开发</a> <a href="/tags/DiDi/" style="font-size: 15px;">DiDi</a> <a href="/tags/internship/" style="font-size: 15px;">internship</a> <a href="/tags/Flutter/" style="font-size: 15px;">Flutter</a> <a href="/tags/%E8%B7%A8%E5%B9%B3%E5%8F%B0/" style="font-size: 15px;">跨平台</a> <a href="/tags/Audio/" style="font-size: 15px;">Audio</a> <a href="/tags/Ping/" style="font-size: 15px;">Ping</a> <a href="/tags/%E5%BC%B9%E5%B9%95/" style="font-size: 15px;">弹幕</a> <a href="/tags/%E9%A1%B5%E9%9D%A2%E4%BC%A0%E5%80%BC/" style="font-size: 15px;">页面传值</a> <a href="/tags/HUD/" style="font-size: 15px;">HUD</a> <a href="/tags/Swift/" style="font-size: 15px;">Swift</a> <a href="/tags/%E5%BC%80%E6%BA%90/" style="font-size: 15px;">开源</a> <a href="/tags/%E9%A1%B9%E7%9B%AE/" style="font-size: 15px;">项目</a> <a href="/tags/PhotosKit/" style="font-size: 15px;">PhotosKit</a> <a href="/tags/React-Native/" style="font-size: 15px;">React-Native</a> <a href="/tags/swift/" style="font-size: 15px;">swift</a> <a href="/tags/Weex/" style="font-size: 15px;">Weex</a> <a href="/tags/Apple/" style="font-size: 15px;">Apple</a> <a href="/tags/%E5%8D%9A%E5%AE%A2/" style="font-size: 15px;">博客</a> <a href="/tags/%E4%BA%91/" style="font-size: 15px;">云</a> <a href="/tags/%E6%84%9F%E6%83%B3/" style="font-size: 15px;">感想</a> <a href="/tags/%E9%9A%8F%E6%83%B3/" style="font-size: 15px;">随想</a> <a href="/tags/%E5%AD%97%E8%8A%82%E8%B7%B3%E5%8A%A8/" style="font-size: 15px;">字节跳动</a> <a href="/tags/%E6%9C%88%E5%BA%A6%E6%80%BB%E7%BB%93/" style="font-size: 15px;">月度总结</a> <a href="/tags/%E9%9A%8F%E7%AC%94/" style="font-size: 15px;">随笔</a> <a href="/tags/CMake/" style="font-size: 15px;">CMake</a> <a href="/tags/makefile/" style="font-size: 15px;">makefile</a> <a href="/tags/%E7%BC%96%E8%AF%91/" style="font-size: 15px;">编译</a> <a href="/tags/CodeLab/" style="font-size: 15px;">CodeLab</a> <a href="/tags/%E5%B0%91%E5%84%BF%E7%BC%96%E7%A8%8B/" style="font-size: 15px;">少儿编程</a> <a href="/tags/%E6%88%91%E7%9A%84%E5%A4%A7%E5%AD%A6/" style="font-size: 15px;">我的大学</a> <a href="/tags/%E5%9B%9E%E5%BF%86%E5%BD%95/" style="font-size: 15px;">回忆录</a> <a href="/tags/crash/" style="font-size: 15px;">crash</a> <a href="/tags/%E9%AA%91%E8%A1%8C/" style="font-size: 15px;">骑行</a> <a href="/tags/%E8%87%AA%E8%A1%8C%E8%BD%A6/" style="font-size: 15px;">自行车</a> <a href="/tags/fcc/" style="font-size: 15px;">fcc</a> <a href="/tags/%E5%88%86%E4%BA%AB/" style="font-size: 15px;">分享</a> <a href="/tags/%E6%B8%B8%E6%88%8F/" style="font-size: 15px;">游戏</a> <a href="/tags/ifLab/" style="font-size: 15px;">ifLab</a> <a href="/tags/%E6%8A%80%E6%9C%AF/" style="font-size: 15px;">技术</a> <a href="/tags/%E5%BB%BA%E7%AB%99/" style="font-size: 15px;">建站</a> <a href="/tags/%E9%9D%A2%E8%AF%95/" style="font-size: 15px;">面试</a> <a href="/tags/%E7%A7%9F%E6%88%BF/" style="font-size: 15px;">租房</a> <a href="/tags/iBistu/" style="font-size: 15px;">iBistu</a> <a href="/tags/macOS/" style="font-size: 15px;">macOS</a> <a href="/tags/%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86/" style="font-size: 15px;">编译原理</a> <a href="/tags/%E7%9D%A1%E9%AD%94/" style="font-size: 15px;">睡魔</a> <a href="/tags/Netflix/" style="font-size: 15px;">Netflix</a> <a href="/tags/%E4%BD%9C%E5%93%81/" style="font-size: 15px;">作品</a> <a href="/tags/%E5%BC%80%E5%8F%91%E6%97%A5%E5%BF%97/" style="font-size: 15px;">开发日志</a> <a href="/tags/App/" style="font-size: 15px;">App</a> <a href="/tags/%E4%BA%A7%E5%93%81%E6%80%9D%E8%80%83/" style="font-size: 15px;">产品思考</a> <a href="/tags/%E6%91%84%E5%BD%B1/" style="font-size: 15px;">摄影</a> <a href="/tags/Playground/" style="font-size: 15px;">Playground</a> <a href="/tags/%E5%B7%A5%E4%BD%9C/" style="font-size: 15px;">工作</a> <a href="/tags/SwiftUI/" style="font-size: 15px;">SwiftUI</a> <a href="/tags/%E5%BD%B1%E8%A7%86%E5%89%A7/" style="font-size: 15px;">影视剧</a> <a href="/tags/WWDC/" style="font-size: 15px;">WWDC</a> <a href="/tags/%E5%AD%97%E8%8A%82/" style="font-size: 15px;">字节</a> <a href="/tags/%E8%B7%91%E6%AD%A5/" style="font-size: 15px;">跑步</a> <a href="/tags/%E9%A9%AC%E6%8B%89%E6%9D%BE/" style="font-size: 15px;">马拉松</a> <a href="/tags/%E8%BF%90%E5%8A%A8/" style="font-size: 15px;">运动</a> <a href="/tags/%E8%B6%8A%E9%87%8E%E8%B7%91/" style="font-size: 15px;">越野跑</a> <a href="/tags/%E6%84%9F%E8%B0%A2/" style="font-size: 15px;">感谢</a> <a href="/tags/%E6%BB%B4%E6%BB%B4/" style="font-size: 15px;">滴滴</a> <a href="/tags/%E6%80%9D%E8%80%83/" style="font-size: 15px;">思考</a> <a href="/tags/%E6%97%85%E8%A1%8C/" style="font-size: 15px;">旅行</a> <a href="/tags/%E6%84%9F%E6%80%A7/" style="font-size: 15px;">感性</a> <a href="/tags/%E9%9D%92%E5%B2%9B/" style="font-size: 15px;">青岛</a> <a href="/tags/%E5%BE%92%E6%AD%A5/" style="font-size: 15px;">徒步</a> <a href="/tags/Unity/" style="font-size: 15px;">Unity</a> <a href="/tags/Android/" style="font-size: 15px;">Android</a> <a href="/tags/WatchOS/" style="font-size: 15px;">WatchOS</a> <a href="/tags/Combine/" style="font-size: 15px;">Combine</a> <a href="/tags/django/" style="font-size: 15px;">django</a> <a href="/tags/%E5%AE%9E%E4%B9%A0/" style="font-size: 15px;">实习</a> <a href="/tags/%E5%BE%AE%E4%BF%A1/" style="font-size: 15px;">微信</a> <a href="/tags/%E5%B0%8F%E7%A8%8B%E5%BA%8F/" style="font-size: 15px;">小程序</a> <a href="/tags/UML/" style="font-size: 15px;">UML</a> <a href="/tags/%E6%90%9E%E4%BA%8B%E6%83%85%E7%B3%BB%E5%88%97/" style="font-size: 15px;">搞事情系列</a> <a href="/tags/%E4%B8%83%E7%89%9B%E4%BA%91/" style="font-size: 15px;">七牛云</a> <a href="/tags/Java/" style="font-size: 15px;">Java</a> <a href="/tags/Spring/" style="font-size: 15px;">Spring</a> <a href="/tags/Spring-MVC/" style="font-size: 15px;">Spring MVC</a> <a href="/tags/Mybatis/" style="font-size: 15px;">Mybatis</a> <a href="/tags/Junit/" style="font-size: 15px;">Junit</a> <a href="/tags/log4j/" style="font-size: 15px;">log4j</a> <a href="/tags/mysql/" style="font-size: 15px;">mysql</a> <a href="/tags/%E5%9B%BD%E9%99%85%E5%8C%96/" style="font-size: 15px;">国际化</a> <a href="/tags/%E6%BC%94%E8%AE%B2/" style="font-size: 15px;">演讲</a> <a href="/tags/%E5%8D%B3%E6%97%B6%E9%80%9A%E8%AE%AF/" style="font-size: 15px;">即时通讯</a> <a href="/tags/side-project/" style="font-size: 15px;">side project</a> <a href="/tags/Qt/" style="font-size: 15px;">Qt</a> <a href="/tags/C-%E8%B7%A8%E7%AB%AF/" style="font-size: 15px;">C++ 跨端</a> <a href="/tags/C/" style="font-size: 15px;">C++</a> <a href="/tags/%E5%93%8D%E5%BA%94%E5%BC%8F/" style="font-size: 15px;">响应式</a></div></div><div class="widget"><div class="widget-title"><i class="fa fa-external-link"> 联系我</i></div><ul></ul><a href="https://github.com/windstormeye" title="GitHub - PJHubs" target="_blank">GitHub - PJHubs</a><ul></ul><a href="https://space.bilibili.com/25392474" title="BiliBili - PJHubs" target="_blank">BiliBili - PJHubs</a><ul></ul><a href="https://twitter.com/wengpeijun" title="Twitter - PJHubs" target="_blank">Twitter - PJHubs</a><ul></ul><a href="https://weibo.com/3307534462" title="微博 - PJHubs" target="_blank">微博 - PJHubs</a><ul></ul><a href="https://www.xiaohongshu.com/user/profile/5f2cd0360000000001001470" title="小红书 - PJHusb" target="_blank">小红书 - PJHusb</a><ul></ul><a href="." title="微信 - pjhubscom" target="_blank">微信 - pjhubscom</a><ul></ul><a href="." title="邮箱 - 877302410@qq.com" target="_blank">邮箱 - 877302410@qq.com</a></div></div></div><div class="pure-u-1 pure-u-md-3-4"><div id="footer">Copyright © 2024 PJHubs</div></div></div><script type="text/javascript" src="//cdn.jsdelivr.net/gh/fancyapps/fancybox/dist/jquery.fancybox.min.js" async></script><script type="text/javascript" src="/js/fancybox.js?v=1.0.0" async></script><link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/gh/fancyapps/fancybox/dist/jquery.fancybox.min.css"><script type="text/javascript" src="/js/copycode.js" successtext="Copy Successed!"></script><link rel="stylesheet" type="text/css" href="/css/copycode.css"><script type="text/javascript" src="/js/codeblock-resizer.js?v=1.0.0"></script><script type="text/javascript" src="/js/smartresize.js?v=1.0.0"></script></div></body></html>

@@ -1,0 +1,465 @@
+<!DOCTYPE html><html lang="zh-Hans"><head><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="description" content="优秀的人遵守规则，顶尖的人创造规则"><title>【WWDC22 110349/110348】Swift Playground 指北 | PJHubs</title><link rel="stylesheet" type="text/css" href="/css/style.css?v=1.0.0"><link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/normalize.css/normalize.min.css"><link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/purecss/build/pure-min.min.css"><link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/purecss/build/grids-responsive-min.css"><link rel="stylesheet" href="//cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css"><script type="text/javascript" src="//cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script><link rel="icon" mask="" sizes="any" href="/favicon.ico"><link rel="Shortcut Icon" type="image/x-icon" href="/favicon.ico"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><link rel="apple-touch-icon-precomposed" href="/apple-touch-icon.png"><script type="text/javascript" src="//cdn.jsdelivr.net/npm/clipboard/dist/clipboard.min.js"></script><script type="text/javascript" src="//cdn.jsdelivr.net/gh/codeseven/toastr/build/toastr.min.js"></script><link rel="stylesheet" href="//cdn.jsdelivr.net/gh/codeseven/toastr/build/toastr.min.css"><meta name="generator" content="Hexo 6.2.0"></head><body><div class="body_container"><div id="header"><div class="site-name"><h1 class="hidden">【WWDC22 110349/110348】Swift Playground 指北</h1><a id="logo" href="/.">PJHubs</a><p class="description">优秀的人遵守规则，顶尖的人创造规则</p></div><div id="nav-menu"><a class="current" href="/."><i class="fa undefined"> 文章</i></a><a href="/archives/"><i class="fa undefined"> 总览</i></a><a href="/photograph/"><i class="fa undefined"> 摄影</i></a><a href="/about/"><i class="fa undefined"> 关于</i></a></div></div><div class="pure-g" id="layout"><div class="pure-u-1 pure-u-md-3-4"><div class="content_container"><div class="post"><h1 class="post-title">【WWDC22 110349/110348】Swift Playground 指北</h1><div class="post-meta">2022-06-30</div><div class="post-content"><p><img src="/./images/2023/swiftplayground/cover.png"></p>
+<p>本文基于 <a target="_blank" rel="noopener" href="https://developer.apple.com/videos/play/wwdc2022/110349/">Session 110349</a>、<a target="_blank" rel="noopener" href="https://developer.apple.com/videos/play/wwdc2022/110348/">Session 110348</a> 梳理</p>
+<blockquote>
+<p>作者信息：</p>
+<p><a target="_blank" rel="noopener" href="https://github.com/windstormeye">PJHubs（PJ）</a>：WWDC19 Scholarship Winner，独立开发者，就职于字节跳动。</p>
+<p><a target="_blank" rel="noopener" href="https://github.com/Mintshec">Cyanichord（Cyan）</a>：WWDC22 Swift Student Challenge Winner，海外留学中。</p>
+<p>审核：</p>
+<p>四娘，老司机技术社区核心成员</p>
+<p>王浙剑（Damonwong），老司机技术社区负责人、WWDC22 内参主理人，目前就职于阿里巴巴。</p>
+<p>导读：</p>
+<ul>
+<li><p>背景。Playground 在 Apple 各个平台下的产品形态及主要发展历史。</p>
+</li>
+<li><p>应用场景。Playground 目前主流的使用场景。</p>
+</li>
+<li><p>Highlight。Swift Playgrounds app 最新版本中的特性。</p>
+</li>
+<li><p>实战。通过一个游戏场景写一份更加现代化的 Playground。</p>
+</li>
+<li><p>分发。如何把 Playground 作品分发到互联网。</p>
+</li>
+<li><p>总结与展望。站在作者的角度对未来的 Swift Playgrounds app 做了总结。</p>
+</li>
+</ul>
+</blockquote>
+<h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><p>Playground 这种无需构建完整 app 工程就可用 AppKit、UIKit 等强依赖模拟器的能力最早跟随于 Xcode 6 和 Swift 1.0 一起出现，因其快速简洁的使用体验而赚取了一波热度，但因集成在 Xcode 中且调试过程相对繁琐，起初局限于做些小 demo 或测试语法等场景，并没有引起太大反响。直到 WWDC18 带来了全新的 CreateML framework，Xcode Playground 支持基础模型训练的能力后，Xcode Playground 才重新回到开发者视野中。</p>
+<p>Apple 在 WWDC16 推出了 Swift Playgrounds app，iPad 用户可以在 iPad 上通过创建<code>.playgroundbook</code>工程来编写、调试并运行完整的 Swift 代码，但同样因为 Playground 本身的功能限制导致在 iPad 上写代码的体验依旧别扭，热情退去后 Swift Playgrounds app 又基本消失了。从 2017 年开始，WWDC Scholarship（现已改为 Swift Student Challenge）要求从以往提交一个完整的 app 变为了提交一份可以在 Mac Xcode 或 iPad Swift Playgrounds app 上运行的 Playground 工程后，Swift Playgrounds app 才算是真真正正的进入到开发者圈子中。</p>
+<p>若开发者想要写一份运行在 iPad Swift Playgrounds app 上且流程清晰、体验流程的 Playground，需要基于 Apple 提供的 <a target="_blank" rel="noopener" href="https://developer.apple.com/download/all/?q=template">Swift Playgrounds Template</a> 工程做二次开发，并不断的通过 AirDrop 或 iCloud 转存其生成的<code>.playgroundbook</code>文件到 iPad 上进行效果验证，十分麻烦。PJ 当初的<a target="_blank" rel="noopener" href="https://github.com/windstormeye/WWDC19_brocadeOfLiNationality">奖学金项目</a>因时间太短，为缩减调试过程耗费的时间果断采用了 Xcode Playground 构建一份<code>.playground</code>文件完成。</p>
+<p>Swift Playgrounds app 3.2 版本推出后，带来了 macOS 版本的 Swift Playgrounds app，开发者终于可以在 Mac 上验证 Playground 效果了！体验与 iPad Swift Playgrounds app 完全一致。Cyan 在参加 WWDC22 Swift Student Challenge 时，Swift Playgrounds app 已经来到了 4.1 版本，比赛的项目要求修改为，提交一份可运行在 Mac 或 iPad Swift Playgrounds app 上并以 SwiftUI 为主的 <code>.swiftpm</code> 工程。</p>
+<p>截止到目前为止（2022.06），不管是 Mac Swift Playgrounds app 还是 iPad Swift Playgrounds app，我们一直都认为这才是 AppleOS 最佳开发入门平台，初学者可以完全不用处理开发者账号、App 签名和模拟器环境与 iOS &#x2F; iPadOS &#x2F; macOS 的不同等等这些一开始就十分令人困惑的问题，只需专注语言和效果本身。这点也在 PJ 之前的<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1934y1V7B5">《 iOS 开发入门 - 独立开发者的成长方案》</a>分享中有所体现，整体效果非常不错。</p>
+<p>为方便大家理解，我们对“Playground”相关的名词做些说明：</p>
+<ul>
+<li><code>.playground</code>：集成在 Xcode 中的 Playground 工程文件。</li>
+<li><code>.playgroundbook</code>：伴随着 Swift Playgrounds app 1.0 推出的全新 Playground 电子书工程文件（经典“小怪兽吃宝石” Playground 就是用的这个），iPad Swift Playgrounds app 创建的“Playground”模板工程文件名。</li>
+<li><code>.swiftpm</code>：伴随着 Swift Playgrounds app 4.0 版本推出的全新 app 类型工程文件。</li>
+<li>Playground：一份独立完整可运行可分发的 Playground，包括<code>.playgroundbook</code>、<code>.playground</code>和<code>.swiftpm</code>在内的三种工程文件。</li>
+<li>Swift Playgrounds app：Mac Swift Playgrounds app 和 iPad Swift Playgrounds app 的统称。</li>
+<li>Playgrounds app：同上，Swift Playgrounds app 的简称。</li>
+<li>Swift Playgrounds：包含以上名词的一整套完整生态链。</li>
+</ul>
+<p>下图为 Swift Playgrounds 的生态发展历程（Xcode Playground 不算其中）。</p>
+<p><img src="/./images/2023/swiftplayground/0.jpeg"></p>
+<h2 id="应用场景"><a href="#应用场景" class="headerlink" title="应用场景"></a>应用场景</h2><p>同样到目前为止（2022.06），在 PJ 个人所接触的群体中，除了前两年比较火的<a target="_blank" rel="noopener" href="https://space.bilibili.com/456606920/channel/seriesdetail?sid=327507">小学生 Vita 君</a>通过使用 Swift Playgrounds app “教你学编程”火了一把以及打破 WWDC Scholarship 最小获奖年龄（9 岁）的 <a target="_blank" rel="noopener" href="https://www.youtube.com/c/AnyoneCanCode">Yuma</a>外，能够真正的把 Swift Playgrounds 带出圈的开发者真的少之又少，但每年的 WWDC Scholarship repos 却经常可以冒出非常多令人眼前一亮的新鲜创意，它们大都集中在以下范围：</p>
+<ul>
+<li>交互式&#x2F;创新性编程体验<ul>
+<li>Apple 官方出品 Playground（质量极高）</li>
+<li><a target="_blank" rel="noopener" href="https://github.com/JustinFincher/WWDC2022-SwiftUINodeEditor">Pegboard</a>（<a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=B6D3y49WOEQ">Video</a>）</li>
+</ul>
+</li>
+<li>学科知识讲解<ul>
+<li><a target="_blank" rel="noopener" href="https://github.com/soulwinter/WWDC22-Genetics-Lab">Genetics Lab</a>（<a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=-1Vt5Ta_dYw">Video</a>）</li>
+<li><a target="_blank" rel="noopener" href="https://github.com/MAJKFL/Audioqe-WWDC22">Audioqe</a>（<a target="_blank" rel="noopener" href="https://www.youtube.com/watch?v=TnayjRjrYp8">Video</a>）</li>
+<li><a target="_blank" rel="noopener" href="https://github.com/FuzzyNat26/build-with-math">Build With Math</a></li>
+</ul>
+</li>
+<li>App 式工具<ul>
+<li><a target="_blank" rel="noopener" href="https://github.com/hugoqnc/Split">Split!</a></li>
+</ul>
+</li>
+</ul>
+<p>以上所列作品可以看出 Apple 和开发者们对 Playground 都做了一定诠释。如果单纯的写一个 App 并处理一些交互式讲解，开发者需要处理太多上下文逻辑，其中最关键的是提供一个原生的“可编程环境”，这一点基本上就拒绝掉绝大多数开发者。</p>
+<p>同时，PJ 觉得“授人以渔”才是最终的教育方式。通过视频从头到尾讲一遍或者写一篇文章从头到尾说一遍怎么写代码，在新手期的时候可能很有帮助，能够快速入门，但时间长了以后不光是作者包括读者本身也会深陷其中，很难拿到其中适合自己部分的内容。而通过一个流程设计精美的 Playground 是可以解决这个问题的，直接暴露给学习者最核心的逻辑代码并提供可控的交互范围，屏蔽掉大量的 UI 搭建过程和胶水逻辑。</p>
+<h2 id="Highlight"><a href="#Highlight" class="headerlink" title="Highlight"></a>Highlight</h2><p>在正式进入 demo 环节之前我们先来看看目前最新版 Swift Playgrounds app 4.1（下文统一使用 4.x 代替版本）中都有哪些新鲜东西。</p>
+<h3 id="权限管理"><a href="#权限管理" class="headerlink" title="权限管理"></a>权限管理</h3><p>这一点非常重要！此前 PJ 想过使用 Swift Playgrounds app 做一些教程向的事情，准备先拿 MapKit 入手做一个简单的“罗盘”演示，但第一步就直接劝退了。做过 iOS &#x2F; iPadOS 开发的小伙伴们都知道想要获取当前用户地理位置需要在<code>info.plist</code>文件中手动写明申请的权限，但在 Swift Playgrounds app 中如果不借助 <a target="_blank" rel="noopener" href="https://developer.apple.com/download/all/?q=template">Swift Playgrounds Template</a> 模板工程你就是无法找到入口去做这件事，但有些权限你又可以自动获得而不用手动申请（如访问相册资源），这种权限管理在当时（2019 年）看来十分劝退。</p>
+<p>在 Swift Playgrounds app 4.x 推出后带来了完整的权限管理，再做这件事就非常容易了，获取用户当前位置的整套流程也变得比直接使用 Xcode 直观且方便了很多，可以一眼看完具体有哪些权限可供开发者使用！其它权限申请流程与下图类似，不再赘述。</p>
+<table>
+<thead>
+<tr>
+<th>“获取当前用户位置”权限</th>
+<th></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1、找到想要的权限</td>
+<td>2、填写权限申请描述</td>
+</tr>
+<tr>
+<td><img src="/./images/2023/swiftplayground/1.png"></td>
+<td><img src="/./images/2023/swiftplayground/2.png"></td>
+</tr>
+<tr>
+<td>3、成功弹出权限申请框</td>
+<td>4、展示用户地理位置</td>
+</tr>
+<tr>
+<td><img src="/./images/2023/swiftplayground/3.png"></td>
+<td><img src="/./images/2023/swiftplayground/4.png"></td>
+</tr>
+</tbody></table>
+<h3 id="Swift-Package-Manager"><a href="#Swift-Package-Manager" class="headerlink" title="Swift Package Manager"></a>Swift Package Manager</h3><p>是的，Swift Playgrounds app 支持完整 SPM 引入第三方库！在 4.x 之前的版本中想要使用第三方库只能拷贝一份。4.x 版本支持 SPM 后我们可以尽情的在 Playground 中调用你所熟悉的框架，尽情挥洒你的创意，需要注意的是拉取配置信息环境耗时较长。</p>
+<p><img src="/./images/2023/swiftplayground/5.png"></p>
+<h3 id="模拟-App-环境"><a href="#模拟-App-环境" class="headerlink" title="模拟 App 环境"></a>模拟 App 环境</h3><p>在 4.x 版本以前，我们只通过<code>import PlaygroundSupport</code>手动的设置承载 UI 可视容器的<code>liveView</code>宽高，无法自动适配屏幕宽高也无法模拟安装进 macOS 或 ipadOS 中的环境，4.x 版本后我们可以通过 Swift Playgrounds app 直接安装 app 到 mac 中。在 iPad Swift Playgrounds app 不允许单独安装一个 App，但可以直接通过“Run on My iPad”的方式全屏预览，可以等同为完整运行一个 App。</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1、左上角区域“App Settings”-&gt;“Install on this Mac”</td>
+<td>2、安装至本机应用程序目录下</td>
+<td>3、点击运行 App</td>
+</tr>
+<tr>
+<td><img src="/./images/2023/swiftplayground/6.png"></td>
+<td><img src="/./images/2023/swiftplayground/7.png"></td>
+<td><img src="/./images/2023/swiftplayground/8.png"></td>
+</tr>
+</tbody></table>
+<p>如果你使用 iPad Swift Playgrounds app 可以获得同一份代码分别在 iOS 和 iPadOS 的预览效果，更进一步，使用上 Mac Catalyst 能力后基本上可以等同三端都可在 iPad Swift Playgrounds app 上完成核心能力开发。</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>iOS（编辑状态下 preview，约等于 iOS 布局）</td>
+<td>iPadOS（全屏预览或运行）</td>
+</tr>
+<tr>
+<td><img src="/./images/2023/swiftplayground/9.png"></td>
+<td><img src="/./images/2023/swiftplayground/10.png"></td>
+</tr>
+</tbody></table>
+<h3 id="需要一台-mac"><a href="#需要一台-mac" class="headerlink" title="需要一台 mac"></a>需要一台 mac</h3><p>如果你想好好的写一份 Playground 贡献给社区、贡献给广大的 iPad 用户，不管是 4.x 版本之前的<code>.playgroundbook</code>还是 4.x 现在改为<code>.swiftpm</code>文件来组织内容，你一定得先拥有一台 Mac 用于制作并调整工程细节。更进一步，如果想要做到下文 demo 中的各种“引导”效果，需要利用一部分 Playgrounds app 内置的 Swift DocC 能力和 Swift Playgrounds markup 语法，而 Playgrounds app 无法很好的支持，需要借用 Xcode 环境来完善 Playground。</p>
+<p>如，同一份代码在 Xcode 和 Swift Playgrounds（Mac 和 iPad）app 中打开的展示效果如下图所示。在 Swift Playgrounds app 中被隐藏的注释就是下文要展开 4.x 中新增的 Tutorial（下文统称“指南”）能力，交互体验非常棒！</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Xcode</td>
+<td>Swift Playgrounds（mac &amp; iPad）</td>
+</tr>
+<tr>
+<td><img src="/./images/2023/swiftplayground/11.png"></td>
+<td><img src="/./images/2023/swiftplayground/12.png"></td>
+</tr>
+</tbody></table>
+<h3 id="Swift-DocC"><a href="#Swift-DocC" class="headerlink" title="Swift DocC"></a>Swift DocC</h3><p>Swift Playgrounds app 4.x 的“指南”部分使用了 Swift DocC 能力替换了原先基于 <a target="_blank" rel="noopener" href="https://developer.apple.com/download/all/?q=template">Swift Playgrounds Template</a> 工程进行二次开发的方式，基本上可以认为 Playground 在 Swift DocC 基础上做了些二次封装，同时也正是用上了 DocC 的能力，屏蔽掉了大量重复繁杂的 UI 细节，让 Playgrounds app 的教学味道变得更强，提供更多引导能力，转变开发者编写 Playground 的想法。</p>
+<p>2019 年伴随着 SwiftUI 一同推出惊艳四方的 <a target="_blank" rel="noopener" href="https://developer.apple.com/tutorials/swiftui">SwiftUI Tutorials</a> 本质上也是通过 Swift DocC 完成。导出的<code>.doccarchive</code>文件托管至 web 服务器上，其中新增的<code>@Step</code>标签可以自动比对两个文件中的不同之处，并自动高亮，这样在不同的 step 之间通过关联的<code>@Image</code>和<code>@Code</code>可以在交互上骗过学习者，以为自己就是通过浏览器在学习整个工程，而<code>.doccarchive</code>文件内为<code>xcodebuild docbuild</code>自动生成的 web 模板资源 &amp; 代码打包合集，可以拿到这个文件进行框架的学习，关于 Swift DocC 可以自行查阅 WWDC22 或往年 Session。</p>
+<h3 id="不要气馁"><a href="#不要气馁" class="headerlink" title="不要气馁"></a>不要气馁</h3><p>Swift Playgrounds app 偶尔会无法快速响应你在 Xcode 中对<code>.swiftpm</code>文件的修改，多尝试几遍重启 Swift Playgrounds app 触发其完整的刷新。</p>
+<h2 id="实战"><a href="#实战" class="headerlink" title="实战"></a>实战</h2><p>以下 demo 只讲述 Swift Playgrounds app 4.x 新增的“App”模板，并利用“指南”能力做一份更加现代化的 Playground，“Playground”模板因推出时间较早且与 Xcode Playground 十分相似，网络上已有大量的内容去讲述怎么使用，本文不再赘述。</p>
+<p>受文章篇幅的原因，我们也不会展开 demo 的每一步如何实现，而是通过讲解 demo 中都用上哪些交互式标签，关于这些交互式标签大家可以在 <a target="_blank" rel="noopener" href="https://developer.apple.com/documentation/docc/tutorial-syntax">Interactive Tutorials</a> 中找到更多细节。为了保证整体流畅性，我们将使用 Xcode Swift Playgrounds “App 模板”工程进行开发，并使用 Mac Swift Playgrounds app 验证 Playground 效果。</p>
+<h3 id="工程差异"><a href="#工程差异" class="headerlink" title="工程差异"></a>工程差异</h3><p>使用 Swift Playgrounds app 创建一个 App 模板工程只能添加 Swift 和图片等资源文件，但如果通过 Xcode 新建一个 Swift Playgrounds app 模板工程，则与普通 App 工程无太大差异，可以随意添加我们想要增加的内容。</p>
+<p>当然了如果你头铁就是不想要 Xcode 提供的完整开发体验去写一份 Playground，可以通过“打开包内容”自行把想要的文件都拖进去，并通过修改 Package.swift 文件来组织对应文件关系来“曲线救国”。通过包内容中出现的 Package.swift 文件可以看出是通过 Swift Package Manager 进行管理的，但该文件是被隐藏的且文件开头的注释不建议开发者自行修改其内容，关于 Package.swift 文件中新增的 .iOSApplication 类型大家感兴趣可自行搜索，因文章篇幅关系不做展开。</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Xcode 新建 Swift Playgrounds App 模板工程</td>
+<td>iPad &#x2F; Mac 上的 Swift Playgrounds 中添加的文件类型有限。图片、Swift 文件、文件夹</td>
+</tr>
+<tr>
+<td><img src="/./images/2023/swiftplayground/13.png"></td>
+<td><img src="/./images/2023/swiftplayground/14.png"></td>
+</tr>
+</tbody></table>
+<h3 id="工程配置"><a href="#工程配置" class="headerlink" title="工程配置"></a>工程配置</h3><p>如果我们按照 <a target="_blank" rel="noopener" href="https://developer.apple.com/wwdc22/110349">Create engaging content for Swift Playgrounds</a> 中的步骤一步步来改造现有 Playground 为它添加上“指南”，你会发现 Playgrounds app 打开工程文件后无法进行预览，但可以触发对 .tutorial 文件的识别，对比了官方几个 Playground 并多次实验后得出结论，出现这个原因是工程中缺少了几个关键文件。</p>
+<p>Playgrounds app 对“指南”<strong>入口的展示</strong>依赖是否创建了 Guide  文件夹。而“指南”中<strong>内容的展示</strong>依赖是否在 Guide 文件夹中添加了 Resources 文件夹和本地化语言文件<code>.lproj</code>，一个最小集可运行带有“指南”能力的 Playground 文件树如下所示。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">.</span><br><span class="line">├── App # 命名随意</span><br><span class="line">│   ├── ContentView.swift</span><br><span class="line">│   └── MyApp.swift</span><br><span class="line">├── Guide # 不可改</span><br><span class="line">│   ├── Guide.tutorial # 命名随意</span><br><span class="line">│   └── Resources # 不可改</span><br><span class="line">│       └── en.lproj # 可为空文件夹，本地化配置有任意一个语言均可</span><br><span class="line">└── Package.swift</span><br></pre></td></tr></table></figure>
+
+<p>注意：除了 Guide 和 Resources 文件名不可修改外，<code>.tutorial</code>文件命名随意。Guide 文件夹、Resources 文件夹、<code>.tutorial</code>和<code>.lproj</code>文件四者缺一不可，“指南”必须通过本地化文件<code>.lproj</code>进行展示，但经过实测如果你并不想支持多语言只需创建一门语言的空文件夹即可。这部分内容是 Apple 在 Session 和公开文档资料中没有阐述的，如果你缺少了任何一项，Playground 打开工程后会出现下图所示异常。</p>
+<p><img src="/./images/2023/swiftplayground/16.png"></p>
+<p>如果你的“指南”文件中标签内容有缺失，使用 Playgrounds app 打开工程将会导致 Playgrounds app 直接闪退，十分恼火。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">❌</span><br><span class="line">@WelcomeMessage(title: &quot;标题&quot;) &#123;</span><br><span class="line">    &lt;!-- 没有填写任何内容 --&gt;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">✅</span><br><span class="line">@WelcomeMessage(title: &quot;标题&quot;) &#123;</span><br><span class="line">    把需要的内容补齐</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>因为上文中我们已经新增了文件和文件夹，导致工程整体目录结构被修改，通过 Playgrounds app 打开工程会看到一个警告，提示我们新增的文件未加入到对应的模块中。</p>
+<p><img src="/./images/2023/swiftplayground/17.png"></p>
+<p>想要解决这个问题需要做一些 Apple “并不推荐的事情”。上文已说明，每一个 Swift Playgrounds app 都是基于 Swift Package Manager 进行管理的，Apple 并不推荐开发者自行修改 Package.swift 中的内容，但截止到本文写作时只能通过手动修改的方式解决这个问题，警告中所提示的问题还影响了“指南”最终交互式标签的响应，因为我们并没有把<code>.tutorial</code>文件添加到对应模块中，导致<code>.tutorial</code>文件关联不到对应的 swift 文件以至于无法执行跳转。</p>
+<p>在 Mac 上右键打开<code>.swiftpm</code>文件，调整 Package.swift 中“AppModule”模块的路径为“App”。</p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// ...</span></span><br><span class="line">targets: [</span><br><span class="line">    .executableTarget(</span><br><span class="line">        name: <span class="string">&quot;AppModule&quot;</span>,</span><br><span class="line">        path: <span class="string">&quot;App&quot;</span> <span class="comment">// 默认是当前路径 &quot;.&quot;</span></span><br><span class="line">    )</span><br><span class="line">]</span><br><span class="line"><span class="comment">// ...</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="UI-标签"><a href="#UI-标签" class="headerlink" title="UI 标签"></a>UI 标签</h3><p>Swift Playgrounds app 的“指南”是由 Swift DocC 提供支持的一系列标签组成，以下代码是完成 Playground “指南”功能页面 UI 展示的最小集。</p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@GuideBook</span>(title: <span class="string">&quot;能否关个灯？&quot;</span>, icon: <span class="string">&quot;&quot;</span>, background: <span class="string">&quot;&quot;</span>, firstFile: <span class="string">&quot;&quot;</span>) &#123;</span><br><span class="line">    <span class="meta">@Guide</span> &#123;</span><br><span class="line">        <span class="meta">@Step</span>(title: <span class="string">&quot;游戏基础逻辑&quot;</span>) &#123;</span><br><span class="line">            <span class="meta">@ContentAndMedia</span> &#123;</span><br><span class="line">                <span class="operator">!</span>[](homePange_banner.png)  </span><br><span class="line"></span><br><span class="line">                小朋友你好呀！这是使用 <span class="type">Swift</span> 进行游戏开发的第一份教程<span class="operator">。</span></span><br><span class="line"></span><br><span class="line">                在这篇教程中，我们将一起完成一个关灯小游戏，总共有三步，每一步都需要发挥你的聪明才智解决问题，快快学起来吧！</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><code>@GuideBook</code></p>
+<ul>
+<li>每一个“指南”文件父节点标签。</li>
+<li><code>icon</code>和<code>background</code>字段可为空，但官方的 Playground 都给了相同值。</li>
+<li><code>firstFile</code>为在欢迎界面上点击“了解更多”后跳转到“指南”时搭配出现的 Swift 文件。</li>
+</ul>
+<p><code>@Guide</code></p>
+<ul>
+<li>每一个<code>@GuideBook</code>标签下至少挂载一个<code>@Guide</code>标签。</li>
+</ul>
+<p><code>@Step</code></p>
+<ul>
+<li>可以理解为一份“指南”下的不同场景&#x2F;关卡。</li>
+<li>可以创建无数个<code>@Step</code>。</li>
+</ul>
+<p><code>@ContentAndMedia</code></p>
+<ul>
+<li>每一个<code>@Step</code>下的简介标签。</li>
+<li>支持通过 markdown 语法添加图片和外链接等资源。</li>
+</ul>
+<p><img src="/./images/2023/swiftplayground/18.png"></p>
+<p>如果你的 Playground 非常简单，仅告诉学习者做的是什么，不需要操作代码并理解其中的逻辑，简单的做到这里也就足够了。但如果你想要做到一些交互性非常强的引导，想要学习者有顺序的去理解 Playground 中的内容，我们还需要学习一些新标签的使用。</p>
+<p><code>@WelcomMessage</code></p>
+<ul>
+<li>在未通过右上角进入“指南”功能前，打开 Playground 就给学习者一个欢迎提示，引导学习者前往“指南”进行学习。</li>
+<li>点击“Learn More” &#x2F; “查看更多”直接跳转到“指南。</li>
+</ul>
+<p><img src="/./images/2023/swiftplayground/19.png"></p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@GuideBook</span>(title: <span class="string">&quot;能否关个灯？&quot;</span>, icon: <span class="string">&quot;&quot;</span>, background: <span class="string">&quot;&quot;</span>, firstFile: <span class="string">&quot;&quot;</span>) &#123;</span><br><span class="line">    <span class="meta">@WelcomeMessage</span>(title: <span class="string">&quot;能否关个灯？&quot;</span>) &#123;</span><br><span class="line">        在这个教程中，你将学会如何使用 <span class="type">Swift</span> 和 <span class="type">SwiftUI</span> 进行简单的游戏开发<span class="operator">。</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// ...</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><code>@GuideButton</code></p>
+<ul>
+<li>快速进入到第一个任务的开始。</li>
+<li>除了文本内容外，其它内容均不可修改。</li>
+</ul>
+<p><img src="/./images/2023/swiftplayground/20.png"></p>
+<p><code>@Page</code></p>
+<ul>
+<li>“指南”中的最小集可交互标签。</li>
+<li>展示在页面顶部。</li>
+<li>标题前面所带的红色形象 icon 不可修改。</li>
+</ul>
+<p><img src="/./images/2023/swiftplayground/21.png"></p>
+<p><code>@Task</code></p>
+<ul>
+<li>每一个<code>@Task</code>标签可以包含众多<code>@Page</code>标签。</li>
+<li>每一个<code>@Page</code>标签可以定位到不同 Swift 文件中的不同位置代码，定位代码的能力通过 playground markup 实现。</li>
+<li>分为两种类型：<ul>
+<li><code>addCode</code>：插入&#x2F;修改代码类型任务，必须把需要的代码插入并校验通过后才可进行下一步。</li>
+<li><code>walkthrough</code>：演示类型任务，看完即可下一步。</li>
+</ul>
+</li>
+<li>两种类型的任务前面所带的 icon 均不可修改。</li>
+</ul>
+<p><img src="/./images/2023/swiftplayground/22.png"></p>
+<p><code>@TaskGroup</code></p>
+<ul>
+<li>不允许包含<code>@SuccessMessage</code>标签。</li>
+<li>把相同要求取向的<code>@Task</code>囊括在一起。</li>
+<li>只可修改标题内容。</li>
+</ul>
+<p><img src="/./images/2023/swiftplayground/23.png"></p>
+<p>只通过一些标签去搭建整个“指南”的内容还是显得有些生硬，搭配<code>@Page</code>标签支持对所需代码的高亮展示，不同的页面之间通过高亮不同区域的代码来映射引导内容，对于学习者来说这种“一个萝卜一个坑”是最是适合不过了。</p>
+<p>如下图所示高亮效果，我们需要先在<code>@Page</code>标签中指明对应的 Swift 文件中的位置 id，并在对应的 Swift 文件代码前后插入一对高亮 markup 语法标签注释对儿。</p>
+<p><img src="/./images/2023/swiftplayground/24.png"></p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Guide.tutorial file</span></span><br><span class="line"><span class="meta">@Task</span>(type: walkthrough, title: <span class="string">&quot;没有灯泡？创建一个！&quot;</span>, id: <span class="string">&quot;LightBasicUITask&quot;</span>, file: <span class="type">LightBasicUI</span>.swift) &#123;</span><br><span class="line">    学习如何创建出一个灯泡</span><br><span class="line">    <span class="comment">// ...</span></span><br><span class="line">    <span class="meta">@Page</span>(id: <span class="string">&quot;2.second&quot;</span>, title: <span class="string">&quot;&quot;</span>) &#123;</span><br><span class="line">        我们使用 `<span class="type">Circle</span>()` 来创建一盏灯</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// LightBasicUI.swif file</span></span><br><span class="line"><span class="keyword">import</span> SwiftUI</span><br><span class="line"><span class="keyword">struct</span> <span class="title class_">LightBasicUI</span>: <span class="title class_">View</span> &#123;</span><br><span class="line">    <span class="keyword">var</span> body: <span class="keyword">some</span> <span class="type">View</span> &#123;</span><br><span class="line">        <span class="comment">/*#-code-walkthrough(2.second)*/</span></span><br><span class="line">        <span class="type">Circle</span>()</span><br><span class="line">        <span class="comment">/*#-code-walkthrough(2.second)*/</span></span><br><span class="line">            .foregroundColor(.black)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// ...</span></span><br></pre></td></tr></table></figure>
+
+<p>每一个<code>@Task</code>标签通过<code>file</code>字段关联在具体的 Swift 文件，<code>@Page</code>标签的 id 字段关联一对注释对儿<code>/*#-code-walkthrough(2.second)*/</code>，注释对儿前后包裹起来的内容就是被高亮的代码区域。</p>
+<p>如果你的<code>@Task</code>类型是 walkthrough，则 cell 开头会默认带上一个红色形象，<code>addCode</code>类型则是绿色形象。<code>addCode</code>类型的任务比较特殊，如果学习者没有完成需要输入的内容则无法进行下一步。连续两个<code>addCode</code>类型任务，上一个<code>addCode</code>类型任务没有完成下一个<code>addCode</code>任务会无法进行，表现上就会出现下图黑框中所示无法点击的状态。如果是<code>addCode</code>类型任务紧接着<code>walkthrough</code>类型任务，UI 上并不会有所表现但依旧无法进行到下一步。</p>
+<p><img src="/./images/2023/swiftplayground/25.png"></p>
+<p>开发者想要识别学习者在 addCode 类型任务中是否输入了对应正确的内容，需要做一些“骚操作”。这部分校验输入代码的能力截止到本文写作时仅在 Get Started with Apps 和 Keep Going With Apps 两份官方出品的 Playground 中有所表现。</p>
+<h3 id="校验输入"><a href="#校验输入" class="headerlink" title="校验输入"></a>校验输入</h3><p>官方所采用的是未经公开的 API，多了 <code>Assessment</code> 和 <code>Connection</code> 两个 Swift <code>文件，Assessment</code> 文件中暴露出了一个 Swift 同名方法供 Playground 调用，实践证明当对应的文件内容发生变化时就会调用该方法，并给到当前发生改动关联的所有<code>@Task</code>任务 id，开发者可以在这个方法中做一些判断，比如通过遍历当前页面视图集合判断其中是否有符合要求的视图，如果有则返回 <code>true</code>，通过闭包返回当前<code>addCode</code>类型任务学习者已完成，可以进行下一步。</p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Assessment.swift file</span></span><br><span class="line"><span class="keyword">import</span> Foundation</span><br><span class="line"></span><br><span class="line"><span class="keyword">let</span> taskFunctionByID <span class="operator">=</span> [<span class="string">&quot;changeText&quot;</span>: changeText,</span><br><span class="line">                        <span class="comment">// 所有 addCode 任务 id 对应的判断函数</span></span><br><span class="line">                        ]</span><br><span class="line"></span><br><span class="line"><span class="meta">@_cdecl</span>(<span class="string">&quot;Assessment&quot;</span>) <span class="keyword">public</span> <span class="keyword">dynamic</span> <span class="keyword">func</span> <span class="title function_">Assessment</span>(<span class="keyword">_</span> <span class="params">payload</span>: [<span class="params">String</span>: <span class="keyword">Any</span>],</span><br><span class="line">                                                     <span class="keyword">_</span> <span class="params">completion</span>: <span class="keyword">@escaping</span> ([String: <span class="keyword">Any</span>]<span class="operator">?</span>, <span class="type">NSError</span>?) -&gt; <span class="type">Void</span>) -&gt; <span class="type">Void</span> &#123;</span><br><span class="line">    <span class="comment">// payload 记录了当前发生改动代码行数前后的任务 id</span></span><br><span class="line">    <span class="keyword">if</span> <span class="keyword">let</span> taskIDData <span class="operator">=</span> payload[<span class="string">&quot;TaskID&quot;</span>] <span class="keyword">as?</span> <span class="type">Data</span>,</span><br><span class="line">       <span class="keyword">let</span> taskID <span class="operator">=</span> <span class="type">String</span>(data: taskIDData, encoding: .utf8) &#123;</span><br><span class="line">        <span class="type">DispatchQueue</span>.main.asyncAfter(deadline: .now() <span class="operator">+</span> <span class="number">0.1</span>) &#123;</span><br><span class="line">            <span class="keyword">var</span> completed <span class="operator">=</span> <span class="literal">false</span></span><br><span class="line">            <span class="keyword">if</span> <span class="keyword">let</span> taskFunction <span class="operator">=</span> taskFunctionByID[taskID] &#123;</span><br><span class="line">                completed <span class="operator">=</span> taskFunction()</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="comment">// ...</span></span><br><span class="line">            completion([taskID: <span class="type">Data</span>(completed.description.utf8)], <span class="literal">nil</span>)</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Connection.swift file</span></span><br><span class="line"><span class="keyword">func</span> <span class="title function_">changeText</span>() -&gt; <span class="type">Bool</span> &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="type">UIElement</span>.elements.contains(where: &#123;<span class="variable">$0</span>.traits.contains(.staticText) <span class="operator">&amp;&amp;</span> <span class="variable">$0</span>.label <span class="operator">!=</span> <span class="string">&quot;Hello, friend.&quot;</span>&#125;)</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">func</span> <span class="title function_">textElement</span>() -&gt; <span class="type">Bool</span> &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="type">UIElement</span>.elements.compactMap(&#123;(<span class="variable">$0</span>.traits.contains(.staticText)) <span class="operator">?</span> <span class="variable">$0</span> : <span class="literal">nil</span>&#125;).count <span class="operator">&gt;</span> <span class="number">1</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// ...</span></span><br></pre></td></tr></table></figure>
+
+<p>在 demo 中我们也按照这两份 Playground 所提供的思路进行<code>addCode</code>类型任务输入内容的校验功能编写。首先需要修改 Package.swift 内容，把 Playground 依赖 Guide module，下面都是照着官方的 Playground Package.swift 内容搬运而来，基本上没有太多的差异。</p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// ...</span></span><br><span class="line"><span class="keyword">let</span> package <span class="operator">=</span> <span class="type">Package</span>(</span><br><span class="line">    name: <span class="string">&quot;LightGame&quot;</span>,</span><br><span class="line">    <span class="comment">// 指定默认语言，如果工程中只有一份 lproj，注意要对齐</span></span><br><span class="line">    defaultLocalization: <span class="string">&quot;en&quot;</span>,</span><br><span class="line">    <span class="comment">// ...</span></span><br><span class="line">    targets: [</span><br><span class="line">        .executableTarget(</span><br><span class="line">            name: <span class="string">&quot;AppModule&quot;</span>,</span><br><span class="line">            <span class="comment">// 添加依赖</span></span><br><span class="line">            dependencies: [<span class="string">&quot;Guide&quot;</span>],</span><br><span class="line">            path: <span class="string">&quot;App&quot;</span></span><br><span class="line">        ),</span><br><span class="line">        .target(</span><br><span class="line">            name: <span class="string">&quot;Guide&quot;</span>,</span><br><span class="line">            path: <span class="string">&quot;Guide&quot;</span>,</span><br><span class="line">            resources: [</span><br><span class="line">            <span class="comment">// 添加上 Guide 文件夹下需要被使用的资源文件</span></span><br><span class="line">            .process(<span class="string">&quot;Guide.tutorial&quot;</span>),</span><br><span class="line">            .process(<span class="string">&quot;Resources/homePange_banner.png&quot;</span>),</span><br><span class="line">            ]</span><br><span class="line">        )</span><br><span class="line">    ]</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+
+<p>创建出一个 Assessment.swift 文件，打开 Get Started with Apps 或 Keep Going With Apps，搬运结构体<code>UIElement</code>的实现，其实现基于<code>UIAccessibilityTraits</code>和<code>UIAccessibilityContainerType</code>来获取页面元素的信息描述，如 demo 中需要校验用户是否把灯的大小调整为 50x50，我们可以这么写判断函数。</p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Assessment.swift</span></span><br><span class="line"><span class="keyword">func</span> <span class="title function_">changeLightSize</span>() -&gt; <span class="type">Bool</span> &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="type">UIElement</span>.elements.contains(where: &#123;</span><br><span class="line">        <span class="built_in">print</span>(<span class="string">&quot;当前元素 frame：<span class="subst">\(<span class="variable">$0</span>.frame.size.width)</span>x<span class="subst">\(<span class="variable">$0</span>.frame.size.height)</span>&quot;</span>)</span><br><span class="line">        <span class="keyword">return</span> <span class="variable">$0</span>.frame.size.width <span class="operator">==</span> <span class="number">50</span> <span class="operator">&amp;&amp;</span> <span class="variable">$0</span>.frame.size.height <span class="operator">==</span> <span class="number">50</span></span><br><span class="line">    &#125;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>再创建一个 Connection.swift 文件，继续搬运代码。</p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> Foundation</span><br><span class="line"><span class="comment">// 写好 id 和检测函数的映射关系</span></span><br><span class="line"><span class="keyword">let</span> taskFunctionByID <span class="operator">=</span> [<span class="string">&quot;changeLightSize&quot;</span>: changeLightSize]</span><br><span class="line"><span class="meta">@_cdecl</span>(<span class="string">&quot;Assessment&quot;</span>) <span class="keyword">public</span> <span class="keyword">dynamic</span> <span class="keyword">func</span> <span class="title function_">Assessment</span>(<span class="keyword">_</span> <span class="params">payload</span>: [<span class="params">String</span>: <span class="keyword">Any</span>],</span><br><span class="line">                                                     <span class="keyword">_</span> <span class="params">completion</span>: <span class="keyword">@escaping</span> ([String: <span class="keyword">Any</span>]<span class="operator">?</span>, <span class="type">NSError</span>?) -&gt; <span class="type">Void</span>) -&gt; <span class="type">Void</span> &#123;</span><br><span class="line">    <span class="built_in">print</span>(payload)</span><br><span class="line">    <span class="keyword">if</span> <span class="keyword">let</span> taskIDData <span class="operator">=</span> payload[<span class="string">&quot;TaskID&quot;</span>] <span class="keyword">as?</span> <span class="type">Data</span>,</span><br><span class="line">       <span class="keyword">let</span> taskID <span class="operator">=</span> <span class="type">String</span>(data: taskIDData, encoding: .utf8) &#123;</span><br><span class="line">        <span class="type">DispatchQueue</span>.main.asyncAfter(deadline: .now() <span class="operator">+</span> <span class="number">0.1</span>) &#123;</span><br><span class="line">            <span class="keyword">var</span> completed <span class="operator">=</span> <span class="literal">false</span></span><br><span class="line">            <span class="keyword">if</span> <span class="keyword">let</span> taskFunction <span class="operator">=</span> taskFunctionByID[taskID] &#123;</span><br><span class="line">                completed <span class="operator">=</span> taskFunction()</span><br><span class="line">            &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">                <span class="built_in">print</span>(<span class="string">&quot;Error: Assessment function for taskID &#x27;<span class="subst">\(taskID)</span>&#x27; not found.&quot;</span>)</span><br><span class="line">            &#125;</span><br><span class="line">            completion([taskID: <span class="type">Data</span>(completed.description.utf8)], <span class="literal">nil</span>)</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>这样我们就完成了当每次文件发生改动时都会拿到一次处理回调，现在回到代码中继续编写逻辑。我们需要引入一个全新的注释<code>//#-learning-task(changeLightSize)</code>，该注释必须关联<code>addCode</code>类型的<code>@Task</code>标签，如果该任务下某个<code>@Page</code>开启了<code>isAddable</code>能力，则可以自动插入代码替换掉注释所在位置。</p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// LightBasicUI.swift</span></span><br><span class="line"><span class="keyword">import</span> SwiftUI</span><br><span class="line"><span class="comment">/*#-code-walkthrough(1.first)*/</span></span><br><span class="line"><span class="keyword">struct</span> <span class="title class_">LightBasicUI</span>: <span class="title class_">View</span> &#123;</span><br><span class="line">    <span class="keyword">var</span> body: <span class="keyword">some</span> <span class="type">View</span> &#123;</span><br><span class="line">        <span class="comment">// ...</span></span><br><span class="line">        <span class="type">Circle</span>()</span><br><span class="line">        <span class="comment">// ...</span></span><br><span class="line">            .foregroundColor(.yellow)</span><br><span class="line">        <span class="comment">//#-learning-task(changeLightSize)</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// ...</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Guide.tutorial</span></span><br><span class="line"><span class="meta">@Task</span>(type: addCode, title: <span class="string">&quot;调整灯的大小&quot;</span>, id: <span class="string">&quot;ahaLightSize&quot;</span>, file: <span class="type">LightBasicUI</span>.swift) &#123;</span><br><span class="line">    <span class="meta">@Page</span>(id: <span class="string">&quot;lightTips&quot;</span>, title: <span class="string">&quot;&quot;</span>) &#123;</span><br><span class="line">        灯现在全填充整个屏幕，太大了，屏幕都快装不下了！！！</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="meta">@Page</span>(id: <span class="string">&quot;lightSizeChangeCode&quot;</span>, title: <span class="string">&quot;&quot;</span>, isAddable: <span class="literal">true</span>) &#123;</span><br><span class="line">        我们来把它调整为 <span class="number">50</span> 宽高的大小吧！灯的大小可以通过 `.frame` 来控制，把它加入到 `.foregroundColor` 下面吧，它看起来应该像这样<span class="operator">。</span></span><br></pre></td></tr></table></figure>
+<pre><code>    .frame(width: 50, height: 50, alignment: .center)
+    <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">@SuccessMessage(message: &quot;&quot;) &#123; </span><br><span class="line">    🎉 你可真行啊！灯泡颜色和大小都被你改好了，下一步我们一起来看看游戏棋盘是如何搭建的吧</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</code></pre>
+<p>重新打开我们的工程后就会看到在对应任务 page 下的代码插入提示了。点击“添加” playground 会自动插入该代码，而要插入的代码就是我们标记为<code>isAddable: true</code>的<code>@Page</code>标签所关联的代码块。</p>
+<p><img src="/./images/2023/swiftplayground/26.png"></p>
+<p><img src="/./images/2023/swiftplayground/27.png"></p>
+<p>当学习者编写的代码被检测到回调到 Connection 文件中相关判断函数返回<code>true</code>后，当前任务即通过，我们可以使用<code>@SuccessMessage</code>标签弹出一个恭喜界面，并顺势引导到下一个任务中。</p>
+<p><img src="/./images/2023/swiftplayground/28.png"></p>
+<p>此时下一个任务也被点亮了。</p>
+<p><img src="/./images/2023/swiftplayground/29.png"></p>
+<p>一般情况下，学习者完成了某一项任务后是没有入口回退到任务初始状态的，整个 Playground 生命周期都会一直保持该 ✅ 通过状态，这对开发者调试 Playground 时非常不友好，我们可以增加或删除<code>.tutorial</code>文件中对应任务的<code>@Page</code>标签个数，触发 Playgrounds app 刷新该任务。</p>
+<h3 id="词汇表"><a href="#词汇表" class="headerlink" title="词汇表"></a>词汇表</h3><p>如果开发者所编写的 Playground 涉及到较多需要额外说明的词汇，比如 demo 中需要先介绍一遍游戏规则，但又不想占用太多篇幅，可以通过链接词汇表的方式完成，如下图所示。</p>
+<p><img src="/./images/2023/swiftplayground/30.png"></p>
+<p>想要做到这种效果需要我们在本地化语言文件夹中新增一个<code>Glossary.plist</code>配置文件，并在其中写下对应的 k-v 对，在<code>.tutorial</code>文件中使用 markdown 语法标记需要跳转的文本内容即可，如果 key 中带有空格需要使用<code>%20</code>来代替，这是 ASCII 编码中的空格符号。</p>
+<p><img src="/./images/2023/swiftplayground/31.png"></p>
+<figure class="highlight swift"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// ...</span></span><br><span class="line"><span class="meta">@ContentAndMedia</span> &#123;</span><br><span class="line">    <span class="comment">// ...</span></span><br><span class="line">    在这篇教程中，我们将一起完成一个[关灯小游戏](glossary:<span class="comment">//gameRulo)，总共有三步，每一步都需要发挥你的聪明才智解决问题，快快学起来吧！</span></span><br><span class="line">    <span class="comment">// ...</span></span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">// ...</span></span><br></pre></td></tr></table></figure>
+
+<h2 id="分发"><a href="#分发" class="headerlink" title="分发"></a>分发</h2><p>经过潜心的设计和开发调试，你的 Playground 已经从一张白纸变成了一款栩栩如生的 Playground App，是时候把它分享给更多人一起体验了。目前为止（2022.6），可用的 Playground 分发方法已经发展出了三种形式：</p>
+<blockquote>
+<ul>
+<li>直接分享文件 <code>WWDC16</code></li>
+<li>通过 Playground Subscription 分发 <code>WWDC18</code></li>
+<li>通过 TestFlight 分发 <code>WWDC22</code></li>
+</ul>
+</blockquote>
+<p>通过以上的列举不难看出，Apple 对 Swift Playgrounds 这一 App 的定位在悄悄发生着改变。起初，它只是作为一款在 iPadOS 上学习和调试 Swift 语言的工具存在。在这一阶段中，Swift Playgrounds 主要面向初学者。之后，在 2018 年，随着第二方第三方订阅的引入，创作者可以将自己基于 Swift Playgrounds Template 创作的内容以 Playground Subscription 的形式分发给他人。这种形式赋予了 Swift Playgrounds 教学意义，将适用人群扩展到了内容创作者和学习者上。现在，2022 年，Swift Playgrounds 不但使用了 Swift DocC 能力替换了原先基于 Swift Playgrounds Template 工程完善了内容创作方法，而且引入了诸如 Swift Package Manager、权限管理和更完善的代码调试工具等开发者喜闻乐见的功能。Swift Playgrounds 已然摇身一变成为了一款轻量级 IDE，可以令开发者在 iPadOS 和 macOS 上进行一些轻量级的 App 开发工作。那么，将 Playground 内容上传到 TestFlight 来进行 App 发布前的测试这一功能的推出便十分合理了。本文的这一部分将介绍上面列举的三种 Playground 分发形式。</p>
+<h3 id="直接分享-Playground-文件"><a href="#直接分享-Playground-文件" class="headerlink" title="直接分享 Playground 文件"></a>直接分享 Playground 文件</h3><p>最简单的方法自然是把 Playground 文件直接分享给他人，但是无论是通过 AppleOS 内置的分享功能（例如 AirDrop）还是其他第三方 App，分享和导入的过程都过于复杂。并且，如果后续 Playground 有了更新，不能及时地体验到新功能对学习者也是极大的损失。<br><img src="/./images/2023/swiftplayground/46.png"></p>
+<h3 id="通过-Playground-Subscription-分发"><a href="#通过-Playground-Subscription-分发" class="headerlink" title="通过 Playground Subscription 分发"></a>通过 Playground Subscription 分发</h3><p>最理想的 Playground 分发形式便是像 Mac 一样开盖即用并随时保持更新。Apple 早在 WWDC18 中就已提出以 Subscription 形式分发 Playground 的方法，Playground Subscription（以下省略为 “Subscription”） 和 Podcast（播客）相同，以 feed 形式存在，是一系列按顺序排列的内容，允许学习者选择列表中的一个或多个 Playground 进行下载并学习。</p>
+<p>也就是说，任何拥有 Subscription 链接的学习者都可以一键订阅 Playground 并在有可用更新时得到通知。尽管 Playground 模板的内容已进行了数次更新，但 Playground 开发者仅需修改文件结构，便可创建新版本的 Subscription。</p>
+<p>Cyan 通过设计并编写 TuerYeCloisonne Playground 项目荣获了 WWDC22 Swift Student Challenge 优胜者。该 Playground 以拼图和填色游戏的形式，引导学习者亲手体验以景泰蓝这一传统手工艺的形式完成一个兔儿爷的形象的流程，感受两种非遗结合在一起所带来的独特之美。本部分将以此 Playground 为例讲解如何发布一个 Playground Subscription。</p>
+<table>
+<thead>
+<tr>
+<th>Cyan 的</th>
+<th>WWDC22</th>
+<th>Swift Student Challenge</th>
+<th>Playground</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><img src="/./images/2023/swiftplayground/32.png"></td>
+<td><img src="/./images/2023/swiftplayground/33.png"></td>
+<td><img src="/./images/2023/swiftplayground/34.png"></td>
+<td><img src="/./images/2023/swiftplayground/35.png"></td>
+</tr>
+</tbody></table>
+<p>为了让所有人都可以使用 Subscription 链接，需要完成三部分工作，分别是创建网络主机、创建和发布 Subscription。前者需要按照给定格式编写对应的 <code>feed.json</code> 文件，后者需要将包含 Playground 文件、元数据、图像和 feed 发布到网络主机上以供学习者下载。</p>
+<h4 id="创建网络主机"><a href="#创建网络主机" class="headerlink" title="创建网络主机"></a><strong>创建网络主机</strong></h4><p>理论上你可以使用任何形式的网络主机，本文以 GitHub Page 为例。首先在 GitHub 上注册并登录自己的账号，在右上角的入口新建一个新的 Repository。</p>
+<p>Repository 的名称必须与你的 GitHub 用户名一致。Cyan 的用户名是 cyanichord，因此 Repository 的名称是 cyanichord.github.io，之后点击<code>Create repository</code>。</p>
+<p>至此，用于发布 Playground Subscription 的网络主机就创建好了，域是 cyanichord.github.io。</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody><tr>
+<td><img src="/./images/2023/swiftplayground/36.png"></td>
+<td><img src="/./images/2023/swiftplayground/37.png"></td>
+<td><img src="/./images/2023/swiftplayground/38.png"></td>
+</tr>
+</tbody></table>
+<h4 id="创建-Subscription-feed"><a href="#创建-Subscription-feed" class="headerlink" title="创建 Subscription feed"></a><strong>创建 Subscription feed</strong></h4><p>Swift Playgrounds app 中的 feed 结构为 JSON，主要由列表、定义、字符串和数字等原始值组成。受文章篇幅限制，本文不会展示 feed 中能包含的全部信息，而是以一个成品 Playground 为例讲解发布一个 Subscription 的必要信息。要创建一个符合 Swift Playgrounds app 使用的标准 feed 文件，至少需要包含以下键值对：</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// feed.json file</span></span><br><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">   <span class="attr">&quot;title&quot;</span><span class="punctuation">:</span> <span class="string">&quot;&quot;</span><span class="punctuation">,</span> <span class="comment">// Subscription 的名称</span></span><br><span class="line">   <span class="attr">&quot;subtitle&quot;</span><span class="punctuation">:</span> <span class="string">&quot;&quot;</span><span class="punctuation">,</span> <span class="comment">// Subscription 的副标题</span></span><br><span class="line">   <span class="attr">&quot;publisherName&quot;</span><span class="punctuation">:</span> <span class="string">&quot;&quot;</span><span class="punctuation">,</span> <span class="comment">// Subscription 的发布者，即个人、机构或组织的名称</span></span><br><span class="line">   <span class="attr">&quot;feedIdentifier&quot;</span><span class="punctuation">:</span> <span class="string">&quot;&quot;</span><span class="punctuation">,</span> <span class="comment">// 托管 feed 的域的反向 DNS 字符串。例：如果托管 feed 的域是 cyanichord.github.io，那么它的反向 DNS 字符串即为 io.github.cyanichord。</span></span><br><span class="line">   <span class="attr">&quot;contactURL&quot;</span><span class="punctuation">:</span> <span class="string">&quot;&quot;</span><span class="punctuation">,</span> <span class="comment">// Subscription 发布者的联系方式</span></span><br><span class="line">   <span class="attr">&quot;formatVersion&quot;</span><span class="punctuation">:</span> <span class="string">&quot;&quot;</span><span class="punctuation">,</span> <span class="comment">// feed 版本号设置，当前为 1.0</span></span><br><span class="line">   <span class="attr">&quot;documents&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span><span class="punctuation">]</span> <span class="comment">// 包含 Subscription 中每一个 Playground 具体信息的集合</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure>
+
+<p>对于<code>documents</code>字段中的每一个 Playground 实例配置，至少包含以下内容。</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// feed.json file</span></span><br><span class="line"><span class="attr">&quot;documents&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span></span><br><span class="line">      <span class="punctuation">&#123;</span></span><br><span class="line">           <span class="attr">&quot;title&quot;</span><span class="punctuation">:</span> <span class="string">&quot;&quot;</span><span class="punctuation">,</span> <span class="comment">// Playground 的标题</span></span><br><span class="line">           <span class="attr">&quot;overviewSubtitle&quot;</span><span class="punctuation">:</span> <span class="string">&quot;&quot;</span><span class="punctuation">,</span> <span class="comment">// 概览视图中显示的副标题</span></span><br><span class="line">           <span class="attr">&quot;description&quot;</span><span class="punctuation">:</span> <span class="string">&quot;&quot;</span><span class="punctuation">,</span> <span class="comment">//  在打开 Subscription 中 Playground 前的详细显示描述</span></span><br><span class="line">           <span class="attr">&quot;contentIdentifier&quot;</span><span class="punctuation">:</span> <span class="string">&quot;&quot;</span><span class="punctuation">,</span> <span class="comment">// Playground 的反向 DNS 字符串</span></span><br><span class="line">           <span class="attr">&quot;contentVersion&quot;</span><span class="punctuation">:</span> <span class="string">&quot;&quot;</span><span class="punctuation">,</span> <span class="comment">//  Playground 的版本号</span></span><br><span class="line">           <span class="attr">&quot;url&quot;</span><span class="punctuation">:</span> <span class="string">&quot;&quot;</span><span class="punctuation">,</span> <span class="comment">//  Playground 压缩包的路径</span></span><br><span class="line">           <span class="attr">&quot;publishedDate&quot;</span><span class="punctuation">:</span> <span class="string">&quot;&quot;</span><span class="punctuation">,</span> <span class="comment">// Playground 的发布时间</span></span><br><span class="line">           <span class="attr">&quot;lastUpdatedDate&quot;</span><span class="punctuation">:</span> <span class="string">&quot;&quot;</span><span class="punctuation">,</span> <span class="comment">//  最后更新 Playground 的时间</span></span><br><span class="line">           <span class="attr">&quot;thumbnailURL&quot;</span><span class="punctuation">:</span> <span class="string">&quot;&quot;</span><span class="punctuation">,</span> <span class="comment">// Playground 封面图片链接，尺寸要求为 902 x 678 像素</span></span><br><span class="line">           <span class="attr">&quot;bannerImageURL&quot;</span><span class="punctuation">:</span> <span class="string">&quot;&quot;</span><span class="punctuation">,</span> <span class="comment">// Playground 横幅图像链接，尺寸要求为 1080 x 400 像素</span></span><br><span class="line">           <span class="attr">&quot;additionalInformation&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span> <span class="comment">// 用于提供元数据的对象集合（详见链接），对于最简单的例子只需要提供 language 的键值即可。</span></span><br><span class="line">              <span class="punctuation">&#123;</span></span><br><span class="line">                   <span class="attr">&quot;name&quot;</span><span class="punctuation">:</span> <span class="string">&quot;Languages&quot;</span><span class="punctuation">,</span></span><br><span class="line">                   <span class="attr">&quot;value&quot;</span><span class="punctuation">:</span> <span class="string">&quot;English&quot;</span></span><br><span class="line">              <span class="punctuation">&#125;</span></span><br><span class="line">          <span class="punctuation">]</span><span class="punctuation">,</span></span><br><span class="line">           <span class="comment">//&quot;previewImageURLs&quot;: [] //  Playground 详细视图的图像的链接，尺寸要求为 800 x 600 像素。本字段用于兼容旧版 Swift Playgrounds app</span></span><br><span class="line">      <span class="punctuation">&#125;</span></span><br><span class="line">  <span class="punctuation">]</span></span><br></pre></td></tr></table></figure>
+
+<p>将 TuerYeCloisonne 项目的信息填入其中，就得到了完整的 <code>feed.json</code> 文件。</p>
+<figure class="highlight json"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// feed.json file</span></span><br><span class="line"><span class="punctuation">&#123;</span></span><br><span class="line">   <span class="attr">&quot;title&quot;</span><span class="punctuation">:</span> <span class="string">&quot;WWDC22 TuerYeCloisonne&quot;</span><span class="punctuation">,</span></span><br><span class="line">   <span class="attr">&quot;subtitle&quot;</span><span class="punctuation">:</span> <span class="string">&quot;Feel the charm of Tuer Ye and Cloisonne&quot;</span><span class="punctuation">,</span></span><br><span class="line">   <span class="attr">&quot;publisherName&quot;</span><span class="punctuation">:</span> <span class="string">&quot;Cyanichord&quot;</span><span class="punctuation">,</span></span><br><span class="line">   <span class="attr">&quot;feedIdentifier&quot;</span><span class="punctuation">:</span> <span class="string">&quot;io.github.cyanichord&quot;</span><span class="punctuation">,</span></span><br><span class="line">   <span class="attr">&quot;contactURL&quot;</span><span class="punctuation">:</span> <span class="string">&quot;https://cyanichord.github.io&quot;</span><span class="punctuation">,</span></span><br><span class="line">   <span class="attr">&quot;formatVersion&quot;</span><span class="punctuation">:</span> <span class="string">&quot;1.0&quot;</span><span class="punctuation">,</span></span><br><span class="line">   <span class="attr">&quot;documents&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span></span><br><span class="line">      <span class="punctuation">&#123;</span></span><br><span class="line">           <span class="attr">&quot;title&quot;</span><span class="punctuation">:</span> <span class="string">&quot;WWDC22 TuerYeCloisonne&quot;</span><span class="punctuation">,</span></span><br><span class="line">           <span class="attr">&quot;overviewSubtitle&quot;</span><span class="punctuation">:</span> <span class="string">&quot;Experience the charm of Tuer Ye and Cloisonne&quot;</span><span class="punctuation">,</span></span><br><span class="line">           <span class="attr">&quot;description&quot;</span><span class="punctuation">:</span> <span class="string">&quot;A simple jigsaw and coloring game.&quot;</span><span class="punctuation">,</span></span><br><span class="line">           <span class="attr">&quot;contentIdentifier&quot;</span><span class="punctuation">:</span> <span class="string">&quot;io.github.cyanichord.tueryecloisonne&quot;</span><span class="punctuation">,</span></span><br><span class="line">           <span class="attr">&quot;contentVersion&quot;</span><span class="punctuation">:</span> <span class="string">&quot;1.0&quot;</span><span class="punctuation">,</span></span><br><span class="line">           <span class="attr">&quot;url&quot;</span><span class="punctuation">:</span> <span class="string">&quot;https://cyanichord.github.io/TuerYeCloisonne/WWDC22_Cyanichord_Cloisonne.swiftpm.zip&quot;</span><span class="punctuation">,</span></span><br><span class="line">           <span class="attr">&quot;publishedDate&quot;</span><span class="punctuation">:</span> <span class="string">&quot;2022-06-25T18:00:00+09:00&quot;</span><span class="punctuation">,</span></span><br><span class="line">           <span class="attr">&quot;lastUpdatedDate&quot;</span><span class="punctuation">:</span> <span class="string">&quot;2022-06-25T18:00:00+09:00&quot;</span><span class="punctuation">,</span></span><br><span class="line">           <span class="attr">&quot;thumbnailURL&quot;</span><span class="punctuation">:</span> <span class="string">&quot;TuerYeCloisonne/thumbnail.png&quot;</span><span class="punctuation">,</span></span><br><span class="line">           <span class="attr">&quot;bannerImageURL&quot;</span><span class="punctuation">:</span> <span class="string">&quot;TuerYeCloisonne/banner.png&quot;</span><span class="punctuation">,</span></span><br><span class="line">           <span class="attr">&quot;additionalInformation&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span></span><br><span class="line">              <span class="punctuation">&#123;</span></span><br><span class="line">                   <span class="attr">&quot;name&quot;</span><span class="punctuation">:</span> <span class="string">&quot;Languages&quot;</span><span class="punctuation">,</span></span><br><span class="line">                   <span class="attr">&quot;value&quot;</span><span class="punctuation">:</span> <span class="string">&quot;English&quot;</span></span><br><span class="line">              <span class="punctuation">&#125;</span></span><br><span class="line">          <span class="punctuation">]</span><span class="punctuation">,</span></span><br><span class="line">           <span class="attr">&quot;previewImageURLs&quot;</span><span class="punctuation">:</span> <span class="punctuation">[</span><span class="punctuation">]</span></span><br><span class="line">      <span class="punctuation">&#125;</span></span><br><span class="line">  <span class="punctuation">]</span></span><br><span class="line"><span class="punctuation">&#125;</span></span><br></pre></td></tr></table></figure>
+
+<p>至此，<code>feed.json</code> 的内容已经完成。</p>
+<h4 id="发布-Subscription"><a href="#发布-Subscription" class="headerlink" title="发布 Subscription"></a><strong>发布 Subscription</strong></h4><p>在本地终端中使用<code>git clone</code>命令把之前创建好的 GitHub Page Repository 克隆到本地。</p>
+<p><img src="/./images/2023/swiftplayground/39.png"></p>
+<p>为了使<code>feed.json</code>中的内容正确的体现在文件结构中，需要将文件夹的结构与文件统一，文件结构应该如下图所示。</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">.</span><br><span class="line">├── index.html #用于提供 Subscription 链接</span><br><span class="line">├── YuerYeCloisonne #包含 Subscription 中的 Playground 内容的文件夹</span><br><span class="line">│   ├── WWDC22_Cyanichord_Cloisonne.swiftpm.zip #Playground 文件的压缩包</span><br><span class="line">│   └── thumbnail.png #Playground 的缩略图</span><br><span class="line">│   └── banner.png #Playground 的横幅图片</span><br><span class="line">└── feed.json</span><br></pre></td></tr></table></figure>
+
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody><tr>
+<td><img src="/./images/2023/swiftplayground/40.png"></td>
+<td><img src="/./images/2023/swiftplayground/41.png"></td>
+</tr>
+</tbody></table>
+<p>其中，index.html 中的订阅链接格式如下：</p>
+<ul>
+<li>Swift Playgrounds app 通用链接前缀：<code>https://developer.apple.com/ul/sp0?url=</code></li>
+<li>Subscription feed.json 的 URL，本例中为：<code>https://cyanichord.github.io/feed.json</code></li>
+</ul>
+<p>完整的链接是如下。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">https://developer.apple.com/ul/sp0?url=https://cyanichord.github.io/feed.json</span><br></pre></td></tr></table></figure>
+
+<p>在网页中插入如下代码。</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">a</span> <span class="attr">href</span>=<span class="string">&quot;https://developer.apple.com/ul/sp0?url=https://cyanichord.github.io/feed.json&quot;</span>&gt;</span>TuerYeCloisonne<span class="tag">&lt;/<span class="name">a</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p><img src="/./images/2023/swiftplayground/42.png"></p>
+<h4 id="通过-Subscription-订阅"><a href="#通过-Subscription-订阅" class="headerlink" title="通过 Subscription 订阅"></a><strong>通过 Subscription 订阅</strong></h4><p>学习者点击链接之后可以自动跳转到 Playground.app，进行订阅操作。</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody><tr>
+<td><img src="/./images/2023/swiftplayground/43.png"></td>
+<td><img src="/./images/2023/swiftplayground/44.png"></td>
+</tr>
+</tbody></table>
+<p>现在，Playground 的 Subscription 链接已经成功发布，所有人都可以使用 Subscription 链接来体验你自己编写的 Playground 了。</p>
+<h3 id="通过-TestFlight-分发"><a href="#通过-TestFlight-分发" class="headerlink" title="通过 TestFlight 分发"></a>通过 TestFlight 分发</h3><p>在通过 TestFlight 分发前，由于要 Swift Playgrounds App 要通过 App Store Connect 来执行相关流程，请确保你有一个有效的开发者账号。<br>在 Swift Playgrounds App 中，打开要分发的项目，点击左上角的 App 设置（App Settings） 区域，在弹出的窗口中填入以下信息：</p>
+<ul>
+<li>App 名称</li>
+<li>App 强调色</li>
+<li>为你的 App 提供一个独一无二的 icon （大小必须为 <code>1024 x 1024 px</code>，否则会被拉伸）</li>
+<li>App 使用的隐私功能</li>
+<li>团队与捆绑包标识符</li>
+<li>App 版本号</li>
+<li>App 类别</li>
+</ul>
+<p>之后，点击上传至 App Store Connect</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody><tr>
+<td><img src="/./images/2023/swiftplayground/47.png"></td>
+<td><img src="/./images/2023/swiftplayground/48.png"></td>
+</tr>
+</tbody></table>
+<p>经过一段时间的等待后，就可以在 App Store Connect 中看到上传好的 App。现在就可以通过内部测试和提交外部测试申请来让其他人通过 TestFlight 下载并安装程序了。</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody><tr>
+<td><img src="/./images/2023/swiftplayground/49.png"></td>
+<td><img src="/./images/2023/swiftplayground/50.png"></td>
+<td><img src="/./images/2023/swiftplayground/51.png"></td>
+</tr>
+</tbody></table>
+<h2 id="总结与展望"><a href="#总结与展望" class="headerlink" title="总结与展望"></a>总结与展望</h2><p>至此，Swift Playgrounds app 4.1 中的新鲜东西都已经说得差不多了，整体看下来虽然到了第四世代已经有了非常多的改善，能够做的东西也非常多，可以供开发者们好好的写一份交互非常棒的 Playground，高亮代码块是最让 PJ 惊喜的地方，解决了调了以往“顺序阅读”的学习方式。addCode 类型的@Task 标签引入更是统一了插入代码和检验输入代码正确性的问题，开发者不用再费劲心思的在代码中埋入隐藏的胶水逻辑代码。</p>
+<p>PJ 原本以为 Swift Playgrounds app（4.0 版本之前）不会再推出更多的新鲜东西，纯粹把它作为 Apple 教育大局下一枚棋子去填补空白即可，但没想到在 WWDC21 中直接王炸，继续做出了一件“only Apple can do”的事情，放开了在 iPad 上发布 App 的能力。侧面去想这件事，本身也说明了做一个简单、流程清晰的 App 在 iPad 上完全没问题，这同时也说明了写 App 是一件低年龄段就可以开始做的事情。</p>
+<p>Cyan 认为 Swift Playgrounds 使用 Swift DocC 完善内容创作方法并引入了诸如 Swift Package Manager、权限管理和更完善的代码调试工具等开发者喜闻乐见的功能后，已经从一个单纯的代码调试工具发展成了一款内容创作工具和轻量级 IDE。轻度开发者现在完全可以实现在 App 上完成全部开发流程的工作。可以预见到的是，将来随着 Swift Playgrounds 的功能愈发完善，Swift Playgrounds 将变成一款 iPadOS 和 macOS 平台上同时面向初学者、内容创作者及学习者和个人开发者的功能完善的 IDE。这将变成 Apple 在教育领域一直推广的 “Everyone can code” 内容中使用的核心平台。</p>
+<p>不禁畅想起未来的 Playground 5.x 版本又会加入多少令人陈赞的功能，但以下几点是我们目前觉得 Swift Playgrounds app 还欠缺的地方，希望接下来的版本更新中可以完善这些能力。</p>
+<h3 id="Debug"><a href="#Debug" class="headerlink" title="Debug"></a>Debug</h3><p>Swift Playgrounds app 只差最后一步了！选择 Playground 模板工程可以选择“单步断点”模式，但过于鸡肋体验导致几乎都选择使用 Swift Playgrounds Book 的模板工程在 Xcode 中进行开发于 debug，调试完毕后才发布，但选择 App 模板工程你会发现只能 print 大法了。PJ 有一个非常强烈的预感，选择 App 模板后，具备了控制台输出和代码行数标识，下一步 Swift Playgrounds app 一定会加上更好用的 debug 工具。</p>
+<p><img src="/./images/2023/swiftplayground/45.png"></p>
+<h3 id="更便捷的分发方式"><a href="#更便捷的分发方式" class="headerlink" title="更便捷的分发方式"></a>更便捷的分发方式</h3><p>除了官方和部分筛选过的第三方 playground 占据了模板列表的绝大部分位置外，如果想要引入其它开发者编写的 playground 就需要先创建一堆索引文件并发布到自建 sever 中，拿着链接才可以进行分发。估计是市场太小，playground 本身能够做的事并不如 Xcode 那般复杂，整体可控导致 Apple 并不想再维护一个官方列表。但时过境迁，现如今 k-12 教育市场已经被洗牌了，PJ 觉得通过 playground 这种寓教于乐的方式去学习不同学科甚至感受不同文化背景的知识是一种全新体验，但求 Apple 能够提供一种更加便捷的 playground 分发方式，能够让我们这些立志于在教育市场做些贡献的开发者们更大量级的分发自己的作品。</p>
+<h3 id="更清爽的文本编辑器和边栏"><a href="#更清爽的文本编辑器和边栏" class="headerlink" title="更清爽的文本编辑器和边栏"></a>更清爽的文本编辑器和边栏</h3><p>Cyan 在使用 iPad 上的 Swift Playgrounds 完成今年参赛作品的开发时，发现文本编辑器虽然支持字号调整，但不支持行间距等复杂调整。这导致在文件中的代码量到达一定程度后，界面显得十分臃肿，边栏同时也出现了这种问题。希望在今后的版本中，Apple 可以在保持 iPad App 设计风格的同时，提供关于文本编辑器和边栏的自定义选项。</p>
+<h3 id="更完善的标签能力"><a href="#更完善的标签能力" class="headerlink" title="更完善的标签能力"></a>更完善的标签能力</h3><p>虽然目前的标签已经足够开发者玩出很多不一样的东西来了，但目前的代码校验方式以及编写方式十分头疼。因为没有代码提示基本上都得翻着官方事例或文档来猜，这件事情很不 Apple，而且 Apple 在 Playground.app 上隐藏了太多的实现细节，一直没有摆出一个海纳百川的姿态去配合开发者，导致越来越没有人愿意通过 Playground 去实现自己的创意。</p>
+<h2 id="参考链接"><a href="#参考链接" class="headerlink" title="参考链接"></a>参考链接</h2><p><a target="_blank" rel="noopener" href="https://developer.apple.com/swift-playgrounds/release-notes/">Swift Playgrounds Release Note</a></p>
+<ul>
+<li>每次版本更新都会放出一些新东西，但更新间隔时间很长，属实是“非必要不更新了”。</li>
+<li>有一些细节不会在 session 或者 article 中说明，如果没有同步放出相关配套的 Playgrounds app 更新细节可以在这看到。</li>
+</ul>
+<p><a target="_blank" rel="noopener" href="https://github.com/wwdc">WWDC Scholar repos</a></p>
+<ul>
+<li>汇集了从 16 年开始到 22 年的所有 WWDC 奖学金项目，其中从 17 年开始转为提交 Playground，可以从 17 年开始逐年观察到优秀的学生开发者们是如何巧妙利用 Swift Playgrounds 搞事情的（玩出花来了！</li>
+<li>其中有非常多惊喜，PJ 个人 WWDC19 Scholar 项目也从中汲取到了非常多的营养，十分推荐！</li>
+</ul>
+<p>WWDC22 - <a target="_blank" rel="noopener" href="https://developer.apple.com/wwdc22/110348">Build your first App in Swift Playgrounds</a></p>
+<p>WWDC22 - <a target="_blank" rel="noopener" href="https://developer.apple.com/wwdc22/110348">Create engaging content for Swift Playgrounds</a></p>
+<p>WWDC18 - <a target="_blank" rel="noopener" href="https://developer.apple.com/wwdc18/413">Create Your Own Swift Playgrounds Subscription</a></p>
+<p><a target="_blank" rel="noopener" href="https://help.apple.com/xcode/mac/10.0/#/dev188e45167">Create, edit, and execute playgrounds</a></p>
+<p><a target="_blank" rel="noopener" href="https://developer.apple.com/library/archive/documentation/Xcode/Reference/xcode_markup_formatting_ref/index.html#//apple_ref/doc/uid/TP40016497-CH2-SW1">Markup Overview</a></p>
+<p><a target="_blank" rel="noopener" href="https://developer.apple.com/documentation/swift-playgrounds/creating-a-subscription">Swift Playgrounds - Creating a subscription</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.bilibili.com/read/cv16275466">Swift Playgrounds App 1 - Swift Playgrounds App 项目</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.bilibili.com/read/cv16276005">Swift Playgrounds App 2 - 引导演示</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.bilibili.com/read/cv16276267">Swift Playgrounds App 3 - 引导任务</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.fatbobman.com/posts/swiftPlaygrounds4/">Swift Playgrounds 4 娱乐还是生产力</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.fatbobman.com/posts/xcodePlayground1/">玩转 Xcode Playground（上）</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.fatbobman.com/posts/xcodePlayground2/">玩转 Xcode Playground（下）</a></p>
+</div><div class="tags"></div><div class="post-nav"><a class="pre" href="/2022/07/16/qt1/">来写一个颜色选择器吧！</a><a class="next" href="/2022/05/28/talk19/">ifLab - iOS Club WWDC 奖学金分享</a></div></div></div></div><div class="pure-u-1-4 hidden_mid_and_down"><div id="sidebar"><div class="widget"><div class="widget-title"><i class="fa fa-star-o"> 标签</i></div><div class="tagcloud"><a href="/tags/%E6%80%BB%E7%BB%93/" style="font-size: 15px;">总结</a> <a href="/tags/iOS/" style="font-size: 15px;">iOS</a> <a href="/tags/%E6%AF%94%E8%B5%9B/" style="font-size: 15px;">比赛</a> <a href="/tags/Cocos/" style="font-size: 15px;">Cocos</a> <a href="/tags/%E6%B8%B8%E6%88%8F%E5%BC%80%E5%8F%91/" style="font-size: 15px;">游戏开发</a> <a href="/tags/DiDi/" style="font-size: 15px;">DiDi</a> <a href="/tags/internship/" style="font-size: 15px;">internship</a> <a href="/tags/Flutter/" style="font-size: 15px;">Flutter</a> <a href="/tags/%E8%B7%A8%E5%B9%B3%E5%8F%B0/" style="font-size: 15px;">跨平台</a> <a href="/tags/Audio/" style="font-size: 15px;">Audio</a> <a href="/tags/Ping/" style="font-size: 15px;">Ping</a> <a href="/tags/%E5%BC%B9%E5%B9%95/" style="font-size: 15px;">弹幕</a> <a href="/tags/%E9%A1%B5%E9%9D%A2%E4%BC%A0%E5%80%BC/" style="font-size: 15px;">页面传值</a> <a href="/tags/HUD/" style="font-size: 15px;">HUD</a> <a href="/tags/Swift/" style="font-size: 15px;">Swift</a> <a href="/tags/%E5%BC%80%E6%BA%90/" style="font-size: 15px;">开源</a> <a href="/tags/%E9%A1%B9%E7%9B%AE/" style="font-size: 15px;">项目</a> <a href="/tags/PhotosKit/" style="font-size: 15px;">PhotosKit</a> <a href="/tags/React-Native/" style="font-size: 15px;">React-Native</a> <a href="/tags/swift/" style="font-size: 15px;">swift</a> <a href="/tags/Weex/" style="font-size: 15px;">Weex</a> <a href="/tags/Apple/" style="font-size: 15px;">Apple</a> <a href="/tags/%E5%8D%9A%E5%AE%A2/" style="font-size: 15px;">博客</a> <a href="/tags/%E4%BA%91/" style="font-size: 15px;">云</a> <a href="/tags/%E6%84%9F%E6%83%B3/" style="font-size: 15px;">感想</a> <a href="/tags/%E9%9A%8F%E6%83%B3/" style="font-size: 15px;">随想</a> <a href="/tags/%E5%AD%97%E8%8A%82%E8%B7%B3%E5%8A%A8/" style="font-size: 15px;">字节跳动</a> <a href="/tags/%E6%9C%88%E5%BA%A6%E6%80%BB%E7%BB%93/" style="font-size: 15px;">月度总结</a> <a href="/tags/%E9%9A%8F%E7%AC%94/" style="font-size: 15px;">随笔</a> <a href="/tags/CMake/" style="font-size: 15px;">CMake</a> <a href="/tags/makefile/" style="font-size: 15px;">makefile</a> <a href="/tags/%E7%BC%96%E8%AF%91/" style="font-size: 15px;">编译</a> <a href="/tags/CodeLab/" style="font-size: 15px;">CodeLab</a> <a href="/tags/%E5%B0%91%E5%84%BF%E7%BC%96%E7%A8%8B/" style="font-size: 15px;">少儿编程</a> <a href="/tags/%E6%88%91%E7%9A%84%E5%A4%A7%E5%AD%A6/" style="font-size: 15px;">我的大学</a> <a href="/tags/%E5%9B%9E%E5%BF%86%E5%BD%95/" style="font-size: 15px;">回忆录</a> <a href="/tags/crash/" style="font-size: 15px;">crash</a> <a href="/tags/%E9%AA%91%E8%A1%8C/" style="font-size: 15px;">骑行</a> <a href="/tags/%E8%87%AA%E8%A1%8C%E8%BD%A6/" style="font-size: 15px;">自行车</a> <a href="/tags/fcc/" style="font-size: 15px;">fcc</a> <a href="/tags/%E5%88%86%E4%BA%AB/" style="font-size: 15px;">分享</a> <a href="/tags/%E6%B8%B8%E6%88%8F/" style="font-size: 15px;">游戏</a> <a href="/tags/ifLab/" style="font-size: 15px;">ifLab</a> <a href="/tags/%E6%8A%80%E6%9C%AF/" style="font-size: 15px;">技术</a> <a href="/tags/%E5%BB%BA%E7%AB%99/" style="font-size: 15px;">建站</a> <a href="/tags/%E9%9D%A2%E8%AF%95/" style="font-size: 15px;">面试</a> <a href="/tags/%E7%A7%9F%E6%88%BF/" style="font-size: 15px;">租房</a> <a href="/tags/iBistu/" style="font-size: 15px;">iBistu</a> <a href="/tags/macOS/" style="font-size: 15px;">macOS</a> <a href="/tags/%E7%BC%96%E8%AF%91%E5%8E%9F%E7%90%86/" style="font-size: 15px;">编译原理</a> <a href="/tags/%E7%9D%A1%E9%AD%94/" style="font-size: 15px;">睡魔</a> <a href="/tags/Netflix/" style="font-size: 15px;">Netflix</a> <a href="/tags/%E4%BD%9C%E5%93%81/" style="font-size: 15px;">作品</a> <a href="/tags/%E5%BC%80%E5%8F%91%E6%97%A5%E5%BF%97/" style="font-size: 15px;">开发日志</a> <a href="/tags/App/" style="font-size: 15px;">App</a> <a href="/tags/%E4%BA%A7%E5%93%81%E6%80%9D%E8%80%83/" style="font-size: 15px;">产品思考</a> <a href="/tags/%E6%91%84%E5%BD%B1/" style="font-size: 15px;">摄影</a> <a href="/tags/Playground/" style="font-size: 15px;">Playground</a> <a href="/tags/%E5%B7%A5%E4%BD%9C/" style="font-size: 15px;">工作</a> <a href="/tags/SwiftUI/" style="font-size: 15px;">SwiftUI</a> <a href="/tags/%E5%BD%B1%E8%A7%86%E5%89%A7/" style="font-size: 15px;">影视剧</a> <a href="/tags/WWDC/" style="font-size: 15px;">WWDC</a> <a href="/tags/%E5%AD%97%E8%8A%82/" style="font-size: 15px;">字节</a> <a href="/tags/%E8%B7%91%E6%AD%A5/" style="font-size: 15px;">跑步</a> <a href="/tags/%E9%A9%AC%E6%8B%89%E6%9D%BE/" style="font-size: 15px;">马拉松</a> <a href="/tags/%E8%BF%90%E5%8A%A8/" style="font-size: 15px;">运动</a> <a href="/tags/%E8%B6%8A%E9%87%8E%E8%B7%91/" style="font-size: 15px;">越野跑</a> <a href="/tags/%E6%84%9F%E8%B0%A2/" style="font-size: 15px;">感谢</a> <a href="/tags/%E6%BB%B4%E6%BB%B4/" style="font-size: 15px;">滴滴</a> <a href="/tags/%E6%80%9D%E8%80%83/" style="font-size: 15px;">思考</a> <a href="/tags/%E6%97%85%E8%A1%8C/" style="font-size: 15px;">旅行</a> <a href="/tags/%E6%84%9F%E6%80%A7/" style="font-size: 15px;">感性</a> <a href="/tags/%E9%9D%92%E5%B2%9B/" style="font-size: 15px;">青岛</a> <a href="/tags/%E5%BE%92%E6%AD%A5/" style="font-size: 15px;">徒步</a> <a href="/tags/Unity/" style="font-size: 15px;">Unity</a> <a href="/tags/Android/" style="font-size: 15px;">Android</a> <a href="/tags/WatchOS/" style="font-size: 15px;">WatchOS</a> <a href="/tags/Combine/" style="font-size: 15px;">Combine</a> <a href="/tags/django/" style="font-size: 15px;">django</a> <a href="/tags/%E5%AE%9E%E4%B9%A0/" style="font-size: 15px;">实习</a> <a href="/tags/%E5%BE%AE%E4%BF%A1/" style="font-size: 15px;">微信</a> <a href="/tags/%E5%B0%8F%E7%A8%8B%E5%BA%8F/" style="font-size: 15px;">小程序</a> <a href="/tags/UML/" style="font-size: 15px;">UML</a> <a href="/tags/%E6%90%9E%E4%BA%8B%E6%83%85%E7%B3%BB%E5%88%97/" style="font-size: 15px;">搞事情系列</a> <a href="/tags/%E4%B8%83%E7%89%9B%E4%BA%91/" style="font-size: 15px;">七牛云</a> <a href="/tags/Java/" style="font-size: 15px;">Java</a> <a href="/tags/Spring/" style="font-size: 15px;">Spring</a> <a href="/tags/Spring-MVC/" style="font-size: 15px;">Spring MVC</a> <a href="/tags/Mybatis/" style="font-size: 15px;">Mybatis</a> <a href="/tags/Junit/" style="font-size: 15px;">Junit</a> <a href="/tags/log4j/" style="font-size: 15px;">log4j</a> <a href="/tags/mysql/" style="font-size: 15px;">mysql</a> <a href="/tags/%E5%9B%BD%E9%99%85%E5%8C%96/" style="font-size: 15px;">国际化</a> <a href="/tags/%E6%BC%94%E8%AE%B2/" style="font-size: 15px;">演讲</a> <a href="/tags/%E5%8D%B3%E6%97%B6%E9%80%9A%E8%AE%AF/" style="font-size: 15px;">即时通讯</a> <a href="/tags/side-project/" style="font-size: 15px;">side project</a> <a href="/tags/Qt/" style="font-size: 15px;">Qt</a> <a href="/tags/C-%E8%B7%A8%E7%AB%AF/" style="font-size: 15px;">C++ 跨端</a> <a href="/tags/C/" style="font-size: 15px;">C++</a> <a href="/tags/%E5%93%8D%E5%BA%94%E5%BC%8F/" style="font-size: 15px;">响应式</a></div></div><div class="widget"><div class="widget-title"><i class="fa fa-external-link"> 联系我</i></div><ul></ul><a href="https://github.com/windstormeye" title="GitHub - PJHubs" target="_blank">GitHub - PJHubs</a><ul></ul><a href="https://space.bilibili.com/25392474" title="BiliBili - PJHubs" target="_blank">BiliBili - PJHubs</a><ul></ul><a href="https://twitter.com/wengpeijun" title="Twitter - PJHubs" target="_blank">Twitter - PJHubs</a><ul></ul><a href="https://weibo.com/3307534462" title="微博 - PJHubs" target="_blank">微博 - PJHubs</a><ul></ul><a href="https://www.xiaohongshu.com/user/profile/5f2cd0360000000001001470" title="小红书 - PJHusb" target="_blank">小红书 - PJHusb</a><ul></ul><a href="." title="微信 - pjhubscom" target="_blank">微信 - pjhubscom</a><ul></ul><a href="." title="邮箱 - 877302410@qq.com" target="_blank">邮箱 - 877302410@qq.com</a></div></div></div><div class="pure-u-1 pure-u-md-3-4"><div id="footer">Copyright © 2024 PJHubs</div></div></div><script type="text/javascript" src="//cdn.jsdelivr.net/gh/fancyapps/fancybox/dist/jquery.fancybox.min.js" async></script><script type="text/javascript" src="/js/fancybox.js?v=1.0.0" async></script><link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/gh/fancyapps/fancybox/dist/jquery.fancybox.min.css"><script type="text/javascript" src="/js/copycode.js" successtext="Copy Successed!"></script><link rel="stylesheet" type="text/css" href="/css/copycode.css"><script type="text/javascript" src="/js/codeblock-resizer.js?v=1.0.0"></script><script type="text/javascript" src="/js/smartresize.js?v=1.0.0"></script></div></body></html>
