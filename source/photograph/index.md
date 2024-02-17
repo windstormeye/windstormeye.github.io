@@ -2,6 +2,28 @@
 
 人生啊！果然要珍惜当下。
 
+### 2024.02 海南春节
+![](/images/2024/02/hainan/1.jpg)
+![](/images/2024/02/hainan/2.jpg)
+![](/images/2024/02/hainan/3.jpg)
+![](/images/2024/02/hainan/4.jpg)
+![](/images/2024/02/hainan/5.jpg)
+![](/images/2024/02/hainan/6.jpg)
+![](/images/2024/02/hainan/9.jpg)
+![](/images/2024/02/hainan/8.jpg)
+![](/images/2024/02/hainan/7.jpg)
+
+### 2024.02 泉州
+![](/images/2024/02/quanzhou/4.jpg)
+![](/images/2024/02/quanzhou/2.jpg)
+![](/images/2024/02/quanzhou/3.jpg)
+![](/images/2024/02/quanzhou/6.jpg)
+![](/images/2024/02/quanzhou/9.jpg)
+![](/images/2024/02/quanzhou/5.jpg)
+![](/images/2024/02/quanzhou/7.jpg)
+![](/images/2024/02/quanzhou/8.jpg)
+![](/images/2024/02/quanzhou/1.jpg)
+![](/images/2024/02/quanzhou/10.jpg)
 
 ### 2024.01 桂林
 ![](/images/2024/01/guilin/6.jpeg)
