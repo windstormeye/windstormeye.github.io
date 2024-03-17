@@ -4,9 +4,9 @@ date: 2018-10-19 09:38:31
 ---
 
 # Hi~ 我是翁培钧
-我的 ID 是`PJHubs`。喜欢做一些有趣的事情，对技术有敬仰，对生活有追求。这里会分享一些在学习或生活上完整的、成体系的看法和总结，零散的知识点会发布在 [PJ 的开发日常](https://github.com/windstormeye/iOS-Course)。近期业余时间专注在“泛游戏”方向，欢迎交流沟通！
+我的 ID 是`PJHubs`。喜欢做一些有趣的事情，对技术有敬仰，对生活有追求。这里会分享一些在学习或生活上完整的、成体系的看法和总结，零散的知识点会发布在 [PJ 的开发日常](https://github.com/windstormeye/iOS-Course)。
 
-这是我[今年要做的事情](https://github.com/users/windstormeye/projects/7)，如果你恰好也有类似想做的，欢迎一起完成它！
+骑车是我最爱的运动，当我骑上车，就不仅仅是骑车。
 
 ## 工作经历
 * 客户端 [@字节跳动](https://bytedance.com/zh)  2019.07 ~ 至今
@@ -120,7 +120,7 @@ PhotoP ([App Store](https://apps.apple.com/cn/app/photop/id1639575048)) | 专注
 Vary（[App Store](https://apps.apple.com/cn/app/vary/id1190496148)） | 重量级创作工具，轻量级社交网络
 --- | --- 
 
-![](https://blogfile.dandyweng.com/2017/02/wall-of-cards-1920x1080-copyright.jpg)
+![](https://camo.githubusercontent.com/265e7ab5fff6c32da52f981be513d28f6cb1b54f3673595df8a9214dfc54629d/68747470733a2f2f626c6f672e64616e647977656e672e636f6d2f66696c65732f323031372f30322f77616c6c2d6f662d63617264732d3139323078313038302d636f707972696768742e6a7067)
 
 
 iBistu | 信息科大移动校园应用 
