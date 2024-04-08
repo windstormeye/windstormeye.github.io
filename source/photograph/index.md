@@ -2,6 +2,39 @@
 
 人生啊！果然要珍惜当下。
 
+### 2024.04 新疆喀什 小朋友
+![](/images/2024/04/kashiger/0.jpg)
+![](/images/2024/04/kashiger/48.jpg)
+![](/images/2024/04/kashiger/14.jpg)
+![](/images/2024/04/kashiger/27.jpg)
+![](/images/2024/04/kashiger/45.jpg)
+![](/images/2024/04/kashiger/52.jpg)
+![](/images/2024/04/kashiger/50.jpg)
+![](/images/2024/04/kashiger/s5.jpg)
+![](/images/2024/04/kashiger/s2.jpg)
+![](/images/2024/04/kashiger/44.jpg)
+
+### 2024.04 新疆喀什 古城
+![](/images/2024/04/kashiger/s9.jpg)
+![](/images/2024/04/kashiger/s0.jpg)
+![](/images/2024/04/kashiger/s4.jpg)
+![](/images/2024/04/kashiger/19.jpg)
+![](/images/2024/04/kashiger/20.jpg)
+![](/images/2024/04/kashiger/28.jpg)
+![](/images/2024/04/kashiger/s8.jpg)
+![](/images/2024/04/kashiger/36.jpg)
+
+### 2024.04 新疆喀什 牛羊大巴扎
+![](/images/2024/04/kashiger/53.jpg)
+![](/images/2024/04/kashiger/54.jpg)
+![](/images/2024/04/kashiger/55.jpg)
+
+### 2024.04 新疆 白沙湖、白沙山、慕士塔格峰
+![](/images/2024/04/kashiger/s7.jpg)
+![](/images/2024/04/kashiger/21.jpg)
+![](/images/2024/04/kashiger/18.jpg)
+
+
 ### 2024.02 海南春节
 ![](/images/2024/02/hainan/1.jpg)
 ![](/images/2024/02/hainan/2.jpg)
