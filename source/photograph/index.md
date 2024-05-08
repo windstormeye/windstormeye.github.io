@@ -2,6 +2,25 @@
 
 人生啊！果然要珍惜当下。
 
+### 2024.05 日本东京
+![](/images/2024/05/tokyo/7.jpg)
+![](/images/2024/05/tokyo/9.jpg)
+![](/images/2024/05/tokyo/11.jpg)
+![](/images/2024/05/tokyo/12.jpg)
+![](/images/2024/05/tokyo/22.jpg)
+![](/images/2024/05/tokyo/29.jpg)
+![](/images/2024/05/tokyo/30.jpg)
+![](/images/2024/05/tokyo/33.jpg)
+![](/images/2024/05/tokyo/34.jpg)
+![](/images/2024/05/tokyo/39.jpg)
+![](/images/2024/05/tokyo/40.jpg)
+![](/images/2024/05/tokyo/45.jpg)
+![](/images/2024/05/tokyo/46.jpg)
+![](/images/2024/05/tokyo/54.jpg)
+![](/images/2024/05/tokyo/60.jpg)
+![](/images/2024/05/tokyo/68.jpg)
+
+
 ### 2024.04 新疆喀什 小朋友
 ![](/images/2024/04/kashiger/0.jpg)
 ![](/images/2024/04/kashiger/48.jpg)
