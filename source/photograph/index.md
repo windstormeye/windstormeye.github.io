@@ -1,6 +1,37 @@
-看着以往的照片，定格在画面上的有些已不在人世，有些已为人父，更有甚者已形同陌路。
+看着以往的照片，定格在画面上的有些人已不在人世，有些已为人父，更有甚者已形同陌路，人生啊！果然要珍惜当下。
 
-人生啊！果然要珍惜当下。
+### 2024.06 日本宇治
+![](/images/2024/06/osaka/21.jpg)
+![](/images/2024/06/osaka/24.jpg)
+
+### 2024.06 日本奈良
+![](/images/2024/06/osaka/19.jpg)
+![](/images/2024/06/osaka/22.jpg)
+
+### 2024.06 日本京都
+![](/images/2024/06/osaka/0.jpg)
+![](/images/2024/06/osaka/10.jpg)
+![](/images/2024/06/osaka/11.jpg)
+![](/images/2024/06/osaka/12.jpg)
+![](/images/2024/06/osaka/13.jpg)
+![](/images/2024/06/osaka/14.jpg)
+![](/images/2024/06/osaka/15.jpg)
+![](/images/2024/06/osaka/16.jpg)
+![](/images/2024/06/osaka/17.jpg)
+![](/images/2024/06/osaka/18.jpg)
+![](/images/2024/06/osaka/23.jpg)
+
+### 2024.06 日本大阪
+![](/images/2024/06/osaka/2.jpg)
+![](/images/2024/06/osaka/3.jpg)
+![](/images/2024/06/osaka/4.jpg)
+![](/images/2024/06/osaka/5.jpg)
+![](/images/2024/06/osaka/6.jpg)
+![](/images/2024/06/osaka/7.jpg)
+![](/images/2024/06/osaka/8.jpg)
+![](/images/2024/06/osaka/9.jpg)
+![](/images/2024/06/osaka/20.jpg)
+![](/images/2024/06/osaka/25.jpg)
 
 ### 2024.05 日本东京
 ![](/images/2024/05/tokyo/7.jpg)
