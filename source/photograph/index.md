@@ -1,5 +1,24 @@
 看着以往的照片，定格在画面上的有些人已不在人世，有些已为人父，更有甚者已形同陌路，人生啊！果然要珍惜当下。
 
+### 2024.08 杭州
+![](/images/2024/08/hangzhou/0.jpg)
+![](/images/2024/08/hangzhou/1.jpg)
+![](/images/2024/08/hangzhou/2.jpg)
+![](/images/2024/08/hangzhou/3.jpg)
+
+### 2024.08 北京什刹海
+![](/images/2024/08/shichahai/0.jpg)
+![](/images/2024/08/shichahai/1.jpg)
+![](/images/2024/08/shichahai/2.jpg)
+![](/images/2024/08/shichahai/3.jpg)
+![](/images/2024/08/shichahai/4.jpg)
+![](/images/2024/08/shichahai/5.jpg)
+![](/images/2024/08/shichahai/6.jpg)
+![](/images/2024/08/shichahai/7.jpg)
+![](/images/2024/08/shichahai/8.jpg)
+![](/images/2024/08/shichahai/9.jpg)
+![](/images/2024/08/shichahai/10.jpg)
+
 ### 2024.06 日本宇治
 ![](/images/2024/06/osaka/21.jpg)
 ![](/images/2024/06/osaka/24.jpg)
