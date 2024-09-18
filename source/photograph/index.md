@@ -1,5 +1,26 @@
 看着以往的照片，定格在画面上的有些人已不在人世，有些已为人父，更有甚者已形同陌路，人生啊！果然要珍惜当下。
 
+### 2024.09 韩国 釜山
+![](/images/2024/09/bushan/0.jpg)
+![](/images/2024/09/bushan/1.jpg)
+![](/images/2024/09/bushan/2.jpg)
+![](/images/2024/09/bushan/3.jpg)
+![](/images/2024/09/bushan/4.jpg)
+![](/images/2024/09/bushan/5.jpg)
+![](/images/2024/09/bushan/6.jpg)
+![](/images/2024/09/bushan/7.jpg)
+![](/images/2024/09/bushan/8.jpg)
+![](/images/2024/09/bushan/9.jpg)
+![](/images/2024/09/bushan/10.jpg)
+![](/images/2024/09/bushan/11.jpg)
+![](/images/2024/09/bushan/12.jpg)
+![](/images/2024/09/bushan/13.jpg)
+![](/images/2024/09/bushan/14.jpg)
+![](/images/2024/09/bushan/15.jpg)
+![](/images/2024/09/bushan/16.jpg)
+![](/images/2024/09/bushan/17.jpg)
+![](/images/2024/09/bushan/18.jpg)
+
 ### 2024.08 北京 颐和园
 ![](/images/2024/08/yihepark/0.jpg)
 ![](/images/2024/08/yihepark/1.jpg)
