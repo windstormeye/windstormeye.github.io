@@ -1,5 +1,49 @@
 看着以往的照片，定格在画面上的有些人已不在人世，有些已为人父，更有甚者已形同陌路，人生啊！果然要珍惜当下。
 
+### 2024.10 泰国 曼谷
+![](/images/2024/10/thailand/23.jpg)
+![](/images/2024/10/thailand/24.jpg)
+![](/images/2024/10/thailand/25.jpg)
+![](/images/2024/10/thailand/28.jpg)
+![](/images/2024/10/thailand/29.jpg)
+![](/images/2024/10/thailand/30.jpg)
+![](/images/2024/10/thailand/31.jpg)
+![](/images/2024/10/thailand/32.jpg)
+![](/images/2024/10/thailand/33.jpg)
+![](/images/2024/10/thailand/34.jpg)
+![](/images/2024/10/thailand/35.jpg)
+![](/images/2024/10/thailand/36.jpg)
+![](/images/2024/10/thailand/37.jpg)
+
+
+### 2024.10 泰国 清迈-曼谷 火车
+![](/images/2024/10/thailand/18.jpg)
+![](/images/2024/10/thailand/19.jpg)
+![](/images/2024/10/thailand/20.jpg)
+![](/images/2024/10/thailand/21.jpg)
+![](/images/2024/10/thailand/22.jpg)
+
+### 2024.10 泰国 清迈
+![](/images/2024/10/thailand/10.jpg)
+![](/images/2024/10/thailand/11.jpg)
+![](/images/2024/10/thailand/12.jpg)
+![](/images/2024/10/thailand/14.jpg)
+![](/images/2024/10/thailand/15.jpg)
+![](/images/2024/10/thailand/16.jpg)
+![](/images/2024/10/thailand/17.jpg)
+
+### 2024.10 泰国 普吉岛
+![](/images/2024/10/thailand/0.jpg)
+![](/images/2024/10/thailand/1.jpg)
+![](/images/2024/10/thailand/2.jpg)
+![](/images/2024/10/thailand/3.jpg)
+![](/images/2024/10/thailand/4.jpg)
+![](/images/2024/10/thailand/5.jpg)
+![](/images/2024/10/thailand/6.jpg)
+![](/images/2024/10/thailand/7.jpg)
+![](/images/2024/10/thailand/8.jpg)
+![](/images/2024/10/thailand/9.jpg)
+
 ### 2024.09 韩国 釜山
 ![](/images/2024/09/bushan/0.jpg)
 ![](/images/2024/09/bushan/1.jpg)
