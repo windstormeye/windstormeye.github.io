@@ -1,5 +1,42 @@
 看着以往的照片，定格在画面上的有些人已不在人世，有些已为人父，更有甚者已形同陌路，人生啊！果然要珍惜当下。
 
+### 2024.10 广东 潮州
+![](/images/2024/10/chaozhou/0.jpg)
+![](/images/2024/10/chaozhou/1.jpg)
+![](/images/2024/10/chaozhou/2.jpg)
+![](/images/2024/10/chaozhou/3.jpg)
+![](/images/2024/10/chaozhou/4.jpg)
+![](/images/2024/10/chaozhou/5.jpg)
+![](/images/2024/10/chaozhou/6.jpg)
+![](/images/2024/10/chaozhou/7.jpg)
+![](/images/2024/10/chaozhou/8.jpg)
+![](/images/2024/10/chaozhou/9.jpg)
+![](/images/2024/10/chaozhou/10.jpg)
+![](/images/2024/10/chaozhou/11.jpg)
+![](/images/2024/10/chaozhou/12.jpg)
+![](/images/2024/10/chaozhou/13.jpg)
+
+### 2024.10 香港
+![](/images/2024/10/hongkong/12.jpg)
+![](/images/2024/10/hongkong/13.jpg)
+![](/images/2024/10/hongkong/14.jpg)
+![](/images/2024/10/hongkong/15.jpg)
+![](/images/2024/10/hongkong/19.jpg)
+![](/images/2024/10/hongkong/21.jpg)
+![](/images/2024/10/hongkong/22.jpg)
+![](/images/2024/10/hongkong/23.jpg)
+![](/images/2024/10/hongkong/25.jpg)
+
+### 2024.10 澳门
+![](/images/2024/10/macau/1.jpg)
+![](/images/2024/10/macau/2.jpg)
+![](/images/2024/10/macau/3.jpg)
+![](/images/2024/10/macau/4.jpg)
+![](/images/2024/10/macau/6.jpg)
+![](/images/2024/10/macau/7.jpg)
+![](/images/2024/10/macau/8.jpg)
+![](/images/2024/10/macau/11.jpg)
+
 ### 2024.10 泰国 曼谷
 ![](/images/2024/10/thailand/23.jpg)
 ![](/images/2024/10/thailand/24.jpg)
