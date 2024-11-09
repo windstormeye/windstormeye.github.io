@@ -111,7 +111,7 @@ PhotoP ([App Store](https://apps.apple.com/cn/app/photop/id1639575048)) | 专注
 Vary（[App Store](https://apps.apple.com/cn/app/vary/id1190496148)） | 重量级创作工具，轻量级社交网络
 --- | --- 
 
-![](https://camo.githubusercontent.com/265e7ab5fff6c32da52f981be513d28f6cb1b54f3673595df8a9214dfc54629d/68747470733a2f2f626c6f672e64616e647977656e672e636f6d2f66696c65732f323031372f30322f77616c6c2d6f662d63617264732d3139323078313038302d636f707972696768742e6a7067)
+![](../images/qiniu_img/vary_app.jpeg)
 
 
 iBistu | 信息科大移动校园应用 
