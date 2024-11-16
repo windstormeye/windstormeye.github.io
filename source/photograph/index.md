@@ -1,5 +1,30 @@
 看着以往的照片，定格在画面上的有些人已不在人世，有些已为人父，更有甚者已形同陌路，人生啊！果然要珍惜当下。
 
+
+### 2024.11 北京 天坛
+![](/images/2024/11/tiantan/7.jpg)
+![](/images/2024/11/tiantan/2.png)
+![](/images/2024/11/tiantan/3.jpg)
+![](/images/2024/11/tiantan/4.jpg)
+![](/images/2024/11/tiantan/5.jpg)
+![](/images/2024/11/tiantan/6.jpg)
+
+### 2024.11 北京 扫街
+![](/images/2024/11/tiantan/0.jpg)
+![](/images/2024/11/tiantan/1.jpg)
+
+### 2024.11 北京 野生动物园
+![](/images/2024/11/animals/0.jpg)
+![](/images/2024/11/animals/1.jpg)
+![](/images/2024/11/animals/2.jpg)
+
+### 2024.11 北京 扫街
+![](/images/2024/11/street/0.jpg)
+![](/images/2024/11/street/1.jpg)
+![](/images/2024/11/street/2.jpg)
+![](/images/2024/11/street/3.jpg)
+![](/images/2024/11/street/4.jpg)
+
 ### 2024.10 广东 潮州
 ![](/images/2024/10/chaozhou/0.jpg)
 ![](/images/2024/10/chaozhou/1.jpg)
