@@ -97,6 +97,11 @@ PJ Hubs @[Strava](https://www.strava.com/athletes/51366484)
 
 ## 作品
 
+PhotoP Studio ([App Store](https://apps.apple.com/cn/app/photop-studio/id6739296926)) | 开启空间修图全新体验！
+--- | --- 
+
+![](../images/2024/photop_studio_0.png)
+
 TranslateP ([App Store](https://apps.apple.com/cn/app/translatep/id6737735627?l=en-GB&mt=12)) | 无需网络的 AI 翻译，仅需两次 cmd + c
 --- | --- 
 
