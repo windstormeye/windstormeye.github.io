@@ -1,5 +1,20 @@
 看着以往的照片，定格在画面上的有些人已不在人世，有些已为人父，更有甚者已形同陌路，人生啊！果然要珍惜当下。
 
+### 2025.01 新加坡
+![](/images/2025/singapore/0.jpg)
+![](/images/2025/singapore/1.jpg)
+![](/images/2025/singapore/2.jpg)
+![](/images/2025/singapore/3.jpg)
+![](/images/2025/singapore/4.jpg)
+![](/images/2025/singapore/5.jpg)
+![](/images/2025/singapore/6.jpg)
+![](/images/2025/singapore/7.jpg)
+![](/images/2025/singapore/8.jpg)
+![](/images/2025/singapore/9.jpg)
+![](/images/2025/singapore/11.jpg)
+![](/images/2025/singapore/12.jpg)
+![](/images/2025/singapore/13.jpg)
+![](/images/2025/singapore/14.jpg)
 
 ### 2024.11 北京 天坛
 ![](/images/2024/11/tiantan/7.jpg)
