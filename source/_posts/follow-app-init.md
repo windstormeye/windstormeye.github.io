@@ -67,6 +67,6 @@ tags:
 时间过去了这么久，其实从心情层面出发已经很平淡了。换句话说，不管其他人如何认定或划分这个产品，我都一直认为它对于我的意义是不一样的，是举足轻重的。市面上起起伏伏了很多类似的产品，但都好像昙花一现般一去不复返，我也不能要求 PFollow 做到多好，最主要的原因还是要给七年前的自己一个交代。如果说那时的自己因为时间、金钱和技术水平这些问题而实现了一个半成品，那么现在的我完全具备解决这些问题的能力，所以希望自己可以在当下这个时间点重新回答好这个题目，再一次重考，希望至少可以拿到及格分。
 
 这何尝不是一个最长情的告白呢～
-testFlight 测试链接（审核通过才可加入测试）：[https://testflight.apple.com/join/Ewj689zy](https://testflight.apple.com/join/Ewj689zy)
+testFlight 测试链接：[https://testflight.apple.com/join/Ewj689zy](https://testflight.apple.com/join/Ewj689zy)
 
 ![2018 年开源版本 PFollow](/images/2025/app/pfollow/note.png)
