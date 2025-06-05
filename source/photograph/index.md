@@ -1,4 +1,15 @@
-看着以往的照片，定格在画面上的有些人已不在人世，有些已为人父，更有甚者已形同陌路，人生啊！果然要珍惜当下。
+
+### 2025.06 日本 九州
+![](/images/2025/photos/japen/1.jpg)
+![](/images/2025/photos/japen/6.jpg)
+![](/images/2025/photos/japen/7.jpg)
+![](/images/2025/photos/japen/16.jpg)
+![](/images/2025/photos/japen/15.jpg)
+![](/images/2025/photos/japen/3.jpg)
+
+### 2025.05 北京 龙潭公园
+![](/images/2025/photos/8.jpg)
+![](/images/2025/photos/9.jpg)
 
 ### 2025.05 川渝地区
 ![](/images/2025/sichuan/1.jpg)
