@@ -11,7 +11,64 @@ date: 2018-10-19 09:38:31
 * 有事解决，没事读书
 * 自我对话，自我排解，自我成长
 
-## 工作经历
+书籍影视：[@豆瓣](https://www.douban.com/people/142311182/)
+
+播客：《如果否则》[@Apple Podcast](https://podcasts.apple.com/cn/podcast/%E5%A6%82%E6%9E%9C%E5%90%A6%E5%88%99/id1530960195)、[@小宇宙](https://www.xiaoyuzhoufm.com/podcast/5f5b5f5a83c34e85dd33738e)、[@喜马拉雅](https://www.ximalaya.com/gerenchengzhang/41614854/)
+
+游戏：[@Steam](https://steamcommunity.com/id/pjhubs/)
+
+运动：跑步、骑车、游泳、越野跑、徒步 [@Strava](https://www.strava.com/athletes/51366484)
+
+
+## 作品
+
+PFollow ([App Store](https://apps.apple.com/cn/app/pfollow/id6742342382)) | 自己从全世界路过的地方
+--- | --- 
+
+![](../images/2025/app/pfollow/cover2.png)
+
+PhotoP Studio ([App Store](https://apps.apple.com/cn/app/photop-studio/id6739296926)) | 开启空间修图全新体验！
+--- | --- 
+
+![](../images/2024/photop_studio_0.png)
+
+TranslateP ([App Store](https://apps.apple.com/cn/app/translatep/id6737735627?l=en-GB&mt=12)) | 无需网络的 AI 翻译，仅需两次 cmd + c
+--- | --- 
+
+![](../images/2025/app/translatep/2_0.jpg)
+
+PhotoP ([App Store](https://apps.apple.com/cn/app/photop/id1639575048)) | 专注 macOS 平台的修图工具
+--- | --- 
+
+![](../images/app/photop/1.0/0.jpg)
+
+星球罐子（[App Store](https://apps.apple.com/hk/app/%E6%98%9F%E7%90%83%E7%BD%90%E5%AD%90/id1502901744)）| 拥有属于你的宇宙
+--- | --- 
+
+![](/images/qiniu_img/截屏2020-03-18下午3.57.43.png)
+
+
+Vary（[App Store](https://apps.apple.com/cn/app/vary/id1190496148)） | 重量级创作工具，轻量级社交网络
+--- | --- 
+
+![](../images/qiniu_img/vary_app.jpeg)
+
+
+iBistu | 信息科大移动校园应用 
+--- | --- 
+
+![](../images/app/iBistu.png)
+
+<details><summary>旅行</summary>
+
+九寨沟县、红原县、阿坝县、四姑娘山镇、潮州、澳门、喀什、泉州、阳朔、桂林、珠海、香港、威海、鄂尔多斯、深圳、大理、丽江、大连、呼和浩特、洛阳、大同、崇礼、厦门、福州、苏州、南京、广州、青岛、杭州、舟山、上海、德令哈、大柴旦、丹霞镇、张掖、敦煌、亚丁、成都、张家界、乌鲁木齐、吐鲁番、青海、重庆、西安、武汉、北京、天津、海南
+
+福冈、福津、熊本、鹿儿岛、新加坡、曼谷、清迈、普吉岛、釜山、大阪、京都、宇治、奈良、东京、横滨、镰仓、圣何塞、旧金山
+</details>
+
+
+<details><summary>工作经历</summary>
+
 * 客户端 [@字节跳动](https://bytedance.com/zh)  2019.07 ~ 至今
     - 剪映/CapCut
     - 西瓜视频
@@ -21,15 +78,19 @@ date: 2018-10-19 09:38:31
     - 北极星
 * iOS [@蜗牛睡眠](http://www.seblong.com)  2017.07 ~ 2017.10
     - 蜗牛睡不着
+</details>
 
-## 教育
+<details><summary>教育</summary>
+
 * 软件工程 [@信息科大](http://www.bistu.edu.cn) 2015 ~ 2019
 * 高中 [@海师附中](http://hsfz.hainnu.edu.cn/) 2012 ~ 2015
 * 初中 [@海南省东方市第二中学]()
 * 小学 [@海南省东方市铁路小学]()
 * 幼儿园 [@海南省东方市铁路幼儿园]()
+</details>
 
-## 奖项
+<details><summary>奖项</summary>
+
 主体 | 奖项
 --- | ---
 2023 剪映 - 专业版 | Q4 “取得超出预期的成果”
@@ -52,8 +113,10 @@ date: 2018-10-19 09:38:31
 2016 全国大学生移动应用创新大赛 | 优胜奖
 第一届北京信息科技大学“校友杯”创业大赛 | 铜奖
 第 26 届海南省青少年科技创新大赛 | 三等奖
+</details>
 
-## 活动
+<details><summary>活动</summary>
+
 活动 | 职位
 --- | ---
 2024 移动应用创新赛 创新启航 - 字节训练营 | 嘉宾
@@ -80,61 +143,4 @@ WTM 2019 @ GDG Beijing:《Python 从 0 到 1》| 助教
 2016 Archsummit 全球架构师峰会 | 讲师助理
 2016 北京马拉松 | 线路志愿者
 2015 北京半程马拉松 | 志愿者
-
-## 旅行
-九寨沟县、红原县、阿坝县、四姑娘山镇、潮州、澳门、喀什、泉州、阳朔、桂林、珠海、香港、威海、鄂尔多斯、深圳、大理、丽江、大连、呼和浩特、洛阳、大同、崇礼、厦门、福州、苏州、南京、广州、青岛、杭州、舟山、上海、德令哈、大柴旦、丹霞镇、张掖、敦煌、亚丁、成都、张家界、乌鲁木齐、吐鲁番、青海、重庆、西安、武汉、北京、天津、海南
-
-福冈、福津、熊本、鹿儿岛、新加坡、曼谷、清迈、普吉岛、釜山、大阪、京都、宇治、奈良、东京、横滨、镰仓、圣何塞、旧金山
-
-## 书籍影视
-PJHubs [@豆瓣](https://www.douban.com/people/142311182/)
-
-## 电台
-《如果否则》泛用型播客平台（Apple Podcast、[小宇宙](https://www.xiaoyuzhoufm.com/podcast/5f5b5f5a83c34e85dd33738e)、[喜马拉雅](https://www.ximalaya.com/gerenchengzhang/41614854/)等）
-
-## 游戏
-PJHubs - [Steam](https://steamcommunity.com/id/pjhubs/)
-
-## 运动
-跑步、骑车、游泳、越野跑、徒步
-
-PJ Hubs @[Strava](https://www.strava.com/athletes/51366484)
-
-## 作品
-
-PFollow ([App Store](https://apps.apple.com/cn/app/pfollow/id6742342382)) | 自己从全世界路过的地方
---- | --- 
-
-![](/images/2025/app/pfollow/cover2.png)
-
-PhotoP Studio ([App Store](https://apps.apple.com/cn/app/photop-studio/id6739296926)) | 开启空间修图全新体验！
---- | --- 
-
-![](../images/2024/photop_studio_0.png)
-
-TranslateP ([App Store](https://apps.apple.com/cn/app/translatep/id6737735627?l=en-GB&mt=12)) | 无需网络的 AI 翻译，仅需两次 cmd + c
---- | --- 
-
-![](../images/2024/translatep.jpg)
-
-PhotoP ([App Store](https://apps.apple.com/cn/app/photop/id1639575048)) | 专注 macOS 平台的修图工具
---- | --- 
-
-![](../images/app/photop/1.0/0.jpg)
-
-星球罐子（[App Store](https://apps.apple.com/hk/app/%E6%98%9F%E7%90%83%E7%BD%90%E5%AD%90/id1502901744)）| 拥有属于你的宇宙
---- | --- 
-
-![](/images/qiniu_img/截屏2020-03-18下午3.57.43.png)
-
-
-Vary（[App Store](https://apps.apple.com/cn/app/vary/id1190496148)） | 重量级创作工具，轻量级社交网络
---- | --- 
-
-![](../images/qiniu_img/vary_app.jpeg)
-
-
-iBistu | 信息科大移动校园应用 
---- | --- 
-
-![](../images/app/iBistu.png)
+</details>
