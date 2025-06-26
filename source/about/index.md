@@ -11,14 +11,6 @@ date: 2018-10-19 09:38:31
 * 有事解决，没事读书
 * 自我对话，自我排解，自我成长
 
-书籍影视：[@豆瓣](https://www.douban.com/people/142311182/)
-
-播客：《如果否则》[@Apple Podcast](https://podcasts.apple.com/cn/podcast/%E5%A6%82%E6%9E%9C%E5%90%A6%E5%88%99/id1530960195)、[@小宇宙](https://www.xiaoyuzhoufm.com/podcast/5f5b5f5a83c34e85dd33738e)、[@喜马拉雅](https://www.ximalaya.com/gerenchengzhang/41614854/)
-
-游戏：[@Steam](https://steamcommunity.com/id/pjhubs/)
-
-运动：跑步、骑车、游泳、越野跑、徒步 [@Strava](https://www.strava.com/athletes/51366484)
-
 
 ## 作品
 

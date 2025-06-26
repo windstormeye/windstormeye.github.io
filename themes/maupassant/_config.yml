@@ -105,16 +105,22 @@ widgets:
   - links
 
 links:
-  - title: GitHub - PJHubs
+  - title: GitHub @PJHubs
     url: https://github.com/windstormeye
-  - title: 小红书 - PJHubs
-    url: https://www.xiaohongshu.com/user/profile/5f2cd0360000000001001470
-  - title: Instagram - PJHubs
+  - title: Instagram @PJHubs
     url: https://www.instagram.com/pjhubs/
-  - title: BiliBili - PJHubs
+  - title: BiliBili @PJHubs
     url: https://space.bilibili.com/25392474
-  - title: Twitter - PJHubs
+  - title: Twitter @PJHubs
     url: https://twitter.com/wengpeijun
+  - title: Steam @PJHubs
+    url: https://steamcommunity.com/id/pjhubs/
+  - title: 豆瓣 @PJHubs
+    url: https://www.douban.com/people/142311182/
+  - title: 播客 @如果否则（Apple Podcast、小宇宙、喜马拉雅）
+    url: https://www.xiaoyuzhoufm.com/podcast/5f5b5f5a83c34e85dd33738e
+  - title: Strava @PJ Hubs
+    url: https://www.strava.com/athletes/51366484
   - title: 邮箱 - 877302410@qq.com
     url: .
 
