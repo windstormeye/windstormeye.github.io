@@ -17,7 +17,7 @@ date: 2018-10-19 09:38:31
 PFollow ([App Store](https://apps.apple.com/cn/app/pfollow/id6742342382)) | 自己从全世界路过的地方
 --- | --- 
 
-![](../images/2025/app/pfollow/cover2.png)
+![](../images/2025/app/pfollow/cover3.png)
 
 PhotoP Studio ([App Store](https://apps.apple.com/cn/app/photop-studio/id6739296926)) | 开启空间修图全新体验！
 --- | --- 
