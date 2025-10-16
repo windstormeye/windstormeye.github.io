@@ -1,3 +1,16 @@
+
+## 2025.10 越南
+![](/images/2025/vietnam/1.jpg)
+![](/images/2025/vietnam/2.jpg)
+![](/images/2025/vietnam/3.jpg)
+![](/images/2025/vietnam/4.jpg)
+![](/images/2025/vietnam/5.jpg)
+![](/images/2025/vietnam/6.jpg)
+![](/images/2025/vietnam/7.jpg)
+![](/images/2025/vietnam/8.jpg)
+![](/images/2025/vietnam/9.jpg)
+![](/images/2025/vietnam/10.jpg)
+
 ## 2025.08 南昌
 ![](/images/2025/photos/08/5.jpg)
 ![](/images/2025/photos/08/4.jpg)
