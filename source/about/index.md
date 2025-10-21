@@ -32,24 +32,12 @@ TranslateP ([App Store](https://apps.apple.com/cn/app/translatep/id6737735627?l=
 PhotoP ([App Store](https://apps.apple.com/cn/app/photop/id1639575048)) | 专注 macOS 平台的修图工具
 --- | --- 
 
-![](../images/app/photop/1.0/0.jpg)
+![](../images/2025/app/photop/color.png)
 
 星球罐子（[App Store](https://apps.apple.com/hk/app/%E6%98%9F%E7%90%83%E7%BD%90%E5%AD%90/id1502901744)）| 拥有属于你的宇宙
 --- | --- 
 
 ![](/images/qiniu_img/截屏2020-03-18下午3.57.43.png)
-
-
-Vary（[App Store](https://apps.apple.com/cn/app/vary/id1190496148)） | 重量级创作工具，轻量级社交网络
---- | --- 
-
-![](../images/qiniu_img/vary_app.jpeg)
-
-
-iBistu | 信息科大移动校园应用 
---- | --- 
-
-![](../images/app/iBistu.png)
 
 <details><summary>旅行</summary>
 

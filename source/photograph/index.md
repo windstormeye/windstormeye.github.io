@@ -1,4 +1,8 @@
 
+## 2025.10 北京
+![](/images/2025/photos/10/1.jpg)
+![](/images/2025/photos/10/2.jpg)
+
 ## 2025.10 越南
 ![](/images/2025/vietnam/1.jpg)
 ![](/images/2025/vietnam/2.jpg)
