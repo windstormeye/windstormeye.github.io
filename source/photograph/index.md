@@ -1,4 +1,12 @@
 
+## 2025.10 河北正定
+![](/images/2025/photos/zhengding/1.jpg)
+![](/images/2025/photos/zhengding/2.jpg)
+![](/images/2025/photos/zhengding/3.jpg)
+![](/images/2025/photos/zhengding/4.jpg)
+![](/images/2025/photos/zhengding/5.jpg)
+![](/images/2025/photos/zhengding/6.jpg)
+
 ## 2025.10 北京
 ![](/images/2025/photos/10/1.jpg)
 ![](/images/2025/photos/10/2.jpg)
