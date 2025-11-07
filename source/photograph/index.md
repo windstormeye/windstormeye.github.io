@@ -1,3 +1,14 @@
+## 2025.10 山东济南
+![](/images/2025/jinan/1.jpg)
+![](/images/2025/jinan/2.jpg)
+![](/images/2025/jinan/3.jpg)
+![](/images/2025/jinan/4.jpg)
+![](/images/2025/jinan/5.jpg)
+![](/images/2025/jinan/6.jpg)
+![](/images/2025/jinan/7.jpg)
+![](/images/2025/jinan/8.jpg)
+![](/images/2025/jinan/9.jpg)
+![](/images/2025/jinan/10.jpg)
 
 ## 2025.10 河北正定
 ![](/images/2025/photos/zhengding/1.jpg)
