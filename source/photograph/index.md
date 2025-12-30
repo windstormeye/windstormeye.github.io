@@ -1,6 +1,14 @@
+## 2025.12 北京
+![](/images/2025/photos/12/2.jpg)
+![](/images/2025/photos/12/4.jpg)
+![](/images/2025/photos/12/5.jpg)
+![](/images/2025/photos/12/6.jpg)
+![](/images/2025/photos/12/1.jpg)
+![](/images/2025/photos/12/3.jpg)
+
 ## 2025.10 山东济南
-![](/images/2025/jinan/1.jpg)
 ![](/images/2025/jinan/2.jpg)
+![](/images/2025/jinan/1.jpg)
 ![](/images/2025/jinan/3.jpg)
 ![](/images/2025/jinan/4.jpg)
 ![](/images/2025/jinan/5.jpg)
