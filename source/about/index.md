@@ -48,6 +48,7 @@ PhotoP ([App Store](https://apps.apple.com/cn/app/photop/id1639575048)) | 专注
 
 
 <details><summary>工作经历</summary>
+
 * 客户端 [@字节跳动](https://bytedance.com/zh)  2019.07 ~ 2026.01
     - 剪映/CapCut
     - 西瓜视频
