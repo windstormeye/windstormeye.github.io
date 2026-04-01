@@ -29,7 +29,8 @@ def count_chinese_words(text):
     return len(text)
 
 def main():
-    posts_dir = '/Volumes/pjhubs_t7/app/windstormeye.github.io/source/_posts'
+
+    posts_dir = '/Users/pjhubs/Documents/pjhubs/windstormeye.github.io/source/_posts'
     total_words = 0
     file_count = 0
     
