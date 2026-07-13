@@ -1,5 +1,5 @@
 ---
-title: Movinn —— 可视化你的运动轨迹
+title: 产品开发总结 | Movinn
 date: 2026-07-12 11:29:47
 tags:
 - 产品
