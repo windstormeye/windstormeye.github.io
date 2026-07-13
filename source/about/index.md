@@ -12,7 +12,13 @@ date: 2018-10-19 09:38:31
 * 自我对话，自我排解，自我成长
 
 
-## 作品
+## 作品 ｜ PJ.Studio
+
+Movinn ([App Store](https://apps.apple.com/app/movinn-visualize-workouts/id6782782334)) | 可视化你的运动轨迹
+--- | --- 
+
+![](../images/2026/07/01/1.png)
+
 
 PFollow ([App Store](https://apps.apple.com/cn/app/pfollow/id6742342382)) | 自己从全世界路过的地方
 --- | --- 
