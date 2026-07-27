@@ -38,7 +38,7 @@ TranslateP ([App Store](https://apps.apple.com/cn/app/translatep/id6737735627?l=
 PhotoP ([App Store](https://apps.apple.com/cn/app/photop/id1639575048)) | 专注 macOS 平台的修图工具
 --- | --- 
 
-![](../images/2025/app/photop/1.4.0.png)
+![](https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/3f/34/e0/3f34e082-0f1c-a4bb-2c8c-de031dffcce9/_U4e2d_U6587-3.jpg/800x500bb.jpg)
 
 星球罐子（[App Store](https://apps.apple.com/hk/app/%E6%98%9F%E7%90%83%E7%BD%90%E5%AD%90/id1502901744)）| 拥有属于你的宇宙
 --- | --- 
