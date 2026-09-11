@@ -17,7 +17,7 @@ date: 2018-10-19 09:38:31
 休息菜单/Relax Menu ([App Store](https://apps.apple.com/cn/app/relax-menu/id6794621792)) | 休息一下
 --- | --- 
 
-![](../images/2026/08/01/1.png)
+![](../images/2026/08/01/1.jpg)
 
 Movinn ([App Store](https://apps.apple.com/app/movinn-visualize-workouts/id6782782334)) | 可视化你的运动轨迹
 --- | --- 
