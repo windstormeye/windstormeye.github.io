@@ -14,8 +14,7 @@ date: 2018-10-19 09:38:31
 
 ## 作品 ｜ PJ.Studio
 
-休息菜单/Relax Menu ([App Store](https://apps.apple.com/cn/app/relax-menu/id6794621792?l=en-GB&mt=12
-Relax Menu)) | 休息一下
+休息菜单/Relax Menu ([App Store](https://apps.apple.com/cn/app/relax-menu/id6794621792)) | 休息一下
 --- | --- 
 
 ![](../images/2026/08/01/1.png)
