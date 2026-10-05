@@ -1,0 +1,149 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="1270" viewBox="0 0 1400 1270">
+<rect width="1400" height="1270" fill="white"/>
+<text x="40" y="28.0" dominant-baseline="central" text-anchor="start" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="22" fill="#181818" font-weight="600">保存的数据</text>
+<rect x="40" y="60" width="430" height="236" rx="0" fill="#ffffff" stroke="#181818" stroke-width="1.3"/>
+<rect x="40" y="60" width="430" height="50" rx="0" fill="#f4f4f4" stroke="#f4f4f4" stroke-width="0"/>
+<polyline points="40,110 470,110" fill="none" stroke="#cecece" stroke-width="1" stroke-linejoin="round"/>
+<text x="60" y="86.0" dominant-baseline="central" text-anchor="start" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="25" fill="#181818" font-weight="600">文本框</text>
+<text x="60" y="132.0" dominant-baseline="central" text-anchor="start" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="22" fill="#181818">文字内容</text>
+<text x="60" y="166.0" dominant-baseline="central" text-anchor="start" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="22" fill="#181818">具体字型</text>
+<text x="60" y="200.0" dominant-baseline="central" text-anchor="start" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="22" fill="#181818">字号（pt）与颜色</text>
+<text x="60" y="234.0" dominant-baseline="central" text-anchor="start" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="22" fill="#181818">水平 / 垂直对齐</text>
+<text x="60" y="268.0" dominant-baseline="central" text-anchor="start" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="22" fill="#181818">位置与宽高（内容区比例）</text>
+<rect x="510" y="60" width="340" height="202" rx="0" fill="#ffffff" stroke="#181818" stroke-width="1.3"/>
+<rect x="510" y="60" width="340" height="50" rx="0" fill="#f4f4f4" stroke="#f4f4f4" stroke-width="0"/>
+<polyline points="510,110 850,110" fill="none" stroke="#cecece" stroke-width="1" stroke-linejoin="round"/>
+<text x="530" y="86.0" dominant-baseline="central" text-anchor="start" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="25" fill="#181818" font-weight="600">纸张与版式</text>
+<text x="530" y="132.0" dominant-baseline="central" text-anchor="start" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="22" fill="#181818">物理尺寸（mm）</text>
+<text x="530" y="166.0" dominant-baseline="central" text-anchor="start" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="22" fill="#181818">内容区与页边</text>
+<text x="530" y="200.0" dominant-baseline="central" text-anchor="start" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="22" fill="#181818">页面背景</text>
+<text x="530" y="234.0" dominant-baseline="central" text-anchor="start" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="22" fill="#181818">封面材质</text>
+<rect x="890" y="60" width="470" height="236" rx="0" fill="#ffffff" stroke="#181818" stroke-width="1.3"/>
+<rect x="890" y="60" width="470" height="50" rx="0" fill="#f4f4f4" stroke="#f4f4f4" stroke-width="0"/>
+<polyline points="890,110 1360,110" fill="none" stroke="#cecece" stroke-width="1" stroke-linejoin="round"/>
+<text x="910" y="86.0" dominant-baseline="central" text-anchor="start" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="25" fill="#181818" font-weight="600">照片对象</text>
+<text x="910" y="132.0" dominant-baseline="central" text-anchor="start" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="22" fill="#181818">原片引用</text>
+<text x="910" y="166.0" dominant-baseline="central" text-anchor="start" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="22" fill="#181818">每个对象独立的调整记录</text>
+<text x="910" y="200.0" dominant-baseline="central" text-anchor="start" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="22" fill="#181818">局部修复与蒙版资源</text>
+<text x="910" y="234.0" dominant-baseline="central" text-anchor="start" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="22" fill="#181818">裁切、旋转、调色</text>
+<text x="910" y="268.0" dominant-baseline="central" text-anchor="start" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="22" fill="#181818">照片框（比例）</text>
+<polyline points="40,334 1360,334" fill="none" stroke="#cecece" stroke-width="1" stroke-linejoin="round"/>
+<text x="40" y="315.0" dominant-baseline="central" text-anchor="start" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="22" fill="#181818" font-weight="600">按需计算</text>
+<polyline points="255,296 255,359" fill="none" stroke="#181818" stroke-width="1.8" stroke-linejoin="round"/>
+<polygon points="255,359 259.5,350.0 250.5,350.0" fill="#181818" stroke="#181818" stroke-width="0.7"/>
+<polyline points="625,262 625,359" fill="none" stroke="#181818" stroke-width="1.8" stroke-linejoin="round"/>
+<polygon points="625,359 629.5,350.0 620.5,350.0" fill="#181818" stroke="#181818" stroke-width="0.7"/>
+<rect x="557.5" y="287.5" width="135.0" height="27.5" rx="0" fill="#ffffff" stroke="#ffffff" stroke-width="0"/>
+<text x="625" y="301.0" dominant-baseline="central" text-anchor="middle" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="21" fill="#181818">尺寸 / 内容区</text>
+<polyline points="850,186 872,186 872,446 909,446" fill="none" stroke="#181818" stroke-width="1.3" stroke-linejoin="round"/>
+<polygon points="909,446 900.0,441.5 900.0,450.5" fill="#181818" stroke="#181818" stroke-width="0.7"/>
+<polyline points="795,262 795,317 892,317 892,759" fill="none" stroke="#181818" stroke-width="1.3" stroke-linejoin="round"/>
+<polygon points="892,759 896.5,750.0 887.5,750.0" fill="#181818" stroke="#181818" stroke-width="0.7"/>
+<rect x="827.0" y="300.0" width="90.0" height="26.5" rx="0" fill="#ffffff" stroke="#ffffff" stroke-width="0"/>
+<text x="872" y="313.0" dominant-baseline="central" text-anchor="middle" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="20" fill="#666666">目标尺寸</text>
+<rect x="837.5" y="699.0" width="108.5" height="26.5" rx="0" fill="#ffffff" stroke="#ffffff" stroke-width="0"/>
+<text x="892" y="712.0" dominant-baseline="central" text-anchor="middle" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="20" fill="#666666">背景 / 材质</text>
+<polyline points="1125,296 1125,359" fill="none" stroke="#181818" stroke-width="1.8" stroke-linejoin="round"/>
+<polygon points="1125,359 1129.5,350.0 1120.5,350.0" fill="#181818" stroke="#181818" stroke-width="0.7"/>
+<rect x="40" y="360" width="810" height="300" rx="0" fill="#ffffff" stroke="#181818" stroke-width="1.4"/>
+<rect x="40" y="360" width="810" height="54" rx="0" fill="#f4f4f4" stroke="#f4f4f4" stroke-width="0"/>
+<text x="64" y="388.0" dominant-baseline="central" text-anchor="start" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="26" fill="#181818" font-weight="600">共同文字排版 · CoreText</text>
+<text x="826" y="388.0" dominant-baseline="central" text-anchor="end" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="21" fill="#666666">同一实现，分别调用</text>
+<rect x="64" y="440" width="242" height="128" rx="0" fill="#ffffff" stroke="#cecece" stroke-width="1.1"/>
+<text x="82" y="465.0" dominant-baseline="central" text-anchor="start" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="24" fill="#181818" font-weight="600">纸面定位</text>
+<text x="82" y="507.09" dominant-baseline="central" text-anchor="start" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="21" fill="#181818">比例框 → pt</text>
+<text x="82" y="536.91" dominant-baseline="central" text-anchor="start" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="21" fill="#181818">统一坐标方向</text>
+<rect x="324" y="440" width="242" height="128" rx="0" fill="#ffffff" stroke="#cecece" stroke-width="1.1"/>
+<text x="342" y="465.0" dominant-baseline="central" text-anchor="start" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="24" fill="#181818" font-weight="600">字体与行</text>
+<text x="342" y="507.09" dominant-baseline="central" text-anchor="start" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="21" fill="#181818">解析具体字型</text>
+<text x="342" y="536.91" dominant-baseline="central" text-anchor="start" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="21" fill="#181818">换行 / 行起点 / 基线</text>
+<rect x="584" y="440" width="242" height="128" rx="0" fill="#ffffff" stroke="#cecece" stroke-width="1.1"/>
+<text x="602" y="465.0" dominant-baseline="central" text-anchor="start" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="24" fill="#181818" font-weight="600">对齐与裁剪</text>
+<text x="602" y="507.09" dominant-baseline="central" text-anchor="start" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="21" fill="#181818">完整文字高度</text>
+<text x="602" y="536.91" dominant-baseline="central" text-anchor="start" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="21" fill="#181818">对齐后沿框裁切</text>
+<polyline points="307,504 321,504" fill="none" stroke="#181818" stroke-width="1.5" stroke-linejoin="round"/>
+<polygon points="321,504 312.0,499.5 312.0,508.5" fill="#181818" stroke="#181818" stroke-width="0.7"/>
+<polyline points="567,504 581,504" fill="none" stroke="#181818" stroke-width="1.5" stroke-linejoin="round"/>
+<polygon points="581,504 572.0,499.5 572.0,508.5" fill="#181818" stroke="#181818" stroke-width="0.7"/>
+<text x="64" y="617.0" dominant-baseline="central" text-anchor="start" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="22" fill="#181818">字形位置、行基线、字迹范围</text>
+<polyline points="493,596 816,596" fill="none" stroke="#cecece" stroke-width="1" stroke-linejoin="round"/>
+<rect x="505" y="582" width="18" height="14" rx="0" fill="#f4f4f4" stroke="#666666" stroke-width="0.8"/>
+<rect x="532" y="578" width="21" height="18" rx="0" fill="#f4f4f4" stroke="#666666" stroke-width="0.8"/>
+<rect x="562" y="582" width="17" height="14" rx="0" fill="#f4f4f4" stroke="#666666" stroke-width="0.8"/>
+<rect x="588" y="578" width="24" height="18" rx="0" fill="#f4f4f4" stroke="#666666" stroke-width="0.8"/>
+<rect x="621" y="582" width="20" height="14" rx="0" fill="#f4f4f4" stroke="#666666" stroke-width="0.8"/>
+<polyline points="493,621 816,621" fill="none" stroke="#cecece" stroke-width="1" stroke-linejoin="round"/>
+<rect x="505" y="607" width="18" height="14" rx="0" fill="#f4f4f4" stroke="#666666" stroke-width="0.8"/>
+<rect x="532" y="603" width="21" height="18" rx="0" fill="#f4f4f4" stroke="#666666" stroke-width="0.8"/>
+<rect x="562" y="607" width="17" height="14" rx="0" fill="#f4f4f4" stroke="#666666" stroke-width="0.8"/>
+<rect x="588" y="603" width="24" height="18" rx="0" fill="#f4f4f4" stroke="#666666" stroke-width="0.8"/>
+<rect x="621" y="607" width="20" height="14" rx="0" fill="#f4f4f4" stroke="#666666" stroke-width="0.8"/>
+<polyline points="485,578 485,639 826,639 826,578" fill="none" stroke="#666666" stroke-width="0.9" stroke-linejoin="round" stroke-dasharray="6 6"/>
+<rect x="910" y="360" width="450" height="300" rx="0" fill="#ffffff" stroke="#181818" stroke-width="1.4"/>
+<rect x="910" y="360" width="450" height="54" rx="0" fill="#f4f4f4" stroke="#f4f4f4" stroke-width="0"/>
+<text x="934" y="388.0" dominant-baseline="central" text-anchor="start" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="26" fill="#181818" font-weight="600">照片处理</text>
+<text x="936" y="458.0" dominant-baseline="central" text-anchor="start" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="21" fill="#666666">01</text>
+<text x="983" y="458.0" dominant-baseline="central" text-anchor="start" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="24" fill="#181818">按目标尺寸解码</text>
+<polyline points="936,490 1334,490" fill="none" stroke="#cecece" stroke-width="1" stroke-linejoin="round"/>
+<text x="936" y="528.0" dominant-baseline="central" text-anchor="start" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="21" fill="#666666">02</text>
+<text x="983" y="528.0" dominant-baseline="central" text-anchor="start" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="24" fill="#181818">局部修复 / 蒙版</text>
+<polyline points="936,560 1334,560" fill="none" stroke="#cecece" stroke-width="1" stroke-linejoin="round"/>
+<text x="936" y="598.0" dominant-baseline="central" text-anchor="start" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="21" fill="#666666">03</text>
+<text x="983" y="598.0" dominant-baseline="central" text-anchor="start" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="24" fill="#181818">几何变换 → 调色</text>
+<polyline points="445,661 445,696 700,696 700,759" fill="none" stroke="#181818" stroke-width="1.8" stroke-linejoin="round"/>
+<polygon points="700,759 704.5,750.0 695.5,750.0" fill="#181818" stroke="#181818" stroke-width="0.7"/>
+<polyline points="1135,661 1135,696 700,696" fill="none" stroke="#181818" stroke-width="1.8" stroke-linejoin="round"/>
+<rect x="885" y="690" width="14" height="12" rx="0" fill="#ffffff" stroke="#ffffff" stroke-width="0"/>
+<polyline points="892,690 892,702" fill="none" stroke="#181818" stroke-width="1.3" stroke-linejoin="round"/>
+<polyline points="40,726 1360,726" fill="none" stroke="#cecece" stroke-width="1" stroke-linejoin="round"/>
+<text x="40" y="707.0" dominant-baseline="central" text-anchor="start" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="22" fill="#181818" font-weight="600">页面绘制职责</text>
+<text x="1360" y="707.0" dominant-baseline="central" text-anchor="end" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="21" fill="#666666">按同一顺序，直接画进当前目标</text>
+<rect x="40" y="760" width="1320" height="225" rx="0" fill="#ffffff" stroke="#181818" stroke-width="1.4"/>
+<text x="68" y="805.0" dominant-baseline="central" text-anchor="start" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="22" fill="#666666">01</text>
+<text x="120" y="805.0" dominant-baseline="central" text-anchor="start" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="24" fill="#181818">背景 / 封面材质</text>
+<text x="68" y="870.0" dominant-baseline="central" text-anchor="start" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="22" fill="#666666">02</text>
+<text x="120" y="870.0" dominant-baseline="central" text-anchor="start" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="24" fill="#181818">照片 + 对应说明</text>
+<text x="68" y="935.0" dominant-baseline="central" text-anchor="start" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="22" fill="#666666">03</text>
+<text x="120" y="935.0" dominant-baseline="central" text-anchor="start" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="24" fill="#181818" font-weight="600">独立文本框</text>
+<text x="439" y="870.0" dominant-baseline="central" text-anchor="middle" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="21" fill="#666666">逐张</text>
+<polyline points="404,844 459,844 459,896 404,896" fill="none" stroke="#666666" stroke-width="1.2" stroke-linejoin="round"/>
+<polygon points="554,880 809,840 931,884 673,924" fill="#f4f4f4" stroke="#666666" stroke-width="1.2"/>
+<polygon points="591,854 846,814 968,858 710,898" fill="#ffffff" stroke="#666666" stroke-width="1.2"/>
+<polygon points="661,857 773,839 813,854 701,872" fill="#cecece" stroke="#cecece" stroke-width="0.6"/>
+<polygon points="628,828 883,788 1005,832 747,872" fill="#ffffff" stroke="#666666" stroke-width="1.2"/>
+<polyline points="724,829 872,805" fill="none" stroke="#181818" stroke-width="2.2" stroke-linejoin="round"/>
+<polyline points="736,838 858,818" fill="none" stroke="#181818" stroke-width="1.3" stroke-linejoin="round"/>
+<text x="1024" y="809.0" dominant-baseline="central" text-anchor="start" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="25" fill="#181818" font-weight="600">共享绘制规则</text>
+<text x="1024" y="851.76" dominant-baseline="central" text-anchor="start" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="22" fill="#181818">照片保持图像</text>
+<text x="1024" y="883.0" dominant-baseline="central" text-anchor="start" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="22" fill="#181818">文字保持字形</text>
+<text x="1024" y="914.24" dominant-baseline="central" text-anchor="start" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="22" fill="#181818">输出目标决定栅格化</text>
+<polyline points="700,986 700,1027 190,1027 1210,1027" fill="none" stroke="#181818" stroke-width="1.8" stroke-linejoin="round"/>
+<polyline points="190,1027 190,1069" fill="none" stroke="#181818" stroke-width="1.8" stroke-linejoin="round"/>
+<polygon points="190,1069 194.5,1060.0 185.5,1060.0" fill="#181818" stroke="#181818" stroke-width="0.7"/>
+<rect x="40" y="1070" width="300" height="152" rx="0" fill="#ffffff" stroke="#181818" stroke-width="1.3"/>
+<rect x="40" y="1070" width="300" height="49" rx="0" fill="#f4f4f4" stroke="#f4f4f4" stroke-width="0"/>
+<text x="58" y="1095.0" dominant-baseline="central" text-anchor="start" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="23" fill="#181818" font-weight="600">静态预览 / 缩略图</text>
+<text x="58" y="1150.38" dominant-baseline="central" text-anchor="start" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="22" fill="#181818">按显示尺寸绘制</text>
+<text x="58" y="1181.62" dominant-baseline="central" text-anchor="start" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="22" fill="#181818">编辑选框取字迹范围</text>
+<polyline points="530,1027 530,1069" fill="none" stroke="#181818" stroke-width="1.8" stroke-linejoin="round"/>
+<polygon points="530,1069 534.5,1060.0 525.5,1060.0" fill="#181818" stroke="#181818" stroke-width="0.7"/>
+<rect x="380" y="1070" width="300" height="152" rx="0" fill="#ffffff" stroke="#181818" stroke-width="1.3"/>
+<rect x="380" y="1070" width="300" height="49" rx="0" fill="#f4f4f4" stroke="#f4f4f4" stroke-width="0"/>
+<text x="398" y="1095.0" dominant-baseline="central" text-anchor="start" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="23" fill="#181818" font-weight="600">翻页纹理</text>
+<text x="398" y="1150.38" dominant-baseline="central" text-anchor="start" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="22" fill="#181818">页面像素 → 曲面</text>
+<text x="398" y="1181.62" dominant-baseline="central" text-anchor="start" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="22" fill="#181818">照片、文字一起翻动</text>
+<polyline points="870,1027 870,1069" fill="none" stroke="#181818" stroke-width="1.8" stroke-linejoin="round"/>
+<polygon points="870,1069 874.5,1060.0 865.5,1060.0" fill="#181818" stroke="#181818" stroke-width="0.7"/>
+<rect x="720" y="1070" width="300" height="152" rx="0" fill="#ffffff" stroke="#181818" stroke-width="1.3"/>
+<rect x="720" y="1070" width="300" height="49" rx="0" fill="#f4f4f4" stroke="#f4f4f4" stroke-width="0"/>
+<text x="738" y="1095.0" dominant-baseline="central" text-anchor="start" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="23" fill="#181818" font-weight="600">JPEG 位图</text>
+<text x="738" y="1150.38" dominant-baseline="central" text-anchor="start" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="22" fill="#181818">整页栅格化</text>
+<text x="738" y="1181.62" dominant-baseline="central" text-anchor="start" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="22" fill="#181818">s = DPI / 72</text>
+<polyline points="1210,1027 1210,1069" fill="none" stroke="#181818" stroke-width="1.8" stroke-linejoin="round"/>
+<polygon points="1210,1069 1214.5,1060.0 1205.5,1060.0" fill="#181818" stroke="#181818" stroke-width="0.7"/>
+<rect x="1060" y="1070" width="300" height="152" rx="0" fill="#ffffff" stroke="#181818" stroke-width="1.3"/>
+<rect x="1060" y="1070" width="300" height="49" rx="0" fill="#f4f4f4" stroke="#f4f4f4" stroke-width="0"/>
+<text x="1078" y="1095.0" dominant-baseline="central" text-anchor="start" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="23" fill="#181818" font-weight="600">PDF 画布</text>
+<text x="1078" y="1150.38" dominant-baseline="central" text-anchor="start" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="22" fill="#181818">照片图像 + 文字字形</text>
+<text x="1078" y="1181.62" dominant-baseline="central" text-anchor="start" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="22" fill="#181818">物理尺寸（pt）</text>
+</svg>

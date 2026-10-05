@@ -1,0 +1,226 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="1000" viewBox="0 0 1400 1000">
+<rect width="1400" height="1000" fill="white"/>
+<text x="40" y="35.0" dominant-baseline="central" text-anchor="start" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="25" fill="#181818" font-weight="600">经纬虚线错位，形成编织的上下感</text>
+<rect x="134" y="155" width="374" height="286" rx="0" fill="#f4f4f4" stroke="#cecece" stroke-width="1"/>
+<polyline points="145,166 145,210" fill="none" stroke="#181818" stroke-width="20.0" stroke-linejoin="round"/>
+<polyline points="145,254 145,298" fill="none" stroke="#181818" stroke-width="20.0" stroke-linejoin="round"/>
+<polyline points="145,342 145,386" fill="none" stroke="#181818" stroke-width="20.0" stroke-linejoin="round"/>
+<polyline points="189,210 189,254" fill="none" stroke="#181818" stroke-width="20.0" stroke-linejoin="round"/>
+<polyline points="189,298 189,342" fill="none" stroke="#181818" stroke-width="20.0" stroke-linejoin="round"/>
+<polyline points="189,386 189,430" fill="none" stroke="#181818" stroke-width="20.0" stroke-linejoin="round"/>
+<polyline points="233,166 233,210" fill="none" stroke="#181818" stroke-width="20.0" stroke-linejoin="round"/>
+<polyline points="233,254 233,298" fill="none" stroke="#181818" stroke-width="20.0" stroke-linejoin="round"/>
+<polyline points="233,342 233,386" fill="none" stroke="#181818" stroke-width="20.0" stroke-linejoin="round"/>
+<polyline points="277,210 277,254" fill="none" stroke="#181818" stroke-width="20.0" stroke-linejoin="round"/>
+<polyline points="277,298 277,342" fill="none" stroke="#181818" stroke-width="20.0" stroke-linejoin="round"/>
+<polyline points="277,386 277,430" fill="none" stroke="#181818" stroke-width="20.0" stroke-linejoin="round"/>
+<polyline points="321,166 321,210" fill="none" stroke="#181818" stroke-width="20.0" stroke-linejoin="round"/>
+<polyline points="321,254 321,298" fill="none" stroke="#181818" stroke-width="20.0" stroke-linejoin="round"/>
+<polyline points="321,342 321,386" fill="none" stroke="#181818" stroke-width="20.0" stroke-linejoin="round"/>
+<polyline points="365,210 365,254" fill="none" stroke="#181818" stroke-width="20.0" stroke-linejoin="round"/>
+<polyline points="365,298 365,342" fill="none" stroke="#181818" stroke-width="20.0" stroke-linejoin="round"/>
+<polyline points="365,386 365,430" fill="none" stroke="#181818" stroke-width="20.0" stroke-linejoin="round"/>
+<polyline points="409,166 409,210" fill="none" stroke="#181818" stroke-width="20.0" stroke-linejoin="round"/>
+<polyline points="409,254 409,298" fill="none" stroke="#181818" stroke-width="20.0" stroke-linejoin="round"/>
+<polyline points="409,342 409,386" fill="none" stroke="#181818" stroke-width="20.0" stroke-linejoin="round"/>
+<polyline points="453,210 453,254" fill="none" stroke="#181818" stroke-width="20.0" stroke-linejoin="round"/>
+<polyline points="453,298 453,342" fill="none" stroke="#181818" stroke-width="20.0" stroke-linejoin="round"/>
+<polyline points="453,386 453,430" fill="none" stroke="#181818" stroke-width="20.0" stroke-linejoin="round"/>
+<polyline points="189,166 233,166" fill="none" stroke="#666666" stroke-width="20.0" stroke-linejoin="round"/>
+<polyline points="277,166 321,166" fill="none" stroke="#666666" stroke-width="20.0" stroke-linejoin="round"/>
+<polyline points="365,166 409,166" fill="none" stroke="#666666" stroke-width="20.0" stroke-linejoin="round"/>
+<polyline points="453,166 497,166" fill="none" stroke="#666666" stroke-width="20.0" stroke-linejoin="round"/>
+<polyline points="145,210 189,210" fill="none" stroke="#666666" stroke-width="20.0" stroke-linejoin="round"/>
+<polyline points="233,210 277,210" fill="none" stroke="#666666" stroke-width="20.0" stroke-linejoin="round"/>
+<polyline points="321,210 365,210" fill="none" stroke="#666666" stroke-width="20.0" stroke-linejoin="round"/>
+<polyline points="409,210 453,210" fill="none" stroke="#666666" stroke-width="20.0" stroke-linejoin="round"/>
+<polyline points="189,254 233,254" fill="none" stroke="#666666" stroke-width="20.0" stroke-linejoin="round"/>
+<polyline points="277,254 321,254" fill="none" stroke="#666666" stroke-width="20.0" stroke-linejoin="round"/>
+<polyline points="365,254 409,254" fill="none" stroke="#666666" stroke-width="20.0" stroke-linejoin="round"/>
+<polyline points="453,254 497,254" fill="none" stroke="#666666" stroke-width="20.0" stroke-linejoin="round"/>
+<polyline points="145,298 189,298" fill="none" stroke="#666666" stroke-width="20.0" stroke-linejoin="round"/>
+<polyline points="233,298 277,298" fill="none" stroke="#666666" stroke-width="20.0" stroke-linejoin="round"/>
+<polyline points="321,298 365,298" fill="none" stroke="#666666" stroke-width="20.0" stroke-linejoin="round"/>
+<polyline points="409,298 453,298" fill="none" stroke="#666666" stroke-width="20.0" stroke-linejoin="round"/>
+<polyline points="189,342 233,342" fill="none" stroke="#666666" stroke-width="20.0" stroke-linejoin="round"/>
+<polyline points="277,342 321,342" fill="none" stroke="#666666" stroke-width="20.0" stroke-linejoin="round"/>
+<polyline points="365,342 409,342" fill="none" stroke="#666666" stroke-width="20.0" stroke-linejoin="round"/>
+<polyline points="453,342 497,342" fill="none" stroke="#666666" stroke-width="20.0" stroke-linejoin="round"/>
+<polyline points="145,386 189,386" fill="none" stroke="#666666" stroke-width="20.0" stroke-linejoin="round"/>
+<polyline points="233,386 277,386" fill="none" stroke="#666666" stroke-width="20.0" stroke-linejoin="round"/>
+<polyline points="321,386 365,386" fill="none" stroke="#666666" stroke-width="20.0" stroke-linejoin="round"/>
+<polyline points="409,386 453,386" fill="none" stroke="#666666" stroke-width="20.0" stroke-linejoin="round"/>
+<text x="143" y="81.0" dominant-baseline="central" text-anchor="start" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="22" fill="#181818" font-weight="600">经线</text>
+<polyline points="165,99 165,129 145,146" fill="none" stroke="#666666" stroke-width="1.2" stroke-linejoin="round"/>
+<text x="40" y="293.0" dominant-baseline="central" text-anchor="start" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="22" fill="#181818" font-weight="600">纬线</text>
+<polyline points="93,293 119,293 138,298" fill="none" stroke="#666666" stroke-width="1.2" stroke-linejoin="round"/>
+<polyline points="277,128 321,128" fill="none" stroke="#666666" stroke-width="1.1" stroke-linejoin="round"/>
+<polygon points="321,128 312.0,123.5 312.0,132.5" fill="#666666" stroke="#666666" stroke-width="0.7"/>
+<polyline points="321,128 277,128" fill="none" stroke="#666666" stroke-width="1.1" stroke-linejoin="round"/>
+<polygon points="277,128 286.0,132.5 286.0,123.5" fill="#666666" stroke="#666666" stroke-width="0.7"/>
+<polyline points="277,121 277,135" fill="none" stroke="#666666" stroke-width="1" stroke-linejoin="round"/>
+<polyline points="321,121 321,135" fill="none" stroke="#666666" stroke-width="1" stroke-linejoin="round"/>
+<text x="299.0" y="94.0" dominant-baseline="central" text-anchor="middle" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="22" fill="#181818">间距 1.1 pt</text>
+<polyline points="443.0,463 463.0,463" fill="none" stroke="#666666" stroke-width="1.1" stroke-linejoin="round"/>
+<polygon points="463.0,463 454.0,458.5 454.0,467.5" fill="#666666" stroke="#666666" stroke-width="0.7"/>
+<polyline points="463.0,463 443.0,463" fill="none" stroke="#666666" stroke-width="1.1" stroke-linejoin="round"/>
+<polygon points="443.0,463 452.0,467.5 452.0,458.5" fill="#666666" stroke="#666666" stroke-width="0.7"/>
+<polyline points="443.0,456 443.0,470" fill="none" stroke="#666666" stroke-width="1" stroke-linejoin="round"/>
+<polyline points="463.0,456 463.0,470" fill="none" stroke="#666666" stroke-width="1" stroke-linejoin="round"/>
+<polyline points="443.0,429 443.0,470" fill="none" stroke="#a0a0a0" stroke-width="1" stroke-linejoin="round"/>
+<polyline points="463.0,429 463.0,470" fill="none" stroke="#a0a0a0" stroke-width="1" stroke-linejoin="round"/>
+<text x="453" y="495.0" dominant-baseline="central" text-anchor="middle" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="22" fill="#666666">线宽 0.5 pt</text>
+<text x="40" y="495.0" dominant-baseline="central" text-anchor="start" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="22" fill="#666666">黑 / 灰区分经纬，示意放大</text>
+<text x="760" y="35.0" dominant-baseline="central" text-anchor="start" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="25" fill="#181818" font-weight="600">奇偶线错相位，横纵反相位</text>
+<text x="760" y="79.0" dominant-baseline="central" text-anchor="start" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="22" fill="#666666">沿线展开</text>
+<text x="760" y="164.0" dominant-baseline="central" text-anchor="start" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="23" fill="#181818">经线 · 偶</text>
+<polyline points="981,164 1333,164" fill="none" stroke="#cecece" stroke-width="1" stroke-linejoin="round"/>
+<polyline points="981,164 1025,164" fill="none" stroke="#181818" stroke-width="15" stroke-linejoin="round"/>
+<polyline points="1069,164 1113,164" fill="none" stroke="#181818" stroke-width="15" stroke-linejoin="round"/>
+<polyline points="1157,164 1201,164" fill="none" stroke="#181818" stroke-width="15" stroke-linejoin="round"/>
+<polyline points="1245,164 1289,164" fill="none" stroke="#181818" stroke-width="15" stroke-linejoin="round"/>
+<text x="899" y="192.0" dominant-baseline="central" text-anchor="middle" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="22" fill="#666666">0</text>
+<text x="760" y="229.0" dominant-baseline="central" text-anchor="start" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="23" fill="#181818">经线 · 奇</text>
+<polyline points="981,229 1333,229" fill="none" stroke="#cecece" stroke-width="1" stroke-linejoin="round"/>
+<polyline points="1025,229 1069,229" fill="none" stroke="#181818" stroke-width="15" stroke-linejoin="round"/>
+<polyline points="1113,229 1157,229" fill="none" stroke="#181818" stroke-width="15" stroke-linejoin="round"/>
+<polyline points="1201,229 1245,229" fill="none" stroke="#181818" stroke-width="15" stroke-linejoin="round"/>
+<polyline points="1289,229 1333,229" fill="none" stroke="#181818" stroke-width="15" stroke-linejoin="round"/>
+<text x="899" y="257.0" dominant-baseline="central" text-anchor="middle" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="22" fill="#666666">1.1</text>
+<text x="760" y="330.0" dominant-baseline="central" text-anchor="start" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="23" fill="#181818">纬线 · 偶</text>
+<polyline points="981,330 1333,330" fill="none" stroke="#cecece" stroke-width="1" stroke-linejoin="round"/>
+<polyline points="1025,330 1069,330" fill="none" stroke="#666666" stroke-width="15" stroke-linejoin="round"/>
+<polyline points="1113,330 1157,330" fill="none" stroke="#666666" stroke-width="15" stroke-linejoin="round"/>
+<polyline points="1201,330 1245,330" fill="none" stroke="#666666" stroke-width="15" stroke-linejoin="round"/>
+<polyline points="1289,330 1333,330" fill="none" stroke="#666666" stroke-width="15" stroke-linejoin="round"/>
+<text x="899" y="358.0" dominant-baseline="central" text-anchor="middle" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="22" fill="#666666">1.1</text>
+<text x="760" y="395.0" dominant-baseline="central" text-anchor="start" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="23" fill="#181818">纬线 · 奇</text>
+<polyline points="981,395 1333,395" fill="none" stroke="#cecece" stroke-width="1" stroke-linejoin="round"/>
+<polyline points="981,395 1025,395" fill="none" stroke="#666666" stroke-width="15" stroke-linejoin="round"/>
+<polyline points="1069,395 1113,395" fill="none" stroke="#666666" stroke-width="15" stroke-linejoin="round"/>
+<polyline points="1157,395 1201,395" fill="none" stroke="#666666" stroke-width="15" stroke-linejoin="round"/>
+<polyline points="1245,395 1289,395" fill="none" stroke="#666666" stroke-width="15" stroke-linejoin="round"/>
+<text x="899" y="423.0" dominant-baseline="central" text-anchor="middle" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="22" fill="#666666">0</text>
+<text x="899" y="113.0" dominant-baseline="central" text-anchor="middle" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="22" fill="#666666">相位 / pt</text>
+<polyline points="981,119 1025,119" fill="none" stroke="#666666" stroke-width="1.1" stroke-linejoin="round"/>
+<polygon points="1025,119 1016.0,114.5 1016.0,123.5" fill="#666666" stroke="#666666" stroke-width="0.7"/>
+<polyline points="1025,119 981,119" fill="none" stroke="#666666" stroke-width="1.1" stroke-linejoin="round"/>
+<polygon points="981,119 990.0,123.5 990.0,114.5" fill="#666666" stroke="#666666" stroke-width="0.7"/>
+<polyline points="981,112 981,126" fill="none" stroke="#666666" stroke-width="1" stroke-linejoin="round"/>
+<polyline points="1025,112 1025,126" fill="none" stroke="#666666" stroke-width="1" stroke-linejoin="round"/>
+<polyline points="1025,119 1069,119" fill="none" stroke="#666666" stroke-width="1.1" stroke-linejoin="round"/>
+<polygon points="1069,119 1060.0,114.5 1060.0,123.5" fill="#666666" stroke="#666666" stroke-width="0.7"/>
+<polyline points="1069,119 1025,119" fill="none" stroke="#666666" stroke-width="1.1" stroke-linejoin="round"/>
+<polygon points="1025,119 1034.0,123.5 1034.0,114.5" fill="#666666" stroke="#666666" stroke-width="0.7"/>
+<polyline points="1025,112 1025,126" fill="none" stroke="#666666" stroke-width="1" stroke-linejoin="round"/>
+<polyline points="1069,112 1069,126" fill="none" stroke="#666666" stroke-width="1" stroke-linejoin="round"/>
+<text x="1025" y="81.0" dominant-baseline="central" text-anchor="middle" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="22" fill="#181818">段长 / 空隙均为 1.1 pt</text>
+<polyline points="1157,459 1245,459" fill="none" stroke="#666666" stroke-width="1.1" stroke-linejoin="round"/>
+<polygon points="1245,459 1236.0,454.5 1236.0,463.5" fill="#666666" stroke="#666666" stroke-width="0.7"/>
+<polyline points="1245,459 1157,459" fill="none" stroke="#666666" stroke-width="1.1" stroke-linejoin="round"/>
+<polygon points="1157,459 1166.0,463.5 1166.0,454.5" fill="#666666" stroke="#666666" stroke-width="0.7"/>
+<polyline points="1157,452 1157,466" fill="none" stroke="#666666" stroke-width="1" stroke-linejoin="round"/>
+<polyline points="1245,452 1245,466" fill="none" stroke="#666666" stroke-width="1" stroke-linejoin="round"/>
+<text x="1201" y="495.0" dominant-baseline="central" text-anchor="middle" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="22" fill="#666666">周期 2.2 pt</text>
+<polyline points="40,538 1360,538" fill="none" stroke="#cecece" stroke-width="1" stroke-linejoin="round"/>
+<text x="40" y="577.0" dominant-baseline="central" text-anchor="start" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="25" fill="#181818" font-weight="600">同一纸面尺度，随 DPI 增加采样</text>
+<text x="770" y="577.0" dominant-baseline="central" text-anchor="start" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="22" fill="#666666">细格表示像素边界</text>
+<text x="40" y="638.0" dominant-baseline="central" text-anchor="start" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="23" fill="#181818">1 pt = 1/72 英寸</text>
+<text x="40" y="686.0" dominant-baseline="central" text-anchor="start" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="24" fill="#181818">像素间距 = 1.1 × DPI / 72</text>
+<text x="40" y="738.0" dominant-baseline="central" text-anchor="start" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="22" fill="#181818">144 DPI：1.1 × 144 / 72 = 2.2 px</text>
+<text x="40" y="783.0" dominant-baseline="central" text-anchor="start" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="22" fill="#181818">288 DPI：1.1 × 288 / 72 = 4.4 px</text>
+<text x="40" y="863.0" dominant-baseline="central" text-anchor="start" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="23" fill="#181818" font-weight="600">两幅裁片：4.4 pt × 4.4 pt</text>
+<text x="40" y="905.0" dominant-baseline="central" text-anchor="start" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="22" fill="#666666">纸面约 1.55 mm × 1.55 mm</text>
+<rect x="770" y="648" width="246" height="246" rx="0" fill="#f4f4f4" stroke="#cecece" stroke-width="1"/>
+<rect x="770" y="648" width="13.977272727272748" height="61.5" rx="0" fill="#707070" stroke="#707070" stroke-width="0"/>
+<rect x="770" y="771.0" width="13.977272727272748" height="61.5" rx="0" fill="#707070" stroke="#707070" stroke-width="0"/>
+<rect x="817.5227272727273" y="709.5" width="27.954545454545496" height="61.5" rx="0" fill="#707070" stroke="#707070" stroke-width="0"/>
+<rect x="817.5227272727273" y="832.5" width="27.954545454545496" height="61.5" rx="0" fill="#707070" stroke="#707070" stroke-width="0"/>
+<rect x="879.0227272727273" y="648" width="27.954545454545496" height="61.5" rx="0" fill="#707070" stroke="#707070" stroke-width="0"/>
+<rect x="879.0227272727273" y="771.0" width="27.954545454545496" height="61.5" rx="0" fill="#707070" stroke="#707070" stroke-width="0"/>
+<rect x="940.5227272727273" y="709.5" width="27.954545454545496" height="61.5" rx="0" fill="#707070" stroke="#707070" stroke-width="0"/>
+<rect x="940.5227272727273" y="832.5" width="27.954545454545496" height="61.5" rx="0" fill="#707070" stroke="#707070" stroke-width="0"/>
+<rect x="831.5" y="648" width="61.5" height="13.977272727272748" rx="0" fill="#ababab" stroke="#ababab" stroke-width="0"/>
+<rect x="954.5" y="648" width="61.5" height="13.977272727272748" rx="0" fill="#ababab" stroke="#ababab" stroke-width="0"/>
+<rect x="770" y="695.5227272727273" width="61.5" height="27.954545454545496" rx="0" fill="#ababab" stroke="#ababab" stroke-width="0"/>
+<rect x="893.0" y="695.5227272727273" width="61.5" height="27.954545454545496" rx="0" fill="#ababab" stroke="#ababab" stroke-width="0"/>
+<rect x="831.5" y="757.0227272727273" width="61.5" height="27.954545454545496" rx="0" fill="#ababab" stroke="#ababab" stroke-width="0"/>
+<rect x="954.5" y="757.0227272727273" width="61.5" height="27.954545454545496" rx="0" fill="#ababab" stroke="#ababab" stroke-width="0"/>
+<rect x="770" y="818.5227272727273" width="61.5" height="27.954545454545496" rx="0" fill="#ababab" stroke="#ababab" stroke-width="0"/>
+<rect x="893.0" y="818.5227272727273" width="61.5" height="27.954545454545496" rx="0" fill="#ababab" stroke="#ababab" stroke-width="0"/>
+<polyline points="797.9545454545455,648 797.9545454545455,894" fill="none" stroke="#d8d8d8" stroke-width="0.75" stroke-linejoin="round"/>
+<polyline points="770,675.9545454545455 1016,675.9545454545455" fill="none" stroke="#d8d8d8" stroke-width="0.75" stroke-linejoin="round"/>
+<polyline points="825.9090909090909,648 825.9090909090909,894" fill="none" stroke="#d8d8d8" stroke-width="0.75" stroke-linejoin="round"/>
+<polyline points="770,703.9090909090909 1016,703.9090909090909" fill="none" stroke="#d8d8d8" stroke-width="0.75" stroke-linejoin="round"/>
+<polyline points="853.8636363636364,648 853.8636363636364,894" fill="none" stroke="#d8d8d8" stroke-width="0.75" stroke-linejoin="round"/>
+<polyline points="770,731.8636363636364 1016,731.8636363636364" fill="none" stroke="#d8d8d8" stroke-width="0.75" stroke-linejoin="round"/>
+<polyline points="881.8181818181818,648 881.8181818181818,894" fill="none" stroke="#d8d8d8" stroke-width="0.75" stroke-linejoin="round"/>
+<polyline points="770,759.8181818181818 1016,759.8181818181818" fill="none" stroke="#d8d8d8" stroke-width="0.75" stroke-linejoin="round"/>
+<polyline points="909.7727272727273,648 909.7727272727273,894" fill="none" stroke="#d8d8d8" stroke-width="0.75" stroke-linejoin="round"/>
+<polyline points="770,787.7727272727273 1016,787.7727272727273" fill="none" stroke="#d8d8d8" stroke-width="0.75" stroke-linejoin="round"/>
+<polyline points="937.7272727272727,648 937.7272727272727,894" fill="none" stroke="#d8d8d8" stroke-width="0.75" stroke-linejoin="round"/>
+<polyline points="770,815.7272727272727 1016,815.7272727272727" fill="none" stroke="#d8d8d8" stroke-width="0.75" stroke-linejoin="round"/>
+<polyline points="965.6818181818182,648 965.6818181818182,894" fill="none" stroke="#d8d8d8" stroke-width="0.75" stroke-linejoin="round"/>
+<polyline points="770,843.6818181818182 1016,843.6818181818182" fill="none" stroke="#d8d8d8" stroke-width="0.75" stroke-linejoin="round"/>
+<polyline points="993.6363636363636,648 993.6363636363636,894" fill="none" stroke="#d8d8d8" stroke-width="0.75" stroke-linejoin="round"/>
+<polyline points="770,871.6363636363636 1016,871.6363636363636" fill="none" stroke="#d8d8d8" stroke-width="0.75" stroke-linejoin="round"/>
+<polyline points="770,648 1016,648 1016,894 770,894 770,648" fill="none" stroke="#666666" stroke-width="1.1" stroke-linejoin="round"/>
+<text x="893.0" y="616.0" dominant-baseline="central" text-anchor="middle" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="25" fill="#181818" font-weight="600">144 DPI</text>
+<text x="893.0" y="930.0" dominant-baseline="central" text-anchor="middle" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="23" fill="#181818" font-weight="600">间距 2.2 px</text>
+<text x="893.0" y="970.0" dominant-baseline="central" text-anchor="middle" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="22" fill="#666666">每格 0.5 pt</text>
+<rect x="1105" y="648" width="246" height="246" rx="0" fill="#f4f4f4" stroke="#cecece" stroke-width="1"/>
+<rect x="1105" y="648" width="13.977272727272748" height="61.5" rx="0" fill="#707070" stroke="#707070" stroke-width="0"/>
+<rect x="1105" y="771.0" width="13.977272727272748" height="61.5" rx="0" fill="#707070" stroke="#707070" stroke-width="0"/>
+<rect x="1152.5227272727273" y="709.5" width="27.954545454545496" height="61.5" rx="0" fill="#707070" stroke="#707070" stroke-width="0"/>
+<rect x="1152.5227272727273" y="832.5" width="27.954545454545496" height="61.5" rx="0" fill="#707070" stroke="#707070" stroke-width="0"/>
+<rect x="1214.0227272727273" y="648" width="27.954545454545496" height="61.5" rx="0" fill="#707070" stroke="#707070" stroke-width="0"/>
+<rect x="1214.0227272727273" y="771.0" width="27.954545454545496" height="61.5" rx="0" fill="#707070" stroke="#707070" stroke-width="0"/>
+<rect x="1275.5227272727273" y="709.5" width="27.954545454545496" height="61.5" rx="0" fill="#707070" stroke="#707070" stroke-width="0"/>
+<rect x="1275.5227272727273" y="832.5" width="27.954545454545496" height="61.5" rx="0" fill="#707070" stroke="#707070" stroke-width="0"/>
+<rect x="1166.5" y="648" width="61.5" height="13.977272727272748" rx="0" fill="#ababab" stroke="#ababab" stroke-width="0"/>
+<rect x="1289.5" y="648" width="61.5" height="13.977272727272748" rx="0" fill="#ababab" stroke="#ababab" stroke-width="0"/>
+<rect x="1105" y="695.5227272727273" width="61.5" height="27.954545454545496" rx="0" fill="#ababab" stroke="#ababab" stroke-width="0"/>
+<rect x="1228.0" y="695.5227272727273" width="61.5" height="27.954545454545496" rx="0" fill="#ababab" stroke="#ababab" stroke-width="0"/>
+<rect x="1166.5" y="757.0227272727273" width="61.5" height="27.954545454545496" rx="0" fill="#ababab" stroke="#ababab" stroke-width="0"/>
+<rect x="1289.5" y="757.0227272727273" width="61.5" height="27.954545454545496" rx="0" fill="#ababab" stroke="#ababab" stroke-width="0"/>
+<rect x="1105" y="818.5227272727273" width="61.5" height="27.954545454545496" rx="0" fill="#ababab" stroke="#ababab" stroke-width="0"/>
+<rect x="1228.0" y="818.5227272727273" width="61.5" height="27.954545454545496" rx="0" fill="#ababab" stroke="#ababab" stroke-width="0"/>
+<polyline points="1118.9772727272727,648 1118.9772727272727,894" fill="none" stroke="#d8d8d8" stroke-width="0.75" stroke-linejoin="round"/>
+<polyline points="1105,661.9772727272727 1351,661.9772727272727" fill="none" stroke="#d8d8d8" stroke-width="0.75" stroke-linejoin="round"/>
+<polyline points="1132.9545454545455,648 1132.9545454545455,894" fill="none" stroke="#d8d8d8" stroke-width="0.75" stroke-linejoin="round"/>
+<polyline points="1105,675.9545454545455 1351,675.9545454545455" fill="none" stroke="#d8d8d8" stroke-width="0.75" stroke-linejoin="round"/>
+<polyline points="1146.9318181818182,648 1146.9318181818182,894" fill="none" stroke="#d8d8d8" stroke-width="0.75" stroke-linejoin="round"/>
+<polyline points="1105,689.9318181818181 1351,689.9318181818181" fill="none" stroke="#d8d8d8" stroke-width="0.75" stroke-linejoin="round"/>
+<polyline points="1160.909090909091,648 1160.909090909091,894" fill="none" stroke="#d8d8d8" stroke-width="0.75" stroke-linejoin="round"/>
+<polyline points="1105,703.9090909090909 1351,703.9090909090909" fill="none" stroke="#d8d8d8" stroke-width="0.75" stroke-linejoin="round"/>
+<polyline points="1174.8863636363635,648 1174.8863636363635,894" fill="none" stroke="#d8d8d8" stroke-width="0.75" stroke-linejoin="round"/>
+<polyline points="1105,717.8863636363636 1351,717.8863636363636" fill="none" stroke="#d8d8d8" stroke-width="0.75" stroke-linejoin="round"/>
+<polyline points="1188.8636363636363,648 1188.8636363636363,894" fill="none" stroke="#d8d8d8" stroke-width="0.75" stroke-linejoin="round"/>
+<polyline points="1105,731.8636363636364 1351,731.8636363636364" fill="none" stroke="#d8d8d8" stroke-width="0.75" stroke-linejoin="round"/>
+<polyline points="1202.840909090909,648 1202.840909090909,894" fill="none" stroke="#d8d8d8" stroke-width="0.75" stroke-linejoin="round"/>
+<polyline points="1105,745.8409090909091 1351,745.8409090909091" fill="none" stroke="#d8d8d8" stroke-width="0.75" stroke-linejoin="round"/>
+<polyline points="1216.8181818181818,648 1216.8181818181818,894" fill="none" stroke="#d8d8d8" stroke-width="0.75" stroke-linejoin="round"/>
+<polyline points="1105,759.8181818181818 1351,759.8181818181818" fill="none" stroke="#d8d8d8" stroke-width="0.75" stroke-linejoin="round"/>
+<polyline points="1230.7954545454545,648 1230.7954545454545,894" fill="none" stroke="#d8d8d8" stroke-width="0.75" stroke-linejoin="round"/>
+<polyline points="1105,773.7954545454545 1351,773.7954545454545" fill="none" stroke="#d8d8d8" stroke-width="0.75" stroke-linejoin="round"/>
+<polyline points="1244.7727272727273,648 1244.7727272727273,894" fill="none" stroke="#d8d8d8" stroke-width="0.75" stroke-linejoin="round"/>
+<polyline points="1105,787.7727272727273 1351,787.7727272727273" fill="none" stroke="#d8d8d8" stroke-width="0.75" stroke-linejoin="round"/>
+<polyline points="1258.75,648 1258.75,894" fill="none" stroke="#d8d8d8" stroke-width="0.75" stroke-linejoin="round"/>
+<polyline points="1105,801.75 1351,801.75" fill="none" stroke="#d8d8d8" stroke-width="0.75" stroke-linejoin="round"/>
+<polyline points="1272.7272727272727,648 1272.7272727272727,894" fill="none" stroke="#d8d8d8" stroke-width="0.75" stroke-linejoin="round"/>
+<polyline points="1105,815.7272727272727 1351,815.7272727272727" fill="none" stroke="#d8d8d8" stroke-width="0.75" stroke-linejoin="round"/>
+<polyline points="1286.7045454545455,648 1286.7045454545455,894" fill="none" stroke="#d8d8d8" stroke-width="0.75" stroke-linejoin="round"/>
+<polyline points="1105,829.7045454545455 1351,829.7045454545455" fill="none" stroke="#d8d8d8" stroke-width="0.75" stroke-linejoin="round"/>
+<polyline points="1300.6818181818182,648 1300.6818181818182,894" fill="none" stroke="#d8d8d8" stroke-width="0.75" stroke-linejoin="round"/>
+<polyline points="1105,843.6818181818182 1351,843.6818181818182" fill="none" stroke="#d8d8d8" stroke-width="0.75" stroke-linejoin="round"/>
+<polyline points="1314.659090909091,648 1314.659090909091,894" fill="none" stroke="#d8d8d8" stroke-width="0.75" stroke-linejoin="round"/>
+<polyline points="1105,857.6590909090909 1351,857.6590909090909" fill="none" stroke="#d8d8d8" stroke-width="0.75" stroke-linejoin="round"/>
+<polyline points="1328.6363636363635,648 1328.6363636363635,894" fill="none" stroke="#d8d8d8" stroke-width="0.75" stroke-linejoin="round"/>
+<polyline points="1105,871.6363636363636 1351,871.6363636363636" fill="none" stroke="#d8d8d8" stroke-width="0.75" stroke-linejoin="round"/>
+<polyline points="1342.6136363636363,648 1342.6136363636363,894" fill="none" stroke="#d8d8d8" stroke-width="0.75" stroke-linejoin="round"/>
+<polyline points="1105,885.6136363636364 1351,885.6136363636364" fill="none" stroke="#d8d8d8" stroke-width="0.75" stroke-linejoin="round"/>
+<polyline points="1105,648 1351,648 1351,894 1105,894 1105,648" fill="none" stroke="#666666" stroke-width="1.1" stroke-linejoin="round"/>
+<text x="1228.0" y="616.0" dominant-baseline="central" text-anchor="middle" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="25" fill="#181818" font-weight="600">288 DPI</text>
+<text x="1228.0" y="930.0" dominant-baseline="central" text-anchor="middle" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="23" fill="#181818" font-weight="600">间距 4.4 px</text>
+<text x="1228.0" y="970.0" dominant-baseline="central" text-anchor="middle" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="22" fill="#666666">每格 0.25 pt</text>
+</svg>

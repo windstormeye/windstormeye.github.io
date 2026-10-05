@@ -1,0 +1,109 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="1280" viewBox="0 0 1400 1280">
+<rect width="1400" height="1280" fill="white"/>
+<text x="40" y="39.0" dominant-baseline="central" text-anchor="start" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="27" fill="#181818" font-weight="600">裁切后的目标尺寸，决定整图需要解码到多大</text>
+<text x="40" y="81.0" dominant-baseline="central" text-anchor="start" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="22" fill="#666666">演算条件：无旋转 / 透视，预算允许；目标照片框 1000 × 750 px</text>
+<polyline points="40,109 1360,109" fill="none" stroke="#cecece" stroke-width="1" stroke-linejoin="round"/>
+<text x="70" y="153.0" dominant-baseline="central" text-anchor="start" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="20" fill="#666666">先缩整图，再裁切</text>
+<text x="70" y="191.0" dominant-baseline="central" text-anchor="start" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="25" fill="#181818" font-weight="600">原图 8000 × 6000</text>
+<rect x="70" y="226" width="300" height="225" rx="0" fill="#f4f4f4" stroke="#666666" stroke-width="1.2"/>
+<polyline points="94.0,266.5 346.0,266.5" fill="none" stroke="#cecece" stroke-width="1" stroke-linejoin="round"/>
+<polyline points="94.0,311.5 346.0,311.5" fill="none" stroke="#cecece" stroke-width="1" stroke-linejoin="round"/>
+<polyline points="94.0,365.5 346.0,365.5" fill="none" stroke="#cecece" stroke-width="1" stroke-linejoin="round"/>
+<polyline points="94.0,410.5 346.0,410.5" fill="none" stroke="#cecece" stroke-width="1" stroke-linejoin="round"/>
+<rect x="182.5" y="310.375" width="75.0" height="56.25" rx="0" fill="#dddddd" stroke="#181818" stroke-width="2"/>
+<polyline points="191.5,327.25 248.5,327.25" fill="none" stroke="#666666" stroke-width="1" stroke-linejoin="round"/>
+<polyline points="191.5,341.3125 248.5,341.3125" fill="none" stroke="#666666" stroke-width="1" stroke-linejoin="round"/>
+<polyline points="191.5,355.375 248.5,355.375" fill="none" stroke="#666666" stroke-width="1" stroke-linejoin="round"/>
+<polyline points="182.5,299.375 257.5,299.375" fill="none" stroke="#666666" stroke-width="1" stroke-linejoin="round"/>
+<polyline points="182.5,294.375 182.5,304.375" fill="none" stroke="#666666" stroke-width="1" stroke-linejoin="round"/>
+<polyline points="257.5,294.375 257.5,304.375" fill="none" stroke="#666666" stroke-width="1" stroke-linejoin="round"/>
+<text x="220.0" y="279.375" dominant-baseline="central" text-anchor="middle" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="20" fill="#666666">宽 1/4</text>
+<polyline points="171.5,310.375 171.5,366.625" fill="none" stroke="#666666" stroke-width="1" stroke-linejoin="round"/>
+<polyline points="166.5,310.375 176.5,310.375" fill="none" stroke="#666666" stroke-width="1" stroke-linejoin="round"/>
+<polyline points="166.5,366.625 176.5,366.625" fill="none" stroke="#666666" stroke-width="1" stroke-linejoin="round"/>
+<text x="157.5" y="338.5" dominant-baseline="central" text-anchor="end" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="20" fill="#666666">高 1/4</text>
+<text x="70" y="488.0" dominant-baseline="central" text-anchor="start" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="22" fill="#181818">原尺寸中的裁切区</text>
+<text x="70" y="526.0" dominant-baseline="central" text-anchor="start" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="26" fill="#181818" font-weight="600">2000 × 1500 px</text>
+<text x="70" y="573.0" dominant-baseline="central" text-anchor="start" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="21" fill="#666666">单份 8 位 RGBA 像素</text>
+<text x="70" y="610.0" dominant-baseline="central" text-anchor="start" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="21" fill="#666666">8000 × 6000 × 4 ≈ 192MB</text>
+<polyline points="370,338.5 432,338.5" fill="none" stroke="#181818" stroke-width="1.7" stroke-linejoin="round"/>
+<polyline points="432,338.5 432,286 520,286" fill="none" stroke="#181818" stroke-width="1.7" stroke-linejoin="round"/>
+<polygon points="520,286 511.0,281.5 511.0,290.5" fill="#181818" stroke="#181818" stroke-width="0.7"/>
+<polyline points="432,338.5 432,576 520,576" fill="none" stroke="#181818" stroke-width="1.7" stroke-linejoin="round"/>
+<polygon points="520,576 511.0,571.5 511.0,580.5" fill="#181818" stroke="#181818" stroke-width="0.7"/>
+<text x="500" y="135.0" dominant-baseline="central" text-anchor="start" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="24" fill="#181818" font-weight="600">按裁切区域反推</text>
+<text x="500" y="177.0" dominant-baseline="central" text-anchor="start" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="23" fill="#181818">1000 / 2000 = 750 / 1500 = 0.5</text>
+<rect x="520" y="218" width="180" height="135" rx="0" fill="#f4f4f4" stroke="#666666" stroke-width="1.2"/>
+<polyline points="534.4,242.3 685.6,242.3" fill="none" stroke="#cecece" stroke-width="1" stroke-linejoin="round"/>
+<polyline points="534.4,269.3 685.6,269.3" fill="none" stroke="#cecece" stroke-width="1" stroke-linejoin="round"/>
+<polyline points="534.4,301.7 685.6,301.7" fill="none" stroke="#cecece" stroke-width="1" stroke-linejoin="round"/>
+<polyline points="534.4,328.7 685.6,328.7" fill="none" stroke="#cecece" stroke-width="1" stroke-linejoin="round"/>
+<rect x="587.5" y="268.625" width="45.0" height="33.75" rx="0" fill="#dddddd" stroke="#181818" stroke-width="2"/>
+<polyline points="592.9,278.75 627.1,278.75" fill="none" stroke="#666666" stroke-width="1" stroke-linejoin="round"/>
+<polyline points="592.9,287.1875 627.1,287.1875" fill="none" stroke="#666666" stroke-width="1" stroke-linejoin="round"/>
+<polyline points="592.9,295.625 627.1,295.625" fill="none" stroke="#666666" stroke-width="1" stroke-linejoin="round"/>
+<text x="520" y="384.0" dominant-baseline="central" text-anchor="start" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="23" fill="#181818">理想解码 4000 × 3000</text>
+<text x="520" y="420.0" dominant-baseline="central" text-anchor="start" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="21" fill="#666666">单份 8 位 RGBA ≈ 48MB</text>
+<polyline points="632.5,285.5 890,285.5" fill="none" stroke="#181818" stroke-width="1.6" stroke-linejoin="round"/>
+<polygon points="890,285.5 881.0,281.0 881.0,290.0" fill="#181818" stroke="#181818" stroke-width="0.7"/>
+<rect x="764.0" y="237.5" width="52.0" height="28.0" rx="0" fill="#ffffff" stroke="#ffffff" stroke-width="0"/>
+<text x="790" y="251.0" dominant-baseline="central" text-anchor="middle" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="21" fill="#666666">裁后</text>
+<rect x="905" y="223" width="180" height="135" rx="0" fill="#dddddd" stroke="#181818" stroke-width="1.5"/>
+<polyline points="926.6,263.5 1063.4,263.5" fill="none" stroke="#666666" stroke-width="1.3" stroke-linejoin="round"/>
+<polyline points="926.6,297.25 1063.4,297.25" fill="none" stroke="#666666" stroke-width="1.3" stroke-linejoin="round"/>
+<polyline points="926.6,331.0 1063.4,331.0" fill="none" stroke="#666666" stroke-width="1.3" stroke-linejoin="round"/>
+<text x="1113" y="244.0" dominant-baseline="central" text-anchor="start" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="21" fill="#666666">局部放大查看</text>
+<text x="1113" y="285.0" dominant-baseline="central" text-anchor="start" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="25" fill="#181818" font-weight="600">1000 × 750</text>
+<text x="1113" y="329.0" dominant-baseline="central" text-anchor="start" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="22" fill="#181818">达到目标尺寸</text>
+<polyline points="490,451 1360,451" fill="none" stroke="#cecece" stroke-width="1" stroke-linejoin="round"/>
+<text x="500" y="477.0" dominant-baseline="central" text-anchor="start" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="24" fill="#181818" font-weight="600">只按照片框缩整图，会少算裁切损失</text>
+<rect x="520" y="508" width="180" height="135" rx="0" fill="#f4f4f4" stroke="#666666" stroke-width="1.2"/>
+<polyline points="534.4,532.3 685.6,532.3" fill="none" stroke="#cecece" stroke-width="1" stroke-linejoin="round"/>
+<polyline points="534.4,559.3 685.6,559.3" fill="none" stroke="#cecece" stroke-width="1" stroke-linejoin="round"/>
+<polyline points="534.4,591.7 685.6,591.7" fill="none" stroke="#cecece" stroke-width="1" stroke-linejoin="round"/>
+<polyline points="534.4,618.7 685.6,618.7" fill="none" stroke="#cecece" stroke-width="1" stroke-linejoin="round"/>
+<rect x="587.5" y="558.625" width="45.0" height="33.75" rx="0" fill="#dddddd" stroke="#181818" stroke-width="2"/>
+<polyline points="592.9,568.75 627.1,568.75" fill="none" stroke="#666666" stroke-width="1" stroke-linejoin="round"/>
+<polyline points="592.9,577.1875 627.1,577.1875" fill="none" stroke="#666666" stroke-width="1" stroke-linejoin="round"/>
+<polyline points="592.9,585.625 627.1,585.625" fill="none" stroke="#666666" stroke-width="1" stroke-linejoin="round"/>
+<text x="520" y="674.0" dominant-baseline="central" text-anchor="start" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="23" fill="#181818">整图只解码到 1000 × 750</text>
+<polyline points="632.5,575.5 890,575.5" fill="none" stroke="#181818" stroke-width="1.6" stroke-linejoin="round"/>
+<polygon points="890,575.5 881.0,571.0 881.0,580.0" fill="#181818" stroke="#181818" stroke-width="0.7"/>
+<rect x="745.0" y="526.0" width="90.0" height="27.0" rx="0" fill="#ffffff" stroke="#ffffff" stroke-width="0"/>
+<text x="790" y="539.0" dominant-baseline="central" text-anchor="middle" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="20" fill="#666666">理论裁后</text>
+<rect x="726.5" y="596.0" width="126.5" height="26.0" rx="0" fill="#ffffff" stroke="#ffffff" stroke-width="0"/>
+<text x="790" y="610.0" dominant-baseline="central" text-anchor="middle" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="22" fill="#181818">250 × 187.5</text>
+<rect x="905" y="513" width="180" height="135" rx="0" fill="#dddddd" stroke="#181818" stroke-width="1.5"/>
+<polyline points="926.6,553.5 1063.4,553.5" fill="none" stroke="#999999" stroke-width="3" stroke-linejoin="round"/>
+<polyline points="926.6,587.25 1063.4,587.25" fill="none" stroke="#999999" stroke-width="3" stroke-linejoin="round"/>
+<polyline points="926.6,621.0 1063.4,621.0" fill="none" stroke="#999999" stroke-width="3" stroke-linejoin="round"/>
+<text x="1113" y="533.0" dominant-baseline="central" text-anchor="start" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="22" fill="#666666">再放大 4 倍</text>
+<text x="1113" y="575.0" dominant-baseline="central" text-anchor="start" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="25" fill="#181818" font-weight="600">1000 × 750</text>
+<text x="1113" y="617.0" dominant-baseline="central" text-anchor="start" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="22" fill="#181818">尺寸够了，细节不够</text>
+<text x="40" y="721.0" dominant-baseline="central" text-anchor="start" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="21" fill="#666666">这里是理想尺寸演算；ImageIO 可能取整，实际返回的宽高与内存仍要复核。</text>
+<polyline points="40,772 1360,772" fill="none" stroke="#cecece" stroke-width="1" stroke-linejoin="round"/>
+<text x="40" y="753.0" dominant-baseline="central" text-anchor="start" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="22" fill="#181818" font-weight="600">单张照片的峰值估算</text>
+<text x="1360" y="753.0" dominant-baseline="central" text-anchor="end" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="21" fill="#666666">页画布常驻与预留空间，先从可用预算中扣除</text>
+<text x="60" y="816.0" dominant-baseline="central" text-anchor="start" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="25" fill="#181818" font-weight="600">解码阶段 P解码</text>
+<text x="738" y="816.0" dominant-baseline="central" text-anchor="start" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="25" fill="#181818" font-weight="600">几何与滤镜阶段 P处理</text>
+<polyline points="60,845 662,845" fill="none" stroke="#cecece" stroke-width="1" stroke-linejoin="round"/>
+<polyline points="738,845 1340,845" fill="none" stroke="#cecece" stroke-width="1" stroke-linejoin="round"/>
+<rect x="60" y="875" width="602" height="68" rx="0" fill="#f4f4f4" stroke="#cecece" stroke-width="1"/>
+<text x="80" y="900.0" dominant-baseline="central" text-anchor="start" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="23" fill="#181818" font-weight="600">可能物化的源图</text>
+<text x="80" y="927.0" dominant-baseline="central" text-anchor="start" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="20" fill="#666666">格式支持缩采样时可减小，否则仍按原片估算</text>
+<rect x="60" y="961" width="602" height="68" rx="0" fill="#f4f4f4" stroke="#cecece" stroke-width="1"/>
+<text x="80" y="986.0" dominant-baseline="central" text-anchor="start" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="23" fill="#181818" font-weight="600">返回的解码图</text>
+<text x="80" y="1013.0" dominant-baseline="central" text-anchor="start" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="20" fill="#666666">与源图物化同时存在；按真实行跨度核对</text>
+<text x="60" y="1070.0" dominant-baseline="central" text-anchor="start" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="23" fill="#181818">P解码 = 源图物化 + 解码结果</text>
+<text x="738" y="884.0" dominant-baseline="central" text-anchor="start" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="23" fill="#181818" font-weight="600">只累计当前操作同时保留的画面</text>
+<rect x="738" y="920" width="602" height="121" rx="0" fill="#f4f4f4" stroke="#cecece" stroke-width="1"/>
+<text x="758" y="950.0" dominant-baseline="central" text-anchor="start" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="20" fill="#181818">解码图 / 裁切图仍引用的几何结果 / 输出画面</text>
+<text x="758" y="986.0" dominant-baseline="central" text-anchor="start" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="20" fill="#181818">有调色时：另计规范输入与滤镜临时空间</text>
+<text x="758" y="1022.0" dominant-baseline="central" text-anchor="start" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="20" fill="#666666">翻转、透视、旋转各自检查，不把操作全相加</text>
+<text x="738" y="1070.0" dominant-baseline="central" text-anchor="start" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="23" fill="#181818">P处理 = max(各操作的共存峰值)</text>
+<polyline points="361.0,1100 361.0,1122 1039.0,1122 1039.0,1100" fill="none" stroke="#666666" stroke-width="1.3" stroke-linejoin="round"/>
+<polyline points="700,1122 700,1141" fill="none" stroke="#666666" stroke-width="1.3" stroke-linejoin="round"/>
+<text x="700" y="1171.0" dominant-baseline="central" text-anchor="middle" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="29" fill="#181818" font-weight="600">P照片 = max(P解码, P处理)</text>
+<text x="700" y="1215.0" dominant-baseline="central" text-anchor="middle" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="22" fill="#666666">源图物化在处理前释放，先后阶段不求和</text>
+<text x="700" y="1252.0" dominant-baseline="central" text-anchor="middle" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="20" fill="#666666">超出照片预算就降低解码请求；48MB 与 192MB 只表示单份像素，不是任务总占用</text>
+</svg>

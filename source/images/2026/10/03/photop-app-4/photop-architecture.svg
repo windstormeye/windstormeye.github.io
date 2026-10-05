@@ -1,0 +1,126 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="980" viewBox="0 0 1400 980">
+<rect width="1400" height="980" fill="white"/>
+<text x="40" y="72.0" dominant-baseline="central" text-anchor="start" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="24" fill="#181818" font-weight="600">界面层</text>
+<text x="40" y="106.0" dominant-baseline="central" text-anchor="start" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="20" fill="#666666">三端适配</text>
+<rect x="170" y="40" width="980" height="96" rx="0" fill="#f4f4f4" stroke="#cecece" stroke-width="1.2"/>
+<text x="333.33333333333337" y="73.0" dominant-baseline="central" text-anchor="middle" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="27" fill="#181818" font-weight="600">macOS</text>
+<text x="333.33333333333337" y="108.0" dominant-baseline="central" text-anchor="middle" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="21" fill="#666666">SwiftUI / AppKit</text>
+<polyline points="496.6666666666667,56 496.6666666666667,120" fill="none" stroke="#cecece" stroke-width="1" stroke-linejoin="round"/>
+<text x="660.0" y="73.0" dominant-baseline="central" text-anchor="middle" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="27" fill="#181818" font-weight="600">iPadOS</text>
+<text x="660.0" y="108.0" dominant-baseline="central" text-anchor="middle" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="21" fill="#666666">SwiftUI / UIKit</text>
+<polyline points="823.3333333333334,56 823.3333333333334,120" fill="none" stroke="#cecece" stroke-width="1" stroke-linejoin="round"/>
+<text x="986.6666666666666" y="73.0" dominant-baseline="central" text-anchor="middle" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="27" fill="#181818" font-weight="600">iOS</text>
+<text x="986.6666666666666" y="108.0" dominant-baseline="central" text-anchor="middle" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="21" fill="#666666">SwiftUI / UIKit</text>
+<text x="40" y="203.0" dominant-baseline="central" text-anchor="start" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="24" fill="#181818" font-weight="600">业务层</text>
+<text x="40" y="237.0" dominant-baseline="central" text-anchor="start" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="20" fill="#666666">一级入口</text>
+<rect x="170" y="176" width="310" height="342" rx="0" fill="#ffffff" stroke="#cecece" stroke-width="1"/>
+<rect x="170" y="176" width="310" height="64" rx="0" fill="#f4f4f4" stroke="#cecece" stroke-width="1"/>
+<text x="325.0" y="208.0" dominant-baseline="central" text-anchor="middle" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="28" fill="#181818" font-weight="600">图像编辑</text>
+<rect x="186" y="262" width="132" height="46" rx="0" fill="#ffffff" stroke="#cecece" stroke-width="1"/>
+<text x="252.0" y="285.0" dominant-baseline="central" text-anchor="middle" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="21" fill="#181818">工程管理</text>
+<rect x="332" y="262" width="132" height="46" rx="0" fill="#ffffff" stroke="#cecece" stroke-width="1"/>
+<text x="398.0" y="285.0" dominant-baseline="central" text-anchor="middle" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="21" fill="#181818">照片浏览</text>
+<rect x="186" y="324" width="132" height="46" rx="0" fill="#ffffff" stroke="#cecece" stroke-width="1"/>
+<text x="252.0" y="347.0" dominant-baseline="central" text-anchor="middle" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="21" fill="#181818">调色编辑</text>
+<rect x="332" y="324" width="132" height="46" rx="0" fill="#ffffff" stroke="#cecece" stroke-width="1"/>
+<text x="398.0" y="347.0" dominant-baseline="central" text-anchor="middle" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="21" fill="#181818">局部编辑</text>
+<rect x="186" y="386" width="132" height="46" rx="0" fill="#ffffff" stroke="#cecece" stroke-width="1"/>
+<text x="252.0" y="409.0" dominant-baseline="central" text-anchor="middle" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="21" fill="#181818">照片文字</text>
+<rect x="332" y="386" width="132" height="46" rx="0" fill="#ffffff" stroke="#cecece" stroke-width="1"/>
+<text x="398.0" y="409.0" dominant-baseline="central" text-anchor="middle" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="21" fill="#181818">批量导出</text>
+<polyline points="186,466 464,466" fill="none" stroke="#cecece" stroke-width="1" stroke-linejoin="round"/>
+<text x="325.0" y="491.0" dominant-baseline="central" text-anchor="middle" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="21" fill="#666666">工程状态与编辑历史</text>
+<rect x="505" y="176" width="310" height="342" rx="0" fill="#ffffff" stroke="#181818" stroke-width="2"/>
+<rect x="505" y="176" width="310" height="64" rx="0" fill="#181818" stroke="#181818" stroke-width="1"/>
+<text x="660.0" y="208.0" dominant-baseline="central" text-anchor="middle" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="28" fill="#ffffff" font-weight="600">画册</text>
+<rect x="521" y="262" width="132" height="46" rx="0" fill="#ffffff" stroke="#cecece" stroke-width="1"/>
+<text x="587.0" y="285.0" dominant-baseline="central" text-anchor="middle" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="21" fill="#181818">画册管理</text>
+<rect x="667" y="262" width="132" height="46" rx="0" fill="#ffffff" stroke="#cecece" stroke-width="1"/>
+<text x="733.0" y="285.0" dominant-baseline="central" text-anchor="middle" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="21" fill="#181818">页面编排</text>
+<rect x="521" y="324" width="132" height="46" rx="0" fill="#ffffff" stroke="#cecece" stroke-width="1"/>
+<text x="587.0" y="347.0" dominant-baseline="central" text-anchor="middle" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="21" fill="#181818">图文布局</text>
+<rect x="667" y="324" width="132" height="46" rx="0" fill="#ffffff" stroke="#cecece" stroke-width="1"/>
+<text x="733.0" y="347.0" dominant-baseline="central" text-anchor="middle" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="21" fill="#181818">书本阅读</text>
+<rect x="521" y="386" width="132" height="46" rx="0" fill="#ffffff" stroke="#cecece" stroke-width="1"/>
+<text x="587.0" y="409.0" dominant-baseline="central" text-anchor="middle" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="21" fill="#181818">成品导出</text>
+<rect x="667" y="386" width="132" height="46" rx="0" fill="#ffffff" stroke="#cecece" stroke-width="1"/>
+<text x="733.0" y="409.0" dominant-baseline="central" text-anchor="middle" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="21" fill="#181818">在线发布</text>
+<polyline points="521,466 799,466" fill="none" stroke="#cecece" stroke-width="1" stroke-linejoin="round"/>
+<text x="660.0" y="491.0" dominant-baseline="central" text-anchor="middle" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="21" fill="#666666">画册文档与编排历史</text>
+<rect x="840" y="176" width="310" height="342" rx="0" fill="#ffffff" stroke="#cecece" stroke-width="1"/>
+<rect x="840" y="176" width="310" height="64" rx="0" fill="#f4f4f4" stroke="#cecece" stroke-width="1"/>
+<text x="995.0" y="208.0" dominant-baseline="central" text-anchor="middle" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="28" fill="#181818" font-weight="600">小工具</text>
+<rect x="856" y="262" width="132" height="46" rx="0" fill="#ffffff" stroke="#cecece" stroke-width="1"/>
+<text x="922.0" y="285.0" dominant-baseline="central" text-anchor="middle" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="21" fill="#181818">文字识别</text>
+<rect x="1002" y="262" width="132" height="46" rx="0" fill="#ffffff" stroke="#cecece" stroke-width="1"/>
+<text x="1068.0" y="285.0" dominant-baseline="central" text-anchor="middle" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="21" fill="#181818">视频转动图</text>
+<rect x="856" y="324" width="132" height="46" rx="0" fill="#ffffff" stroke="#cecece" stroke-width="1"/>
+<text x="922.0" y="347.0" dominant-baseline="central" text-anchor="middle" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="21" fill="#181818">长截图</text>
+<rect x="1002" y="324" width="132" height="46" rx="0" fill="#ffffff" stroke="#cecece" stroke-width="1"/>
+<text x="1068.0" y="347.0" dominant-baseline="central" text-anchor="middle" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="21" fill="#181818">拼图</text>
+<rect x="856" y="386" width="132" height="46" rx="0" fill="#ffffff" stroke="#cecece" stroke-width="1"/>
+<text x="922.0" y="409.0" dominant-baseline="central" text-anchor="middle" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="21" fill="#181818">自动抠图</text>
+<rect x="1002" y="386" width="132" height="46" rx="0" fill="#ffffff" stroke="#cecece" stroke-width="1"/>
+<text x="1068.0" y="409.0" dominant-baseline="central" text-anchor="middle" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="21" fill="#181818">照片上色</text>
+<polyline points="856,466 1134,466" fill="none" stroke="#cecece" stroke-width="1" stroke-linejoin="round"/>
+<text x="995.0" y="491.0" dominant-baseline="central" text-anchor="middle" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="21" fill="#666666">各工具独立任务</text>
+<polyline points="180,534 180,551 805,551 805,534" fill="none" stroke="#181818" stroke-width="1.3" stroke-linejoin="round"/>
+<polyline points="487.5,551 487.5,573" fill="none" stroke="#181818" stroke-width="1.3" stroke-linejoin="round"/>
+<text x="40" y="603.0" dominant-baseline="central" text-anchor="start" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="24" fill="#181818" font-weight="600">能力层</text>
+<text x="40" y="637.0" dominant-baseline="central" text-anchor="start" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="20" fill="#666666">计算与组件</text>
+<rect x="170" y="574" width="645" height="169" rx="0" fill="#f4f4f4" stroke="#181818" stroke-width="1.2"/>
+<text x="190" y="601.0" dominant-baseline="central" text-anchor="start" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="22" fill="#181818" font-weight="600">图像编辑与画册共用</text>
+<rect x="186" y="630" width="142" height="96" rx="0" fill="#ffffff" stroke="#cecece" stroke-width="1.2"/>
+<text x="257" y="651.0" dominant-baseline="central" text-anchor="middle" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="22" fill="#181818" font-weight="600">照片渲染</text>
+<text x="257" y="680.0" dominant-baseline="central" text-anchor="middle" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="20" fill="#666666">调色 / 几何</text>
+<text x="257" y="707.0" dominant-baseline="central" text-anchor="middle" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="20" fill="#666666">GPU 出图</text>
+<rect x="343" y="630" width="142" height="96" rx="0" fill="#ffffff" stroke="#cecece" stroke-width="1.2"/>
+<text x="414" y="651.0" dominant-baseline="central" text-anchor="middle" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="22" fill="#181818" font-weight="600">局部处理</text>
+<text x="414" y="680.0" dominant-baseline="central" text-anchor="middle" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="20" fill="#666666">修复 / 蒙版</text>
+<text x="414" y="707.0" dominant-baseline="central" text-anchor="middle" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="20" fill="#666666">局部合成</text>
+<rect x="500" y="630" width="142" height="96" rx="0" fill="#ffffff" stroke="#cecece" stroke-width="1.2"/>
+<text x="571" y="651.0" dominant-baseline="central" text-anchor="middle" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="22" fill="#181818" font-weight="600">文字绘制</text>
+<text x="571" y="680.0" dominant-baseline="central" text-anchor="middle" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="20" fill="#666666">文本模型</text>
+<text x="571" y="707.0" dominant-baseline="central" text-anchor="middle" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="20" fill="#666666">导出字形</text>
+<rect x="657" y="630" width="142" height="96" rx="0" fill="#ffffff" stroke="#cecece" stroke-width="1.2"/>
+<text x="728" y="651.0" dominant-baseline="central" text-anchor="middle" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="22" fill="#181818" font-weight="600">图像分析</text>
+<text x="728" y="680.0" dominant-baseline="central" text-anchor="middle" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="20" fill="#666666">照片评分</text>
+<text x="728" y="707.0" dominant-baseline="central" text-anchor="middle" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="20" fill="#666666">自动增强</text>
+<rect x="840" y="574" width="310" height="169" rx="0" fill="#ffffff" stroke="#cecece" stroke-width="1.2"/>
+<text x="995.0" y="601.0" dominant-baseline="central" text-anchor="middle" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="22" fill="#181818" font-weight="600">各工具的处理实现</text>
+<rect x="856" y="630" width="278" height="28" rx="0" fill="#ffffff" stroke="#cecece" stroke-width="1"/>
+<text x="995.0" y="644.0" dominant-baseline="central" text-anchor="middle" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="20" fill="#181818">文字识别</text>
+<rect x="856" y="662" width="278" height="28" rx="0" fill="#ffffff" stroke="#cecece" stroke-width="1"/>
+<text x="995.0" y="676.0" dominant-baseline="central" text-anchor="middle" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="20" fill="#181818">图像合成与生成</text>
+<rect x="856" y="694" width="278" height="28" rx="0" fill="#ffffff" stroke="#cecece" stroke-width="1"/>
+<text x="995.0" y="708.0" dominant-baseline="central" text-anchor="middle" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="20" fill="#181818">视频与帧处理</text>
+<rect x="1190" y="176" width="170" height="567" rx="0" fill="#f4f4f4" stroke="#cecece" stroke-width="1.2"/>
+<text x="1275" y="208.0" dominant-baseline="central" text-anchor="middle" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="23" fill="#181818" font-weight="600">应用服务</text>
+<text x="1275" y="243.0" dominant-baseline="central" text-anchor="middle" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="20" fill="#666666">跨业务支持</text>
+<rect x="1206" y="280" width="138" height="78" rx="0" fill="#ffffff" stroke="#cecece" stroke-width="1"/>
+<text x="1275.0" y="319.0" dominant-baseline="central" text-anchor="middle" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="23" fill="#181818">Pro 权益</text>
+<rect x="1206" y="383" width="138" height="78" rx="0" fill="#ffffff" stroke="#cecece" stroke-width="1"/>
+<text x="1275.0" y="422.0" dominant-baseline="central" text-anchor="middle" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="23" fill="#181818">应用设置</text>
+<rect x="1206" y="486" width="138" height="78" rx="0" fill="#ffffff" stroke="#cecece" stroke-width="1"/>
+<text x="1275.0" y="525.0" dominant-baseline="central" text-anchor="middle" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="23" fill="#181818">语言管理</text>
+<rect x="1206" y="589" width="138" height="78" rx="0" fill="#ffffff" stroke="#cecece" stroke-width="1"/>
+<text x="1275.0" y="628.0" dominant-baseline="central" text-anchor="middle" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="23" fill="#181818">使用分析</text>
+<text x="40" y="816.0" dominant-baseline="central" text-anchor="start" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="24" fill="#181818" font-weight="600">基础层</text>
+<text x="40" y="850.0" dominant-baseline="central" text-anchor="start" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="20" fill="#666666">系统与集成</text>
+<rect x="170" y="790" width="284" height="143" rx="0" fill="#f4f4f4" stroke="#cecece" stroke-width="1.2"/>
+<text x="312" y="821.0" dominant-baseline="central" text-anchor="middle" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="24" fill="#181818" font-weight="600">图形与文字</text>
+<text x="312" y="865.0" dominant-baseline="central" text-anchor="middle" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="21" fill="#666666">Metal · Core Image</text>
+<text x="312" y="901.0" dominant-baseline="central" text-anchor="middle" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="21" fill="#666666">CoreGraphics · CoreText</text>
+<rect x="472" y="790" width="284" height="143" rx="0" fill="#f4f4f4" stroke="#cecece" stroke-width="1.2"/>
+<text x="614" y="821.0" dominant-baseline="central" text-anchor="middle" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="24" fill="#181818" font-weight="600">媒体与视觉</text>
+<text x="614" y="865.0" dominant-baseline="central" text-anchor="middle" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="21" fill="#666666">ImageIO · AVFoundation</text>
+<text x="614" y="901.0" dominant-baseline="central" text-anchor="middle" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="21" fill="#666666">Vision · Core ML</text>
+<rect x="774" y="790" width="284" height="143" rx="0" fill="#f4f4f4" stroke="#cecece" stroke-width="1.2"/>
+<text x="916" y="821.0" dominant-baseline="central" text-anchor="middle" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="24" fill="#181818" font-weight="600">访问与存储</text>
+<text x="916" y="865.0" dominant-baseline="central" text-anchor="middle" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="21" fill="#666666">文件系统 · PhotoKit</text>
+<text x="916" y="901.0" dominant-baseline="central" text-anchor="middle" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="21" fill="#666666">UserDefaults</text>
+<rect x="1076" y="790" width="284" height="143" rx="0" fill="#f4f4f4" stroke="#cecece" stroke-width="1.2"/>
+<text x="1218" y="821.0" dominant-baseline="central" text-anchor="middle" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="24" fill="#181818" font-weight="600">外部服务</text>
+<text x="1218" y="865.0" dominant-baseline="central" text-anchor="middle" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="21" fill="#666666">Apple 商店</text>
+<text x="1218" y="901.0" dominant-baseline="central" text-anchor="middle" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="21" fill="#666666">画册发布与网页阅读</text>
+</svg>

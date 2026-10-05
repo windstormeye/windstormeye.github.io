@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="1070" viewBox="0 0 1400 1070">
+<rect width="1400" height="1070" fill="white"/>
+<rect x="45" y="185" width="210" height="146" rx="0" fill="#ffffff" stroke="#181818" stroke-width="1.3"/>
+<rect x="45" y="185" width="210" height="50" rx="0" fill="#f4f4f4" stroke="#f4f4f4" stroke-width="0"/>
+<polyline points="45,235 255,235" fill="none" stroke="#cecece" stroke-width="1" stroke-linejoin="round"/>
+<text x="65" y="211.0" dominant-baseline="central" text-anchor="start" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="25" fill="#181818" font-weight="600">作者 App</text>
+<text x="65" y="257.0" dominant-baseline="central" text-anchor="start" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="22" fill="#181818">Apple 登录</text>
+<text x="65" y="297.0" dominant-baseline="central" text-anchor="start" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="22" fill="#181818">发布 / 管理</text>
+<rect x="45" y="695" width="210" height="146" rx="0" fill="#ffffff" stroke="#181818" stroke-width="1.3"/>
+<rect x="45" y="695" width="210" height="50" rx="0" fill="#f4f4f4" stroke="#f4f4f4" stroke-width="0"/>
+<polyline points="45,745 255,745" fill="none" stroke="#cecece" stroke-width="1" stroke-linejoin="round"/>
+<text x="65" y="721.0" dominant-baseline="central" text-anchor="start" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="25" fill="#181818" font-weight="600">读者浏览器</text>
+<text x="65" y="767.0" dominant-baseline="central" text-anchor="start" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="22" fill="#181818">无需登录</text>
+<text x="65" y="807.0" dominant-baseline="central" text-anchor="start" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="22" fill="#181818">读取清单 / JPG</text>
+<rect x="315" y="125" width="195" height="805" rx="0" fill="#f4f4f4" stroke="#181818" stroke-width="1.3"/>
+<text x="412" y="470.0" dominant-baseline="central" text-anchor="middle" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="26" fill="#181818" font-weight="600">Pages 网关</text>
+<text x="412" y="515.0" dominant-baseline="central" text-anchor="middle" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="22" fill="#666666">同域入口</text>
+<polyline points="255,255 315,255" fill="none" stroke="#181818" stroke-width="1.8" stroke-linejoin="round"/>
+<polygon points="315,255 306.0,250.5 306.0,259.5" fill="#181818" stroke="#181818" stroke-width="0.7"/>
+<polyline points="255,765 315,765" fill="none" stroke="#181818" stroke-width="1.8" stroke-linejoin="round"/>
+<polygon points="315,765 306.0,760.5 306.0,769.5" fill="#181818" stroke="#181818" stroke-width="0.7"/>
+<polyline points="510,255 590,255" fill="none" stroke="#181818" stroke-width="1.8" stroke-linejoin="round"/>
+<polygon points="590,255 581.0,250.5 581.0,259.5" fill="#181818" stroke="#181818" stroke-width="0.7"/>
+<polyline points="510,765 590,765" fill="none" stroke="#181818" stroke-width="1.8" stroke-linejoin="round"/>
+<polygon points="590,765 581.0,760.5 581.0,769.5" fill="#181818" stroke="#181818" stroke-width="0.7"/>
+<text x="550" y="485.0" dominant-baseline="central" text-anchor="middle" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="22" fill="#666666">服务</text>
+<text x="550" y="520.0" dominant-baseline="central" text-anchor="middle" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="22" fill="#666666">绑定</text>
+<rect x="590" y="125" width="405" height="805" rx="0" fill="#ffffff" stroke="#181818" stroke-width="1.5"/>
+<rect x="590" y="125" width="405" height="65" rx="0" fill="#f4f4f4" stroke="#f4f4f4" stroke-width="0"/>
+<polyline points="590,190 995,190" fill="none" stroke="#cecece" stroke-width="1" stroke-linejoin="round"/>
+<text x="790" y="158.0" dominant-baseline="central" text-anchor="middle" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="26" fill="#181818" font-weight="600">画册 Worker</text>
+<text x="620" y="235.0" dominant-baseline="central" text-anchor="start" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="25" fill="#181818" font-weight="600">作者操作</text>
+<text x="620" y="285.0" dominant-baseline="central" text-anchor="start" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="23" fill="#181818">登录会话 · 画册归属</text>
+<text x="620" y="329.0" dominant-baseline="central" text-anchor="start" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="23" fill="#181818">在线名额 · 发布版本</text>
+<text x="620" y="373.0" dominant-baseline="central" text-anchor="start" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="23" fill="#181818">页面校验 · 写入 JPG</text>
+<polyline points="610,435 975,435" fill="none" stroke="#cecece" stroke-width="1" stroke-linejoin="round"/>
+<text x="620" y="485.0" dominant-baseline="central" text-anchor="start" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="25" fill="#181818" font-weight="600">公开读取</text>
+<text x="620" y="535.0" dominant-baseline="central" text-anchor="start" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="23" fill="#181818">画册有效 · 版本可读</text>
+<text x="620" y="579.0" dominant-baseline="central" text-anchor="start" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="23" fill="#181818">该版本确实引用此页</text>
+<text x="620" y="686.0" dominant-baseline="central" text-anchor="start" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="23" fill="#181818" font-weight="600">核验通过，再读缓存</text>
+<text x="620" y="836.0" dominant-baseline="central" text-anchor="start" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="23" fill="#181818">缓存未命中，再读 R2</text>
+<text x="620" y="882.0" dominant-baseline="central" text-anchor="start" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="22" fill="#666666">浏览器不保留响应缓存</text>
+<ellipse cx="1242.5" cy="385.0" rx="107.5" ry="15.0" fill="#f4f4f4" stroke="#181818" stroke-width="1.4"/>
+<rect x="1135" y="140.0" width="215" height="245" rx="0" fill="#f4f4f4" stroke="#f4f4f4" stroke-width="0"/>
+<polyline points="1135,140.0 1135,385.0" fill="none" stroke="#181818" stroke-width="1.4" stroke-linejoin="round"/>
+<polyline points="1350,140.0 1350,385.0" fill="none" stroke="#181818" stroke-width="1.4" stroke-linejoin="round"/>
+<ellipse cx="1242.5" cy="140.0" rx="107.5" ry="15.0" fill="#ffffff" stroke="#181818" stroke-width="1.4"/>
+<text x="1242.5" y="189.0" dominant-baseline="central" text-anchor="middle" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="26" fill="#181818" font-weight="600">D1</text>
+<text x="1242.5" y="235.0" dominant-baseline="central" text-anchor="middle" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="22" fill="#666666">账号会话</text>
+<text x="1242.5" y="272.0" dominant-baseline="central" text-anchor="middle" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="22" fill="#666666">画册 / 版本</text>
+<text x="1242.5" y="309.0" dominant-baseline="central" text-anchor="middle" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="22" fill="#666666">页面引用</text>
+<rect x="1135" y="595" width="215" height="125" rx="0" fill="#f4f4f4" stroke="#181818" stroke-width="1.3"/>
+<text x="1242" y="637.0" dominant-baseline="central" text-anchor="middle" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="26" fill="#181818" font-weight="600">边缘缓存</text>
+<text x="1242" y="682.0" dominant-baseline="central" text-anchor="middle" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="22" fill="#666666">JPG · 24 小时</text>
+<ellipse cx="1242.5" cy="995.0" rx="107.5" ry="15.0" fill="#f4f4f4" stroke="#181818" stroke-width="1.4"/>
+<rect x="1135" y="795.0" width="215" height="200" rx="0" fill="#f4f4f4" stroke="#f4f4f4" stroke-width="0"/>
+<polyline points="1135,795.0 1135,995.0" fill="none" stroke="#181818" stroke-width="1.4" stroke-linejoin="round"/>
+<polyline points="1350,795.0 1350,995.0" fill="none" stroke="#181818" stroke-width="1.4" stroke-linejoin="round"/>
+<ellipse cx="1242.5" cy="795.0" rx="107.5" ry="15.0" fill="#ffffff" stroke="#181818" stroke-width="1.4"/>
+<text x="1242.5" y="844.0" dominant-baseline="central" text-anchor="middle" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="26" fill="#181818" font-weight="600">私有 R2</text>
+<text x="1242.5" y="890.0" dominant-baseline="central" text-anchor="middle" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="22" fill="#666666">页面 JPG</text>
+<text x="1242.5" y="927.0" dominant-baseline="central" text-anchor="middle" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="22" fill="#666666">无公开入口</text>
+<polyline points="995,300 1135,300" fill="none" stroke="#181818" stroke-width="1.8" stroke-linejoin="round"/>
+<polygon points="1135,300 1126.0,295.5 1126.0,304.5" fill="#181818" stroke="#181818" stroke-width="0.7"/>
+<rect x="1005.5" y="256.0" width="118.5" height="28.0" rx="0" fill="#ffffff" stroke="#ffffff" stroke-width="0"/>
+<text x="1065" y="270.0" dominant-baseline="central" text-anchor="middle" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="22" fill="#181818">会话 / 版本</text>
+<polyline points="995,554 1050,554 1050,365 1135,365" fill="none" stroke="#181818" stroke-width="1.8" stroke-linejoin="round"/>
+<polygon points="1135,365 1126.0,360.5 1126.0,369.5" fill="#181818" stroke="#181818" stroke-width="0.7"/>
+<ellipse cx="1050.0" cy="467.0" rx="15.0" ry="15.0" fill="#ffffff" stroke="#181818" stroke-width="1.4"/>
+<text x="1050" y="467.0" dominant-baseline="central" text-anchor="middle" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="21" fill="#181818" font-weight="600">1</text>
+<rect x="1027.0" y="389.5" width="76.0" height="28.5" rx="0" fill="#ffffff" stroke="#ffffff" stroke-width="0"/>
+<text x="1065" y="404.0" dominant-baseline="central" text-anchor="middle" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="22" fill="#666666">先核验</text>
+<polyline points="995,658 1135,658" fill="none" stroke="#181818" stroke-width="1.8" stroke-linejoin="round"/>
+<polygon points="1135,658 1126.0,653.5 1126.0,662.5" fill="#181818" stroke="#181818" stroke-width="0.7"/>
+<ellipse cx="1065.0" cy="658.0" rx="15.0" ry="15.0" fill="#ffffff" stroke="#181818" stroke-width="1.4"/>
+<text x="1065" y="658.0" dominant-baseline="central" text-anchor="middle" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="21" fill="#181818" font-weight="600">2</text>
+<polyline points="995,859 1135,859" fill="none" stroke="#181818" stroke-width="1.8" stroke-linejoin="round"/>
+<polygon points="1135,859 1126.0,854.5 1126.0,863.5" fill="#181818" stroke="#181818" stroke-width="0.7"/>
+<ellipse cx="1065.0" cy="859.0" rx="15.0" ry="15.0" fill="#ffffff" stroke="#181818" stroke-width="1.4"/>
+<text x="1065" y="859.0" dominant-baseline="central" text-anchor="middle" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="21" fill="#181818" font-weight="600">3</text>
+<rect x="1016.0" y="806.0" width="98.0" height="28.5" rx="0" fill="#ffffff" stroke="#ffffff" stroke-width="0"/>
+<text x="1065" y="820.0" dominant-baseline="central" text-anchor="middle" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="22" fill="#666666">缺失读取</text>
+<polyline points="995,210 1098,210 1098,90 1380,90 1380,962 1350,962" fill="none" stroke="#666666" stroke-width="1.8" stroke-linejoin="round" stroke-dasharray="6 6"/>
+<polyline points="1359.0,966.5 1350,962 1359.0,957.5" fill="none" stroke="#666666" stroke-width="1.8" stroke-linejoin="round"/>
+<text x="1242" y="64.0" dominant-baseline="central" text-anchor="middle" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="22" fill="#666666">上传 JPG</text>
+</svg>

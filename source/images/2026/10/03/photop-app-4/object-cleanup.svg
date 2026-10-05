@@ -1,0 +1,101 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="1590" viewBox="0 0 1400 1590">
+<rect width="1400" height="1590" fill="white"/>
+<text x="40" y="43.0" dominant-baseline="central" text-anchor="start" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="29" fill="#181818" font-weight="600">删除先确定在线状态，存储对象再可靠回收</text>
+<rect x="35.0" y="96" width="160" height="72" rx="0" fill="#f4f4f4" stroke="#181818" stroke-width="1.2"/>
+<text x="115" y="132.0" dominant-baseline="central" text-anchor="middle" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="24" fill="#181818" font-weight="600">作者</text>
+<polyline points="115,168 115,1518" fill="none" stroke="#a0a0a0" stroke-width="1" stroke-linejoin="round" stroke-dasharray="6 6"/>
+<rect x="260.0" y="96" width="210" height="72" rx="0" fill="#f4f4f4" stroke="#181818" stroke-width="1.2"/>
+<text x="365" y="132.0" dominant-baseline="central" text-anchor="middle" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="24" fill="#181818" font-weight="600">画册服务</text>
+<polyline points="365,168 365,1518" fill="none" stroke="#a0a0a0" stroke-width="1" stroke-linejoin="round" stroke-dasharray="6 6"/>
+<rect x="565.0" y="96" width="250" height="72" rx="0" fill="#f4f4f4" stroke="#181818" stroke-width="1.2"/>
+<text x="690" y="132.0" dominant-baseline="central" text-anchor="middle" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="24" fill="#181818" font-weight="600">在线与引用记录</text>
+<polyline points="690,168 690,1518" fill="none" stroke="#a0a0a0" stroke-width="1" stroke-linejoin="round" stroke-dasharray="6 6"/>
+<rect x="900.0" y="96" width="220" height="72" rx="0" fill="#f4f4f4" stroke="#181818" stroke-width="1.2"/>
+<text x="1010" y="132.0" dominant-baseline="central" text-anchor="middle" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="24" fill="#181818" font-weight="600">持久回收队列</text>
+<polyline points="1010,168 1010,1518" fill="none" stroke="#a0a0a0" stroke-width="1" stroke-linejoin="round" stroke-dasharray="6 6"/>
+<rect x="1180.0" y="96" width="180" height="72" rx="0" fill="#f4f4f4" stroke="#181818" stroke-width="1.2"/>
+<text x="1270" y="132.0" dominant-baseline="central" text-anchor="middle" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="24" fill="#181818" font-weight="600">私有 R2</text>
+<polyline points="1270,168 1270,1518" fill="none" stroke="#a0a0a0" stroke-width="1" stroke-linejoin="round" stroke-dasharray="6 6"/>
+<polyline points="115,221 365,221" fill="none" stroke="#181818" stroke-width="1.8" stroke-linejoin="round"/>
+<polygon points="365,221 356.0,216.5 356.0,225.5" fill="#181818" stroke="#181818" stroke-width="0.7"/>
+<rect x="191.0" y="189.0" width="98.0" height="28.0" rx="0" fill="#ffffff" stroke="#ffffff" stroke-width="0"/>
+<text x="240.0" y="203.0" dominant-baseline="central" text-anchor="middle" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="22" fill="#181818">请求删除</text>
+<polyline points="365,277 690,277" fill="none" stroke="#181818" stroke-width="1.8" stroke-linejoin="round"/>
+<polygon points="690,277 681.0,272.5 681.0,281.5" fill="#181818" stroke="#181818" stroke-width="0.7"/>
+<rect x="445.5" y="245.0" width="164.0" height="28.0" rx="0" fill="#ffffff" stroke="#ffffff" stroke-width="0"/>
+<text x="527.5" y="259.0" dominant-baseline="central" text-anchor="middle" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="22" fill="#181818">验证归属后删除</text>
+<rect x="556" y="301" width="574" height="344" rx="0" fill="#f4f4f4" stroke="#181818" stroke-width="1.4"/>
+<text x="579" y="324.0" dominant-baseline="central" text-anchor="start" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="24" fill="#181818" font-weight="600">同一 D1 事务</text>
+<polyline points="579,348 1107,348" fill="none" stroke="#cecece" stroke-width="1" stroke-linejoin="round"/>
+<rect x="579" y="366" width="306" height="90" rx="0" fill="#ffffff" stroke="#cecece" stroke-width="1"/>
+<text x="598" y="390.0" dominant-baseline="central" text-anchor="start" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="23" fill="#181818" font-weight="600">依旧映射检查页面引用</text>
+<text x="598" y="430.0" dominant-baseline="central" text-anchor="start" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="22" fill="#181818">其他画册仍有引用 → 保留</text>
+<polyline points="690,491 1010,491" fill="none" stroke="#181818" stroke-width="1.8" stroke-linejoin="round"/>
+<polygon points="1010,491 1001.0,486.5 1001.0,495.5" fill="#181818" stroke="#181818" stroke-width="0.7"/>
+<rect x="779.0" y="458.5" width="142.0" height="28.5" rx="0" fill="#ffffff" stroke="#ffffff" stroke-width="0"/>
+<text x="850.0" y="473.0" dominant-baseline="central" text-anchor="middle" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="22" fill="#181818">独占对象入队</text>
+<rect x="930" y="509" width="170" height="101" rx="0" fill="#ffffff" stroke="#cecece" stroke-width="1"/>
+<text x="1015" y="538.0" dominant-baseline="central" text-anchor="middle" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="22" fill="#181818" font-weight="600">持久保留</text>
+<text x="1015" y="580.0" dominant-baseline="central" text-anchor="middle" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="21" fill="#181818">24h 后二轮</text>
+<rect x="579" y="516" width="306" height="94" rx="0" fill="#ffffff" stroke="#cecece" stroke-width="1"/>
+<text x="598" y="543.0" dominant-baseline="central" text-anchor="start" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="23" fill="#181818">移除版本与相关映射</text>
+<text x="598" y="582.0" dominant-baseline="central" text-anchor="start" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="22" fill="#181818" font-weight="600">下线画册 · 释放在线名额</text>
+<rect x="670.0" y="616.5" width="346.0" height="28.0" rx="0" fill="#f4f4f4" stroke="#f4f4f4" stroke-width="0"/>
+<text x="843" y="630.0" dominant-baseline="central" text-anchor="middle" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="21" fill="#181818" font-weight="600">引用判定、入队、移除记录一起提交</text>
+<polyline points="690,685 365,685" fill="none" stroke="#181818" stroke-width="1.8" stroke-linejoin="round" stroke-dasharray="6 6"/>
+<polyline points="374.0,689.5 365,685 374.0,680.5" fill="none" stroke="#181818" stroke-width="1.8" stroke-linejoin="round"/>
+<rect x="445.5" y="652.5" width="164.0" height="28.5" rx="0" fill="#ffffff" stroke="#ffffff" stroke-width="0"/>
+<text x="527.5" y="667.0" dominant-baseline="central" text-anchor="middle" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="22" fill="#181818">删除状态已提交</text>
+<polyline points="365,751 1270,751" fill="none" stroke="#181818" stroke-width="1.8" stroke-linejoin="round"/>
+<polygon points="1270,751 1261.0,746.5 1261.0,755.5" fill="#181818" stroke="#181818" stroke-width="0.7"/>
+<rect x="702.5" y="718.5" width="230.0" height="29.0" rx="0" fill="#ffffff" stroke="#ffffff" stroke-width="0"/>
+<text x="817.5" y="733.0" dominant-baseline="central" text-anchor="middle" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="22" fill="#181818">立即尝试删除独占对象</text>
+<polyline points="1270,811 365,811" fill="none" stroke="#181818" stroke-width="1.8" stroke-linejoin="round" stroke-dasharray="6 6"/>
+<polyline points="374.0,815.5 365,811 374.0,806.5" fill="none" stroke="#181818" stroke-width="1.8" stroke-linejoin="round"/>
+<rect x="724.5" y="778.5" width="186.0" height="28.5" rx="0" fill="#ffffff" stroke="#ffffff" stroke-width="0"/>
+<text x="817.5" y="793.0" dominant-baseline="central" text-anchor="middle" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="22" fill="#181818">成功，或暂时失败</text>
+<polyline points="365,872 115,872" fill="none" stroke="#181818" stroke-width="1.8" stroke-linejoin="round" stroke-dasharray="6 6"/>
+<polyline points="124.0,876.5 115,872 124.0,867.5" fill="none" stroke="#181818" stroke-width="1.8" stroke-linejoin="round"/>
+<rect x="169.0" y="840.0" width="142.0" height="28.0" rx="0" fill="#ffffff" stroke="#ffffff" stroke-width="0"/>
+<text x="240.0" y="854.0" dominant-baseline="central" text-anchor="middle" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="22" fill="#181818">返回删除完成</text>
+<text x="415" y="905.0" dominant-baseline="central" text-anchor="start" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="22" fill="#666666">R2 失败不撤回下线；队列继续保留，名额已经释放</text>
+<polyline points="40,967 1360,967" fill="none" stroke="#cecece" stroke-width="1" stroke-linejoin="round"/>
+<text x="40" y="948.0" dominant-baseline="central" text-anchor="start" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="22" fill="#181818" font-weight="600">迟到上传与定时重试</text>
+<polyline points="365,1017 1270,1017" fill="none" stroke="#181818" stroke-width="1.8" stroke-linejoin="round" stroke-dasharray="6 6"/>
+<polyline points="1261.0,1012.5 1270,1017 1261.0,1021.5" fill="none" stroke="#181818" stroke-width="1.8" stroke-linejoin="round"/>
+<rect x="632.0" y="984.5" width="371.0" height="28.5" rx="0" fill="#ffffff" stroke="#ffffff" stroke-width="0"/>
+<text x="817.5" y="999.0" dominant-baseline="central" text-anchor="middle" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="22" fill="#181818">删除前已发出的上传，现在才写入 R2</text>
+<text x="415" y="1058.0" dominant-baseline="central" text-anchor="start" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="22" fill="#666666">第一次成功也保留二轮任务，清掉在途上传留下的尾巴</text>
+<rect x="268" y="1086" width="1101" height="324" rx="0" fill="#ffffff" stroke="#cecece" stroke-width="1"/>
+<polyline points="365,1086 365,1410" fill="none" stroke="#a0a0a0" stroke-width="1" stroke-linejoin="round" stroke-dasharray="6 6"/>
+<polyline points="690,1086 690,1410" fill="none" stroke="#a0a0a0" stroke-width="1" stroke-linejoin="round" stroke-dasharray="6 6"/>
+<polyline points="1010,1086 1010,1410" fill="none" stroke="#a0a0a0" stroke-width="1" stroke-linejoin="round" stroke-dasharray="6 6"/>
+<polyline points="1270,1086 1270,1410" fill="none" stroke="#a0a0a0" stroke-width="1" stroke-linejoin="round" stroke-dasharray="6 6"/>
+<rect x="287.0" y="1098.5" width="504.0" height="29.5" rx="0" fill="#ffffff" stroke="#ffffff" stroke-width="0"/>
+<text x="292" y="1113.0" dominant-baseline="central" text-anchor="start" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="23" fill="#181818" font-weight="600">24h 之后的定时回收 · 失败则保留任务继续重试</text>
+<polyline points="365,1160 1010,1160" fill="none" stroke="#181818" stroke-width="1.8" stroke-linejoin="round"/>
+<polygon points="1010,1160 1001.0,1155.5 1001.0,1164.5" fill="#181818" stroke="#181818" stroke-width="0.7"/>
+<rect x="594.5" y="1127.5" width="186.0" height="29.0" rx="0" fill="#ffffff" stroke="#ffffff" stroke-width="0"/>
+<text x="687.5" y="1142.0" dominant-baseline="central" text-anchor="middle" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="22" fill="#181818">读取到期回收任务</text>
+<polyline points="1010,1220 365,1220" fill="none" stroke="#181818" stroke-width="1.8" stroke-linejoin="round" stroke-dasharray="6 6"/>
+<polyline points="374.0,1224.5 365,1220 374.0,1215.5" fill="none" stroke="#181818" stroke-width="1.8" stroke-linejoin="round"/>
+<rect x="594.5" y="1187.5" width="186.0" height="28.5" rx="0" fill="#ffffff" stroke="#ffffff" stroke-width="0"/>
+<text x="687.5" y="1202.0" dominant-baseline="central" text-anchor="middle" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="22" fill="#181818">旧对象的原存储键</text>
+<polyline points="365,1278 1270,1278" fill="none" stroke="#181818" stroke-width="1.8" stroke-linejoin="round"/>
+<polygon points="1270,1278 1261.0,1273.5 1261.0,1282.5" fill="#181818" stroke="#181818" stroke-width="0.7"/>
+<rect x="724.5" y="1245.5" width="186.0" height="28.5" rx="0" fill="#ffffff" stroke="#ffffff" stroke-width="0"/>
+<text x="817.5" y="1260.0" dominant-baseline="central" text-anchor="middle" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="22" fill="#181818">再次删除该存储键</text>
+<polyline points="1270,1329 365,1329" fill="none" stroke="#181818" stroke-width="1.8" stroke-linejoin="round" stroke-dasharray="6 6"/>
+<polyline points="374.0,1333.5 365,1329 374.0,1324.5" fill="none" stroke="#181818" stroke-width="1.8" stroke-linejoin="round"/>
+<rect x="658.5" y="1296.5" width="318.0" height="29.0" rx="0" fill="#ffffff" stroke="#ffffff" stroke-width="0"/>
+<text x="817.5" y="1311.0" dominant-baseline="central" text-anchor="middle" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="22" fill="#181818">删除成功；失败则继续保留任务</text>
+<polyline points="365,1381 1010,1381" fill="none" stroke="#181818" stroke-width="1.8" stroke-linejoin="round"/>
+<polygon points="1010,1381 1001.0,1376.5 1001.0,1385.5" fill="#181818" stroke="#181818" stroke-width="0.7"/>
+<rect x="550.5" y="1348.5" width="274.0" height="29.0" rx="0" fill="#ffffff" stroke="#ffffff" stroke-width="0"/>
+<text x="687.5" y="1363.0" dominant-baseline="central" text-anchor="middle" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="22" fill="#181818">仅成功分支：移除回收任务</text>
+<rect x="40" y="1421" width="1320" height="132" rx="0" fill="#f4f4f4" stroke="#cecece" stroke-width="1"/>
+<text x="63" y="1451.0" dominant-baseline="central" text-anchor="start" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="24" fill="#181818" font-weight="600">过期清理</text>
+<text x="280" y="1451.0" dominant-baseline="central" text-anchor="start" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="22" fill="#181818">草稿 24h 过期，删除过期版本及其页面映射</text>
+<text x="280" y="1491.0" dominant-baseline="central" text-anchor="start" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="22" fill="#181818">无引用对象且创建已超过 24h → 同一持久回收队列</text>
+<text x="280" y="1531.0" dominant-baseline="central" text-anchor="start" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="22" fill="#181818" font-weight="600">存储键不复用；旧任务重试不会删到重新上传的新副本</text>
+</svg>

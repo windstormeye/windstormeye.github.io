@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="510" viewBox="0 0 1400 510">
+<rect width="1400" height="510" fill="white"/>
+<text x="40" y="32.0" dominant-baseline="central" text-anchor="start" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="28" fill="#181818" font-weight="600">网页软纸拖动 · 静态页减去同一帧的掀起区</text>
+<text x="73" y="65.0" dominant-baseline="central" text-anchor="start" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="24" fill="#181818" font-weight="600">完整静态页 A</text>
+<text x="515" y="65.0" dominant-baseline="central" text-anchor="start" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="24" fill="#181818" font-weight="600">保留 A − H</text>
+<text x="985" y="65.0" dominant-baseline="central" text-anchor="start" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="24" fill="#181818" font-weight="600">再叠入卷页纸</text>
+<rect x="125" y="99" width="176.0" height="264.0" rx="0" fill="#f4f4f4" stroke="#181818" stroke-width="1.2"/>
+<polygon points="301.0,363.0 301.0,171.466944 249.236288,363.0" fill="#d8d8d8" stroke="#666666" stroke-width="1.2"/>
+<text x="355" y="270.0" dominant-baseline="central" text-anchor="middle" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="24" fill="#181818" font-weight="600">H</text>
+<polyline points="335,270 284,270" fill="none" stroke="#666666" stroke-width="1.2" stroke-linejoin="round"/>
+<polygon points="284,270 293.0,274.5 293.0,265.5" fill="#666666" stroke="#666666" stroke-width="0.7"/>
+<polyline points="397,220 490,220" fill="none" stroke="#181818" stroke-width="1.8" stroke-linejoin="round"/>
+<polygon points="490,220 481.0,215.5 481.0,224.5" fill="#181818" stroke="#181818" stroke-width="0.7"/>
+<rect x="408.0" y="182.0" width="72.0" height="27.5" rx="0" fill="#ffffff" stroke="#ffffff" stroke-width="0"/>
+<text x="444" y="195.0" dominant-baseline="central" text-anchor="middle" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="21" fill="#181818">减去 H</text>
+<polyline points="550,99 726,99 726,363 550,363 550,99" fill="none" stroke="#a0a0a0" stroke-width="1.2" stroke-linejoin="round" stroke-dasharray="6 6"/>
+<polygon points="550.0,99.0 726.0,99.0 726.0,171.466944 674.2362880000001,363.0 550.0,363.0" fill="#ffffff" stroke="#181818" stroke-width="1.5"/>
+<text x="745" y="320.0" dominant-baseline="central" text-anchor="start" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="21" fill="#666666">露出底页</text>
+<polyline points="866,220 955,220" fill="none" stroke="#181818" stroke-width="1.8" stroke-linejoin="round"/>
+<polygon points="955,220 946.0,215.5 946.0,224.5" fill="#181818" stroke="#181818" stroke-width="0.7"/>
+<rect x="884.0" y="182.5" width="52.0" height="26.0" rx="0" fill="#ffffff" stroke="#ffffff" stroke-width="0"/>
+<text x="910" y="195.0" dominant-baseline="central" text-anchor="middle" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="21" fill="#181818">叠入</text>
+<rect x="1010" y="99" width="176" height="264" rx="0" fill="#f4f4f4" stroke="#a0a0a0" stroke-width="1"/>
+<polygon points="1010.0,99.0 1186.0,99.0 1186.0,171.466944 1134.236288,363.0 1010.0,363.0" fill="#ffffff" stroke="#181818" stroke-width="1.4"/>
+<polygon points="1222.707748,108.846452 1186.0,171.466944 1134.236288,363.0 1089.2,336.6" fill="#d8d8d8" stroke="#181818" stroke-width="1.4"/>
+<text x="985" y="390.0" dominant-baseline="central" text-anchor="start" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="21" fill="#666666">不另垫整块纸板；阴影跟随页面轮廓</text>
+<text x="40" y="417.0" dominant-baseline="central" text-anchor="start" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="21" fill="#666666">H 来自翻页库当前帧；CSS polygon(evenodd) 为静态页扣出对应区域。</text>
+<text x="40" y="454.0" dominant-baseline="central" text-anchor="start" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="21" fill="#666666">前翻、后翻使用对应方向；结束或回弹完成后恢复静态页。图示为向前从右下角拖动。</text>
+<text x="40" y="487.0" dominant-baseline="central" text-anchor="start" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="21" fill="#666666">按钮自动翻页采用整页旋转，跳过这项软纸裁切。</text>
+</svg>

@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="830" viewBox="0 0 1400 830">
+<rect width="1400" height="830" fill="white"/>
+<text x="40" y="38.0" dominant-baseline="central" text-anchor="start" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="27" fill="#181818" font-weight="600">全屏卷页 · 页面排布与采样余量共同决定中间纹理</text>
+<text x="40" y="80.0" dominant-baseline="central" text-anchor="start" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="22" fill="#666666">对页宽 W = 1844 屏幕点；Retina 倍率 s = 2</text>
+<polyline points="40,106 1360,106" fill="none" stroke="#cecece" stroke-width="1" stroke-linejoin="round"/>
+<text x="40" y="142.0" dominant-baseline="central" text-anchor="start" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="24" fill="#181818" font-weight="600">修改前</text>
+<text x="270" y="142.0" dominant-baseline="central" text-anchor="start" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="21" fill="#666666">源页面排布</text>
+<rect x="270" y="178" width="228" height="54" rx="0" fill="#ffffff" stroke="#666666" stroke-width="1"/>
+<text x="384.0" y="205.0" dominant-baseline="central" text-anchor="middle" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="21" fill="#666666">透明对页 · W</text>
+<rect x="498.0" y="178" width="114.0" height="54" rx="0" fill="#e2e2e2" stroke="#181818" stroke-width="1"/>
+<text x="555.0" y="205.0" dominant-baseline="central" text-anchor="middle" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="19" fill="#181818">正面 W/2</text>
+<rect x="612.0" y="178" width="114.0" height="54" rx="0" fill="#f4f4f4" stroke="#181818" stroke-width="1"/>
+<text x="669.0" y="205.0" dominant-baseline="central" text-anchor="middle" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="19" fill="#181818">背面 W/2</text>
+<text x="758" y="205.0" dominant-baseline="central" text-anchor="start" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="21" fill="#666666">源位置向右多占一幅对页</text>
+<text x="40" y="251.0" dominant-baseline="central" text-anchor="start" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="21" fill="#666666">横向申请范围</text>
+<rect x="82" y="276" width="456" height="65" rx="0" fill="#f4f4f4" stroke="#666666" stroke-width="1"/>
+<rect x="538" y="276" width="228" height="65" rx="0" fill="#dddddd" stroke="#181818" stroke-width="1.4"/>
+<rect x="766" y="276" width="456" height="65" rx="0" fill="#f4f4f4" stroke="#666666" stroke-width="1"/>
+<text x="310.0" y="309.0" dominant-baseline="central" text-anchor="middle" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="22" fill="#181818">左采样余量 2W</text>
+<text x="652.0" y="309.0" dominant-baseline="central" text-anchor="middle" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="22" fill="#181818">输出对页 W</text>
+<text x="994.0" y="309.0" dominant-baseline="central" text-anchor="middle" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="22" fill="#181818">右采样余量 2W</text>
+<polyline points="82,376 82,386" fill="none" stroke="#666666" stroke-width="1" stroke-linejoin="round"/>
+<polyline points="1222,376 1222,386" fill="none" stroke="#666666" stroke-width="1" stroke-linejoin="round"/>
+<polyline points="82,381 1222,381" fill="none" stroke="#666666" stroke-width="1" stroke-linejoin="round"/>
+<rect x="439.5" y="348.0" width="425.0" height="30.5" rx="0" fill="#ffffff" stroke="#ffffff" stroke-width="0"/>
+<text x="652.0" y="363.0" dominant-baseline="central" text-anchor="middle" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="23" fill="#666666">(W + 2M) × s = 5 × 1844 × 2 = 18440 px</text>
+<text x="40" y="428.0" dominant-baseline="central" text-anchor="start" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="22" fill="#181818">实测日志：18440 px 宽的中间纹理分配失败，页序能变，画面不更新</text>
+<text x="40" y="465.0" dominant-baseline="central" text-anchor="start" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="24" fill="#181818" font-weight="600">修改后</text>
+<text x="270" y="465.0" dominant-baseline="central" text-anchor="start" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="21" fill="#666666">源页面排布</text>
+<rect x="270.0" y="501" width="114.0" height="54" rx="0" fill="#e2e2e2" stroke="#181818" stroke-width="1"/>
+<text x="327.0" y="528.0" dominant-baseline="central" text-anchor="middle" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="19" fill="#181818">正面 W/2</text>
+<rect x="384.0" y="501" width="114.0" height="54" rx="0" fill="#f4f4f4" stroke="#181818" stroke-width="1"/>
+<text x="441.0" y="528.0" dominant-baseline="central" text-anchor="middle" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="19" fill="#181818">背面 W/2</text>
+<text x="530" y="528.0" dominant-baseline="central" text-anchor="start" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="21" fill="#666666">横向原点归零</text>
+<text x="40" y="574.0" dominant-baseline="central" text-anchor="start" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="21" fill="#666666">横向申请范围</text>
+<rect x="82" y="599" width="228" height="65" rx="0" fill="#f4f4f4" stroke="#666666" stroke-width="1"/>
+<rect x="310" y="599" width="228" height="65" rx="0" fill="#dddddd" stroke="#181818" stroke-width="1.4"/>
+<rect x="538" y="599" width="228" height="65" rx="0" fill="#f4f4f4" stroke="#666666" stroke-width="1"/>
+<text x="196.0" y="632.0" dominant-baseline="central" text-anchor="middle" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="22" fill="#181818">左余量 W</text>
+<text x="424.0" y="632.0" dominant-baseline="central" text-anchor="middle" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="22" fill="#181818">输出对页 W</text>
+<text x="652.0" y="632.0" dominant-baseline="central" text-anchor="middle" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="22" fill="#181818">右余量 W</text>
+<polyline points="82,699 82,709" fill="none" stroke="#666666" stroke-width="1" stroke-linejoin="round"/>
+<polyline points="766,699 766,709" fill="none" stroke="#666666" stroke-width="1" stroke-linejoin="round"/>
+<polyline points="82,704 766,704" fill="none" stroke="#666666" stroke-width="1" stroke-linejoin="round"/>
+<rect x="211.5" y="671.0" width="425.0" height="30.5" rx="0" fill="#ffffff" stroke="#ffffff" stroke-width="0"/>
+<text x="424.0" y="686.0" dominant-baseline="central" text-anchor="middle" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="23" fill="#666666">(W + 2M) × s = 3 × 1844 × 2 = 11064 px</text>
+<text x="835" y="632.0" dominant-baseline="central" text-anchor="start" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="22" fill="#666666">M = W；保留足够回源距离</text>
+<text x="40" y="752.0" dominant-baseline="central" text-anchor="start" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="22" fill="#181818">11064 px 是新布局的横向范围计算；同一全屏窗口的卷页恢复更新</text>
+<polyline points="40,775 1360,775" fill="none" stroke="#cecece" stroke-width="1" stroke-linejoin="round"/>
+<text x="40" y="804.0" dominant-baseline="central" text-anchor="start" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="22" fill="#666666">源图更紧凑，采样范围也要一起改；减少空白没有改变纸张曲面或正反面内容</text>
+</svg>

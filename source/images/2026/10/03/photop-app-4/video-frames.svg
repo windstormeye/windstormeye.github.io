@@ -1,0 +1,102 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="1330" viewBox="0 0 1400 1330">
+<rect width="1400" height="1330" fill="white"/>
+<text x="40" y="30.0" dominant-baseline="central" text-anchor="start" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="22" fill="#181818" font-weight="600">成片时钟</text>
+<text x="1360" y="30.0" dominant-baseline="central" text-anchor="end" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="22" fill="#666666">30 fps · 每张纸 90 帧</text>
+<rect x="130" y="65" width="834" height="62" rx="0" fill="#f4f4f4" stroke="#181818" stroke-width="1"/>
+<rect x="964" y="65" width="306" height="62" rx="0" fill="#dddddd" stroke="#181818" stroke-width="1"/>
+<text x="547.0" y="96.0" dominant-baseline="central" text-anchor="middle" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="24" fill="#181818">0—65 帧 · 静止阅读</text>
+<text x="1117.0" y="96.0" dominant-baseline="central" text-anchor="middle" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="23" fill="#181818">66—89 帧 · 卷页</text>
+<polyline points="130,127 130,138" fill="none" stroke="#181818" stroke-width="1" stroke-linejoin="round"/>
+<text x="130" y="159.0" dominant-baseline="central" text-anchor="middle" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="22" fill="#666666">0 s</text>
+<polyline points="964,127 964,138" fill="none" stroke="#181818" stroke-width="1" stroke-linejoin="round"/>
+<text x="964" y="159.0" dominant-baseline="central" text-anchor="middle" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="22" fill="#666666">2.2 s</text>
+<polyline points="1270,127 1270,138" fill="none" stroke="#181818" stroke-width="1" stroke-linejoin="round"/>
+<text x="1270" y="159.0" dominant-baseline="central" text-anchor="middle" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="22" fill="#666666">3 s</text>
+<text x="40" y="204.0" dominant-baseline="central" text-anchor="start" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="22" fill="#181818" font-weight="600">像素缓冲与编码</text>
+<text x="1360" y="204.0" dominant-baseline="central" text-anchor="end" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="22" fill="#666666">时间戳 = 全局帧号 / 30</text>
+<rect x="45.0" y="242" width="250" height="72" rx="0" fill="#f4f4f4" stroke="#181818" stroke-width="1.2"/>
+<text x="170" y="278.0" dominant-baseline="central" text-anchor="middle" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="24" fill="#181818" font-weight="600">导出线程</text>
+<polyline points="170,314 170,1240" fill="none" stroke="#a0a0a0" stroke-width="1" stroke-linejoin="round" stroke-dasharray="6 6"/>
+<rect x="395.0" y="242" width="250" height="72" rx="0" fill="#f4f4f4" stroke="#181818" stroke-width="1.2"/>
+<text x="520" y="260.96" dominant-baseline="central" text-anchor="middle" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="24" fill="#181818" font-weight="600">像素缓冲池</text>
+<text x="520" y="295.04" dominant-baseline="central" text-anchor="middle" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="24" fill="#181818" font-weight="600">最多 4 个</text>
+<polyline points="520,314 520,1240" fill="none" stroke="#a0a0a0" stroke-width="1" stroke-linejoin="round" stroke-dasharray="6 6"/>
+<rect x="745.0" y="242" width="250" height="72" rx="0" fill="#f4f4f4" stroke="#181818" stroke-width="1.2"/>
+<text x="870" y="260.96" dominant-baseline="central" text-anchor="middle" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="24" fill="#181818" font-weight="600">Metal</text>
+<text x="870" y="295.04" dominant-baseline="central" text-anchor="middle" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="24" fill="#181818" font-weight="600">GPU 绘制</text>
+<polyline points="870,314 870,1240" fill="none" stroke="#a0a0a0" stroke-width="1" stroke-linejoin="round" stroke-dasharray="6 6"/>
+<rect x="1095.0" y="242" width="250" height="72" rx="0" fill="#f4f4f4" stroke="#181818" stroke-width="1.2"/>
+<text x="1220" y="260.96" dominant-baseline="central" text-anchor="middle" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="24" fill="#181818" font-weight="600">AVFoundation</text>
+<text x="1220" y="295.04" dominant-baseline="central" text-anchor="middle" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="24" fill="#181818" font-weight="600">H.264 / MP4</text>
+<polyline points="1220,314 1220,1240" fill="none" stroke="#a0a0a0" stroke-width="1" stroke-linejoin="round" stroke-dasharray="6 6"/>
+<rect x="40" y="350" width="1320" height="598" rx="0" fill="#ffffff" stroke="#cecece" stroke-width="1"/>
+<polyline points="170,315 170,1240" fill="none" stroke="#a0a0a0" stroke-width="1" stroke-linejoin="round" stroke-dasharray="6 6"/>
+<polyline points="520,315 520,1240" fill="none" stroke="#a0a0a0" stroke-width="1" stroke-linejoin="round" stroke-dasharray="6 6"/>
+<polyline points="870,315 870,1240" fill="none" stroke="#a0a0a0" stroke-width="1" stroke-linejoin="round" stroke-dasharray="6 6"/>
+<polyline points="1220,315 1220,1240" fill="none" stroke="#a0a0a0" stroke-width="1" stroke-linejoin="round" stroke-dasharray="6 6"/>
+<rect x="40" y="350" width="284" height="38" rx="0" fill="#f4f4f4" stroke="#cecece" stroke-width="1"/>
+<text x="54" y="369.0" dominant-baseline="central" text-anchor="start" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="22" fill="#181818" font-weight="600">loop · 每个输出帧 n</text>
+<rect x="165" y="395" width="10" height="511" rx="0" fill="#ffffff" stroke="#666666" stroke-width="1"/>
+<polyline points="175,410 1220,410" fill="none" stroke="#181818" stroke-width="1.8" stroke-linejoin="round"/>
+<polygon points="1220,410 1211.0,405.5 1211.0,414.5" fill="#181818" stroke="#181818" stroke-width="0.7"/>
+<rect x="604.5" y="377.5" width="186.0" height="29.0" rx="0" fill="#ffffff" stroke="#ffffff" stroke-width="0"/>
+<text x="697.5" y="392.0" dominant-baseline="central" text-anchor="middle" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="22" fill="#181818">检查能否接收新帧</text>
+<polyline points="1220,454 175,454" fill="none" stroke="#181818" stroke-width="1.8" stroke-linejoin="round" stroke-dasharray="6 6"/>
+<polyline points="184.0,458.5 175,454 184.0,449.5" fill="none" stroke="#181818" stroke-width="1.8" stroke-linejoin="round"/>
+<rect x="615.5" y="421.5" width="164.0" height="29.0" rx="0" fill="#ffffff" stroke="#ffffff" stroke-width="0"/>
+<text x="697.5" y="436.0" dominant-baseline="central" text-anchor="middle" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="22" fill="#181818">就绪；忙时等待</text>
+<polyline points="175,509 520,509" fill="none" stroke="#181818" stroke-width="1.8" stroke-linejoin="round"/>
+<polygon points="520,509 511.0,504.5 511.0,513.5" fill="#181818" stroke="#181818" stroke-width="0.7"/>
+<rect x="262.0" y="477.0" width="170.5" height="28.5" rx="0" fill="#ffffff" stroke="#ffffff" stroke-width="0"/>
+<text x="347.5" y="491.0" dominant-baseline="central" text-anchor="middle" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="22" fill="#181818">申请 BGRA 缓冲</text>
+<polyline points="520,558 175,558" fill="none" stroke="#181818" stroke-width="1.8" stroke-linejoin="round" stroke-dasharray="6 6"/>
+<polyline points="184.0,562.5 175,558 184.0,553.5" fill="none" stroke="#181818" stroke-width="1.8" stroke-linejoin="round"/>
+<rect x="237.5" y="526.5" width="220.0" height="28.0" rx="0" fill="#ffffff" stroke="#ffffff" stroke-width="0"/>
+<text x="347.5" y="540.0" dominant-baseline="central" text-anchor="middle" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="21" fill="#181818">可用缓冲；池满则等待</text>
+<text x="198" y="604.0" dominant-baseline="central" text-anchor="start" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="21" fill="#666666">按帧号算卷页进度</text>
+<polyline points="175,654 864,654" fill="none" stroke="#181818" stroke-width="1.8" stroke-linejoin="round"/>
+<polygon points="864,654 855.0,649.5 855.0,658.5" fill="#181818" stroke="#181818" stroke-width="0.7"/>
+<rect x="393.5" y="622.0" width="252.0" height="28.5" rx="0" fill="#ffffff" stroke="#ffffff" stroke-width="0"/>
+<text x="519.5" y="636.0" dominant-baseline="central" text-anchor="middle" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="22" fill="#181818">同一缓冲映射成输出纹理</text>
+<rect x="864" y="654" width="12" height="84" rx="0" fill="#f4f4f4" stroke="#666666" stroke-width="1"/>
+<text x="898" y="676.38" dominant-baseline="central" text-anchor="start" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="22" fill="#181818">最多 4 张页纹理</text>
+<text x="898" y="707.62" dominant-baseline="central" text-anchor="start" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="22" fill="#181818">曲面 / 光照 / 投影</text>
+<polyline points="864,760 175,760" fill="none" stroke="#181818" stroke-width="1.8" stroke-linejoin="round" stroke-dasharray="6 6"/>
+<polyline points="184.0,764.5 175,760 184.0,755.5" fill="none" stroke="#181818" stroke-width="1.8" stroke-linejoin="round"/>
+<rect x="444.5" y="727.5" width="150.0" height="29.0" rx="0" fill="#ffffff" stroke="#ffffff" stroke-width="0"/>
+<text x="519.5" y="742.0" dominant-baseline="central" text-anchor="middle" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="22" fill="#181818">GPU 绘制完成</text>
+<polyline points="175,816 1214,816" fill="none" stroke="#181818" stroke-width="1.8" stroke-linejoin="round"/>
+<polygon points="1214,816 1205.0,811.5 1205.0,820.5" fill="#181818" stroke="#181818" stroke-width="0.7"/>
+<rect x="542.0" y="783.5" width="304.5" height="29.0" rx="0" fill="#ffffff" stroke="#ffffff" stroke-width="0"/>
+<text x="694.5" y="798.0" dominant-baseline="central" text-anchor="middle" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="22" fill="#181818">提交同一缓冲 · 时间戳 n / 30</text>
+<rect x="1214" y="816" width="12" height="53" rx="0" fill="#f4f4f4" stroke="#666666" stroke-width="1"/>
+<polyline points="1214,870 175,870" fill="none" stroke="#181818" stroke-width="1.8" stroke-linejoin="round" stroke-dasharray="6 6"/>
+<polyline points="184.0,874.5 175,870 184.0,865.5" fill="none" stroke="#181818" stroke-width="1.8" stroke-linejoin="round"/>
+<rect x="656.5" y="837.5" width="76.0" height="28.5" rx="0" fill="#ffffff" stroke="#ffffff" stroke-width="0"/>
+<text x="694.5" y="852.0" dominant-baseline="central" text-anchor="middle" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="22" fill="#181818">已接收</text>
+<text x="198" y="912.0" dominant-baseline="central" text-anchor="start" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="22" fill="#181818" font-weight="600">进入下一帧</text>
+<rect x="1154.5" y="909.5" width="190.5" height="27.5" rx="0" fill="#ffffff" stroke="#ffffff" stroke-width="0"/>
+<text x="1340" y="923.0" dominant-baseline="central" text-anchor="end" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="21" fill="#666666">不做 CPU 画面回读</text>
+<rect x="40" y="986" width="1320" height="276" rx="0" fill="#ffffff" stroke="#cecece" stroke-width="1"/>
+<polyline points="170,986 170,1262" fill="none" stroke="#a0a0a0" stroke-width="1" stroke-linejoin="round" stroke-dasharray="6 6"/>
+<polyline points="520,986 520,1262" fill="none" stroke="#a0a0a0" stroke-width="1" stroke-linejoin="round" stroke-dasharray="6 6"/>
+<polyline points="870,986 870,1262" fill="none" stroke="#a0a0a0" stroke-width="1" stroke-linejoin="round" stroke-dasharray="6 6"/>
+<polyline points="1220,986 1220,1262" fill="none" stroke="#a0a0a0" stroke-width="1" stroke-linejoin="round" stroke-dasharray="6 6"/>
+<rect x="40" y="986" width="215" height="37" rx="0" fill="#f4f4f4" stroke="#cecece" stroke-width="1"/>
+<text x="54" y="1004.0" dominant-baseline="central" text-anchor="start" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="22" fill="#181818" font-weight="600">全部帧已接收</text>
+<polyline points="170,1060 1214,1060" fill="none" stroke="#181818" stroke-width="1.8" stroke-linejoin="round"/>
+<polygon points="1214,1060 1205.0,1055.5 1205.0,1064.5" fill="#181818" stroke="#181818" stroke-width="0.7"/>
+<rect x="522.0" y="1027.5" width="340.0" height="29.0" rx="0" fill="#ffffff" stroke="#ffffff" stroke-width="0"/>
+<text x="692.0" y="1042.0" dominant-baseline="central" text-anchor="middle" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="22" fill="#181818">结束时间段，关闭输入，完成写入</text>
+<rect x="1214" y="1060" width="12" height="132" rx="0" fill="#f4f4f4" stroke="#666666" stroke-width="1"/>
+<rect x="1103.0" y="1099.38" width="98.0" height="28.5" rx="0" fill="#ffffff" stroke="#ffffff" stroke-width="0"/>
+<text x="1196" y="1113.38" dominant-baseline="central" text-anchor="end" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="22" fill="#666666">写入索引</text>
+<rect x="1052.5" y="1130.62" width="148.5" height="28.0" rx="0" fill="#ffffff" stroke="#ffffff" stroke-width="0"/>
+<text x="1196" y="1144.62" dominant-baseline="central" text-anchor="end" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="22" fill="#666666">收完整个 MP4</text>
+<polyline points="1214,1192 170,1192" fill="none" stroke="#181818" stroke-width="1.8" stroke-linejoin="round" stroke-dasharray="6 6"/>
+<polyline points="179.0,1196.5 170,1192 179.0,1187.5" fill="none" stroke="#181818" stroke-width="1.8" stroke-linejoin="round"/>
+<rect x="643.0" y="1160.0" width="98.0" height="28.5" rx="0" fill="#ffffff" stroke="#ffffff" stroke-width="0"/>
+<text x="692.0" y="1174.0" dominant-baseline="central" text-anchor="middle" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="22" fill="#181818">封装完成</text>
+<rect x="193.0" y="1219.0" width="208.0" height="29.0" rx="0" fill="#ffffff" stroke="#ffffff" stroke-width="0"/>
+<text x="198" y="1233.0" dominant-baseline="central" text-anchor="start" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="22" fill="#181818" font-weight="600">检查成功后保存文件</text>
+</svg>

@@ -1,0 +1,96 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="1010" viewBox="0 0 1400 1010">
+<rect width="1400" height="1010" fill="white"/>
+<text x="40" y="43.0" dominant-baseline="central" text-anchor="start" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="29" fill="#181818" font-weight="600">阅读窗口、版本宽限与图片缓存</text>
+<polyline points="40,104 1360,104" fill="none" stroke="#cecece" stroke-width="1" stroke-linejoin="round"/>
+<text x="40" y="85.0" dominant-baseline="central" text-anchor="start" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="22" fill="#181818" font-weight="600">01  浏览器只给附近纸面设置图片地址</text>
+<rect x="83" y="139" width="78" height="58" rx="0" fill="#ffffff" stroke="#cecece" stroke-width="1.1"/>
+<text x="122.0" y="168.0" dominant-baseline="central" text-anchor="middle" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="24" fill="#a0a0a0">4</text>
+<rect x="178" y="139" width="78" height="58" rx="0" fill="#f4f4f4" stroke="#cecece" stroke-width="1.1"/>
+<text x="217.0" y="168.0" dominant-baseline="central" text-anchor="middle" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="24" fill="#181818">5</text>
+<rect x="273" y="139" width="78" height="58" rx="0" fill="#f4f4f4" stroke="#cecece" stroke-width="1.1"/>
+<text x="312.0" y="168.0" dominant-baseline="central" text-anchor="middle" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="24" fill="#181818">6</text>
+<rect x="368" y="139" width="78" height="58" rx="0" fill="#f4f4f4" stroke="#cecece" stroke-width="1.1"/>
+<text x="407.0" y="168.0" dominant-baseline="central" text-anchor="middle" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="24" fill="#181818">7</text>
+<rect x="463" y="139" width="78" height="58" rx="0" fill="#f4f4f4" stroke="#cecece" stroke-width="1.1"/>
+<text x="502.0" y="168.0" dominant-baseline="central" text-anchor="middle" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="24" fill="#181818">8</text>
+<rect x="558" y="139" width="78" height="58" rx="0" fill="#f4f4f4" stroke="#cecece" stroke-width="1.1"/>
+<text x="597.0" y="168.0" dominant-baseline="central" text-anchor="middle" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="24" fill="#181818">9</text>
+<rect x="653" y="139" width="78" height="58" rx="0" fill="#f4f4f4" stroke="#181818" stroke-width="2.2"/>
+<text x="692.0" y="168.0" dominant-baseline="central" text-anchor="middle" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="24" fill="#181818" font-weight="600">10</text>
+<rect x="748" y="139" width="78" height="58" rx="0" fill="#f4f4f4" stroke="#cecece" stroke-width="1.1"/>
+<text x="787.0" y="168.0" dominant-baseline="central" text-anchor="middle" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="24" fill="#181818">11</text>
+<rect x="843" y="139" width="78" height="58" rx="0" fill="#f4f4f4" stroke="#cecece" stroke-width="1.1"/>
+<text x="882.0" y="168.0" dominant-baseline="central" text-anchor="middle" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="24" fill="#181818">12</text>
+<rect x="938" y="139" width="78" height="58" rx="0" fill="#f4f4f4" stroke="#cecece" stroke-width="1.1"/>
+<text x="977.0" y="168.0" dominant-baseline="central" text-anchor="middle" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="24" fill="#181818">13</text>
+<rect x="1033" y="139" width="78" height="58" rx="0" fill="#f4f4f4" stroke="#cecece" stroke-width="1.1"/>
+<text x="1072.0" y="168.0" dominant-baseline="central" text-anchor="middle" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="24" fill="#181818">14</text>
+<rect x="1128" y="139" width="78" height="58" rx="0" fill="#f4f4f4" stroke="#cecece" stroke-width="1.1"/>
+<text x="1167.0" y="168.0" dominant-baseline="central" text-anchor="middle" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="24" fill="#181818">15</text>
+<rect x="1223" y="139" width="78" height="58" rx="0" fill="#ffffff" stroke="#cecece" stroke-width="1.1"/>
+<text x="1262.0" y="168.0" dominant-baseline="central" text-anchor="middle" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="24" fill="#a0a0a0">16</text>
+<polyline points="178,213 178,220 1206,220 1206,213" fill="none" stroke="#666666" stroke-width="1" stroke-linejoin="round"/>
+<text x="692.0" y="250.0" dominant-baseline="central" text-anchor="middle" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="23" fill="#181818">当前面 10：加载面 5…15，即当前面前后各 5 面</text>
+<text x="40" y="284.0" dominant-baseline="central" text-anchor="start" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="21" fill="#666666">窗口外移除图片地址；空白纸面无需 JPG。移除地址不等于浏览器立即释放全部内存。</text>
+<polyline points="40,340 1360,340" fill="none" stroke="#cecece" stroke-width="1" stroke-linejoin="round"/>
+<text x="40" y="321.0" dominant-baseline="central" text-anchor="start" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="22" fill="#181818" font-weight="600">02  每张图片先检查版本，再查缓存</text>
+<rect x="40" y="367" width="1320" height="94" rx="0" fill="#f4f4f4" stroke="#cecece" stroke-width="1"/>
+<text x="62" y="396.0" dominant-baseline="central" text-anchor="start" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="24" fill="#181818" font-weight="600">旧清单 A</text>
+<text x="290" y="396.0" dominant-baseline="central" text-anchor="start" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="23" fill="#181818">提交新版 B 后，A 仍可读取 1 小时；超过宽限即失效</text>
+<text x="62" y="433.0" dominant-baseline="central" text-anchor="start" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="22" fill="#666666">新打开链接</text>
+<text x="290" y="433.0" dominant-baseline="central" text-anchor="start" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="22" fill="#666666">拿当前版本 B；已打开的阅读继续按原清单请求</text>
+<rect x="40" y="517" width="215" height="116" rx="0" fill="#ffffff" stroke="#181818" stroke-width="1.3"/>
+<text x="147" y="552.0" dominant-baseline="central" text-anchor="middle" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="25" fill="#181818" font-weight="600">图片请求</text>
+<text x="147" y="597.0" dominant-baseline="central" text-anchor="middle" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="21" fill="#181818">画册 · 版本 · 页</text>
+<polyline points="255,574 350,574" fill="none" stroke="#181818" stroke-width="1.8" stroke-linejoin="round"/>
+<polygon points="350,574 341.0,569.5 341.0,578.5" fill="#181818" stroke="#181818" stroke-width="0.7"/>
+<rect x="350" y="506" width="485" height="154" rx="0" fill="#ffffff" stroke="#181818" stroke-width="1.5"/>
+<text x="374" y="540.0" dominant-baseline="central" text-anchor="start" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="25" fill="#181818" font-weight="600">D1：每次都核验</text>
+<polyline points="372,562 814,562" fill="none" stroke="#cecece" stroke-width="1" stroke-linejoin="round"/>
+<text x="374" y="592.0" dominant-baseline="central" text-anchor="start" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="23" fill="#181818">画册在线；版本仍可读</text>
+<text x="374" y="633.0" dominant-baseline="central" text-anchor="start" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="23" fill="#181818">本版引用此页；对象已就绪</text>
+<rect x="985" y="517" width="340" height="116" rx="0" fill="#f4f4f4" stroke="#181818" stroke-width="1.3"/>
+<text x="1155" y="552.0" dominant-baseline="central" text-anchor="middle" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="25" fill="#181818" font-weight="600">边缘缓存</text>
+<text x="1155" y="597.0" dominant-baseline="central" text-anchor="middle" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="23" fill="#181818">JPG · 一天</text>
+<polyline points="835,574 985,574" fill="none" stroke="#181818" stroke-width="1.8" stroke-linejoin="round"/>
+<polygon points="985,574 976.0,569.5 976.0,578.5" fill="#181818" stroke="#181818" stroke-width="0.7"/>
+<rect x="883.0" y="535.5" width="54.0" height="28.5" rx="0" fill="#ffffff" stroke="#ffffff" stroke-width="0"/>
+<text x="910" y="550.0" dominant-baseline="central" text-anchor="middle" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="22" fill="#181818">通过</text>
+<rect x="40" y="750" width="510" height="125" rx="0" fill="#f4f4f4" stroke="#cecece" stroke-width="1"/>
+<text x="62" y="780.0" dominant-baseline="central" text-anchor="start" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="23" fill="#181818" font-weight="600">404：画册已删除、版本过期</text>
+<text x="62" y="820.0" dominant-baseline="central" text-anchor="start" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="22" fill="#181818">或本版没有引用此页</text>
+<text x="62" y="853.0" dominant-baseline="central" text-anchor="start" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="22" fill="#666666">跳过缓存与 R2</text>
+<polyline points="590,660 590,710 295,710 295,750" fill="none" stroke="#181818" stroke-width="1.8" stroke-linejoin="round"/>
+<polygon points="295,750 299.5,741.0 290.5,741.0" fill="#181818" stroke="#181818" stroke-width="0.7"/>
+<rect x="552.0" y="673.5" width="76.0" height="28.5" rx="0" fill="#ffffff" stroke="#ffffff" stroke-width="0"/>
+<text x="590" y="688.0" dominant-baseline="central" text-anchor="middle" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="22" fill="#181818">不通过</text>
+<rect x="610" y="759" width="255" height="113" rx="0" fill="#ffffff" stroke="#181818" stroke-width="1.3"/>
+<text x="737" y="792.0" dominant-baseline="central" text-anchor="middle" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="23" fill="#181818" font-weight="600">给浏览器：JPG</text>
+<text x="737" y="838.0" dominant-baseline="central" text-anchor="middle" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="21" fill="#181818">private, no-store</text>
+<polyline points="985,617 903,617 903,790 865,790" fill="none" stroke="#181818" stroke-width="1.8" stroke-linejoin="round"/>
+<polygon points="865,790 874.0,794.5 874.0,785.5" fill="#181818" stroke="#181818" stroke-width="0.7"/>
+<rect x="895.0" y="660.5" width="54.0" height="29.0" rx="0" fill="#ffffff" stroke="#ffffff" stroke-width="0"/>
+<text x="922" y="675.0" dominant-baseline="central" text-anchor="middle" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="22" fill="#181818">命中</text>
+<rect x="985" y="716" width="340" height="122" rx="0" fill="#ffffff" stroke="#181818" stroke-width="1.3"/>
+<text x="1155" y="750.0" dominant-baseline="central" text-anchor="middle" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="24" fill="#181818" font-weight="600">R2：读取私有 JPG</text>
+<text x="1155" y="798.0" dominant-baseline="central" text-anchor="middle" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="22" fill="#181818">只有缓存缺失才回源</text>
+<polyline points="1140,633 1140,716" fill="none" stroke="#181818" stroke-width="1.8" stroke-linejoin="round"/>
+<polygon points="1140,716 1144.5,707.0 1135.5,707.0" fill="#181818" stroke="#181818" stroke-width="0.7"/>
+<rect x="1102.0" y="660.5" width="76.0" height="29.0" rx="0" fill="#ffffff" stroke="#ffffff" stroke-width="0"/>
+<text x="1140" y="675.0" dominant-baseline="central" text-anchor="middle" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="22" fill="#181818">未命中</text>
+<polyline points="1303,716 1303,633" fill="none" stroke="#666666" stroke-width="1.8" stroke-linejoin="round" stroke-dasharray="6 6"/>
+<polyline points="1298.5,642.0 1303,633 1307.5,642.0" fill="none" stroke="#666666" stroke-width="1.8" stroke-linejoin="round"/>
+<text x="1360" y="661.51" dominant-baseline="central" text-anchor="middle" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="19" fill="#666666">成功后</text>
+<text x="1360" y="688.49" dominant-baseline="central" text-anchor="middle" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="19" fill="#666666">异步缓存</text>
+<polyline points="985,793 927,793 927,845 865,845" fill="none" stroke="#181818" stroke-width="1.8" stroke-linejoin="round"/>
+<polygon points="865,845 874.0,849.5 874.0,840.5" fill="#181818" stroke="#181818" stroke-width="0.7"/>
+<rect x="887.0" y="868.5" width="94.0" height="28.0" rx="0" fill="#ffffff" stroke="#ffffff" stroke-width="0"/>
+<text x="934" y="882.0" dominant-baseline="central" text-anchor="middle" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="21" fill="#181818">回源成功</text>
+<rect x="985" y="900" width="340" height="78" rx="0" fill="#f4f4f4" stroke="#cecece" stroke-width="1"/>
+<text x="1155" y="922.0" dominant-baseline="central" text-anchor="middle" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="22" fill="#181818">对象缺失：404</text>
+<text x="1155" y="955.0" dominant-baseline="central" text-anchor="middle" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="21" fill="#666666">读取异常：请求失败</text>
+<polyline points="1155,838 1155,900" fill="none" stroke="#181818" stroke-width="1.8" stroke-linejoin="round"/>
+<polygon points="1155,900 1159.5,891.0 1150.5,891.0" fill="#181818" stroke="#181818" stroke-width="0.7"/>
+<text x="40" y="937.0" dominant-baseline="central" text-anchor="start" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="22" fill="#666666">命中缓存仍有 Worker 请求和 D1 核验。</text>
+<text x="40" y="974.0" dominant-baseline="central" text-anchor="start" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="21" fill="#666666">已下载到设备或被保存的图片，无法远程收回。</text>
+</svg>

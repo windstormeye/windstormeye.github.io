@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="1040" viewBox="0 0 1400 1040">
+<rect width="1400" height="1040" fill="white"/>
+<text x="40" y="38.0" dominant-baseline="central" text-anchor="start" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="27" fill="#181818" font-weight="600">同一文本框 · 比例位置 → 纸面排版 → 输出尺度</text>
+<text x="40" y="78.0" dominant-baseline="central" text-anchor="start" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="22" fill="#666666">A4：2480 × 3508 px / 300 DPI，约 210 × 297 mm</text>
+<polyline points="40,104 1360,104" fill="none" stroke="#cecece" stroke-width="1" stroke-linejoin="round"/>
+<text x="40" y="135.0" dominant-baseline="central" text-anchor="start" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="24" fill="#181818" font-weight="600">01  内容区与原点</text>
+<rect x="85" y="180" width="282" height="399" rx="0" fill="#ffffff" stroke="#181818" stroke-width="1.7"/>
+<rect x="100.51" y="201.945" width="250.98" height="349.125" rx="0" fill="#ffffff" stroke="#666666" stroke-width="1"/>
+<polyline points="100.51,201.945 351.49,201.945 351.49,551.0699999999999 100.51,551.0699999999999 100.51,201.945" fill="none" stroke="#666666" stroke-width="1" stroke-linejoin="round" stroke-dasharray="6 6"/>
+<rect x="125.608" y="254.31375" width="200.784" height="174.5625" rx="0" fill="#f4f4f4" stroke="#181818" stroke-width="1.5"/>
+<polyline points="142.608,289.31375 288.608,289.31375" fill="none" stroke="#666666" stroke-width="0.9" stroke-linejoin="round" stroke-dasharray="6 6"/>
+<text x="142.608" y="278.31375" dominant-baseline="central" text-anchor="start" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="20" fill="#181818">照片与一段话</text>
+<polyline points="142.608,326.31375 310.608,326.31375" fill="none" stroke="#666666" stroke-width="0.9" stroke-linejoin="round" stroke-dasharray="6 6"/>
+<text x="142.608" y="315.31375" dominant-baseline="central" text-anchor="start" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="20" fill="#181818">照片与一段话</text>
+<polyline points="142.608,363.31375 247.608,363.31375" fill="none" stroke="#666666" stroke-width="0.9" stroke-linejoin="round" stroke-dasharray="6 6"/>
+<text x="142.608" y="352.31375" dominant-baseline="central" text-anchor="start" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="20" fill="#181818">留在纸上</text>
+<text x="226.0" y="408.87625" dominant-baseline="central" text-anchor="middle" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="19" fill="#666666">文本框 / 排版范围</text>
+<polyline points="65,180 65,240" fill="none" stroke="#666666" stroke-width="1" stroke-linejoin="round"/>
+<polygon points="65,240 69.5,231.0 60.5,231.0" fill="#666666" stroke="#666666" stroke-width="0.7"/>
+<text x="42" y="167.0" dominant-baseline="central" text-anchor="start" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="19" fill="#666666">屏幕 y↓</text>
+<polyline points="65,579 65,519" fill="none" stroke="#666666" stroke-width="1" stroke-linejoin="round"/>
+<polygon points="65,519 60.5,528.0 69.5,528.0" fill="#666666" stroke="#666666" stroke-width="0.7"/>
+<text x="40" y="605.0" dominant-baseline="central" text-anchor="start" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="19" fill="#666666">纸面 y↑</text>
+<polyline points="100.51,640 100.51,650" fill="none" stroke="#666666" stroke-width="1" stroke-linejoin="round"/>
+<polyline points="351.49,640 351.49,650" fill="none" stroke="#666666" stroke-width="1" stroke-linejoin="round"/>
+<polyline points="100.51,645 351.49,645" fill="none" stroke="#666666" stroke-width="1" stroke-linejoin="round"/>
+<rect x="167.0" y="613.5" width="118.0" height="27.5" rx="0" fill="#ffffff" stroke="#ffffff" stroke-width="0"/>
+<text x="226.0" y="627.0" dominant-baseline="central" text-anchor="middle" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="21" fill="#666666">内容宽 89%</text>
+<text x="390" y="211.0" dominant-baseline="central" text-anchor="start" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="19" fill="#666666">上留 5.5%</text>
+<polyline points="351.49,201.945 380,201.945" fill="none" stroke="#666666" stroke-width="1" stroke-linejoin="round"/>
+<text x="390" y="556.0" dominant-baseline="central" text-anchor="start" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="19" fill="#666666">下留 7%</text>
+<polyline points="351.49,551.0699999999999 380,551.0699999999999" fill="none" stroke="#666666" stroke-width="1" stroke-linejoin="round"/>
+<text x="40" y="670.0" dominant-baseline="central" text-anchor="start" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="21" fill="#666666">左右各留 5.5%，文字框相对内容区记录</text>
+<text x="605" y="135.0" dominant-baseline="central" text-anchor="start" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="24" fill="#181818" font-weight="600">02  保存与换算</text>
+<text x="605" y="181.0" dominant-baseline="central" text-anchor="start" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="23" fill="#181818">x = 0.10   y = 0.35   w = 0.80   h = 0.50</text>
+<text x="605" y="220.0" dominant-baseline="central" text-anchor="start" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="22" fill="#666666">y 从内容区底部计；显示距顶 1 − y − h</text>
+<rect x="605" y="249" width="755" height="127" rx="0" fill="#f4f4f4" stroke="#cecece" stroke-width="1"/>
+<text x="628" y="281.0" dominant-baseline="central" text-anchor="start" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="24" fill="#181818">距顶比例 = 1 − 0.35 − 0.50 = 0.15</text>
+<text x="628" y="324.0" dominant-baseline="central" text-anchor="start" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="23" fill="#181818">纸面：左 30.24 mm，上 55.32 mm</text>
+<text x="628" y="354.0" dominant-baseline="central" text-anchor="start" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="23" fill="#181818">框宽 149.50 mm，框高 129.94 mm</text>
+<text x="605" y="421.0" dominant-baseline="central" text-anchor="start" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="24" fill="#181818" font-weight="600">PDF 使用左下原点</text>
+<text x="605" y="464.0" dominant-baseline="central" text-anchor="start" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="22" fill="#181818">页高 841.92 pt，距顶 156.81 pt，框高 368.34 pt</text>
+<text x="605" y="505.0" dominant-baseline="central" text-anchor="start" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="23" fill="#181818">底起点 = 841.92 − 156.81 − 368.34</text>
+<text x="605" y="543.0" dominant-baseline="central" text-anchor="start" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="25" fill="#181818" font-weight="600">             = 316.77 pt</text>
+<text x="605" y="591.0" dominant-baseline="central" text-anchor="start" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="21" fill="#666666">位置要减去整个框高；只翻转起点会落错地方</text>
+<text x="605" y="649.0" dominant-baseline="central" text-anchor="start" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="25" fill="#181818" font-weight="600">先在纸面 pt 中排字，再缩放绘制</text>
+<text x="605" y="683.0" dominant-baseline="central" text-anchor="start" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="21" fill="#666666">换行与行基线沿用纸面结果，输出不重新猜行高</text>
+<polyline points="40,741 1360,741" fill="none" stroke="#cecece" stroke-width="1" stroke-linejoin="round"/>
+<text x="40" y="722.0" dominant-baseline="central" text-anchor="start" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="22" fill="#181818" font-weight="600">03  同一个框的输出值</text>
+<text x="1360" y="722.0" dominant-baseline="central" text-anchor="end" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="21" fill="#666666">表中位置统一按距左、距顶比较</text>
+<text x="48" y="777.0" dominant-baseline="central" text-anchor="start" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="22" fill="#181818" font-weight="600">目标</text>
+<text x="380" y="777.0" dominant-baseline="central" text-anchor="start" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="22" fill="#181818" font-weight="600">距左 / 距顶</text>
+<text x="645" y="777.0" dominant-baseline="central" text-anchor="start" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="22" fill="#181818" font-weight="600">框宽 × 框高</text>
+<text x="953" y="777.0" dominant-baseline="central" text-anchor="start" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="22" fill="#181818" font-weight="600">12 pt 字号</text>
+<text x="1210" y="777.0" dominant-baseline="central" text-anchor="start" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="22" fill="#181818" font-weight="600">整页高度</text>
+<polyline points="40,807 1360,807" fill="none" stroke="#cecece" stroke-width="1" stroke-linejoin="round"/>
+<text x="48" y="835.0" dominant-baseline="central" text-anchor="start" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="21" fill="#181818">预览（示意）</text>
+<text x="380" y="835.0" dominant-baseline="central" text-anchor="start" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="21" fill="#181818">61.08 / 111.75 点</text>
+<text x="645" y="835.0" dominant-baseline="central" text-anchor="start" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="21" fill="#181818">302.01 × 262.50 点</text>
+<text x="953" y="835.0" dominant-baseline="central" text-anchor="start" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="21" fill="#181818">8.55 屏幕点</text>
+<text x="1210" y="835.0" dominant-baseline="central" text-anchor="start" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="21" fill="#181818">600 屏幕点</text>
+<polyline points="40,865 1360,865" fill="none" stroke="#cecece" stroke-width="1" stroke-linejoin="round"/>
+<text x="48" y="893.0" dominant-baseline="central" text-anchor="start" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="21" fill="#181818">PDF</text>
+<text x="380" y="893.0" dominant-baseline="central" text-anchor="start" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="21" fill="#181818">85.71 / 156.81 pt</text>
+<text x="645" y="893.0" dominant-baseline="central" text-anchor="start" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="21" fill="#181818">423.78 × 368.34 pt</text>
+<text x="953" y="893.0" dominant-baseline="central" text-anchor="start" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="21" fill="#181818">12 pt</text>
+<text x="1210" y="893.0" dominant-baseline="central" text-anchor="start" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="21" fill="#181818">841.92 pt</text>
+<polyline points="40,923 1360,923" fill="none" stroke="#cecece" stroke-width="1" stroke-linejoin="round"/>
+<text x="48" y="951.0" dominant-baseline="central" text-anchor="start" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="21" fill="#181818">JPG · 300 DPI</text>
+<text x="380" y="951.0" dominant-baseline="central" text-anchor="start" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="21" fill="#181818">357.12 / 653.37 px</text>
+<text x="645" y="951.0" dominant-baseline="central" text-anchor="start" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="21" fill="#181818">1765.76 × 1534.75 px</text>
+<text x="953" y="951.0" dominant-baseline="central" text-anchor="start" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="21" fill="#181818">50 px</text>
+<text x="1210" y="951.0" dominant-baseline="central" text-anchor="start" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="21" fill="#181818">3508 px</text>
+<text x="40" y="1000.0" dominant-baseline="central" text-anchor="start" font-family="Heiti SC, STHeiti, PingFang SC, sans-serif" font-size="22" fill="#666666">毫米 = 像素 ÷ DPI × 25.4       PDF pt = 像素 ÷ DPI × 72       字号像素 = 印刷 pt × DPI ÷ 72</text>
+</svg>
