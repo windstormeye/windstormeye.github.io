@@ -1,3 +1,7 @@
+## 画册
+- [《琅勃拉邦-老挝》](https://app.pj.studio/photop/albums/a/860fe3828bbf4c4e8ce7bb326f0d835a)
+- [《正镶白旗》](https://app.pj.studio/photop/albums/a/e1bc9c1043e84de08f5c8621f0608a1f)
+
 ## 2026.10 济州岛
 ![](../images/2026/10/04/17.jpg)
 ![](../images/2026/10/04/6.jpg) 
