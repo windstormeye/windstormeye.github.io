@@ -14,15 +14,20 @@ date: 2018-10-19 09:38:31
 
 ## 作品 ｜ PJ.Studio
 
+PhotoPeaks ([App Store](https://apps.apple.com/us/app/photopeaks/id1639575048)) | 专注 macOS 平台的修图工具
+--- | --- 
+
+![](https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/3f/34/e0/3f34e082-0f1c-a4bb-2c8c-de031dffcce9/_U4e2d_U6587-3.jpg/800x500bb.jpg)
+
+MovingPath ([App Store](https://apps.apple.com/us/app/movingpath/id6782782334)) | 可视化你的运动轨迹
+--- | --- 
+
+![](../images/2026/07/01/1.png)
+
 休息菜单/Relax Menu ([App Store](https://apps.apple.com/cn/app/relax-menu/id6794621792)) | 休息一下
 --- | --- 
 
 ![](../images/2026/08/01/1.jpg)
-
-Movinn ([App Store](https://apps.apple.com/app/movinn-visualize-workouts/id6782782334)) | 可视化你的运动轨迹
---- | --- 
-
-![](../images/2026/07/01/1.png)
 
 
 PFollow ([App Store](https://apps.apple.com/cn/app/pfollow/id6742342382)) | 自己从全世界路过的地方
@@ -39,11 +44,6 @@ TranslateP ([App Store](https://apps.apple.com/cn/app/translatep/id6737735627?l=
 --- | --- 
 
 ![](../images/2025/app/translatep/2.jpg)
-
-PhotoP ([App Store](https://apps.apple.com/cn/app/photop/id1639575048)) | 专注 macOS 平台的修图工具
---- | --- 
-
-![](https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/3f/34/e0/3f34e082-0f1c-a4bb-2c8c-de031dffcce9/_U4e2d_U6587-3.jpg/800x500bb.jpg)
 
 星球罐子（[App Store](https://apps.apple.com/hk/app/%E6%98%9F%E7%90%83%E7%BD%90%E5%AD%90/id1502901744)）| 拥有属于你的宇宙
 --- | --- 
