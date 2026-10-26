@@ -1,25 +1,20 @@
 extends base
 
 block title
+  - var page_suffix = page.current > 1 ? ' | 第 ' + page.current + ' 页' : ''
   if config.subtitle
-    title= config.title + ' | ' + config.subtitle
+    title= config.title + ' | ' + config.subtitle + page_suffix
   else
-    title= config.title
+    title= config.title + page_suffix
 
 block content
   for post in page.posts.toArray()
     .post
-      h1.post-title
+      h2.post-title
         include _partial/helpers.pug
         a(href=url_for(post.path))
           +title(post)
       .post-meta= post.date.format(config.date_format)
-      if theme.disqus.enable == true
-        a.disqus-comment-count(data-disqus-identifier=post.path, href=url_for(post.path) + '#disqus_thread')
-      if theme.changyan
-        a.ds-thread-count(href=url_for(post.path) + '#SOHUCS')
-          span.cy_cmt_count(id='sourceId::' + post.date.valueOf() style='margin: 0 3px 0 1px;') 0
-          span= ' ' + __('Comment')
       if post.description
         .post-content
           != post.description
@@ -45,11 +40,3 @@ block content
         a(href=url_for(post.path))= __('更多')
 
   include _partial/paginator.pug
-  if theme.disqus.enable == true
-    script(id='dsq-count-scr', src='//'+ theme.disqus.shortname + '.disqus.com/count.js', async)
-  if theme.changyan
-    script#cy_cmt_num(src='https://changyan.sohu.com/upload/plugins/plugins.list.count.js?clientId=' + theme.changyan, async)
-  if config.mathjax
-    include _partial/mathjax.pug
-  if config.mathjax2
-    include _partial/mathjax2.pug

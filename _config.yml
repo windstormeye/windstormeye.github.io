@@ -7,8 +7,8 @@ title: PJHubs
 subtitle: 也就骑个车，顺便写点码，再去看看景
 description: 也就骑个车，顺便写点码，再去看看景
 author: PJHubs
-language: zh-Hans
-timezone:
+language: zh-CN
+timezone: Asia/Shanghai
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
@@ -40,6 +40,9 @@ render_drafts: false
 post_asset_folder: false
 relative_link: false
 future: true
+# 文章的“更新时间”默认取文件 mtime，CI 每次 checkout 都会被重置成构建时间；
+# 改为默认等于发布时间，修改旧文章时在 front-matter 里手动写 updated。
+updated_option: date
 highlight:
   enable: true
   line_number: true
@@ -79,14 +82,11 @@ theme: maupassant
 
 
 # Deployment
-## Docs: https://hexo.io/docs/deployment.html
-deploy:
-  type: git
-  # repo: https://github.com/windstormeye/windstormeye.github.io.git
-  repository: git@github.com:windstormeye/windstormeye.github.io.git
-  branch: master
+## 由 GitHub Actions（.github/workflows/.pages.yml）构建并发布到 GitHub Pages
 
-plugins: hexo-generator-cname
+# Markdown
+marked:
+  lazyload: true
 
 # RSS Feed
 feed:
@@ -95,9 +95,9 @@ feed:
   path: atom.xml
   limit: 20
   hub:
-  content:
+  content: true
   content_limit: 140
   content_limit_delim: ' '
   order_by: -date
-  icon: /images/avatar.png
+  icon: /apple-touch-icon.png
   autodiscovery: true

@@ -1,0 +1,35 @@
+//- 每次页面加载上报一次（匿名 ID + 页面路径 + 标题），数据进 PJ Studio 统一看板。采集端源码见仓库根目录 analytics/
+script.
+  (function () {
+    if (/^(localhost|127\.0\.0\.1|\[::1\])$/.test(location.hostname)) return;
+    if (navigator.doNotTrack === '1' || navigator.globalPrivacyControl) return;
+    var uuid = function () {
+      if (window.crypto && crypto.randomUUID) return crypto.randomUUID();
+      var bytes = crypto.getRandomValues(new Uint8Array(16)), hex = [];
+      bytes[6] = bytes[6] & 15 | 64; bytes[8] = bytes[8] & 63 | 128;
+      for (var i = 0; i < 16; i++) hex.push((bytes[i] + 256).toString(16).slice(1));
+      return hex.slice(0, 4).join('') + '-' + hex.slice(4, 6).join('') + '-' + hex.slice(6, 8).join('') + '-' + hex.slice(8, 10).join('') + '-' + hex.slice(10).join('');
+    };
+    // 浏览器本地的匿名 ID，只用来按天和区间去重 UV
+    var id;
+    try {
+      id = localStorage.getItem('pjhubs_visitor_id');
+      if (!/^[0-9a-f]{8}-[0-9a-f]{4}-4[0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/i.test(id || '')) {
+        id = uuid();
+        localStorage.setItem('pjhubs_visitor_id', id);
+      }
+    } catch (e) {
+      id = uuid();
+    }
+    // 看板里按文章统计，标题去掉站点名后缀
+    var suffix = ' | ' + '#{config.title}', title = document.title;
+    if (title.slice(-suffix.length) === suffix) title = title.slice(0, -suffix.length);
+    var url = '#{theme.cf_stats.endpoint}';
+    var body = JSON.stringify({ visitorID: id, path: location.pathname, title: title.slice(0, 200) });
+    // text/plain 的跨域 POST 不需要预检；不带 cookie
+    if (window.fetch) {
+      fetch(url, { method: 'POST', body: body, mode: 'no-cors', credentials: 'omit', keepalive: true }).catch(function () {});
+    } else if (navigator.sendBeacon) {
+      navigator.sendBeacon(url, body);
+    }
+  })();

@@ -1,0 +1,16 @@
+{
+  "name": "blog-analytics",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node --test test/*.test.js",
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy"
+  },
+  "devDependencies": {
+    "esbuild": "0.28.1",
+    "miniflare": "5.20260918.0-alpha",
+    "wrangler": "4.135.0"
+  },
+  "engines": { "node": ">=22.13" }
+}

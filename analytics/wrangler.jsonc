@@ -1,0 +1,23 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "blog-analytics",
+  "main": "src/index.js",
+  "compatibility_date": "2026-09-01",
+  "workers_dev": false,
+  "preview_urls": false,
+  "routes": [],
+  "vars": {
+    "ALLOWED_ORIGINS": "https://pjhubs.com,https://www.pjhubs.com"
+  },
+  "d1_databases": [{
+    "binding": "DB",
+    "database_name": "blog-analytics",
+    "database_id": "c775b711-25c5-4b24-841d-105cf5b15e3f",
+    "migrations_dir": "migrations"
+  }],
+  "ratelimits": [
+    { "name": "VISIT_LIMIT", "namespace_id": "2610202611", "simple": { "limit": 30, "period": 60 } },
+    { "name": "VISIT_LOCATION_LIMIT", "namespace_id": "2610202612", "simple": { "limit": 300, "period": 60 } }
+  ],
+  "observability": { "enabled": true, "logs": { "enabled": true, "invocation_logs": false } }
+}

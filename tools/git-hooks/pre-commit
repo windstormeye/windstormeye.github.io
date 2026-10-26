@@ -1,0 +1,37 @@
+#!/bin/bash
+# 启用方式（每个 clone 执行一次）：git config core.hooksPath tools/git-hooks
+set -e
+
+REPO_ROOT=$(git rev-parse --show-toplevel)
+cd "$REPO_ROOT"
+WEBP_SCRIPT="$REPO_ROOT/tools/convert_webp.py"
+PYTHON_SCRIPT="$REPO_ROOT/tools/compress_images.py"
+checked_images=false
+
+# 先把新增的 jpg/png 转成 WebP 并改写文章引用，再对暂存区里的图片做体积检查
+python3 "$WEBP_SCRIPT"
+
+# NUL-separated paths also cover Chinese names, spaces and embedded newlines.
+while IFS= read -r -d '' img; do
+    case "$img" in
+        *.[jJ][pP][gG]|*.[jJ][pP][eE][gG]|*.[pP][nN][gG]|*.[wW][eE][bB][pP]|*.[gG][iI][fF]) ;;
+        *) continue ;;
+    esac
+    if [ ! -f "$REPO_ROOT/$img" ]; then
+        continue
+    fi
+    if [ ! -f "$PYTHON_SCRIPT" ]; then
+        echo "错误: 找不到压缩脚本 $PYTHON_SCRIPT"
+        exit 1
+    fi
+    if [ "$checked_images" = false ]; then
+        echo "检测到新增或修改的图片，正在检查文件大小..."
+        checked_images=true
+    fi
+    python3 "$PYTHON_SCRIPT" "$REPO_ROOT/$img"
+    git add -- "$img"
+done < <(git diff --cached --name-only --diff-filter=ACM -z)
+
+if [ "$checked_images" = true ]; then
+    echo "图片检查与压缩处理完成。"
+fi
