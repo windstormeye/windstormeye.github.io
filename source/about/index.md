@@ -14,7 +14,7 @@ date: 2018-10-19 09:38:31
 
 ## 作品 ｜ PJ.Studio
 
-PhotoPeaks ([App Store](https://apps.apple.com/us/app/photopeaks/id1639575048)) | 专注 macOS 平台的修图工具
+[PhotoPeaks](https://photopeaks.app) ([App Store](https://apps.apple.com/us/app/photopeaks/id1639575048)) | 专注 macOS 平台的修图工具
 --- | --- 
 
 ![](https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/3f/34/e0/3f34e082-0f1c-a4bb-2c8c-de031dffcce9/_U4e2d_U6587-3.jpg/800x500bb.jpg)
