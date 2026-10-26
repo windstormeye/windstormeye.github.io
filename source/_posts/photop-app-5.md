@@ -277,4 +277,4 @@ result = result * 2^EV
 
 PhotoP 现在换成了 PhotoPeaks，我想好好做一个生产力工具，做一个符合自己品味的工具产品，之前是不确定这个产品能不能活，能不能撕开一些口子找到生存的空间，现在找到了，我想好好的做一次。
 
-目前 PhotoPeaks 在中国大陆地区因为在等待 ICP 备案过程中，暂时无法在 app store 下载，其他地区 app store 均可正常搜索下载。
+此外，我们上线了 photopeaks.app 官网，但目前 PhotoPeaks 在中国大陆地区因为在等待 ICP 备案过程中，暂时无法在 app store 下载，其他地区 app store 均可正常搜索下载。
