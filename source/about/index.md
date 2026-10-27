@@ -17,7 +17,7 @@ date: 2018-10-19 09:38:31
 [PhotoPeaks](https://photopeaks.app) ([App Store](https://apps.apple.com/us/app/id1639575048)) | 在 iPhone、iPad 和 Mac 上修图、整理照片、制作画册
 --- | --- 
 
-![PhotoPeaks：让照片，尽兴一点。支持 iPhone、iPad 和 Mac](https://photopeaks.app/media/social-cover.jpg)
+![PhotoPeaks：iOS 修图界面与功能展示](/images/2026/10/27/photopeaks-app-store-search.webp)
 
 MovingPath ([App Store](https://apps.apple.com/us/app/movingpath/id6782782334)) | 可视化你的运动轨迹
 --- | --- 
