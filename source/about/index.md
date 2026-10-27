@@ -14,31 +14,25 @@ date: 2018-10-19 09:38:31
 
 ## 作品 ｜ PJ.Studio
 
-[PhotoPeaks](https://photopeaks.app) ([App Store](https://apps.apple.com/us/app/photopeaks/id1639575048)) | 专注 macOS 平台的修图工具
+[PhotoPeaks](https://photopeaks.app) ([App Store](https://apps.apple.com/us/app/id1639575048)) | 在 iPhone、iPad 和 Mac 上修图、整理照片、制作画册
 --- | --- 
 
-![](https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/3f/34/e0/3f34e082-0f1c-a4bb-2c8c-de031dffcce9/_U4e2d_U6587-3.jpg/800x500bb.jpg)
+![PhotoPeaks：让照片，尽兴一点。支持 iPhone、iPad 和 Mac](https://photopeaks.app/media/social-cover.jpg)
 
 MovingPath ([App Store](https://apps.apple.com/us/app/movingpath/id6782782334)) | 可视化你的运动轨迹
 --- | --- 
 
 ![](../images/2026/07/01/1.png)
 
-休息菜单/Relax Menu ([App Store](https://apps.apple.com/cn/app/relax-menu/id6794621792)) | 休息一下
+休息菜单 ([App Store](https://apps.apple.com/cn/app/id6794621792)) | 菜单栏休息提醒，跟着仔仔活动肩颈、起身放松
 --- | --- 
 
-![](../images/2026/08/01/1.jpg)
-
+![休息菜单：专注到点，仔仔守住屏幕](https://is1-ssl.mzstatic.com/image/thumb/PurpleSource211/v4/fa/c2/c6/fac2c6ce-8da6-af3d-8a11-3e47503f6e23/01-_U4e13_U6ce8_U5230_U70b9_U4ed4_U4ed4_U5b88_U4f4f_U5c4f_U5e55.png/800x500bb.jpg)
 
 PFollow ([App Store](https://apps.apple.com/cn/app/pfollow/id6742342382)) | 自己从全世界路过的地方
 --- | --- 
 
 ![](../images/2025/app/pfollow/111_cover.png)
-
-PhotoP Studio ([App Store](https://apps.apple.com/cn/app/photop-studio/id6739296926)) | 开启空间修图全新体验！
---- | --- 
-
-![](../images/2024/photop_studio_0.png)
 
 CopyPop（原 TranslateP） ([App Store](https://apps.apple.com/cn/app/id6737735627)) | Mac 本地 AI 翻译，连按两次 ⌘C，译文就在眼前
 --- | --- 
@@ -46,11 +40,6 @@ CopyPop（原 TranslateP） ([App Store](https://apps.apple.com/cn/app/id6737735
 支持截图翻译、原文朗读和本地单词本。语言包下载后可离线使用，翻译内容留在 Mac 上。
 
 ![CopyPop：连按两次 ⌘C 即可翻译](https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/e1/83/36/e1833686-6488-5d55-ecc9-d49aee13275c/1.png/800x500bb.jpg)
-
-星球罐子（[App Store](https://apps.apple.com/hk/app/%E6%98%9F%E7%90%83%E7%BD%90%E5%AD%90/id1502901744)）| 拥有属于你的宇宙
---- | --- 
-
-![](/images/qiniu_img/截屏2020-03-18下午3.57.43.png)
 
 <details><summary>旅行</summary>
 
