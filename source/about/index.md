@@ -40,10 +40,12 @@ PhotoP Studio ([App Store](https://apps.apple.com/cn/app/photop-studio/id6739296
 
 ![](../images/2024/photop_studio_0.png)
 
-TranslateP ([App Store](https://apps.apple.com/cn/app/translatep/id6737735627?l=en-GB&mt=12)) | 无需网络的 AI 翻译，仅需两次 cmd + c
+CopyPop（原 TranslateP） ([App Store](https://apps.apple.com/cn/app/id6737735627)) | Mac 本地 AI 翻译，连按两次 ⌘C，译文就在眼前
 --- | --- 
 
-![](../images/2025/app/translatep/2.jpg)
+支持截图翻译、原文朗读和本地单词本。语言包下载后可离线使用，翻译内容留在 Mac 上。
+
+![CopyPop：连按两次 ⌘C 即可翻译](https://is1-ssl.mzstatic.com/image/thumb/PurpleSource221/v4/e1/83/36/e1833686-6488-5d55-ecc9-d49aee13275c/1.png/800x500bb.jpg)
 
 星球罐子（[App Store](https://apps.apple.com/hk/app/%E6%98%9F%E7%90%83%E7%BD%90%E5%AD%90/id1502901744)）| 拥有属于你的宇宙
 --- | --- 
