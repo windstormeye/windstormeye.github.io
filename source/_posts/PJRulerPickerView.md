@@ -2,7 +2,9 @@
 title: 搞事情之 PJRulerPickerView 组件开发总结
 date: 2019-05-16 13:19:30
 tags:
+- iOS
 - Swift
+- 搞事情系列
 ---
 
 ![PJRulerPickerView](https://i.loli.net/2019/05/16/5cdcf341b909717230.gif)

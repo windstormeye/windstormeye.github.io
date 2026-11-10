@@ -2,9 +2,8 @@
 title: PFollow | 1.0.1 版本开发记录
 date: 2025-09-23 17:56:51
 tags:
-- 产品
+- 开发日志
 - PFollow
-- 思考
 ---
 
 ![](/images/2025/app/pfollow/cover3.png)

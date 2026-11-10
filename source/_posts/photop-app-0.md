@@ -2,12 +2,8 @@
 title: 《PhotoP 开发日志 02》 - 发布前后
 date: 2022-11-18 21:46:42
 tags:
-- 作品
-- 感想
 - 开发日志
-- App
-- 产品思考
-- macOS
+- PhotoPeaks
 ---
 
 ![](../images/app/photop/1.0/0.jpg)

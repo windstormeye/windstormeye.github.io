@@ -2,8 +2,7 @@
 title: 关于我的第六辆公路车
 date: 2025-03-16 17:57:33
 tags:
-- 自行车
-- 感想
+- 骑行
 ---
 
 ![](/images/2025/blog/thinking19_cover.jpeg)

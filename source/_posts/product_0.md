@@ -2,11 +2,9 @@
 title: 产品开发总结 | 星球罐子、Movinn 和 PFollow
 date: 2026-08-02 18:43:57
 tags:
-- 作品
-- 感想
 - 开发日志
-- App
-- 产品思考
+- PFollow
+- MovingPath
 ---
 
 ![](../images/2026/07/03/4.png)

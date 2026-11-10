@@ -3,7 +3,6 @@ title: 川西之行
 date: 2020-10-08 22:44:48
 tags:
 - 旅行
-- 感想
 ---
 
 ![](/images/qiniu_img/IMG_4862.jpeg)

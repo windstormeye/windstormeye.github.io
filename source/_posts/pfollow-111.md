@@ -2,9 +2,10 @@
 title: 产品开发总结 | PFollow、PhotoP 和 TranslateP
 date: 2025-12-31 17:56:51
 tags:
-- 产品
+- 开发日志
 - PFollow
-- 思考
+- PhotoPeaks
+- CopyPop
 ---
 
 ![](/images/2025/app/pfollow/111_cover.png)

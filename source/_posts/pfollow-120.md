@@ -2,10 +2,9 @@
 title: 产品开发总结 | PFollow 和 TranslateP
 date: 2026-03-21 17:56:51
 tags:
-- 产品
+- 开发日志
 - PFollow
-- TranslateP
-- 思考
+- CopyPop
 ---
 
 ![](/images/2026/03/02/06.png)

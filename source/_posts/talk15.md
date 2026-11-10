@@ -3,7 +3,6 @@ title: 第一次创业
 date: 2022-01-20 23:38:43
 tags:
 - 感想
-- 创业
 ---
 
 ![](/images/qiniu_img/IMG_0363.JPG)

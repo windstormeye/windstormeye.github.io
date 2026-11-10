@@ -3,7 +3,6 @@ title: 燕赵大地，正定古城
 date: 2025-10-26 09:05:33
 tags:
 - 旅行
-- 感想
 ---
 
 ![](../images/2025/photos/zhengding/2.jpg)

@@ -2,9 +2,8 @@
 title: PFollow | 1.0 发布
 date: 2025-03-09 17:56:51
 tags:
-- 产品
+- 开发日志
 - PFollow
-- 思考
 ---
 
 ![](/images/2025/app/pfollow/cover2.png)

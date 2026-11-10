@@ -3,7 +3,7 @@ title: Qt Project - 播放器
 date: 2022-05-12 16:03:06
 tags:
 - Qt
-- C++ 跨端
+- C++
 ---
 
 ![](/images/qiniu_img/20220512160505.png)

@@ -2,8 +2,7 @@
 title: 把自己当成工具来解决问题 - freecodecamp 分享
 date: 2020-05-12 23:23:06
 tags:
-- fcc
-- 分享
+- 演讲
 ---
 
 ![](/images/qiniu_img/20200519234238.png)

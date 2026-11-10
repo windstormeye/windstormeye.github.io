@@ -2,12 +2,8 @@
 title: 《PhotoP 开发日志 04》- 全新设计
 date: 2025-06-27 18:43:57
 tags:
-- 作品
-- 感想
 - 开发日志
-- App
-- 产品思考
-- macOS
+- PhotoPeaks
 ---
 
 ![](../images/2025/app/photop/color.png)

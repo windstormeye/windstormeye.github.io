@@ -1,9 +1,8 @@
 ---
 title: Hexo + GitHub Pages + 绑定域名
 date: 2017-12-30 11:08:11
-tags: 
-- 技术
-- 建站
+tags:
+- 博客
 ---
 
 &ensp;&ensp;&ensp;本文主要分三部分内容讲解如何基于GitHub Pages结合Hexo这个快速、简洁且高效的博客框架搭建一个无流量限制的个人博客站。

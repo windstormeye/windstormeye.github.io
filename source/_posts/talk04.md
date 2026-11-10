@@ -2,6 +2,8 @@
 title: 2020 ifLabCon 成员大会演讲稿
 date: 2020-11-01 11:18:43
 tags:
+- ifLab
+- 演讲
 ---
 
 ![](/images/qiniu_img/IMG_6438.jpeg)

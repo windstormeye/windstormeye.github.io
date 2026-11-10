@@ -2,9 +2,7 @@
 title: Swift 游戏开发之「能否关个灯」（〇）
 date: 2019-09-02 23:13:06
 tags:
-- iOS
 - Swift
-- SwiftUI
 - 游戏开发
 ---
 

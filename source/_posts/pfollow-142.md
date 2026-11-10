@@ -2,10 +2,8 @@
 title: 产品开发总结 | PFollow 的旅程导出、位置分享和街景图
 date: 2026-10-01 17:02:20
 tags:
-- 产品
-- PFollow
 - 开发日志
-- 产品思考
+- PFollow
 ---
 
 ![](../images/2026/10/01/pfollow-142/cover.png)

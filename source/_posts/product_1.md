@@ -2,11 +2,8 @@
 title: 产品开发总结 | PhotoP 自动修图、照片评分和 iOS、iPadOS 支持
 date: 2026-08-12 18:43:57
 tags:
-- 作品
-- 感想
 - 开发日志
-- App
-- 产品思考
+- PhotoPeaks
 ---
 
 ![](../images/2026/07/04/1.png)

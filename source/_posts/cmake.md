@@ -3,8 +3,7 @@ title: CMake 新手向
 date: 2022-03-26 10:13:04
 tags:
 - CMake
-- makefile
-- 编译
+- C++
 ---
  
 ![](/images/qiniu_img/20220411233330.png)

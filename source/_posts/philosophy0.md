@@ -2,6 +2,7 @@
 title: 再谈摄影
 date: 2023-12-03 23:55:06
 tags:
+- 摄影
 ---
 
 ![](/images/2023/street_snap/11/0.jpg)

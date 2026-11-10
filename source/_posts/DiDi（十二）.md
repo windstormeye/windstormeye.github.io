@@ -2,9 +2,8 @@
 title: DiDi（十二）
 date: 2018-03-08 21:47:34
 tags:
+- 滴滴
 - iOS
-- DiDi
-- internship
 ---
 
 ## 2018-03-06

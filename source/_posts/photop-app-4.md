@@ -2,10 +2,8 @@
 title: 产品开发总结 | 隆重推出 PhotoP 画册模块！
 date: 2026-10-05 01:24:20
 tags:
-- 作品
-- PhotoP
 - 开发日志
-- 产品思考
+- PhotoPeaks
 ---
 
 ![](../images/2026/10/03/photop-app-4/cover-20261005.png)

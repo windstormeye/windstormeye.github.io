@@ -2,12 +2,8 @@
 title: 《PhotoP 开发日志 03》- 基础体验完善
 date: 2022-12-17 19:08:57
 tags:
-- 作品
-- 感想
 - 开发日志
-- App
-- 产品思考
-- macOS
+- PhotoPeaks
 ---
 
 ![](../images/app/photop/1.1/1.png)

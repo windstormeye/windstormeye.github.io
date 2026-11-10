@@ -3,7 +3,6 @@ title: 勇闯泰兰德
 date: 2024-10-06 20:16:57
 tags:
 - 旅行
-- 感想
 ---
 
 ![](/images/2024/10/thailand/28.jpg)

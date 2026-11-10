@@ -2,7 +2,7 @@
 title: SwiftUI - 北京师范大学 iOS Club 学生沙龙（讲稿）
 date: 2019-12-02 22:44:26
 tags:
-- Apple
+- SwiftUI
 - 演讲
 ---
 

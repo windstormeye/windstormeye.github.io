@@ -2,6 +2,9 @@
 title: 【WWDC22 110349/110348】Swift Playground 指北
 date: 2022-06-30 10:01:22
 tags:
+- Swift
+- Playground
+- WWDC
 ---
 
 ![](./images/2023/swiftplayground/cover.png)

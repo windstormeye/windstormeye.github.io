@@ -3,8 +3,6 @@ title: 鹿儿岛、熊本和福冈
 date: 2025-06-05 09:05:33
 tags:
 - 旅行
-- 感想
-- 日本
 ---
 
 ![](/images/2025/photos/japen/16.jpg)

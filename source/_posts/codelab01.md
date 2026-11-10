@@ -2,8 +2,7 @@
 title: CodeLab 北京 & 国图少儿馆
 date: 2019-11-24 09:54:03
 tags:
-- CodeLab
-- 少儿编程
+- 编程教育
 ---
 
 ![](https://i.loli.net/2019/11/24/awUNEPhTGpsOvR3.jpg)

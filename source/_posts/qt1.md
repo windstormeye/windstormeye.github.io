@@ -2,8 +2,8 @@
 title: 来写一个颜色选择器吧！
 date: 2022-07-16 09:05:21
 tags:
-- C++
 - Qt
+- C++
 ---
 
 ![](/images/20220717_qt_project_1/0.jpg)

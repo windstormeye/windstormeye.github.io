@@ -3,10 +3,7 @@ title: SwiftUI 怎么和 Core Data 结合？
 date: 2019-08-12 23:42:58
 tags:
 - SwiftUI
-- Swift
 - iOS
-- Core Data
-- Masq
 ---
 
 > 最近新起了一个 side project，用于承载 WWDC19 里公布的内容。这篇文章主要讲述了 `SwiftUI` 和 `Core Data` 怎么结合，以及自己遇到的问题和思考的第〇篇。

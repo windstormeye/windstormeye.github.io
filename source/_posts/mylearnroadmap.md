@@ -3,7 +3,7 @@ title: 我的大学——WWDC Scholarship & 准备工作
 date: 2019-04-17 14:31:08
 tags:
 - 我的大学
-- 回忆录
+- WWDC
 ---
 
 昨天是 WWDC19 Schoolarship 放榜的日子。早上 6 点惊醒，一直忐忑不安的到 7 点 10 分左右终于收到了 Apple 的邮件，我成功入选啦！！！

@@ -2,9 +2,8 @@
 title: 产品开发总结 | MovingPath 的非凡之旅和轨迹记录
 date: 2026-10-26 14:30:00
 tags:
-- 产品
-- MovingPath
 - 开发日志
+- MovingPath
 ---
 
 ![](../images/2026/10/25/movingpath-110/cover.png)

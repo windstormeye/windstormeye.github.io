@@ -2,6 +2,7 @@
 title: 彩云之南，归去的地方
 date: 2023-04-05 20:41:15
 tags:
+- 旅行
 ---
 
 ![](/images/2023/lijiangdali/136.jpg)

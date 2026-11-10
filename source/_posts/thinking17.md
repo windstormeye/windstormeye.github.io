@@ -2,6 +2,7 @@
 title: 三论摄影
 date: 2025-01-18 09:32:48
 tags:
+- 摄影
 ---
 
 ![](/images/2025/blog/photo_cover.jpg)

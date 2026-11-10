@@ -2,11 +2,8 @@
 title: 产品开发总结 | PhotoPeaks 更名与修图更新
 date: 2026-10-24
 tags:
-- 作品
-- PhotoPeaks
 - 开发日志
-- 产品思考
-- AI
+- PhotoPeaks
 ---
 
 ![](../images/2026/10/25/photop-app-5/cover-app-crop-20261025.png)

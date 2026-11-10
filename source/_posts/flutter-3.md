@@ -2,6 +2,8 @@
 title: Flutter 三探
 date: 2019-01-17 21:19:45
 tags:
+- Flutter
+- 跨平台
 ---
 
 > 对 Flutter 一期调研在这篇文章中就告一段落了，将继续完善上篇文章中利用豆瓣电影 Top250 公开 API demo。

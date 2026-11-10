@@ -2,9 +2,8 @@
 title: 产品开发总结 | Movinn
 date: 2026-07-12 11:29:47
 tags:
-- 产品
-- Movinn
-- 思考
+- 开发日志
+- MovingPath
 ---
 
 ![](../images/2026/07/01/0.png)

@@ -2,7 +2,7 @@
 title: Let's Vision 2025 见闻
 date: 2025-03-04 22:52:57
 tags:
-- 感想
+- 技术大会
 ---
 
 ![](/images/2025/blog/letsvision.png)

@@ -2,8 +2,8 @@
 title: 《ifLab 和你的故事》- 第一份实习/工作（讲稿）
 date: 2020-09-14 21:47:14
 tags:
-- 感想
 - ifLab
+- 演讲
 ---
 ![](/images/qiniu_img/IMG_0350.jpeg)
 

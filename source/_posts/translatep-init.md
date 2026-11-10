@@ -3,6 +3,8 @@ title: 《TranslateP 开发日志 01》- 做了一个翻译软件
 date: 2024-11-03 18:03:38
 updated: 2026-10-27
 tags:
+- 开发日志
+- CopyPop
 ---
 
 > 更新（2026-10-27）：TranslateP 现已更名为 **CopyPop**，可在 [Mac App Store 下载](https://apps.apple.com/cn/app/id6737735627)。支持两次 ⌘C 翻译、截图翻译、原文朗读和本地单词本，语言包下载后可离线使用。

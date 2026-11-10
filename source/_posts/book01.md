@@ -2,7 +2,7 @@
 title: 用 kindle 读了 127 本书
 date: 2021-02-06 15:00:36
 tags:
-- 感想
+- 读书
 ---
 
 ![](/images/qiniu_img/20210217230529.png)

@@ -2,9 +2,7 @@
 title: 也来谈表
 date: 2023-09-17 10:57:19
 tags:
-- apple
-- 佳明
-- 感想
+- 数码
 ---
 
 ![](../images/2023/talk/1.jpeg)

@@ -2,8 +2,7 @@
 title: 我和 iPhone 的故事
 date: 2024-11-09 17:14:39
 tags:
-- 感想
-- 思考
+- 数码
 ---
 ![](/images/2024/10/iphone/9.jpg)
 

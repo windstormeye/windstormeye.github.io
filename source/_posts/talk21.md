@@ -3,8 +3,6 @@ title: 花都五十八
 date: 2022-08-24 00:05:39
 tags:
 - 感想
-- 字节跳动
-- 广州
 ---
 ![](../images/202207_guangzhou/guangzhouta/4.JPG)
 

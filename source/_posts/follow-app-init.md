@@ -2,11 +2,8 @@
 title: PFollow | 最长情的告白
 date: 2025-02-23 10:33:47
 tags:
-- PFollow
-- App
-- 产品思考
-- iOS
 - 开发日志
+- PFollow
 ---
 
 <!-- ![](/images/2025/app/pfollow/pfollow_app.jpeg) -->

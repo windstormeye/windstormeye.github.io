@@ -2,10 +2,8 @@
 title: 《PhotoP 开发日志 01》 - 做了一个修图工具
 date: 2022-08-13 07:49:10
 tags:
-- App
-- 产品思考
-- macOS
 - 开发日志
+- PhotoPeaks
 ---
 
 ![](../images/photop/0.png)

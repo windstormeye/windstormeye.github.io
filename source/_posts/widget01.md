@@ -2,9 +2,8 @@
 title: 从实际问题看 SwiftUI 和 Widget 编程
 date: 2020-12-06 18:21:38
 tags:
-- iOS14
-- Widget
 - SwiftUI
+- iOS
 ---
 
 ![](/images/qiniu_img/20201207102254.png)

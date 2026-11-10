@@ -2,11 +2,8 @@
 title: 为已有的 SwiftUI 代码适配 Apple Watch（〇）
 date: 2019-12-07 22:09:34
 tags:
-- iOS
-- Swift
-- WatchOS
 - SwiftUI
-- Combine
+- watchOS
 ---
 
 ![](https://i.loli.net/2019/12/08/2SwpGhrAkTCLmZv.png)

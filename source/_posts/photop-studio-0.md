@@ -2,6 +2,9 @@
 title: 《PhotoP Studio 开发日志 01》- 开启空间修图全新体验
 date: 2024-12-15 19:36:15
 tags:
+- 开发日志
+- PhotoPeaks
+- visionOS
 ---
 
 ![](../images/2024/photop_studio_0.png)
