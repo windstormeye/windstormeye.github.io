@@ -14,7 +14,7 @@ git config core.hooksPath tools/git-hooks
 
 大小上限为 **500 KB（500,000 字节）**。超限图片循环缩小尺寸，JPG 同时逐步降低质量，直到达到上限；已达标图片保持原样。GIF 会保留动画。压缩失败或无法达到上限时，保留原文件并阻止提交。
 
-旧的 `convert_webp.py` 已不在 hook 中调用，提交时无需设置 `SKIP_WEBP`。
+旧的 WebP 转换脚本已移除，提交时无需设置 `SKIP_WEBP`。hook 仅压缩新增或修改的图片，不转换图片格式。
 
 运行图片处理测试：
 

@@ -111,7 +111,8 @@ def compress_image(file_path):
             return True
 
         with Image.open(file_path) as source:
-            save_format = source.format
+            # 手机 JPEG 可能包含 MPO 辅助图层；网页保留主图并按 JPEG 编码。
+            save_format = 'JPEG' if source.format == 'MPO' else source.format
             img = ImageOps.exif_transpose(source)
             # 转正照片后移除 EXIF 等元数据，保持原始图片格式。
             img.info.clear()
