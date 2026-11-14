@@ -2,6 +2,19 @@
 - [《琅勃拉邦-老挝》](https://app.pj.studio/photop/albums/a/860fe3828bbf4c4e8ce7bb326f0d835a)
 - [《正镶白旗》](https://app.pj.studio/photop/albums/a/e1bc9c1043e84de08f5c8621f0608a1f)
 
+## 2026.11 香格里拉
+![](../images/2026/11/1/0.jpg)
+![](../images/2026/11/1/2.jpg)
+![](../images/2026/11/1/14.jpg)
+![](../images/2026/11/1/15.jpg)
+![](../images/2026/11/1/17.jpg)
+![](../images/2026/11/1/20.jpg)
+![](../images/2026/11/1/22.jpg)
+![](../images/2026/11/1/25.jpg)
+![](../images/2026/11/1/36.jpg)
+![](../images/2026/11/1/40.jpg)
+![](../images/2026/11/1/48.jpg)
+
 ## 2026.10 济州岛
 ![](../images/2026/10/04/17.jpg)
 ![](../images/2026/10/04/6.jpg) 

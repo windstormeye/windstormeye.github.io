@@ -1,4 +1,4 @@
-"""pre-commit 用：把本次新增的 jpg/png 转成 WebP，并把文章里的引用改成 .webp。
+"""历史手动工具（pre-commit 已停用）：把本次新增的 jpg/png 转成 WebP，并改写引用。
 
 - 只处理新增（git 状态为 A）的 source/images/ 下的文章图片，已经发布过的图片不动，避免老链接失效；
   favicon、apple-touch-icon 这类必须保持原格式的文件不在这个目录里。

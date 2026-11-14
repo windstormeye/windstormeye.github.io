@@ -1,16 +1,42 @@
 #!/bin/bash
-# 启用方式（每个 clone 执行一次）：git config core.hooksPath tools/git-hooks
+# 依赖安装与启用方式见 tools/README.md。
 set -e
 
 REPO_ROOT=$(git rev-parse --show-toplevel)
 cd "$REPO_ROOT"
-WEBP_SCRIPT="$REPO_ROOT/tools/convert_webp.py"
 PYTHON_SCRIPT="$REPO_ROOT/tools/compress_images.py"
 checked_images=false
 
-# 先把新增的 jpg/png 转成 WebP 并改写文章引用，再对暂存区里的图片做体积检查
-python3 "$WEBP_SCRIPT"
+# 纯文字提交不需要 Python 图片处理依赖。
+has_images=false
+while IFS= read -r -d '' img; do
+    case "$img" in
+        *.[jJ][pP][gG]|*.[jJ][pP][eE][gG]|*.[pP][nN][gG]|*.[wW][eE][bB][pP]|*.[gG][iI][fF])
+            has_images=true
+            break
+            ;;
+    esac
+done < <(git diff --cached --name-only --diff-filter=ACM -z)
+if [ "$has_images" = false ]; then
+    exit 0
+fi
 
+# 固定使用项目环境，无需在提交前手动激活；兼容已安装依赖的系统 Python。
+PYTHON=python3
+if [ -x "$REPO_ROOT/.venv/bin/python" ]; then
+    PYTHON="$REPO_ROOT/.venv/bin/python"
+fi
+if ! "$PYTHON" -c 'from PIL import Image, ImageOps, ImageSequence' >/dev/null 2>&1; then
+    cat >&2 <<'EOF'
+错误：图片处理需要 Python 3 和 Pillow（PIL），当前 Python 环境未安装或无法加载依赖。
+请在仓库根目录执行以下命令，然后重新提交：
+  python3 -m venv .venv
+  .venv/bin/python -m pip install -r tools/requirements.txt
+EOF
+    exit 1
+fi
+
+# 保持原图片格式，循环压缩到 500 KB 以内。
 # NUL-separated paths also cover Chinese names, spaces and embedded newlines.
 while IFS= read -r -d '' img; do
     case "$img" in
@@ -25,10 +51,10 @@ while IFS= read -r -d '' img; do
         exit 1
     fi
     if [ "$checked_images" = false ]; then
-        echo "检测到新增或修改的图片，正在检查文件大小..."
+        echo "检测到新增或修改的图片，正在检查文件大小（上限 500 KB，保留原格式）..."
         checked_images=true
     fi
-    python3 "$PYTHON_SCRIPT" "$REPO_ROOT/$img"
+    "$PYTHON" "$PYTHON_SCRIPT" "$REPO_ROOT/$img"
     git add -- "$img"
 done < <(git diff --cached --name-only --diff-filter=ACM -z)
 

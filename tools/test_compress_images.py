@@ -1,6 +1,9 @@
 import contextlib
 import hashlib
 import io
+import random
+import subprocess
+import sys
 import tempfile
 import unittest
 from pathlib import Path
@@ -8,6 +11,59 @@ from unittest.mock import patch
 
 from PIL import Image, ImageChops, ImageDraw, ImageSequence
 import compress_images
+
+
+class JpegCompressionTests(unittest.TestCase):
+    def setUp(self):
+        self.directory = tempfile.TemporaryDirectory()
+        self.addCleanup(self.directory.cleanup)
+        self.root = Path(self.directory.name)
+
+    def make_photo(self):
+        path = self.root / 'photo.jpg'
+        image = Image.frombytes('RGB', (1600, 1200), random.Random(0).randbytes(1600 * 1200 * 3))
+        exif = Image.Exif()
+        exif[274] = 6
+        image.save(path, quality=98, exif=exif)
+        return path
+
+    def test_jpeg_repeatedly_compresses_below_500kb_and_preserves_orientation(self):
+        path = self.make_photo()
+        self.assertGreater(path.stat().st_size, 500_000)
+        output = io.StringIO()
+        with contextlib.redirect_stdout(output):
+            self.assertTrue(compress_images.compress_image(str(path)))
+        self.assertLessEqual(path.stat().st_size, 500_000)
+        self.assertGreater(output.getvalue().count('调整尺寸至'), 1)
+        with Image.open(path) as image:
+            self.assertEqual(image.format, 'JPEG')
+            self.assertGreater(image.height, image.width)
+            self.assertIsNone(image.getexif().get(274))
+        self.assertEqual(list(self.root.iterdir()), [path])
+
+    def test_small_jpeg_is_unchanged(self):
+        path = self.root / 'small.jpg'
+        Image.new('RGB', (32, 32), 'blue').save(path)
+        before = path.read_bytes()
+        self.assertTrue(compress_images.compress_image(str(path)))
+        self.assertEqual(path.read_bytes(), before)
+
+    def test_unreachable_limit_preserves_original(self):
+        path = self.root / 'small.jpg'
+        Image.new('RGB', (16, 16), 'blue').save(path)
+        before = path.read_bytes()
+        with patch.object(compress_images, 'MAX_SIZE', 1), contextlib.redirect_stdout(io.StringIO()), contextlib.redirect_stderr(io.StringIO()):
+            self.assertFalse(compress_images.compress_image(str(path)))
+        self.assertEqual(path.read_bytes(), before)
+        self.assertFalse(list(self.root.glob('*.tmp')))
+
+    def test_cli_returns_failure_for_invalid_image(self):
+        path = self.root / 'broken.jpg'
+        path.write_bytes(b'x' * 500_001)
+        result = subprocess.run([sys.executable, compress_images.__file__, str(path)], capture_output=True)
+        self.assertNotEqual(result.returncode, 0)
+        self.assertEqual(path.stat().st_size, 500_001)
+        self.assertFalse(list(self.root.glob('*.tmp')))
 
 
 class GifCompressionTests(unittest.TestCase):
